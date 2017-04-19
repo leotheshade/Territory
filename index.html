@@ -7,127 +7,132 @@
   <body>
     <svg vewBox="0 0 1000 1000" width="920" height="520" id="board" onclick="dash(event)">
 
-      <text id="displayForestWood" x="760" y ="200" font-family="sans-serif" font-size="25" fill="brown"></text>
-      <text id="displayCastleOre" x="400" y="230" font-family="sans-serif" font-size="25" fill="brown"></text>
-      <text id="displayCastleWood" x="400" y="200" font-family="sans-serif" font-size="25" fill="white"></text>
-      <text id="displayMountainOre" x="140" y="130" font-family="sans-serif" font-size="25" fill="white"></text>
-      <text id="displayWagonWood" x="460" y="400" font-family="sans-serif" font-size="25" fill="white"></text>
-
-      <text id="displayWagonOre" x="400" y="400" font-family="sans-serif" font-size="25" fill="brown"></text>
-
-
-      //castle
-      <rect x="400" y="240" width="120" height="60" fill="gray" onclick="castleClick()"/>
-      <rect x="440" y="270" width="40" height="30"onclick="castleClick()"/>
-        <image id="castle" width="120" height="85" x="400" y="220" onclick="castleClick()" xlink:href="file:///C:/Users/Student/Desktop/castle%20art.png" />
-      //castle
-
-      //mountains
-      <polygon points="0 420 100 100 200 420"  fill="saddlebrown" onclick="mountainClick()"/>
-      //forest
-      //tree
-      <rect x="880" y="30" width="10" height="30" fill="brown"/>
-      <circle cx="885" cy="25" r="15" fill="green"/>
-      //tree^
-       <rect x="840" y="35" width="10" height="30" fill="brown"/>
-      <circle cx="845" cy="30" r="15" fill="green"/>
-      <rect x="860" y="85" width="10" height="30" fill="brown"/>
-      <circle cx="865" cy="80" r="15" fill="green"/>
-       <rect x="820" y="85" width="10" height="30" fill="brown"/>
-      <circle cx="825" cy="80" r="15" fill="green"/>
-      <rect x="900" y="85" width="10" height="30" fill="brown"/>
-      <circle cx="905" cy="80" r="15" fill="green"/>
-
-      <rect x="860" y="145" width="10" height="30" fill="brown"/>
-      <circle cx="865" cy="140" r="15" fill="green"/>
-       <rect x="820" y="145" width="10" height="30" fill="brown"/>
-      <circle cx="825" cy="140" r="15" fill="green"/>
-      <rect x="900" y="145" width="10" height="30" fill="brown"/>
-      <circle cx="905" cy="140" r="15" fill="green"/>
-
-      <rect x="860" y="205" width="10" height="30" fill="brown"/>
-      <circle cx="865" cy="200" r="15" fill="green"/>
-       <rect x="820" y="205" width="10" height="30" fill="brown"/>
-      <circle cx="825" cy="200" r="15" fill="green"/>
-      <rect x="900" y="205" width="10" height="30" fill="brown"/>
-      <circle cx="905" cy="200" r="15" fill="green"/>
-
-      <rect x="860" y="265" width="10" height="30" fill="brown"/>
-      <circle cx="865" cy="260" r="15" fill="green"/>
-       <rect x="820" y="265" width="10" height="30" fill="brown"/>
-      <circle cx="825" cy="260" r="15" fill="green"/>
-      <rect x="900" y="265" width="10" height="30" fill="brown"/>
-      <circle cx="905" cy="260" r="15" fill="green"/>
-
-      <rect x="860" y="325" width="10" height="30" fill="brown"/>
-      <circle cx="865" cy="320" r="15" fill="green"/>
-       <rect x="820" y="325" width="10" height="30" fill="brown"/>
-      <circle cx="825" cy="320" r="15" fill="green"/>
-      <rect x="900" y="325" width="10" height="30" fill="brown"/>
-      <circle cx="905" cy="320" r="15" fill="green"/>
-
-       <rect x="860" y="385" width="10" height="30" fill="brown"/>
-      <circle cx="865" cy="380" r="15" fill="green"/>
-       <rect x="820" y="385" width="10" height="30" fill="brown"/>
-      <circle cx="825" cy="380" r="15" fill="green"/>
-      <rect x="900" y="385" width="10" height="30" fill="brown"/>
-      <circle cx="905" cy="380" r="15" fill="green"/>
-
-      <rect x="860" y="445" width="10" height="30" fill="brown"/>
-      <circle cx="865" cy="440" r="15" fill="green"/>
-       <rect x="820" y="445" width="10" height="30" fill="brown"/>
-      <circle cx="825" cy="440" r="15" fill="green"/>
-      <rect x="900" y="445" width="10" height="30" fill="brown"/>
-      <circle cx="905" cy="440" r="15" fill="green"/>
-      //forest
-      //forset cover
-      <rect x="800" y="0" width="120" height="500" opacity="0" onclick="forestClick()"/>
-      //forest cover
-      //workers
-      <!-- <circle id="worker1" cx="410" cy="320" r="10" fill="blue" onclick="worker1Click()"> -->
-        <!-- <animate id="worker1moveX" attributeName="cx" from="0" to="0" begin="indefinite" dur="indefinite"/> -->
-
-        <!-- <animate id="worker1moveY" attributeName="cy" from="0" to="0" begin="indefinite" dur="indefinite"/> -->
-      <!-- </circle> -->
-
-          <image id="worker1" width="60" height="50" x="390" y="300" onclick="worker1Click()" xlink:href="file:///C:/Users/Student/Desktop/miner%20concept%20art%20no%203.png" >
-          <animate id="worker1moveX" attributeName="x" from="0" to="0" begin="indefinite" dur="indefinite"/>
-
-          <animate id="worker1moveY" attributeName="y" from="0" to="0" begin="indefinite" dur="indefinite"/>
-</image>
-
-      <circle id="worker2" cx="440" cy="320" r="10" fill="blue" onclick="worker2Click()">
-        <animate id="worker2moveX" attributeName="cx" from="0" to="0" begin="indefinite" dur="indefinite"/>
-
-        <animate id="worker2moveY" attributeName="cy" from="0" to="0" begin="indefinite" dur="indefinite"/>
-
-      </circle>
-
-      <circle id="worker3" cx="470" cy="320" r="10" fill="blue" onclick="worker3Click()">
-         <animate id="worker3moveX" attributeName="cx" from="0" to="0" begin="indefinite" dur="indefinite"/>
-
-        <animate id="worker3moveY" attributeName="cy" from="0" to="0" begin="indefinite" dur="indefinite"/>
-      </circle>
-
-      <circle id="worker4" cx="500" cy="320" r="10" fill="blue" onclick="worker4Click()">
-        <animate id="worker4moveX" attributeName="cx" from="0" to="0" begin="indefinite" dur="indefinite"/>
-
-        <animate id="worker4moveY" attributeName="cy" from="0" to="0" begin="indefinite" dur="indefinite"/>
-      </circle>
-
-      <rect id="supplyWagon1" x="450" y="350" width="30" height="20" fill="brown" onclick="wagonClick()">
-        <animate id="wagon1MoveX" attributeName="x" from="0" to="0" begin="indefinite" dur="indefinite"/>
-
-        <animate id="wagon1MoveY" attributeName="y" from="0" to="0" begin="indefinite" dur="indefinite"/>
-
-      </rect>
+    <image width="20" height="30" x="100" y="100" xlink:href="file:///C:/Users/Student/Desktop/miner%20concept%20art%20no%201.png" />
 
 
 
-      //confirm button
-      <rect x="445" y="470" width="50" height="30" fill="red" onclick="send()"/>
 
-      </svg>
+  //castle
+  <rect x="400" y="240" width="120" height="60" fill="gray" onclick="castleClick()"/>
+  <rect x="440" y="270" width="40" height="30"onclick="castleClick()"/>
+  //castle
+
+  //mountains
+  <polygon points="0 420 100 100 200 420"  fill="saddlebrown" onclick="mountainClick()"/>
+  //forest
+  //tree
+  <rect x="880" y="30" width="10" height="30" fill="brown"/>
+  <circle cx="885" cy="25" r="15" fill="green"/>
+  //tree^
+   <rect x="840" y="35" width="10" height="30" fill="brown"/>
+  <circle cx="845" cy="30" r="15" fill="green"/>
+  <rect x="860" y="85" width="10" height="30" fill="brown"/>
+  <circle cx="865" cy="80" r="15" fill="green"/>
+   <rect x="820" y="85" width="10" height="30" fill="brown"/>
+  <circle cx="825" cy="80" r="15" fill="green"/>
+  <rect x="900" y="85" width="10" height="30" fill="brown"/>
+  <circle cx="905" cy="80" r="15" fill="green"/>
+
+  <rect x="860" y="145" width="10" height="30" fill="brown"/>
+  <circle cx="865" cy="140" r="15" fill="green"/>
+   <rect x="820" y="145" width="10" height="30" fill="brown"/>
+  <circle cx="825" cy="140" r="15" fill="green"/>
+  <rect x="900" y="145" width="10" height="30" fill="brown"/>
+  <circle cx="905" cy="140" r="15" fill="green"/>
+
+  <rect x="860" y="205" width="10" height="30" fill="brown"/>
+  <circle cx="865" cy="200" r="15" fill="green"/>
+   <rect x="820" y="205" width="10" height="30" fill="brown"/>
+  <circle cx="825" cy="200" r="15" fill="green"/>
+  <rect x="900" y="205" width="10" height="30" fill="brown"/>
+  <circle cx="905" cy="200" r="15" fill="green"/>
+
+  <rect x="860" y="265" width="10" height="30" fill="brown"/>
+  <circle cx="865" cy="260" r="15" fill="green"/>
+   <rect x="820" y="265" width="10" height="30" fill="brown"/>
+  <circle cx="825" cy="260" r="15" fill="green"/>
+  <rect x="900" y="265" width="10" height="30" fill="brown"/>
+  <circle cx="905" cy="260" r="15" fill="green"/>
+
+  <rect x="860" y="325" width="10" height="30" fill="brown"/>
+  <circle cx="865" cy="320" r="15" fill="green"/>
+   <rect x="820" y="325" width="10" height="30" fill="brown"/>
+  <circle cx="825" cy="320" r="15" fill="green"/>
+  <rect x="900" y="325" width="10" height="30" fill="brown"/>
+  <circle cx="905" cy="320" r="15" fill="green"/>
+
+   <rect x="860" y="385" width="10" height="30" fill="brown"/>
+  <circle cx="865" cy="380" r="15" fill="green"/>
+   <rect x="820" y="385" width="10" height="30" fill="brown"/>
+  <circle cx="825" cy="380" r="15" fill="green"/>
+  <rect x="900" y="385" width="10" height="30" fill="brown"/>
+  <circle cx="905" cy="380" r="15" fill="green"/>
+
+  <rect x="860" y="445" width="10" height="30" fill="brown"/>
+  <circle cx="865" cy="440" r="15" fill="green"/>
+   <rect x="820" y="445" width="10" height="30" fill="brown"/>
+  <circle cx="825" cy="440" r="15" fill="green"/>
+  <rect x="900" y="445" width="10" height="30" fill="brown"/>
+  <circle cx="905" cy="440" r="15" fill="green"/>
+  //forest
+  //forset cover
+  <rect x="800" y="0" width="120" height="500" opacity="0" onclick="forestClick()"/>
+  //forest cover
+  //workers
+  <circle id="worker1" cx="410" cy="320" r="10" fill="blue" onclick="worker1Click()">
+    <animate id="worker1moveX" attributeName="cx" from="0" to="0" begin="indefinite" dur="indefinite"/>
+
+    <animate id="worker1moveY" attributeName="cy" from="0" to="0" begin="indefinite" dur="indefinite"/>
+  </circle>
+
+  <circle id="worker2" cx="440" cy="320" r="10" fill="blue" onclick="worker2Click()">
+    <animate id="worker2moveX" attributeName="cx" from="0" to="0" begin="indefinite" dur="indefinite"/>
+
+    <animate id="worker2moveY" attributeName="cy" from="0" to="0" begin="indefinite" dur="indefinite"/>
+
+  </circle>
+
+  <circle id="worker3" cx="470" cy="320" r="10" fill="blue" onclick="worker3Click()">
+     <animate id="worker3moveX" attributeName="cx" from="0" to="0" begin="indefinite" dur="indefinite"/>
+
+    <animate id="worker3moveY" attributeName="cy" from="0" to="0" begin="indefinite" dur="indefinite"/>
+  </circle>
+
+  <circle id="worker4" cx="500" cy="320" r="10" fill="blue" onclick="worker4Click()">
+    <animate id="worker4moveX" attributeName="cx" from="0" to="0" begin="indefinite" dur="indefinite"/>
+
+    <animate id="worker4moveY" attributeName="cy" from="0" to="0" begin="indefinite" dur="indefinite"/>
+  </circle>
+
+  <rect id="supplyWagon1" x="450" y="350" width="30" height="20" fill="brown" onclick="wagonClick()">
+    <animate id="wagon1MoveX" attributeName="x" from="0" to="0" begin="indefinite" dur="indefinite"/>
+
+    <animate id="wagon1MoveY" attributeName="y" from="0" to="0" begin="indefinite" dur="indefinite"/>
+
+  </rect>
+
+
+  // time of day
+   <rect id="dayNight", x="0" y="0" width="1000" height="1000" fill="black" opacity="0">
+     <animate id="dayToNight" attributeName="opacity" from="0" to="0.6" begin="indefinite" dur="360"/>
+     <animate id="nightToDay" attributeName="opacity" from="0.6" to="0" begin="indefinite" dur="360"/>
+  </rect>
+  //confirm button
+  <rect x="445" y="470" width="50" height="30" fill="red" onclick="send()"/>
+  //text
+  <text id="displayForestWood" x="760" y ="200" font-family="sans-serif" font-size="25" fill="brown"></text>
+  <text id="displayCastleOre" x="400" y="230" font-family="sans-serif" font-size="25" fill="gray"></text>
+  <text id="displayCastleWood" x="400" y="200" font-family="sans-serif" font-size="25" fill="browwn"></text>
+  <text id="displayMountainOre" x="140" y="130" font-family="sans-serif" font-size="25" fill="gray"></text>
+  <text id="displayWagonWood" x="460" y="400" font-family="sans-serif" font-size="25" fill="brown"></text>
+
+  <text id="displayWagonOre" x="400" y="400" font-family="sans-serif" font-size="25" fill="gray"></text>
+   // icon of raid
+  <text id="raidAlert" x="330" y="150" font-family="sans-serif" font-size="25" fill="red" opacity="1" style="display: none;"></text>
+ <text id="notifications" x="20" y="50" font-family="sans-serif" font-size="20" fill="red" opacity="1" style="display:none;"></text>
+
+</svg>
+
     <script src="code.js"></script>
   </body>
 </html>

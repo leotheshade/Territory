@@ -45,7 +45,20 @@ var cutCheck1 = 0
 var cutCheck2 = 0
 var cutCheck3 = 0
 var cutCheck4 = 0
+var time = "morning"
+var wagonDefence = 0
+var axeLVL = 1
+var pickLVL = 1
+var banditT1 = 0
+var banditT2 = 0
+var banditT3 = 0
+var banditT4 = 0
+var banditT5 = 0
+var Ocheck = 0
+var Ncheck = 0
 
+timec()
+ var cycle = setInterval(timec, 360000)
 function forestClick(){
   if(wagonCheck1 == 1){
     wagonMountains1 =0
@@ -268,20 +281,20 @@ function worker4Click(){
 
 function send(){
   //down
-
+ raid()
   if(castleWorker1 == 1 && worker1position == "forest"){
 
-      document.getElementById("worker1moveX").setAttribute("from", 740)
-    document.getElementById("worker1moveX").setAttribute("to", 390)
+      document.getElementById("worker1moveX").setAttribute("from", 800)
+    document.getElementById("worker1moveX").setAttribute("to", 410)
     document.getElementById("worker1moveX").setAttribute("dur", 10)
 
-    document.getElementById("worker1moveY").setAttribute("from", 300)
-    document.getElementById("worker1moveY").setAttribute("to", 300)
+    document.getElementById("worker1moveY").setAttribute("from", 250)
+    document.getElementById("worker1moveY").setAttribute("to", 320)
     document.getElementById("worker1moveY").setAttribute("dur", 10)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("x", 390)
-    document.getElementById("worker1").setAttribute("y", 300)
+    document.getElementById("worker1").setAttribute("cx", 410)
+    document.getElementById("worker1").setAttribute("cy", 320)
     castleWorker1 = 0
     worker1position = "moving"
     var startMine1 = setTimeout(worker1castle, 10000)
@@ -345,6 +358,8 @@ function send(){
 
   if(wagonWorker1 == 1 && worker1position == "forest" && wagonCastle == 1 && wagonPosition1 == "forest"){
 
+    wagonDefence += 1
+
       document.getElementById("worker1moveX").setAttribute("from", 800)
     document.getElementById("worker1moveX").setAttribute("to", 410)
     document.getElementById("worker1moveX").setAttribute("dur", 20)
@@ -361,6 +376,7 @@ function send(){
     var startMine1 = setTimeout(worker1castle, 20000)
     }
     if(wagonWorker2 == 1 && worker2position == "forest" && wagonCastle == 1 && wagonPosition1 == "forest"){
+      wagonDefence += 1
       document.getElementById("worker2moveX").setAttribute("from", 800)
     document.getElementById("worker2moveX").setAttribute("to", 440)
     document.getElementById("worker2moveX").setAttribute("dur", 20)
@@ -378,6 +394,7 @@ function send(){
 
     }
     if(wagonWorker3 == 1 && worker3position == "forest" && wagonCastle == 1 && wagonPosition1 == "forest"){
+      wagonDefence += 1
        document.getElementById("worker3moveX").setAttribute("from", 800)
     document.getElementById("worker3moveX").setAttribute("to", 470)
     document.getElementById("worker3moveX").setAttribute("dur", 20)
@@ -395,6 +412,7 @@ function send(){
     }
     //down
     if(wagonWorker4 == 1 && worker4position == "forest" && wagonCastle == 1 && wagonPosition1 == "forest"){
+      wagonDefence += 1
       document.getElementById("worker4moveX").setAttribute("from", 800)
     document.getElementById("worker4moveX").setAttribute("to", 500)
     document.getElementById("worker4moveX").setAttribute("dur", 20)
@@ -412,6 +430,7 @@ function send(){
 
     }
   if(wagonCastle == 1 && wagonPosition1 == "forest"){
+    raid()
     document.getElementById("wagon1MoveX").setAttribute("from", 760)
     document.getElementById("wagon1MoveX").setAttribute("to", 450)
     document.getElementById("wagon1MoveX").setAttribute("dur", 20)
@@ -515,8 +534,8 @@ function send(){
     document.getElementById("worker4moveY").setAttribute("dur", 20)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
-    document.getElementById("worker4").setAttribute("x", 800)
-    document.getElementById("worker4").setAttribute("y", 340)
+    document.getElementById("worker4").setAttribute("cx", 800)
+    document.getElementById("worker4").setAttribute("cy", 340)
     wagonWorker4 = 0
     worker4position = "moving"
      var startMine1 = setTimeout(worker4cutting, 20000)
@@ -525,17 +544,17 @@ function send(){
   //normal
    if(forestWorker1 == 1 && worker1position == "castle"){
 
-      document.getElementById("worker1moveX").setAttribute("from", 390)
-    document.getElementById("worker1moveX").setAttribute("to", 740)
+      document.getElementById("worker1moveX").setAttribute("from", 410)
+    document.getElementById("worker1moveX").setAttribute("to", 800)
     document.getElementById("worker1moveX").setAttribute("dur", 10)
 
-    document.getElementById("worker1moveY").setAttribute("from", 300)
-    document.getElementById("worker1moveY").setAttribute("to", 300)
+    document.getElementById("worker1moveY").setAttribute("from", 320)
+    document.getElementById("worker1moveY").setAttribute("to", 250)
     document.getElementById("worker1moveY").setAttribute("dur", 10)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("x", 740)
-    document.getElementById("worker1").setAttribute("y", 300)
+    document.getElementById("worker1").setAttribute("cx", 800)
+    document.getElementById("worker1").setAttribute("cy", 250)
     wagonWorker1 = 0
     worker1position = "moving"
    var startMine1 = setTimeout(worker1cutting, 10000)
@@ -627,8 +646,8 @@ function send(){
     document.getElementById("worker1moveY").setAttribute("dur", 20)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("x", 40)
-    document.getElementById("worker1").setAttribute("y", 450)
+    document.getElementById("worker1").setAttribute("cx", 40)
+    document.getElementById("worker1").setAttribute("cy", 450)
     wagonWorker1 = 0
     worker1position = "moving"
     var startMine1 = setTimeout(worker1mining, 20000)
@@ -981,26 +1000,26 @@ function worker1cutting(){
 function cutting1(){
   if(worker1position == "forest" && forestWood != 200){
 
-  forestWood +=  1;
+  forestWood +=  axeLVL;
 
   document.getElementById("displayForestWood").textContent = forestWood;
   }
 }
 function cutting2(){
   if(worker2position == "forest" && forestWood != 200){
- forestWood +=  1;
+ forestWood +=  axeLVL;
   document.getElementById("displayForestWood").textContent = forestWood;
   }
 }
 function cutting3(){
   if(worker3position == "forest" && forestWood != 200){
-  forestWood +=  1;
+  forestWood +=  axeLVL;
   document.getElementById("displayForestWood").textContent = forestWood;
   }
 }
 function cutting4(){
   if(worker4position == "forest" && forestWood != 200){
-  forestWood +=  1 ;
+  forestWood +=  axeLVL ;
  document.getElementById("displayForestWood").textContent = forestWood;
   }
 }
@@ -1045,26 +1064,26 @@ function worker1mining(){
 function mining1(){
   if(worker1position == "mountains" && mountainOre != 200){
 
-  mountainOre +=  1;
+  mountainOre +=  pickLVL;
 
   document.getElementById("displayMountainOre").textContent = mountainOre;
   }
 }
 function mining2(){
   if(worker2position == "mountains" && mountainOre != 200){
-  mountainOre +=  1;
+  mountainOre +=  pickLVL;
   document.getElementById("displayMountainOre").textContent = mountainOre;
   }
 }
 function mining3(){
   if(worker3position == "mountains" && mountainOre != 200){
-  mountainOre +=  1;
+  mountainOre +=  pickLVL;
   document.getElementById("displayMountainOre").textContent = mountainOre;
   }
 }
 function mining4(){
   if(worker4position == "mountains" && mountainOre != 200){
-  mountainOre +=  1 ;
+  mountainOre +=  pickLVL ;
   document.getElementById("displayMountainOre").textContent = mountainOre;
   }
 }
@@ -1108,3 +1127,196 @@ function depositWood(){
     document.getElementById("displayCastleWood").textContent = castleWood;
   }
 }
+function raid(){
+  var chance = Math.random()
+  var timeTillRaid = chance * 20
+
+  if(chance < 0.80 && time == "night"){
+    document.getElementById("raidAlert").style.display = "block";
+
+ }
+   if(chance < 0.33 && time == "day"){
+     var chance = Math.random()
+    document.getElementById("raidAlert").style.display = "block";
+      document.getElementById("raidAlert").textContent = "You Have Been Raided";
+     if(Ocheck == 0){
+     setTimeout(setOpacityR, 5000)
+       Ocheck = 1
+     }
+    if(banditT1 > 0 && chance < .20){
+       alert("T1")
+    }
+    else if(banditT2 > 0 && chance < .40){
+       alert("T2")
+    }
+    else if(banditT3 > 0 && chance < .60){
+       alert("T3")
+    }
+    else if(banditT4 > 0 && chance < .80){
+       alert("T4")
+    }
+    else if(banditT5 > 0 && chance < 1){
+      alert("T5")
+    }
+  }
+  else{
+    alert("no raid")
+  }
+
+
+
+}
+function attack(){
+
+}
+function setOpacityR(){
+  document.getElementById("raidAlert").style.display = "none";
+  Ocheck = 0
+}
+function setBandits1(){
+  var chance = Math.random()
+
+  if(chance < .1666){
+    banditT1 = 0
+  }
+  else if(chance < .3332){
+    banditT1 = 1
+  }
+  else if(chance < .4998){
+    banditT1 = 2
+  }
+  else if(chance < .6664){
+    banditT1 = 3
+  }
+  else if(chance < .883){
+     banditT1 = 4
+  }
+  else if(chance < 1){
+    banditT1 = 5
+  }
+
+}
+
+function setBandits2(){
+  var chance = Math.random()
+  if(chance < .1666){
+    banditT2 = 0
+  }
+  else if(chance < .3332){
+    banditT2 = 1
+  }
+  else if(chance < .4998){
+    banditT2 = 2
+  }
+  else if(chance < .6664){
+    banditT2 = 3
+  }
+  else if(chance < .883){
+     banditT2 = 4
+  }
+  else if(chance < 1){
+    banditT2 = 5
+  }
+}
+
+
+function setBandits3(){
+  var chance = Math.random()
+  if(chance < .1666){
+    banditT3 = 0
+  }
+  else if(chance < .3332){
+    banditT3 = 1
+  }
+  else if(chance < .4998){
+    banditT3 = 2
+  }
+  else if(chance < .6664){
+    banditT3 = 3
+  }
+  else if(chance < .883){
+     banditT3 = 4
+  }
+  else if(chance < 1){
+    banditT3 = 5
+  }
+}
+
+function setBandits4(){
+  var chance = Math.random()
+  if(chance < .1666){
+    banditT4 = 0
+  }
+  else if(chance < .3332){
+    banditT4 = 1
+  }
+  else if(chance < .4998){
+    banditT4 = 2
+  }
+  else if(chance < .6664){
+    banditT4 = 3
+  }
+  else if(chance < .883){
+     banditT4 = 4
+  }
+  else if(chance < 1){
+    banditT4 = 5
+  }
+}
+
+function setBandits5(){
+  var chance = Math.random()
+  if(chance < .1666){
+    banditT5 = 0
+  }
+  else if(chance < .3332){
+    banditT5 = 1
+  }
+  else if(chance < .4998){
+    banditT5 = 2
+  }
+  else if(chance < .6664){
+    banditT5 = 3
+  }
+  else if(chance < .883){
+     banditT5 = 4
+  }
+  else if(chance < 1){
+    banditT5 = 5
+  }
+}
+function notificationOP(){
+  document.getElementById("notifications").style.display = "none";
+  Ncheck = 0
+}
+function timec(){
+  if(time == "morning"){
+    time = "day"
+    document.getElementById("dayToNight").beginElement()
+    setBandits1()
+     setBandits2()
+     setBandits3()
+     setBandits4()
+     setBandits5()
+  }
+  else if(time == "day"){
+     document.getElementById("notifications").style.display = "block";
+      document.getElementById("notifications").textContent = "As night falls, the acursed grow stronger...";
+    if(Ncheck == 0){
+     setTimeout(notificationOP, 5000)
+       Ncheck = 1
+     }
+    time = "night"
+    document.getElementById("nightToDay").beginElement()
+  }
+  else if(time == "night"){
+    time = "day"
+    document.getElementById("dayToNight").beginElement()
+    setBandits1()
+     setBandits2()
+     setBandits3()
+     setBandits4()
+     setBandits5()
+  }
+
+}  

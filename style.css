@@ -1,3 +1,7 @@
 svg{
   background:lime;
 }
+#dayNight{
+cursor:default;
+  pointer-events: none;
+}
