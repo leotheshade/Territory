@@ -1319,4 +1319,4 @@ function timec(){
      setBandits5()
   }
 
-}  
+}
