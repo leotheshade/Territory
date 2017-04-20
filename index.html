@@ -7,23 +7,30 @@
   <body>
     <svg vewBox="0 0 1000 1000" width="920" height="520" id="board" onclick="dash(event)">
 
-    <image width="20" height="30" x="100" y="100" xlink:href="file:///C:/Users/Student/Desktop/miner%20concept%20art%20no%201.png" />
+    <!-- <image width="20" height="30" x="100" y="100" xlink:href="file:///C:/Users/Student/Desktop/miner%20concept%20art%20no%201.png" /> -->
+<!-- market -->
+<line x1="470" y1="35" x2="495" y2="50" stroke="red" stroke-width="10"/>
+<line x1="435" y1="35" x2="465" y2="35" stroke="blue" stroke-width="10"/>
+<line x1="430" y1="35" x2="405" y2="50" stroke="purple" stroke-width="10"/>
+<line x1="405" y1="60" x2="405" y2="90" stroke="yellow" stroke-width="10" />
+<line x1="495" y1="60" x2="495" y2="90" stroke="yellow" stroke-width="10"/>
+<rect x="440" y="60" width="20" height="20" fill="gray"/>
+<circle cx="450" cy="70" r="9" fill="aqua"/>
+<rect x="400" y="30" width="100" height="70" fill="white" opacity="0"/>
 
 
-
-
-  //castle
+  <!-- //castle -->
   <rect x="400" y="240" width="120" height="60" fill="gray" onclick="castleClick()"/>
   <rect x="440" y="270" width="40" height="30"onclick="castleClick()"/>
-  //castle
+  <!-- //castle -->
 
-  //mountains
+  <!-- //mountains -->
   <polygon points="0 420 100 100 200 420"  fill="saddlebrown" onclick="mountainClick()"/>
-  //forest
-  //tree
+  <!-- //forest -->
+  <!-- //tree -->
   <rect x="880" y="30" width="10" height="30" fill="brown"/>
   <circle cx="885" cy="25" r="15" fill="green"/>
-  //tree^
+  <!-- //tree^ -->
    <rect x="840" y="35" width="10" height="30" fill="brown"/>
   <circle cx="845" cy="30" r="15" fill="green"/>
   <rect x="860" y="85" width="10" height="30" fill="brown"/>
@@ -74,11 +81,11 @@
   <circle cx="825" cy="440" r="15" fill="green"/>
   <rect x="900" y="445" width="10" height="30" fill="brown"/>
   <circle cx="905" cy="440" r="15" fill="green"/>
-  //forest
-  //forset cover
+  <!-- //forest
+  //forset cover -->
   <rect x="800" y="0" width="120" height="500" opacity="0" onclick="forestClick()"/>
-  //forest cover
-  //workers
+  <!-- //forest cover
+  //workers -->
   <circle id="worker1" cx="410" cy="320" r="10" fill="blue" onclick="worker1Click()">
     <animate id="worker1moveX" attributeName="cx" from="0" to="0" begin="indefinite" dur="indefinite"/>
 
@@ -112,14 +119,14 @@
   </rect>
 
 
-  // time of day
+  <!-- // time of day -->
    <rect id="dayNight", x="0" y="0" width="1000" height="1000" fill="black" opacity="0">
      <animate id="dayToNight" attributeName="opacity" from="0" to="0.6" begin="indefinite" dur="360"/>
      <animate id="nightToDay" attributeName="opacity" from="0.6" to="0" begin="indefinite" dur="360"/>
   </rect>
-  //confirm button
+  <!-- //confirm button -->
   <rect x="445" y="470" width="50" height="30" fill="red" onclick="send()"/>
-  //text
+  <!-- //text -->
   <text id="displayForestWood" x="760" y ="200" font-family="sans-serif" font-size="25" fill="brown"></text>
   <text id="displayCastleOre" x="400" y="230" font-family="sans-serif" font-size="25" fill="gray"></text>
   <text id="displayCastleWood" x="400" y="200" font-family="sans-serif" font-size="25" fill="browwn"></text>
@@ -127,7 +134,7 @@
   <text id="displayWagonWood" x="460" y="400" font-family="sans-serif" font-size="25" fill="brown"></text>
 
   <text id="displayWagonOre" x="400" y="400" font-family="sans-serif" font-size="25" fill="gray"></text>
-   // icon of raid
+   <!-- // icon of raid -->
   <text id="raidAlert" x="330" y="150" font-family="sans-serif" font-size="25" fill="red" opacity="1" style="display: none;"></text>
  <text id="notifications" x="20" y="50" font-family="sans-serif" font-size="20" fill="red" opacity="1" style="display:none;"></text>
 
