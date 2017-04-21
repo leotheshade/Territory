@@ -1292,7 +1292,8 @@ function notificationOP(){
 function timec(){
   if(time == "morning"){
     time = "day"
-    document.getElementById("dayToNight").beginElement()
+    document.getElementById("dayNight").setAttribute("opacity", 0)
+    // document.getElementById("dayToNight").beginElement()
     setBandits1()
      setBandits2()
      setBandits3()
@@ -1301,17 +1302,20 @@ function timec(){
   }
   else if(time == "day"){
      document.getElementById("notifications").style.display = "block";
-      document.getElementById("notifications").textContent = "As night falls, the acursed grow stronger...";
+      document.getElementById("notifications").textContent = "As the shadow vale rises, the acursed grow stronger...";
     if(Ncheck == 0){
      setTimeout(notificationOP, 5000)
        Ncheck = 1
      }
     time = "night"
-    document.getElementById("nightToDay").beginElement()
+      document.getElementById("dayNight").setAttribute("opacity", 0.6)
+
+    document.getElementById("dayToNight").beginElement()
   }
   else if(time == "night"){
     time = "day"
-    document.getElementById("dayToNight").beginElement()
+
+      document.getElementById("nightToDay").beginElement()
     setBandits1()
      setBandits2()
      setBandits3()
