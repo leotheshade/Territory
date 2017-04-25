@@ -146,6 +146,17 @@ function mountainClick(){
   }
 }
 //working on 12/12/16
+function menuLaunch(){
+  if(wagonCheck1 == 1){
+// alert("menu up")
+ document.getElementById("wagonMenu").style.display = "block";
+  }
+
+  else if(wagonCheck1 == 0){
+document.getElementById("wagonMenu").style.display = "none";
+  // alert("menu down")
+  }
+}
 function wagonClick(){
    if(worker1check == 1){
     wagonWorker1 = 1
@@ -1314,6 +1325,7 @@ function timec(){
   }
   else if(time == "night"){
     time = "day"
+    document.getElementById("dayNight").setAttribute("opacity", 0)
 
       document.getElementById("nightToDay").beginElement()
     setBandits1()
