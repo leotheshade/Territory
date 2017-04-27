@@ -252,40 +252,48 @@ function worker1Click(){
     if(worker1check == 0){
        worker1check = 1
       document.getElementById("worker1").setAttribute("fill", "green")
+      document.getElementById("w1Label").setAttribute("fill","green")
        }
     else if(worker1check == 1){
       worker1check = 0
       document.getElementById("worker1").setAttribute("fill", "blue")
+        document.getElementById("w1Label").setAttribute("fill","blue")
     }
   }
 function worker2Click(){
     if(worker2check == 0){
        worker2check = 1
       document.getElementById("worker2").setAttribute("fill", "green")
+        document.getElementById("w2Label").setAttribute("fill","green")
        }
     else if(worker2check == 1){
       worker2check = 0
       document.getElementById("worker2").setAttribute("fill", "blue")
+        document.getElementById("w2Label").setAttribute("fill","blue")
     }
   }
 function worker3Click(){
     if(worker3check == 0){
        worker3check = 1
       document.getElementById("worker3").setAttribute("fill", "green")
+        document.getElementById("w3Label").setAttribute("fill","green")
        }
     else if(worker3check == 1){
       worker3check = 0
       document.getElementById("worker3").setAttribute("fill", "blue")
+        document.getElementById("w3Label").setAttribute("fill","blue")
     }
   }
 function worker4Click(){
     if(worker4check == 0){
        worker4check = 1
       document.getElementById("worker4").setAttribute("fill", "green")
+        document.getElementById("w4Label").setAttribute("fill","green")
        }
     else if(worker4check == 1){
       worker4check = 0
       document.getElementById("worker4").setAttribute("fill", "blue")
+        document.getElementById("w4Label").setAttribute("fill","blue")
     }
   }
 
