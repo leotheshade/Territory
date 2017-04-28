@@ -74,6 +74,8 @@ function forestClick(){
     worker1check = 0
     wagonWorker1 = 0
     document.getElementById("worker1").setAttribute("fill", "blue")
+    document.getElementById("w1Label").setAttribute("fill","blue")
+
 
      }
   if(worker2check == 1){
@@ -83,6 +85,7 @@ function forestClick(){
     worker2check = 0
     wagonWorker2 = 0
     document.getElementById("worker2").setAttribute("fill", "blue")
+    document.getElementById("w2Label").setAttribute("fill","blue")
   }
   if(worker3check == 1){
     mountainWorker3 = 0
@@ -91,6 +94,7 @@ function forestClick(){
     worker3check = 0
     wagonWorker3 = 0
     document.getElementById("worker3").setAttribute("fill", "blue")
+    document.getElementById("w3Label").setAttribute("fill","blue")
 
   }
   if(worker4check == 1){
@@ -100,6 +104,7 @@ function forestClick(){
     worker4check = 0
     wagonWorker4 = 0
     document.getElementById("worker4").setAttribute("fill", "blue")
+    document.getElementById("w4Label").setAttribute("fill","blue")
   }
 }
 function mountainClick(){
@@ -117,6 +122,7 @@ function mountainClick(){
     worker1check = 0
     wagonWorker1 = 0
     document.getElementById("worker1").setAttribute("fill", "blue")
+    document.getElementById("w1Label").setAttribute("fill","blue")
 
      }
   if(worker2check == 1){
@@ -126,6 +132,7 @@ function mountainClick(){
     worker2check = 0
     wagonWorker2 = 0
     document.getElementById("worker2").setAttribute("fill", "blue")
+    document.getElementById("w2Label").setAttribute("fill","blue")
   }
   if(worker3check == 1){
     mountainWorker3 = 1
@@ -134,6 +141,7 @@ function mountainClick(){
     worker3check = 0
     wagonWorker3 = 0
     document.getElementById("worker3").setAttribute("fill", "blue")
+    document.getElementById("w3Label").setAttribute("fill","blue")
 
   }
   if(worker4check == 1){
@@ -143,6 +151,7 @@ function mountainClick(){
     worker4check = 0
     wagonWorker4 = 0
     document.getElementById("worker4").setAttribute("fill", "blue")
+    document.getElementById("w4Label").setAttribute("fill","blue")
   }
 }
 //working on 12/12/16
@@ -189,6 +198,7 @@ function wagonClick(){
     forestWorker4 = 0
     worker4check = 0
     document.getElementById("worker4").setAttribute("fill", "blue")
+
   }
 
   else{
@@ -219,6 +229,7 @@ function castleClick(){
     worker1check = 0
     wagonWorker1 = 0
     document.getElementById("worker1").setAttribute("fill", "blue")
+    document.getElementById("w1Label").setAttribute("fill","blue")
 
   }
   if(worker2check == 1){
@@ -228,6 +239,7 @@ function castleClick(){
     worker2check = 0
     wagonWorker2 = 0
     document.getElementById("worker2").setAttribute("fill", "blue")
+    document.getElementById("w2Label").setAttribute("fill","blue")
   }
   if(worker3check == 1){
     mountainWorker3 = 0
@@ -236,6 +248,7 @@ function castleClick(){
     worker3check = 0
     wagonWorker3 = 0
     document.getElementById("worker3").setAttribute("fill", "blue")
+    document.getElementById("w3Label").setAttribute("fill","blue")
   }
   if(worker4check == 1){
     mountainWorker4 = 0
@@ -244,6 +257,7 @@ function castleClick(){
     worker4check = 0
     wagonWorker4 = 0
     document.getElementById("worker4").setAttribute("fill", "blue")
+    document.getElementById("w4Label").setAttribute("fill","blue")
   }
 }
    //worker checks
