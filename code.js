@@ -159,10 +159,64 @@ function menuLaunch(){
   if(wagonCheck1 == 1){
 // alert("menu up")
  document.getElementById("wagonMenu").style.display = "block";
+ document.getElementById("mI").style.display = "block"
+ document.getElementById("fI").style.display = "block"
+ document.getElementById("cI").style.display = "block"
+
+ document.getElementById("woodTrade").style.display = "block"
+ document.getElementById("sellWood").style.display = "block"
+ document.getElementById("buyWood").style.display = "block"
+
+ document.getElementById("buyLabel").style.display = "block"
+ document.getElementById("sellLabel").style.display = "block"
+
+ document.getElementById("oreTrade").style.display = "block"
+ document.getElementById("sellOre").style.display = "block"
+ document.getElementById("buyOre").style.display = "block"
+
+ document.getElementById("w1I").style.display = "block"
+ document.getElementById("w2I").style.display = "block"
+ document.getElementById("w3I").style.display = "block"
+ document.getElementById("w4I").style.display = "block"
+
+ document.getElementById("w1Label").style.display = "block"
+ document.getElementById("w2Label").style.display = "block"
+ document.getElementById("w3Label").style.display = "block"
+ document.getElementById("w4Label").style.display = "block"
   }
 
   else if(wagonCheck1 == 0){
 document.getElementById("wagonMenu").style.display = "none";
+document.getElementById("mI").style.display = "none"
+document.getElementById("fI").style.display = "none"
+document.getElementById("cI").style.display = "none"
+
+document.getElementById("woodTrade").style.display = "none"
+document.getElementById("sellWood").style.display = "none"
+document.getElementById("buyWood").style.display = "none"
+
+document.getElementById("buyLabel").style.display = "none"
+document.getElementById("sellLabel").style.display = "none"
+
+document.getElementById("oreTrade").style.display = "none"
+document.getElementById("sellOre").style.display = "none"
+document.getElementById("buyOre").style.display = "none"
+
+document.getElementById("w1I").style.display = "none"
+document.getElementById("w2I").style.display = "none"
+document.getElementById("w3I").style.display = "none"
+document.getElementById("w4I").style.display = "none"
+
+document.getElementById("w1Label").style.display = "none"
+document.getElementById("w2Label").style.display = "none"
+document.getElementById("w3Label").style.display = "none"
+document.getElementById("w4Label").style.display = "none"
+
+
+
+
+
+
   // alert("menu down")
   }
 }
@@ -263,13 +317,15 @@ function castleClick(){
    //worker checks
 
 function worker1Click(){
-    if(worker1check == 0){
-       worker1check = 1
+    if(wagonWorker1 == 0){
+      //  worker1check = 1
+      wagonWorker1 = 1
       document.getElementById("worker1").setAttribute("fill", "green")
       document.getElementById("w1Label").setAttribute("fill","green")
        }
-    else if(worker1check == 1){
-      worker1check = 0
+    else if(wagonWorker1 == 1){
+      // worker1check = 0
+      wagonWorker1 = 0
       document.getElementById("worker1").setAttribute("fill", "blue")
         document.getElementById("w1Label").setAttribute("fill","blue")
     }
