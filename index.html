@@ -30,12 +30,12 @@
 <!-- market^ -->
 
   <!-- //castle -->
-  <rect x="400" y="240" width="120" height="60" fill="gray" onclick="castleClick()"/>
-  <rect x="440" y="270" width="40" height="30"onclick="castleClick()"/>
+  <rect x="400" y="240" width="120" height="60" fill="gray" />
+  <rect x="440" y="270" width="40" height="30"/>
   <!-- //castle -->
 
   <!-- //mountains -->
-  <polygon points="0 420 100 100 200 420"  fill="saddlebrown" onclick="mountainClick()"/>
+  <polygon points="0 420 100 100 200 420"  fill="saddlebrown" />
   <!-- //forest -->
   <!-- //tree -->
   <rect x="880" y="30" width="10" height="30" fill="brown"/>
@@ -93,29 +93,29 @@
   <circle cx="905" cy="440" r="15" fill="green"/>
   <!-- //forest
   //forset cover -->
-  <rect x="800" y="0" width="120" height="500" opacity="0" onclick="forestClick()"/>
+  <rect x="800" y="0" width="120" height="500" opacity="0" />
   <!-- //forest cover
   //workers -->
-  <circle id="worker1" cx="410" cy="320" r="10" fill="blue" onclick="worker1Click()">
+  <circle id="worker1" cx="410" cy="320" r="10" fill="blue" >
     <animate id="worker1moveX" attributeName="cx" from="0" to="0" begin="indefinite" dur="indefinite"/>
 
     <animate id="worker1moveY" attributeName="cy" from="0" to="0" begin="indefinite" dur="indefinite"/>
   </circle>
 
-  <circle id="worker2" cx="440" cy="320" r="10" fill="blue" onclick="worker2Click()">
+  <circle id="worker2" cx="440" cy="320" r="10" fill="blue" >
     <animate id="worker2moveX" attributeName="cx" from="0" to="0" begin="indefinite" dur="indefinite"/>
 
     <animate id="worker2moveY" attributeName="cy" from="0" to="0" begin="indefinite" dur="indefinite"/>
 
   </circle>
 
-  <circle id="worker3" cx="470" cy="320" r="10" fill="blue" onclick="worker3Click()">
+  <circle id="worker3" cx="470" cy="320" r="10" fill="blue" >
      <animate id="worker3moveX" attributeName="cx" from="0" to="0" begin="indefinite" dur="indefinite"/>
 
     <animate id="worker3moveY" attributeName="cy" from="0" to="0" begin="indefinite" dur="indefinite"/>
   </circle>
 
-  <circle id="worker4" cx="500" cy="320" r="10" fill="blue" onclick="worker4Click()">
+  <circle id="worker4" cx="500" cy="320" r="10" fill="blue" >
     <animate id="worker4moveX" attributeName="cx" from="0" to="0" begin="indefinite" dur="indefinite"/>
 
     <animate id="worker4moveY" attributeName="cy" from="0" to="0" begin="indefinite" dur="indefinite"/>
@@ -168,6 +168,8 @@
       <rect id="buyOre" x="655" y="254" width="40" height="20" fill="silver" style="display:none;"/>
       <text id="buyLabel" x="615" y="245" font-family="sans-serif" font-size="18" fill="gold" style="display:none;">Sell</text>
       <text id="sellLabel" x="655" y="245" font-family="sans-serif" font-size="18" fill="silver" style="display:none;">Buy</text>
+
+      <rect id="closeButton" x="730" y="215" width="40" height="40" fill="red" style="display:none" onclick="menuLaunch()"/>
 
    <!-- // icon of raid -->
    <!-- // icon of raid -->

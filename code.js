@@ -183,6 +183,8 @@ function menuLaunch(){
  document.getElementById("w2Label").style.display = "block"
  document.getElementById("w3Label").style.display = "block"
  document.getElementById("w4Label").style.display = "block"
+
+ document.getElementById("closeButton").style.display = "block"
   }
 
   else if(wagonCheck1 == 0){
@@ -212,6 +214,7 @@ document.getElementById("w2Label").style.display = "none"
 document.getElementById("w3Label").style.display = "none"
 document.getElementById("w4Label").style.display = "none"
 
+document.getElementById("closeButton").style.display = "none"
 
 
 
@@ -460,7 +463,7 @@ function send(){
     document.getElementById("worker1moveY").beginElement()
     document.getElementById("worker1").setAttribute("cx", 410)
     document.getElementById("worker1").setAttribute("cy", 320)
-    wagonWorker1 = 0
+    // wagonWorker1 = 0
     worker1position = "moving"
     var startMine1 = setTimeout(worker1castle, 20000)
     }
@@ -477,7 +480,7 @@ function send(){
     document.getElementById("worker2moveY").beginElement()
     document.getElementById("worker2").setAttribute("cx", 440)
     document.getElementById("worker2").setAttribute("cy", 320)
-    wagonWorker2 = 0
+    // wagonWorker2 = 0
     worker2position = "moving"
     setTimeout(worker2castle, 20000)
 
@@ -495,7 +498,7 @@ function send(){
     document.getElementById("worker3moveY").beginElement()
     document.getElementById("worker3").setAttribute("cx", 470)
     document.getElementById("worker3").setAttribute("cy", 320)
-    wagonWorker3 = 0
+    // wagonWorker3 = 0
     worker3position = "moving"
     setTimeout(worker3castle, 20000)
     }
@@ -513,7 +516,7 @@ function send(){
     document.getElementById("worker4moveY").beginElement()
     document.getElementById("worker4").setAttribute("cx", 500)
     document.getElementById("worker4").setAttribute("cy", 320)
-    wagonWorker4 = 0
+    // wagonWorker4 = 0
     worker4position = "moving"
     setTimeout(worker4castle, 20000)
 
@@ -577,7 +580,7 @@ function send(){
     document.getElementById("worker1moveY").beginElement()
     document.getElementById("worker1").setAttribute("cx", 800)
     document.getElementById("worker1").setAttribute("cy", 250)
-    wagonWorker1 = 0
+    // wagonWorker1 = 0
     worker1position = "moving"
     var startMine1 = setTimeout(worker1cutting, 20000)
     }
@@ -593,7 +596,7 @@ function send(){
     document.getElementById("worker2moveY").beginElement()
     document.getElementById("worker2").setAttribute("cx", 800)
     document.getElementById("worker2").setAttribute("cy", 280)
-    wagonWorker2 = 0
+    // wagonWorker2 = 0
     worker2position = "moving"
     var startMine1 = setTimeout(worker2cutting, 20000)
   }
@@ -609,7 +612,7 @@ function send(){
     document.getElementById("worker3moveY").beginElement()
     document.getElementById("worker3").setAttribute("cx", 800)
     document.getElementById("worker3").setAttribute("cy", 310)
-    wagonWorker3 = 0
+    // wagonWorker3 = 0
     worker3position = "moving"
      var startMine1 = setTimeout(worker3cutting, 20000)
   }
@@ -625,7 +628,7 @@ function send(){
     document.getElementById("worker4moveY").beginElement()
     document.getElementById("worker4").setAttribute("cx", 800)
     document.getElementById("worker4").setAttribute("cy", 340)
-    wagonWorker4 = 0
+    // wagonWorker4 = 0
     worker4position = "moving"
      var startMine1 = setTimeout(worker4cutting, 20000)
   }
@@ -692,7 +695,7 @@ function send(){
     document.getElementById("worker4moveY").beginElement()
     document.getElementById("worker4").setAttribute("cx", 800)
     document.getElementById("worker4").setAttribute("cy", 340)
-    wagonWorker4 = 0
+    // wagonWorker4 = 0
     worker4position = "moving"
      var startMine1 = setTimeout(worker4cutting, 10000)
   }
