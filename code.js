@@ -56,6 +56,10 @@ var banditT4 = 0
 var banditT5 = 0
 var Ocheck = 0
 var Ncheck = 0
+var wagonSellW = 0
+var wagonBuyW = 0
+var wagonBuyO = 0
+var wagonSellO = 0
 
 timec()
  var cycle = setInterval(timec, 360000)
@@ -334,46 +338,99 @@ function worker1Click(){
     }
   }
 function worker2Click(){
-    if(worker2check == 0){
-       worker2check = 1
+    if( wagonWorker2 == 0){
+       wagonWorker2 = 1
       document.getElementById("worker2").setAttribute("fill", "green")
         document.getElementById("w2Label").setAttribute("fill","green")
        }
-    else if(worker2check == 1){
-      worker2check = 0
+    else if(wagonWorker2 == 1){
+      wagonWorker2 = 0
       document.getElementById("worker2").setAttribute("fill", "blue")
         document.getElementById("w2Label").setAttribute("fill","blue")
     }
   }
 function worker3Click(){
-    if(worker3check == 0){
-       worker3check = 1
+    if(wagonWorker3 == 0){
+       wagonWorker3 = 1
       document.getElementById("worker3").setAttribute("fill", "green")
         document.getElementById("w3Label").setAttribute("fill","green")
        }
-    else if(worker3check == 1){
-      worker3check = 0
+    else if(wagonWorker3 == 1){
+      wagonWorker3 = 0
       document.getElementById("worker3").setAttribute("fill", "blue")
         document.getElementById("w3Label").setAttribute("fill","blue")
     }
   }
 function worker4Click(){
-    if(worker4check == 0){
-       worker4check = 1
+    if(wagonWorker4 == 0){
+       wagonWorker4 = 1
       document.getElementById("worker4").setAttribute("fill", "green")
         document.getElementById("w4Label").setAttribute("fill","green")
        }
-    else if(worker4check == 1){
-      worker4check = 0
+    else if(wagonWorker4 == 1){
+      wagonWorker4 = 0
       document.getElementById("worker4").setAttribute("fill", "blue")
         document.getElementById("w4Label").setAttribute("fill","blue")
     }
   }
-
-
+function sellWoodS(){
+  // alert("ye")
+  if(wagonCheck1 == 1){
+   wagonMountains1 = 0
+   wagonForest = 0
+   wagonCastle = 0
+   wagonSellW = 1
+   wagonBuyW = 0
+   wagonSellO = 0
+   wagonBuyO = 0
+   wagonCheck1 = 0
+   document.getElementById("supplyWagon1").setAttribute("fill", "brown")
+ }
+}
+function buyWoodS(){
+  if(wagonCheck1 == 1){
+   wagonMountains1 = 0
+   wagonForest = 0
+   wagonCastle = 0
+   wagonSellW = 0
+   wagonBuyW = 1
+   wagonSellO = 0
+   wagonBuyO = 0
+   wagonCheck1 = 0
+   document.getElementById("supplyWagon1").setAttribute("fill", "brown")
+ }
+}
+function sellOreS(){
+  if(wagonCheck1 == 1){
+   wagonMountains1 = 0
+   wagonForest = 0
+   wagonCastle = 0
+   wagonSellW = 0
+   wagonBuyW = 0
+   wagonSellO = 1
+   wagonBuyO = 0
+   wagonCheck1 = 0
+   document.getElementById("supplyWagon1").setAttribute("fill", "brown")
+ }
+}
+function BuyOreS(){
+  if(wagonCheck1 == 1){
+   wagonMountains1 = 0
+   wagonForest = 0
+   wagonCastle = 0
+   wagonSellW = 0
+   wagonBuyW = 0
+   wagonSellO = 0
+   wagonBuyO = 1
+   wagonCheck1 = 0
+   document.getElementById("supplyWagon1").setAttribute("fill", "brown")
+ }
+}
 function send(){
   //down
  raid()
+
+
   if(castleWorker1 == 1 && worker1position == "forest"){
 
       document.getElementById("worker1moveX").setAttribute("from", 800)
@@ -740,7 +797,6 @@ function send(){
     document.getElementById("worker1moveY").beginElement()
     document.getElementById("worker1").setAttribute("cx", 40)
     document.getElementById("worker1").setAttribute("cy", 450)
-    wagonWorker1 = 0
     worker1position = "moving"
     var startMine1 = setTimeout(worker1mining, 20000)
     }
@@ -756,7 +812,6 @@ function send(){
     document.getElementById("worker2moveY").beginElement()
     document.getElementById("worker2").setAttribute("cx", 70)
     document.getElementById("worker2").setAttribute("cy", 450)
-    wagonWorker2 = 0
     worker2position = "moving"
     setTimeout(worker2mining, 20000)
 
@@ -773,7 +828,6 @@ function send(){
     document.getElementById("worker3moveY").beginElement()
     document.getElementById("worker3").setAttribute("cx", 100)
     document.getElementById("worker3").setAttribute("cy", 450)
-    mountainWorker3 = 0
     worker3position = "moving"
     setTimeout(worker3mining, 20000)
     }
@@ -790,7 +844,6 @@ function send(){
     document.getElementById("worker4moveY").beginElement()
     document.getElementById("worker4").setAttribute("cx", 130)
     document.getElementById("worker4").setAttribute("cy", 450)
-    wagonWorker4 = 0
     worker4position = "moving"
     setTimeout(worker4mining, 20000)
 
@@ -808,7 +861,6 @@ function send(){
     document.getElementById("worker1moveY").beginElement()
     document.getElementById("worker1").setAttribute("cx", 410)
     document.getElementById("worker1").setAttribute("cy", 320)
-    wagonWorker1 = 0
     worker1position = "moving"
     var startMine1 = setTimeout(worker1castle, 20000)
     }
@@ -824,7 +876,6 @@ function send(){
     document.getElementById("worker2moveY").beginElement()
     document.getElementById("worker2").setAttribute("cx", 440)
     document.getElementById("worker2").setAttribute("cy", 320)
-    wagonWorker2 = 0
     worker2position = "moving"
     setTimeout(worker2castle, 20000)
 
@@ -841,7 +892,6 @@ function send(){
     document.getElementById("worker3moveY").beginElement()
     document.getElementById("worker3").setAttribute("cx", 470)
     document.getElementById("worker3").setAttribute("cy", 320)
-    mountainWorker3 = 0
     worker3position = "moving"
     setTimeout(worker3castle, 20000)
     }
@@ -858,7 +908,6 @@ function send(){
     document.getElementById("worker4moveY").beginElement()
     document.getElementById("worker4").setAttribute("cx", 500)
     document.getElementById("worker4").setAttribute("cy", 320)
-    wagonWorker4 = 0
     worker4position = "moving"
     setTimeout(worker4castle, 20000)
 
@@ -1054,7 +1103,7 @@ function worker4cutting(){
 
   worker4position = "forest"
   if(worker4position == "forest" && cutCheck4 == 0){
-  var cut = setInterval(cutting4, 900)
+  var cut = setInterval(cutting4, 1000)
   cutCheck4 = 1
   }
 }
@@ -1063,7 +1112,7 @@ function worker3cutting(){
   worker3position = "forest"
   if(worker3position == "forest" && cutCheck3 == 0){
 
-  var mine = setInterval(cutting3, 900)
+  var mine = setInterval(cutting3, 1000)
   cutCheck3 = 1
   }
 }
@@ -1074,7 +1123,7 @@ function worker2cutting(){
   worker2position = "forest"
   if(worker2position == "forest" && cutCheck2 == 0){
 
-  var mine = setInterval(cutting2, 900)
+  var mine = setInterval(cutting2, 1000)
   cutCheck2 = 1
   }
 }
@@ -1082,7 +1131,7 @@ function worker1cutting(){
 
   worker1position = "forest"
   if(worker1position == "forest" && cutCheck1 == 0){
-  var cut = setInterval(cutting1, 900)
+  var cut = setInterval(cutting1, 1000)
   cutCheck1 = 1
   }
 }
@@ -1120,7 +1169,7 @@ function worker4mining(){
 
   worker4position = "mountains"
   if(worker4position == "mountains" && mineCheck4 == 0){
-  var mine = setInterval(mining4, 900)
+  var mine = setInterval(mining4, 1000)
   mineCheck4 = 1
   }
 }
@@ -1129,7 +1178,7 @@ function worker3mining(){
   worker3position = "mountains"
   if(worker3position == "mountains" && mineCheck3 == 0){
 
-  var mine = setInterval(mining3, 900)
+  var mine = setInterval(mining3, 1000)
   mineCheck3 = 1
   }
 }
@@ -1140,7 +1189,7 @@ function worker2mining(){
   worker2position = "mountains"
   if(worker2position == "mountains" && mineCheck2 == 0){
 
-  var mine = setInterval(mining2, 900)
+  var mine = setInterval(mining2, 1000)
   mineCheck2 = 1
   }
 }
@@ -1148,7 +1197,7 @@ function worker1mining(){
   clearInterval(mine)
   worker1position = "mountains"
   if(worker1position == "mountains" && mineCheck1 == 0){
-  var mine = setInterval(mining1, 900)
+  var mine = setInterval(mining1, 1000)
   mineCheck1 = 1
   }
 }
@@ -1396,7 +1445,7 @@ function timec(){
      document.getElementById("notifications").style.display = "block";
       document.getElementById("notifications").textContent = "As the shadow vale rises, the acursed grow stronger...";
     if(Ncheck == 0){
-     setTimeout(notificationOP, 5000)
+     setTimeout(notificationOP, 7000)
        Ncheck = 1
      }
     time = "night"
