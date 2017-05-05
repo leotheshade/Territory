@@ -32,11 +32,11 @@ var worker2move = 0
 var worker3move = 0
 var worker4move = 0
 var mountainOre = 0
-var castleOre = 0
+var castleOre = 100
 var wagonOre = 0
 var forestWood = 0
 var wagonWood = 0
-var castleWood = 0
+var castleWood = 100
 var mineCheck1 = 0
 var mineCheck2 = 0
 var mineCheck3 = 0
@@ -64,6 +64,18 @@ var castleGold = 0
 var wagonGold = 0
 
 timec()
+updateText()
+function updateText(){
+  document.getElementById("displayWagonOre").textContent = wagonOre;
+  document.getElementById("displayWagonWood").textContent = wagonWood;
+  document.getElementById("displayWagonGold").textContent = wagonGold;
+  document.getElementById("displayCastleOre").textContent = castleOre;
+  document.getElementById("displayCastleWood").textContent = castleWood;
+  document.getElementById("displayCastleGold").textContent = castleGold;
+  document.getElementById("displayMountainOre").textContent = mountainOre;
+  document.getElementById("displayForestWood").textContent = forestWood;
+requestAnimationFrame(updateText)
+}
  var cycle = setInterval(timec, 360000)
 function forestClick(){
   if(wagonCheck1 == 1){
@@ -434,9 +446,87 @@ function buyOreS(){
 function send(){
   //down
  raid()
- // if(wagonCastle == 1 ){
- //
- // }
+ if(wagonCastle == 1 && wagonPosition1 == "market"){
+   document.getElementById("wagon1MoveX").setAttribute("from", 435)
+  document.getElementById("wagon1MoveX").setAttribute("to", 450)
+   document.getElementById("wagon1MoveX").setAttribute("dur", 20)
+
+  document.getElementById("wagon1MoveY").setAttribute("from", 110)
+  document.getElementById("wagon1MoveY").setAttribute("to", 350)
+  document.getElementById("wagon1MoveY").setAttribute("dur", 20)
+
+   document.getElementById("wagon1MoveX").beginElement()
+  document.getElementById("wagon1MoveY").beginElement()
+
+  document.getElementById("supplyWagon1").setAttribute("x", 450)
+  document.getElementById("supplyWagon1").setAttribute("y", 350)
+
+  wagonPosition1 = "moving"
+
+  var wagonTakeW = setTimeout(depositResources, 20000)
+ }
+
+
+
+
+ if(wagonBuyO == 1 && wagonPosition1 == "castle" && castleGold >= 100){
+   document.getElementById("wagon1MoveX").setAttribute("from", 450)
+  document.getElementById("wagon1MoveX").setAttribute("to", 435)
+   document.getElementById("wagon1MoveX").setAttribute("dur", 20)
+
+  document.getElementById("wagon1MoveY").setAttribute("from", 350)
+  document.getElementById("wagon1MoveY").setAttribute("to", 110)
+  document.getElementById("wagon1MoveY").setAttribute("dur", 20)
+
+   document.getElementById("wagon1MoveX").beginElement()
+  document.getElementById("wagon1MoveY").beginElement()
+
+  document.getElementById("supplyWagon1").setAttribute("x", 435)
+  document.getElementById("supplyWagon1").setAttribute("y", 111)
+
+  wagonPosition1 = "moving"
+ takeGoldCastle()
+  var wagonTakeW = setTimeout(tradeOreB, 20000)
+ }
+
+  if( wagonSellO == 1 && wagonPosition1 == "castle" && castleOre >= 100){
+   document.getElementById("wagon1MoveX").setAttribute("from", 450)
+  document.getElementById("wagon1MoveX").setAttribute("to", 435)
+   document.getElementById("wagon1MoveX").setAttribute("dur", 20)
+
+  document.getElementById("wagon1MoveY").setAttribute("from", 350)
+  document.getElementById("wagon1MoveY").setAttribute("to", 110)
+  document.getElementById("wagon1MoveY").setAttribute("dur", 20)
+
+   document.getElementById("wagon1MoveX").beginElement()
+  document.getElementById("wagon1MoveY").beginElement()
+
+  document.getElementById("supplyWagon1").setAttribute("x", 435)
+  document.getElementById("supplyWagon1").setAttribute("y", 111)
+
+  wagonPosition1 = "moving"
+ takeOreCastle()
+  var wagonTakeW = setTimeout(tradeOreS, 20000)
+ }
+ if(wagonBuyW == 1 && wagonPosition1 == "castle" && castleGold >= 100){
+   document.getElementById("wagon1MoveX").setAttribute("from", 450)
+  document.getElementById("wagon1MoveX").setAttribute("to", 435)
+   document.getElementById("wagon1MoveX").setAttribute("dur", 20)
+
+  document.getElementById("wagon1MoveY").setAttribute("from", 350)
+  document.getElementById("wagon1MoveY").setAttribute("to", 110)
+  document.getElementById("wagon1MoveY").setAttribute("dur", 20)
+
+   document.getElementById("wagon1MoveX").beginElement()
+  document.getElementById("wagon1MoveY").beginElement()
+
+  document.getElementById("supplyWagon1").setAttribute("x", 435)
+  document.getElementById("supplyWagon1").setAttribute("y", 111)
+
+  wagonPosition1 = "moving"
+ takeGoldCastle()
+  var wagonTakeW = setTimeout(tradeWoodB, 20000)
+ }
 if(wagonSellW == 1 && wagonPosition1 == "castle" && castleWood >= 100){
   document.getElementById("wagon1MoveX").setAttribute("from", 450)
  document.getElementById("wagon1MoveX").setAttribute("to", 435)
@@ -453,8 +543,8 @@ if(wagonSellW == 1 && wagonPosition1 == "castle" && castleWood >= 100){
  document.getElementById("supplyWagon1").setAttribute("y", 111)
 
  wagonPosition1 = "moving"
-
- var wagonTakeW = setTimeout(takeWoodForest, 20000)
+takeWoodCastle()
+ var wagonTakeW = setTimeout(tradeWoodS, 20000)
 }
 
 if(wagonBuyW == 1 && wagonPosition1 == "castle"){
@@ -665,7 +755,7 @@ if(wagonBuyO == 1 && wagonPosition1 == "castle"){
 
     }
   if(wagonCastle == 1 && wagonPosition1 == "forest"){
-    raid()
+    // raid()
     document.getElementById("wagon1MoveX").setAttribute("from", 760)
     document.getElementById("wagon1MoveX").setAttribute("to", 450)
     document.getElementById("wagon1MoveX").setAttribute("dur", 20)
@@ -1190,7 +1280,7 @@ function worker4cutting(){
 
   worker4position = "forest"
   if(worker4position == "forest" && cutCheck4 == 0){
-  var cut = setInterval(cutting4, 1000)
+  var cut = setInterval(cutting4, 1100)
   cutCheck4 = 1
   }
 }
@@ -1199,7 +1289,7 @@ function worker3cutting(){
   worker3position = "forest"
   if(worker3position == "forest" && cutCheck3 == 0){
 
-  var mine = setInterval(cutting3, 1000)
+  var mine = setInterval(cutting3, 1100)
   cutCheck3 = 1
   }
 }
@@ -1210,7 +1300,7 @@ function worker2cutting(){
   worker2position = "forest"
   if(worker2position == "forest" && cutCheck2 == 0){
 
-  var mine = setInterval(cutting2, 1000)
+  var mine = setInterval(cutting2, 1100)
   cutCheck2 = 1
   }
 }
@@ -1218,7 +1308,7 @@ function worker1cutting(){
 
   worker1position = "forest"
   if(worker1position == "forest" && cutCheck1 == 0){
-  var cut = setInterval(cutting1, 1000)
+  var cut = setInterval(cutting1, 1100)
   cutCheck1 = 1
   }
 }
@@ -1256,7 +1346,7 @@ function worker4mining(){
 
   worker4position = "mountains"
   if(worker4position == "mountains" && mineCheck4 == 0){
-  var mine = setInterval(mining4, 1000)
+  var mine = setInterval(mining4, 1100)
   mineCheck4 = 1
   }
 }
@@ -1265,7 +1355,7 @@ function worker3mining(){
   worker3position = "mountains"
   if(worker3position == "mountains" && mineCheck3 == 0){
 
-  var mine = setInterval(mining3, 1000)
+  var mine = setInterval(mining3, 1100)
   mineCheck3 = 1
   }
 }
@@ -1276,7 +1366,7 @@ function worker2mining(){
   worker2position = "mountains"
   if(worker2position == "mountains" && mineCheck2 == 0){
 
-  var mine = setInterval(mining2, 1000)
+  var mine = setInterval(mining2, 1100)
   mineCheck2 = 1
   }
 }
@@ -1284,7 +1374,7 @@ function worker1mining(){
   clearInterval(mine)
   worker1position = "mountains"
   if(worker1position == "mountains" && mineCheck1 == 0){
-  var mine = setInterval(mining1, 1000)
+  var mine = setInterval(mining1, 1100)
   mineCheck1 = 1
   }
 }
@@ -1347,28 +1437,44 @@ function tradeWoodS(){
   wagonWood -= 100
   document.getElementById("displayWagonGold").textContent = wagonGold;
   document.getElementById("displayWagonWood").textContent = wagonWood;
+  wagonPosition1 == "market"
 }
 function tradeWoodB(){
   wagonWood += 100
   wagonGold -= 100
   document.getElementById("displayWagonGold").textContent = wagonGold;
   document.getElementById("displayWagonWood").textContent = wagonWood;
+  wagonPosition1 == "market"
 }
 function tradeOreS(){
   wagonOre -= 100
   wagonGold += 100
   document.getElementById("displayWagonGold").textContent = wagonGold;
   document.getElementById("displayWagonOre").textContent = wagonOre;
-
+wagonPosition1 == "market"
 }
 function tradeOreB(){
   wagonOre += 100
   wagonGold -= 100
   document.getElementById("displayWagonGold").textContent = wagonGold;
   document.getElementById("displayWagonOre").textContent = wagonOre;
-
+wagonPosition1 == "market"
 }
-
+function depositResources(){
+  wagonPosition1 == "castle"
+  if(wagonGold >= 100){
+    wagonGold -= 100
+    castleGold += 100
+  }
+  if(wagonOre >= 100){
+    wagonOre -= 100
+    castleOre >= 100
+  }
+  if(wagonWood >= 100){
+    wagonWood -= 100
+    castleWood += 100
+  }
+}
 function takeOreMountains(){
   document.getElementById("displayWagonOre").textContent = wagonOre;
   wagonPosition1 = "mountains"
