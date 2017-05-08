@@ -1437,38 +1437,38 @@ function tradeWoodS(){
   wagonWood -= 100
   document.getElementById("displayWagonGold").textContent = wagonGold;
   document.getElementById("displayWagonWood").textContent = wagonWood;
-  wagonPosition1 == "market"
+  wagonPosition1 = "market"
 }
 function tradeWoodB(){
   wagonWood += 100
   wagonGold -= 100
   document.getElementById("displayWagonGold").textContent = wagonGold;
   document.getElementById("displayWagonWood").textContent = wagonWood;
-  wagonPosition1 == "market"
+  wagonPosition1 = "market"
 }
 function tradeOreS(){
   wagonOre -= 100
   wagonGold += 100
   document.getElementById("displayWagonGold").textContent = wagonGold;
   document.getElementById("displayWagonOre").textContent = wagonOre;
-wagonPosition1 == "market"
+wagonPosition1 = "market"
 }
 function tradeOreB(){
   wagonOre += 100
   wagonGold -= 100
   document.getElementById("displayWagonGold").textContent = wagonGold;
   document.getElementById("displayWagonOre").textContent = wagonOre;
-wagonPosition1 == "market"
+wagonPosition1 = "market"
 }
 function depositResources(){
-  wagonPosition1 == "castle"
+  wagonPosition1 = "castle"
   if(wagonGold >= 100){
     wagonGold -= 100
     castleGold += 100
   }
   if(wagonOre >= 100){
     wagonOre -= 100
-    castleOre >= 100
+    castleOre += 100
   }
   if(wagonWood >= 100){
     wagonWood -= 100
@@ -1520,8 +1520,28 @@ function raid(){
   var timeTillRaid = chance * 20
 
   if(chance < 0.80 && time == "night"){
+     var chance = Math.random()
     document.getElementById("raidAlert").style.display = "block";
-
+  document.getElementById("raidAlert").textContent = "You Have Been Raided";
+  if(Ocheck == 0){
+  setTimeout(setOpacityR, 5000)
+    Ocheck = 1
+  }
+ if(banditT1 > 0 && chance < .20){
+    alert("T1")
+ }
+ else if(banditT2 > 0 && chance < .40){
+    alert("T2")
+ }
+ else if(banditT3 > 0 && chance < .60){
+    alert("T3")
+ }
+ else if(banditT4 > 0 && chance < .80){
+    alert("T4")
+ }
+ else if(banditT5 > 0 && chance < 1){
+   alert("T5")
+ }
  }
    if(chance < 0.33 && time == "day"){
      var chance = Math.random()
