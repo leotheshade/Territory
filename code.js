@@ -66,7 +66,8 @@ var ransomGold = 500
 
 alert("Dear nephew, If you are reading this, I have passed from this world. As you are my only heir, my kingdom and everything it encompasses is now yours. Although do not belive this to be a blessing. As of this letter being written, my kingdom is in a state of great disparage. The vile Acursed haunt my roads, my coffers grow empty, the Night Beasts terrorize my settlements, and a dragon threatens everything if he does not recieve payment frequently. Given all this, I emplore you to take my mantle and rule my kingless nation. I care about my people greatly, and without a leader to guide and rule them, they would wither and die swiftly. Things may be looking grim, but I belive that if you take my throne, and lead my people, you will be able to make my crumbling nation into a mightly empire! If you do decide to take all the risks, and rule my kingdom, take this letter to my steward and he will help you with everything you need to know. Signed, Old King Genus")
 
-alert("Steward: Ah, so you have come. Your uncle was right about you, he never once lost faith that you would come.")
+alert("Steward: Ah, so you have come. Your uncle was right about you, he never once lost faith that you would accept. Well on to business. The first thing you would like too know is how to order your men to do tasks. First you must click on your supply wagon. It's the brown box under your castle. Then you must click on whoever you want to acompany the wagon, then select the destination you want it to be sent to. Once you have done this, select the red box at the bottom of your screen to order your wagon to begin moving.")
+alert("Steward")
 
 timec()
 updateText()
