@@ -62,15 +62,21 @@ var wagonBuyO = 0
 var wagonSellO = 0
 var castleGold = 0
 var wagonGold = 0
-var ransomGold = 500
+var ransomGold = 300
 
+var textTest = 0
+
+if(textTest == 1){
 alert("Dear nephew, If you are reading this, I have passed from this world. As you are my only heir, my kingdom and everything it encompasses is now yours. Although do not belive this to be a blessing. As of this letter being written, my kingdom is in a state of great disparage. The vile Acursed haunt my roads, my coffers grow empty, the Night Beasts terrorize my settlements, and a dragon threatens everything if he does not recieve payment frequently. Given all this, I emplore you to take my mantle and rule my kingless nation. I care about my people greatly, and without a leader to guide and rule them, they would wither and die swiftly. Things may be looking grim, but I belive that if you take my throne, and lead my people, you will be able to make my crumbling nation into a mightly empire! If you do decide to take all the risks, and rule my kingdom, take this letter to my steward and he will help you with everything you need to know. Signed, Old King Genus")
 
-alert("Steward: Ah, so you have come. Your uncle was right about you, he never once lost faith that you would accept. Well on to business. The first thing you would like too know is how to order your men to do tasks. First you must click on your supply wagon. It's the brown box under your castle. Then you must click on whoever you want to acompany the wagon, then select the destination you want it to be sent to. Once you have done this, select the red box at the bottom of your screen to order your wagon to begin moving.")
-alert("Steward: Beware, when moving your units or resources, the vile Acursed are sure to be attracted. What are the Acursed you ask? Well they are vile creatures, once men, they now patr")
-alert("Steward: One facillity you might want to make use of is the market located north of your castle")
-
+alert("Steward: Ah, so you have come. Your uncle was right about you, he never once lost faith that you would accept. Well, onto business. The first thing you would like too know is how to order your men to do tasks. First you must click on your supply wagon. It's the brown box under your castle. Then you must click on whoever you want to acompany the wagon, then select the destination you want it to be sent to. The mountains hold incredible ammounts of ore free for the taking, and the forest has plenty of excelent building wood that we can harvest at our lesure. Once you have chosen a destination, select the red box at the bottom of your screen to order your wagon to begin moving.")
+alert("Steward: Beware, when moving your units or resources, the vile Acursed are sure to be attracted. What are the Acursed you ask? Well they are vile creatures, once men, they are now ruthless theives who partol your roads and rob your people. Somehow they react to the Shadow Veil and gain immense power while its darkness envelops our land and become much more aggressive than normal. They can be easily identified by the glowing rune that is branded on their backs. They will attack your supply wagons if they spot them.(currently the combat features are not in place so when you are attacked, all that will happen is tell you what bandit team attacked and make a red label appear letting you know that you have been attacked)")
+alert("Steward: One facillity you might want to make use of is The Market located north of your castle. You can use it to buy or sell extra resources you might need. The people that run it are not part of any kingdom, do business indiscriminately, and have allies with any major power in this world. They deal in bundles of 100s, so if you give them 100 ore, they will trade you 100 gold in return and vice versa. You can access it by selecting either Buy or Sell from your wagon next to what resource you want to trade in. Be aware that the route to The Market is shorter then other routes so it will take less time for your wagon to arrive there. ")
+alert("Steward: One of the main threats of this kingdom is a mighty dragon that insists that he requires a protection fee to keep us safe, but has hinted that if we don't pay, he will destroy this kingdom and everyone in it. I do not belive that he is aware that your uncle is dead, so he will not expect you to be in your uncle's place when he comes. He always talked with Old King Genus when he came so he may want to speak with you. This will be your chance to make an impression on him, so make it a good one. When he first comes, he will demand 300 gold, so make sure you have earned that much by tomorrow. Every time he comes he will demand 50 more gold the next day.")
+alert("Steward: Your kingdom is a large one, so you will be required to make certain descisions that will affect certain aspects of your kingdom. When such a descision comes up, select whatever choice seems the best to you. Be wary, when interacting with certain figures, simple choices could have massive consequences. You may recieve a report saying that scouts have sighted a Night Beast in close proximity to some of your workers. You will be forced to decide to send reinforcements to the camp, send the workers home, or just do nothing. This descision will decide the fate of your subjects. But know this, you can't save everyone, accidents happen, things can be unpredictable. You can just hope that you made the right descision, and if you didn't, all you can do is shrug it off, and do better next time.")
+}
 timec()
+
 updateText()
 function updateText(){
   document.getElementById("displayWagonOre").textContent = wagonOre;
@@ -1716,8 +1722,8 @@ function setBandits5(){
 function dragon(){
   if(castleGold >= ransomGold){
     castleGold -= ransomGold
-    ransomGold += 100
-    alert("The dragon came to collect his protection fee, the next time he will want 100 more")
+    ransomGold += 50
+    alert("The dragon came to collect his protection fee, the next time he will want 50 more")
   }
   else{
     alert("The dragon came to collect his protection fee, but was enraged to find that you didn't offered him the demanded ammount. In his blind rage he razed your kingdom to the ground.")
@@ -1754,7 +1760,7 @@ function timec(){
   else if(time == "night"){
     time = "day"
     document.getElementById("dayNight").setAttribute("opacity", 0)
-
+dragon()
       document.getElementById("nightToDay").beginElement()
     setBandits1()
      setBandits2()
