@@ -63,6 +63,7 @@ var wagonSellO = 0
 var castleGold = 0
 var wagonGold = 0
 var ransomGold = 300
+var dragonRep = 0
 
 var textTest = 0
 
@@ -1718,7 +1719,17 @@ function setBandits5(){
     banditT5 = 5
   }
 }
+function choice1select(){
+document.getElementById("choiceOne").style.display = "none";
+document.getElementById("choiceTwo").style.display = "none";
 
+}
+function choice2select(){
+
+}
+function choice3select(){
+
+}
 function dragon(){
   if(castleGold >= ransomGold){
     castleGold -= ransomGold
