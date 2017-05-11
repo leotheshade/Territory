@@ -64,8 +64,11 @@ var castleGold = 0
 var wagonGold = 0
 var ransomGold = 300
 var dragonRep = 0
-
+var firstDragVisit = 0
+var keyChoice = "blank"
+var choice = "blank"
 var textTest = 0
+var dragonIntroR = "blank"
 
 if(textTest == 1){
 alert("Dear nephew, If you are reading this, I have passed from this world. As you are my only heir, my kingdom and everything it encompasses is now yours. Although do not belive this to be a blessing. As of this letter being written, my kingdom is in a state of great disparage. The vile Acursed haunt my roads, my coffers grow empty, the Night Beasts terrorize my settlements, and a dragon threatens everything if he does not recieve payment frequently. Given all this, I emplore you to take my mantle and rule my kingless nation. I care about my people greatly, and without a leader to guide and rule them, they would wither and die swiftly. Things may be looking grim, but I belive that if you take my throne, and lead my people, you will be able to make my crumbling nation into a mightly empire! If you do decide to take all the risks, and rule my kingdom, take this letter to my steward and he will help you with everything you need to know. Signed, Old King Genus")
@@ -1719,19 +1722,58 @@ function setBandits5(){
     banditT5 = 5
   }
 }
+function choiceMake(){
+  document.getElementById("choiceOne").style.display = "block";
+  document.getElementById("choiceTwo").style.display = "block";
+  document.getElementById("choiceThree").style.display = "block";
+if(keyChoice == "dragonIntro"){
+  alert("As you stand on the area that the dragon will meet you on, you feel the ground shake and hear loud thuds at regular intervals. Steward: He approaches/. The thuds grow louder until a massive shape swoops down from the clouds and lands before you. It is a dragon. You cannot help but gape in awe at the sight before you. The dragon lowers it's head and speaks. Dragon: Who is this who stands before me? Where is Old King Genus? Speak human, or I shall slay you where you stand!/. You manage to explain that Old King Genus is dead, and that you are his nephew and heir. The dragon relaxes and droops slightly. Dragon: So that is why. You have my condolences and my grief. He was a good king and we had such pleasent talks. I assume that I will be meeting you from now on, and that your steward has already explained how these meetings will work? But, in Old King Genus's memory, I will not ask for my pay this time. Now that thats out out of the way, I would like to speak with you.")
+alert("Choice: Select the RED choice to speak with him in a hostile tone. Select the GRAY choice to tell him that you don't feel like talking at that moment. Select the BLUE choice to oblige him in a friendly conversation. ")
+
+
+}
+}
 function choice1select(){
 document.getElementById("choiceOne").style.display = "none";
 document.getElementById("choiceTwo").style.display = "none";
-
+document.getElementById("choiceThree").style.display = "none";
+if(keyChoice == "dragonIntro"){
+alert("Dragon: You walk a dangerous line my young king. Some might take a tone like that badly. But you are Old King Genus's nephew, and you are new, but know this, if you continue how you are going, you await a dangerous fate.")
+dragonRep -= 5
+keyChoice = "blank"
+dragonIntroR = 1
+}
 }
 function choice2select(){
-
+  document.getElementById("choiceOne").style.display = "none";
+  document.getElementById("choiceTwo").style.display = "none";
+  document.getElementById("choiceThree").style.display = "none";
+  if(keyChoice == dragonIntro){
+alert("Dragon: Of course. I wouldn't want to force someone to have a conversation they wouldn't want to have. Although I hope that you will speak with me next time. I do miss the talks I had with Old King Genus. You have my farewell until the next time we speak.")
+keyChoice = "blank"
+dragonIntroR = 2
+  }
 }
 function choice3select(){
-
+  document.getElementById("choiceOne").style.display = "none";
+  document.getElementById("choiceTwo").style.display = "none";
+  document.getElementById("choiceThree").style.display = "none";
+  if(keyChoice == "dragonIntro"){
+alert("Dragon: Your manners and diplomacy is admirable my young king. I enjoyed talking with you this time. You will make a great ruler, and a worthy successor to your uncle. I look forward to our next meeting, but unfortunately, I will need my payment then. Farewell for now my young king.")
+    dragonRep += 5
+    keyChoice = "blank"
+    dragonIntroR = 3
+  }
 }
 function dragon(){
-  if(castleGold >= ransomGold){
+  if(firstDragVisit == 0){
+
+    keyChoice = "dragonIntro"
+    choiceMake()
+    firstDragVisit = 1
+
+  }
+  else if(castleGold >= ransomGold){
     castleGold -= ransomGold
     ransomGold += 50
     alert("The dragon came to collect his protection fee, the next time he will want 50 more")
