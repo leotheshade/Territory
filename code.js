@@ -45,7 +45,7 @@ var cutCheck1 = 0
 var cutCheck2 = 0
 var cutCheck3 = 0
 var cutCheck4 = 0
-var time = "night"
+var time = "morning"
 var wagonDefence = 0
 var axeLVL = 1
 var pickLVL = 1
@@ -1727,10 +1727,12 @@ function choiceMake(){
   document.getElementById("choiceTwo").style.display = "block";
   document.getElementById("choiceThree").style.display = "block";
 if(keyChoice == "dragonIntro"){
-  alert("As you stand on the area that the dragon will meet you on, you feel the ground shake and hear loud thuds at regular intervals. Steward: He approaches/. The thuds grow louder until a massive shape swoops down from the clouds and lands before you. It is a dragon. You cannot help but gape in awe at the sight before you. The dragon lowers it's head and speaks. Dragon: Who is this who stands before me? Where is Old King Genus? Speak human, or I shall slay you where you stand!/. You manage to explain that Old King Genus is dead, and that you are his nephew and heir. The dragon relaxes and droops slightly. Dragon: So that is why. You have my condolences and my grief. He was a good king and we had such pleasent talks. I assume that I will be meeting you from now on, and that your steward has already explained how these meetings will work? But, in Old King Genus's memory, I will not ask for my pay this time. Now that thats out out of the way, I would like to speak with you.")
+  alert("As you stand where the dragon will meet you on, you feel the ground shake and hear loud thuds at regular intervals. Steward: He approaches/. The thuds grow louder until a massive shape swoops down from the clouds and lands before you. It is a dragon. You cannot help but gape in awe at the sight before you. The dragon lowers it's head and speaks. Dragon: Who is this who stands before me? Where is Old King Genus? Speak human, or I shall slay you where you stand!/. You manage to explain that Old King Genus is dead, and that you are his nephew and heir. The dragon relaxes and droops slightly. Dragon: So that is why. You have my condolences and my grief. He was a good king and we had such pleasent talks. I assume that I will be meeting you from now on, and that your steward has already explained how these meetings will work? But, in Old King Genus's memory, I will not ask for my pay this time. Now that thats out out of the way, I would like to speak with you.")
 alert("Choice: Select the RED choice to speak with him in a hostile tone. Select the GRAY choice to tell him that you don't feel like talking at that moment. Select the BLUE choice to oblige him in a friendly conversation. ")
-
-
+}
+if(choice == "dragonT"){
+  alert("As you stand where you will meet the dragon, you hear the familiar thuds as you feel the dragon aproaching. The dragon lands before you and looks down. Dragon: Greetings my young king. I have come to collect my payment. But why just do business? let us talk, about anything that might be happening with you and your kingdom.")
+  alert("Choice: Select the RED choice to speak hostily. Select the GRAY choice to tell him that you don't feel like talking. Select the BLUE choice to speak to him in a friendly tone.")
 }
 }
 function choice1select(){
@@ -1738,10 +1740,17 @@ document.getElementById("choiceOne").style.display = "none";
 document.getElementById("choiceTwo").style.display = "none";
 document.getElementById("choiceThree").style.display = "none";
 if(keyChoice == "dragonIntro"){
-alert("Dragon: You walk a dangerous line my young king. Some might take a tone like that badly. But you are Old King Genus's nephew, and you are new, but know this, if you continue how you are going, you await a dangerous fate.")
+alert("Dragon: You walk a dangerous line my young king. Some might take a tone like that badly. But you are Old King Genus's nephew, and you are new, but know this, if you continue how you are going, you await a dangerous fate. I will return tomorrow and for you and your kingdom's sake, I hope you will have my payment then.")
 dragonRep -= 5
 keyChoice = "blank"
 dragonIntroR = 1
+}
+
+if(choice == "dragonT"){
+  alert("Dragon: I see that you choose to walk that line. I choose to talk with you because I miss my conversations with Old King Genus. Continue walking this line at your own peril, and you know i will be back tomorrow for my payment.")
+  dragonRep -= 1
+choice = "blank"
+
 }
 }
 function choice2select(){
@@ -1749,9 +1758,14 @@ function choice2select(){
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
   if(keyChoice == "dragonIntro"){
-alert("Dragon: Of course. I wouldn't want to force someone to have a conversation they wouldn't want to have. Although I hope that you will speak with me next time. I do miss the talks I had with Old King Genus. You have my farewell until the next time we speak.")
+alert("Dragon: Of course. I wouldn't want to force someone to have a conversation they wouldn't want to have. Although I hope that you will speak with me next time. I do miss the talks I had with Old King Genus. I will be back tomorrow for my fee. You have my farewell until the next time we speak.")
 keyChoice = "blank"
 dragonIntroR = 2
+  }
+  if(choice == "dragonT"){
+    alert("Dragon: I see. Well, I am not one to force another to talk for my pleasure, but i do enjoy talking with someone, and Old King Genus was the only one that realy obliged my desire, and i do hope you will talk to me tomorrow. Farewell until next time my young king.")
+choice = "blank"
+
   }
 }
 function choice3select(){
@@ -1759,11 +1773,23 @@ function choice3select(){
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
   if(keyChoice == "dragonIntro"){
-alert("Dragon: Your manners and diplomacy is admirable my young king. I enjoyed talking with you this time. You will make a great ruler, and a worthy successor to your uncle. I look forward to our next meeting, but unfortunately, I will need my payment then. Farewell for now my young king.")
+alert("Dragon: Your manners and diplomacy are admirable my young king. I enjoyed talking with you this time. You will make a great ruler, and a worthy successor to your uncle. I look forward to our next meeting, but unfortunately, I will need my payment then. Farewell for now my young king.")
     dragonRep += 5
     keyChoice = "blank"
     dragonIntroR = 3
   }
+  if(choice == "dragonT"){
+    alert("Dragon: You hold a pleasent conversation my young king, but unfortunately, I must away to take care of my own business. I will return tommorow, and maybe we will talk then. You have my farewell my young king.")
+    choice = "blank"
+    dragonRep += 1
+  }
+}
+function launchGameO(){
+  document.getElementById("deathScreen").style.display = "block";
+  document.getElementById("gameO").style.display = "block";
+  document.getElementById("gameOT").style.display = "block";
+  document.getElementById("gameOT2").style.display = "block";
+
 }
 function dragon(){
   if(firstDragVisit == 0){
@@ -1777,9 +1803,12 @@ function dragon(){
     castleGold -= ransomGold
     ransomGold += 50
     alert("The dragon came to collect his protection fee, the next time he will want 50 more")
+    choice = "dragonT"
+    choiceMake()
   }
   else{
     alert("The dragon came to collect his protection fee, but was enraged to find that you didn't offered him the demanded ammount. In his blind rage he razed your kingdom to the ground.")
+launchGameO()
   }
 }
 
