@@ -45,7 +45,7 @@ var cutCheck1 = 0
 var cutCheck2 = 0
 var cutCheck3 = 0
 var cutCheck4 = 0
-var time = "morning"
+var time = "night"
 var wagonDefence = 0
 var axeLVL = 1
 var pickLVL = 1
@@ -1748,7 +1748,7 @@ function choice2select(){
   document.getElementById("choiceOne").style.display = "none";
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
-  if(keyChoice == dragonIntro){
+  if(keyChoice == "dragonIntro"){
 alert("Dragon: Of course. I wouldn't want to force someone to have a conversation they wouldn't want to have. Although I hope that you will speak with me next time. I do miss the talks I had with Old King Genus. You have my farewell until the next time we speak.")
 keyChoice = "blank"
 dragonIntroR = 2
