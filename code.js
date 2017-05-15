@@ -1211,85 +1211,162 @@ takeWoodCastle()
 //
 //   }
 //
-//   if(castleWorker1 == 1 && worker1position == "mountains"){
-//     document.getElementById("worker1moveX").setAttribute("from", 40)
-//     document.getElementById("worker1moveX").setAttribute("to", 410)
-//     document.getElementById("worker1moveX").setAttribute("dur", 10)
-//
-//     document.getElementById("worker1moveY").setAttribute("from", 450)
-//     document.getElementById("worker1moveY").setAttribute("to", 320)
-//     document.getElementById("worker1moveY").setAttribute("dur", 10)
-//     document.getElementById("worker1moveX").beginElement()
-//     document.getElementById("worker1moveY").beginElement()
-//     document.getElementById("worker1").setAttribute("cx", 410)
-//     document.getElementById("worker1").setAttribute("cy", 320)
-//     castleWorker1 = 0
-//     worker1position = "moving"
-//     setTimeout(worker1castle, 10000)
-//     clearTimeout(startMine1);
-//   }
-//
-//
-//   if(castleWorker2 == 1 && worker2position == "mountains"){
-//     document.getElementById("worker2moveX").setAttribute("from", 70)
-//     document.getElementById("worker2moveX").setAttribute("to", 440)
-//     document.getElementById("worker2moveX").setAttribute("dur", 10)
-//
-//     document.getElementById("worker2moveY").setAttribute("from", 450)
-//     document.getElementById("worker2moveY").setAttribute("to", 320)
-//     document.getElementById("worker2moveY").setAttribute("dur", 10)
-//     document.getElementById("worker2moveX").beginElement()
-//     document.getElementById("worker2moveY").beginElement()
-//     document.getElementById("worker2").setAttribute("cx", 440)
-//     document.getElementById("worker2").setAttribute("cy", 320)
-//     castleWorker2 = 0
-//     worker2position = "moving"
-//     setTimeout(worker2castle, 10000)
-//     clearTimeout(startMine1);
-//   }
-//
-//
-//
-//    if(castleWorker3 == 1 && worker3position == "mountains"){
-//     document.getElementById("worker3moveX").setAttribute("from", 100)
-//     document.getElementById("worker3moveX").setAttribute("to", 470)
-//     document.getElementById("worker3moveX").setAttribute("dur", 10)
-//
-//     document.getElementById("worker3moveY").setAttribute("from", 450)
-//     document.getElementById("worker3moveY").setAttribute("to", 320)
-//     document.getElementById("worker3moveY").setAttribute("dur", 10)
-//     document.getElementById("worker3moveX").beginElement()
-//     document.getElementById("worker3moveY").beginElement()
-//     document.getElementById("worker3").setAttribute("cx", 470)
-//     document.getElementById("worker3").setAttribute("cy", 320)
-//     castleWorker3 = 0
-//     worker3position = "moving"
-//     setTimeout(worker3castle, 10000)
-//     clearTimeout(startMine1);
-//   }
-//
-//
-//   if(castleWorker4 == 1 && worker4position == "mountains"){
-//     document.getElementById("worker4moveX").setAttribute("from", 130)
-//     document.getElementById("worker4moveX").setAttribute("to", 500)
-//     document.getElementById("worker4moveX").setAttribute("dur", 10)
-//
-//     document.getElementById("worker4moveY").setAttribute("from", 450)
-//     document.getElementById("worker4moveY").setAttribute("to", 320)
-//     document.getElementById("worker4moveY").setAttribute("dur", 10)
-//     document.getElementById("worker4moveX").beginElement()
-//     document.getElementById("worker4moveY").beginElement()
-//     document.getElementById("worker4").setAttribute("cx", 500)
-//     document.getElementById("worker4").setAttribute("cy", 320)
-//     castleWorker4 = 0
-//     worker4position = "moving"
-//     setTimeout(worker4castle, 10000)
-//     clearTimeout(startMine1);
-//   }
+  // if(castleWorker1 == 1 && worker1position == "mountains"){
+  //   document.getElementById("worker1moveX").setAttribute("from", 40)
+  //   document.getElementById("worker1moveX").setAttribute("to", 410)
+  //   document.getElementById("worker1moveX").setAttribute("dur", 10)
+  //
+  //   document.getElementById("worker1moveY").setAttribute("from", 450)
+  //   document.getElementById("worker1moveY").setAttribute("to", 320)
+  //   document.getElementById("worker1moveY").setAttribute("dur", 10)
+  //   document.getElementById("worker1moveX").beginElement()
+  //   document.getElementById("worker1moveY").beginElement()
+  //   document.getElementById("worker1").setAttribute("cx", 410)
+  //   document.getElementById("worker1").setAttribute("cy", 320)
+  //   castleWorker1 = 0
+  //   worker1position = "moving"
+  //   setTimeout(worker1castle, 10000)
+  //   clearTimeout(startMine1);
+  // }
+  //
+  //
+  // if(castleWorker2 == 1 && worker2position == "mountains"){
+  //   document.getElementById("worker2moveX").setAttribute("from", 70)
+  //   document.getElementById("worker2moveX").setAttribute("to", 440)
+  //   document.getElementById("worker2moveX").setAttribute("dur", 10)
+  //
+  //   document.getElementById("worker2moveY").setAttribute("from", 450)
+  //   document.getElementById("worker2moveY").setAttribute("to", 320)
+  //   document.getElementById("worker2moveY").setAttribute("dur", 10)
+  //   document.getElementById("worker2moveX").beginElement()
+  //   document.getElementById("worker2moveY").beginElement()
+  //   document.getElementById("worker2").setAttribute("cx", 440)
+  //   document.getElementById("worker2").setAttribute("cy", 320)
+  //   castleWorker2 = 0
+  //   worker2position = "moving"
+  //   setTimeout(worker2castle, 10000)
+  //   clearTimeout(startMine1);
+  // }
+  //
+  //
+  //
+  //  if(castleWorker3 == 1 && worker3position == "mountains"){
+  //   document.getElementById("worker3moveX").setAttribute("from", 100)
+  //   document.getElementById("worker3moveX").setAttribute("to", 470)
+  //   document.getElementById("worker3moveX").setAttribute("dur", 10)
+  //
+  //   document.getElementById("worker3moveY").setAttribute("from", 450)
+  //   document.getElementById("worker3moveY").setAttribute("to", 320)
+  //   document.getElementById("worker3moveY").setAttribute("dur", 10)
+  //   document.getElementById("worker3moveX").beginElement()
+  //   document.getElementById("worker3moveY").beginElement()
+  //   document.getElementById("worker3").setAttribute("cx", 470)
+  //   document.getElementById("worker3").setAttribute("cy", 320)
+  //   castleWorker3 = 0
+  //   worker3position = "moving"
+  //   setTimeout(worker3castle, 10000)
+  //   clearTimeout(startMine1);
+  // }
+  //
+  //
+  // if(castleWorker4 == 1 && worker4position == "mountains"){
+  //   document.getElementById("worker4moveX").setAttribute("from", 130)
+  //   document.getElementById("worker4moveX").setAttribute("to", 500)
+  //   document.getElementById("worker4moveX").setAttribute("dur", 10)
+  //
+  //   document.getElementById("worker4moveY").setAttribute("from", 450)
+  //   document.getElementById("worker4moveY").setAttribute("to", 320)
+  //   document.getElementById("worker4moveY").setAttribute("dur", 10)
+  //   document.getElementById("worker4moveX").beginElement()
+  //   document.getElementById("worker4moveY").beginElement()
+  //   document.getElementById("worker4").setAttribute("cx", 500)
+  //   document.getElementById("worker4").setAttribute("cy", 320)
+  //   castleWorker4 = 0
+  //   worker4position = "moving"
+  //   setTimeout(worker4castle, 10000)
+  //   clearTimeout(startMine1);
+  // }
 
 
 }
+function evacMount(){
+  if(castleWorker1 == 1 && worker1position == "mountains"){
+    document.getElementById("worker1moveX").setAttribute("from", 40)
+    document.getElementById("worker1moveX").setAttribute("to", 410)
+    document.getElementById("worker1moveX").setAttribute("dur", 10)
 
+    document.getElementById("worker1moveY").setAttribute("from", 450)
+    document.getElementById("worker1moveY").setAttribute("to", 320)
+    document.getElementById("worker1moveY").setAttribute("dur", 10)
+    document.getElementById("worker1moveX").beginElement()
+    document.getElementById("worker1moveY").beginElement()
+    document.getElementById("worker1").setAttribute("cx", 410)
+    document.getElementById("worker1").setAttribute("cy", 320)
+    castleWorker1 = 0
+    worker1position = "moving"
+    setTimeout(worker1castle, 10000)
+    clearTimeout(startMine1);
+  }
+
+
+  if(castleWorker2 == 1 && worker2position == "mountains"){
+    document.getElementById("worker2moveX").setAttribute("from", 70)
+    document.getElementById("worker2moveX").setAttribute("to", 440)
+    document.getElementById("worker2moveX").setAttribute("dur", 10)
+
+    document.getElementById("worker2moveY").setAttribute("from", 450)
+    document.getElementById("worker2moveY").setAttribute("to", 320)
+    document.getElementById("worker2moveY").setAttribute("dur", 10)
+    document.getElementById("worker2moveX").beginElement()
+    document.getElementById("worker2moveY").beginElement()
+    document.getElementById("worker2").setAttribute("cx", 440)
+    document.getElementById("worker2").setAttribute("cy", 320)
+    castleWorker2 = 0
+    worker2position = "moving"
+    setTimeout(worker2castle, 10000)
+    clearTimeout(startMine1);
+  }
+
+
+
+   if(castleWorker3 == 1 && worker3position == "mountains"){
+    document.getElementById("worker3moveX").setAttribute("from", 100)
+    document.getElementById("worker3moveX").setAttribute("to", 470)
+    document.getElementById("worker3moveX").setAttribute("dur", 10)
+
+    document.getElementById("worker3moveY").setAttribute("from", 450)
+    document.getElementById("worker3moveY").setAttribute("to", 320)
+    document.getElementById("worker3moveY").setAttribute("dur", 10)
+    document.getElementById("worker3moveX").beginElement()
+    document.getElementById("worker3moveY").beginElement()
+    document.getElementById("worker3").setAttribute("cx", 470)
+    document.getElementById("worker3").setAttribute("cy", 320)
+    castleWorker3 = 0
+    worker3position = "moving"
+    setTimeout(worker3castle, 10000)
+    clearTimeout(startMine1);
+  }
+
+
+  if(castleWorker4 == 1 && worker4position == "mountains"){
+    document.getElementById("worker4moveX").setAttribute("from", 130)
+    document.getElementById("worker4moveX").setAttribute("to", 500)
+    document.getElementById("worker4moveX").setAttribute("dur", 10)
+
+    document.getElementById("worker4moveY").setAttribute("from", 450)
+    document.getElementById("worker4moveY").setAttribute("to", 320)
+    document.getElementById("worker4moveY").setAttribute("dur", 10)
+    document.getElementById("worker4moveX").beginElement()
+    document.getElementById("worker4moveY").beginElement()
+    document.getElementById("worker4").setAttribute("cx", 500)
+    document.getElementById("worker4").setAttribute("cy", 320)
+    castleWorker4 = 0
+    worker4position = "moving"
+    setTimeout(worker4castle, 10000)
+    clearTimeout(startMine1);
+  }
+
+}
 function worker1castle(){
   worker1position = "castle"
 
@@ -1734,7 +1811,7 @@ function choiceMake(){
   document.getElementById("choiceThree").style.display = "block";
   if(choice == "nbMount"){
     alert("Steward: Sir! Scouts around the mountain camp have reported sightings of a Night Beast roaming the area! If it finds your workers, they will be in grave peril. What shall we do?")
-    alert("Choice:")
+    alert("Choice: Select the RED choice to send your garrison to the camp to protect it from the Night Beast(-50 gold). Select the GRAY choice leave your camp how it is(chance). Select the BLUE choice to send your workers back to your castle(forfeit all resources at the camp)")
   }
 if(keyChoice == "dragonIntro"){
   alert("As you stand where the dragon will meet you on, you feel the ground shake and hear loud thuds at regular intervals. Steward: He approaches/. The thuds grow louder until a massive shape swoops down from the clouds and lands before you. It is a dragon. You cannot help but gape in awe at the sight before you. The dragon lowers it's head and speaks. Dragon: Who is this who stands before me? Where is Old King Genus? Speak human, or I shall slay you where you stand!/. You manage to explain that Old King Genus is dead, and that you are his nephew and heir. The dragon relaxes and droops slightly. Dragon: So that is why. You have my condolences and my grief. He was a good king and we had such pleasent talks. I assume that I will be meeting you from now on, and that your steward has already explained how these meetings will work? But, in Old King Genus's memory, I will not ask for my pay this time. Now that thats out out of the way, I would like to speak with you.")
@@ -1762,6 +1839,22 @@ if(choice == "dragonT"){
 choice = "blank"
 
 }
+if(choice == "nbMount"){
+  var chance = Math.random()
+  if(chance < .45){
+    alert("Steward: We have recieved reports that the Night Beast has moved on, and the garrison did not encounter it.")
+  }
+  else if(chance < .9){
+    alert("Steward: We have recieved reports that the garrison encountered the Night Beast, but they were able to fight it off.")
+  }
+  else{
+    alert("Steward: We have recieved reports that the garrison encountered the Night Beast, but sadly, they were unable to fight it off ")
+    castleGold -= 100
+    mountainOre = 0
+  }
+  castleGold -= 50
+  choice = "blank"
+}
 }
 function choice2select(){
   document.getElementById("choiceOne").style.display = "none";
@@ -1776,6 +1869,18 @@ dragonIntroR = 2
     alert("Dragon: I see. Well, I am not one to force another to talk for my pleasure, but i do enjoy talking with someone, and Old King Genus was the only one that realy obliged my desire. I do hope you will talk to me tomorrow. Farewell until next time my young king.")
 choice = "blank"
 
+  }
+  if(choice == "nbMount"){
+    var chance = Math.random()
+    if(chance < .7){
+      alert("Steward: We have recieved reports that the workers didn't encounter the Night Beast, and have continued working as planned")
+    }
+else{
+  alert("Steward: We have recieved reports that the Night Beast found your workers and they didn't survive the encounter.")
+  castleGold -= 100
+  mountainOre = 0
+}
+    choice = "blank"
   }
 }
 function choice3select(){
@@ -1792,6 +1897,9 @@ alert("Dragon: Your manners and diplomacy are admirable my young king. I enjoyed
     alert("Dragon: You hold an enjoyable conversation my young king, but unfortunately, I must away to take care of my own business. I will return tommorow, and maybe we will talk then. You have my farewell my young king.")
     choice = "blank"
     dragonRep += 1
+  }
+  if(choice == "nbMount"){
+
   }
 }
 function launchGameO(){
