@@ -1722,10 +1722,20 @@ function setBandits5(){
     banditT5 = 5
   }
 }
+function randomChoice(){
+  if(mountainWorker1 == 1 || mountainWorker2 == 1 || mountainWorker3 == 1 || mountainWorker4 == 1){
+    choice = "nbMount"
+    choiceMake()
+  }
+}
 function choiceMake(){
   document.getElementById("choiceOne").style.display = "block";
   document.getElementById("choiceTwo").style.display = "block";
   document.getElementById("choiceThree").style.display = "block";
+  if(choice == "nbMount"){
+    alert("Steward: Sir! Scouts around the mountain camp have reported sightings of a Night Beast roaming the area! If it finds your workers, they will be in grave peril. What shall we do?")
+    alert("Choice:")
+  }
 if(keyChoice == "dragonIntro"){
   alert("As you stand where the dragon will meet you on, you feel the ground shake and hear loud thuds at regular intervals. Steward: He approaches/. The thuds grow louder until a massive shape swoops down from the clouds and lands before you. It is a dragon. You cannot help but gape in awe at the sight before you. The dragon lowers it's head and speaks. Dragon: Who is this who stands before me? Where is Old King Genus? Speak human, or I shall slay you where you stand!/. You manage to explain that Old King Genus is dead, and that you are his nephew and heir. The dragon relaxes and droops slightly. Dragon: So that is why. You have my condolences and my grief. He was a good king and we had such pleasent talks. I assume that I will be meeting you from now on, and that your steward has already explained how these meetings will work? But, in Old King Genus's memory, I will not ask for my pay this time. Now that thats out out of the way, I would like to speak with you.")
 alert("Choice: Select the RED choice to speak with him in a hostile tone. Select the GRAY choice to tell him that you don't feel like talking at that moment. Select the BLUE choice to oblige him in a friendly conversation. ")
@@ -1747,7 +1757,7 @@ dragonIntroR = 1
 }
 
 if(choice == "dragonT"){
-  alert("Dragon: I see that you choose to walk that line. I choose to talk with you because I miss my conversations with Old King Genus. Continue walking this line at your own peril, and you know i will be back tomorrow for my payment.")
+  alert("Dragon: I see that you choose to walk that line. I choose to talk with you because I miss my conversations with Old King Genus. Continue acting like this at your own peril, and you know I will be back tomorrow for my payment.")
   dragonRep -= 1
 choice = "blank"
 
@@ -1763,7 +1773,7 @@ keyChoice = "blank"
 dragonIntroR = 2
   }
   if(choice == "dragonT"){
-    alert("Dragon: I see. Well, I am not one to force another to talk for my pleasure, but i do enjoy talking with someone, and Old King Genus was the only one that realy obliged my desire, and i do hope you will talk to me tomorrow. Farewell until next time my young king.")
+    alert("Dragon: I see. Well, I am not one to force another to talk for my pleasure, but i do enjoy talking with someone, and Old King Genus was the only one that realy obliged my desire. I do hope you will talk to me tomorrow. Farewell until next time my young king.")
 choice = "blank"
 
   }
@@ -1779,7 +1789,7 @@ alert("Dragon: Your manners and diplomacy are admirable my young king. I enjoyed
     dragonIntroR = 3
   }
   if(choice == "dragonT"){
-    alert("Dragon: You hold a pleasent conversation my young king, but unfortunately, I must away to take care of my own business. I will return tommorow, and maybe we will talk then. You have my farewell my young king.")
+    alert("Dragon: You hold an enjoyable conversation my young king, but unfortunately, I must away to take care of my own business. I will return tommorow, and maybe we will talk then. You have my farewell my young king.")
     choice = "blank"
     dragonRep += 1
   }
