@@ -80,8 +80,8 @@ alert("Steward: One of the main threats of this kingdom is a mighty dragon that 
 alert("Steward: Your kingdom is a large one, so you will be required to make certain descisions that will affect certain aspects of your kingdom. When such a descision comes up, select whatever choice seems the best to you. Be wary, when interacting with certain figures, simple choices could have massive consequences. You may recieve a report saying that scouts have sighted a Night Beast in close proximity to some of your workers. You will be forced to decide to send reinforcements to the camp, send the workers home, or just do nothing. This descision will decide the fate of your subjects. But know this, you can't save everyone, accidents happen, things can be unpredictable. You can just hope that you made the right descision, and if you didn't, all you can do is shrug it off, and do better next time.")
 }
 timec()
-
 updateText()
+var rEvent = setInterval(randomChoice, 40000)
 function updateText(){
   document.getElementById("displayWagonOre").textContent = wagonOre;
   document.getElementById("displayWagonWood").textContent = wagonWood;
@@ -1290,7 +1290,9 @@ takeWoodCastle()
 
 }
 function evacMount(){
+
   if(worker1position == "mountains"){
+
     document.getElementById("worker1moveX").setAttribute("from", 40)
     document.getElementById("worker1moveX").setAttribute("to", 410)
     document.getElementById("worker1moveX").setAttribute("dur", 23)
@@ -1305,11 +1307,11 @@ function evacMount(){
     castleWorker1 = 0
     worker1position = "moving"
     setTimeout(worker1castle, 23000)
-    clearTimeout(startMine1);
+
   }
 
 
-  if( worker2position == "mountains"){
+  if(worker2position == "mountains"){
     document.getElementById("worker2moveX").setAttribute("from", 70)
     document.getElementById("worker2moveX").setAttribute("to", 440)
     document.getElementById("worker2moveX").setAttribute("dur", 23)
@@ -1324,7 +1326,7 @@ function evacMount(){
     castleWorker2 = 0
     worker2position = "moving"
     setTimeout(worker2castle, 23000)
-    clearTimeout(startMine1);
+
   }
 
 
@@ -1344,7 +1346,7 @@ function evacMount(){
     castleWorker3 = 0
     worker3position = "moving"
     setTimeout(worker3castle, 23000)
-    clearTimeout(startMine1);
+
   }
 
 
@@ -1363,7 +1365,7 @@ function evacMount(){
     castleWorker4 = 0
     worker4position = "moving"
     setTimeout(worker4castle, 23000)
-    clearTimeout(startMine1);
+
   }
 
 }
@@ -1800,8 +1802,9 @@ function setBandits5(){
   }
 }
 function randomChoice(){
-  if(mountainWorker1 == 1 || mountainWorker2 == 1 || mountainWorker3 == 1 || mountainWorker4 == 1){
+  if(worker1position == "mountains" || worker2position == "mountains" || worker3position == "mountains" || worker4position == "mountains"){
     choice = "nbMount"
+    alert("ye")
     choiceMake()
   }
 }
@@ -1899,7 +1902,9 @@ alert("Dragon: Your manners and diplomacy are admirable my young king. I enjoyed
     dragonRep += 1
   }
   if(choice == "nbMount"){
-
+alert("Steward: We have recieved reports that your workers are on their way back to the castle.")
+choice = "blank"
+evacMount()
   }
 }
 function launchGameO(){
