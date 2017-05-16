@@ -1290,79 +1290,79 @@ takeWoodCastle()
 
 }
 function evacMount(){
-  if(castleWorker1 == 1 && worker1position == "mountains"){
+  if(worker1position == "mountains"){
     document.getElementById("worker1moveX").setAttribute("from", 40)
     document.getElementById("worker1moveX").setAttribute("to", 410)
-    document.getElementById("worker1moveX").setAttribute("dur", 10)
+    document.getElementById("worker1moveX").setAttribute("dur", 23)
 
     document.getElementById("worker1moveY").setAttribute("from", 450)
     document.getElementById("worker1moveY").setAttribute("to", 320)
-    document.getElementById("worker1moveY").setAttribute("dur", 10)
+    document.getElementById("worker1moveY").setAttribute("dur", 23)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
     document.getElementById("worker1").setAttribute("cx", 410)
     document.getElementById("worker1").setAttribute("cy", 320)
     castleWorker1 = 0
     worker1position = "moving"
-    setTimeout(worker1castle, 10000)
+    setTimeout(worker1castle, 23000)
     clearTimeout(startMine1);
   }
 
 
-  if(castleWorker2 == 1 && worker2position == "mountains"){
+  if( worker2position == "mountains"){
     document.getElementById("worker2moveX").setAttribute("from", 70)
     document.getElementById("worker2moveX").setAttribute("to", 440)
-    document.getElementById("worker2moveX").setAttribute("dur", 10)
+    document.getElementById("worker2moveX").setAttribute("dur", 23)
 
     document.getElementById("worker2moveY").setAttribute("from", 450)
     document.getElementById("worker2moveY").setAttribute("to", 320)
-    document.getElementById("worker2moveY").setAttribute("dur", 10)
+    document.getElementById("worker2moveY").setAttribute("dur", 23)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
     document.getElementById("worker2").setAttribute("cx", 440)
     document.getElementById("worker2").setAttribute("cy", 320)
     castleWorker2 = 0
     worker2position = "moving"
-    setTimeout(worker2castle, 10000)
+    setTimeout(worker2castle, 23000)
     clearTimeout(startMine1);
   }
 
 
 
-   if(castleWorker3 == 1 && worker3position == "mountains"){
+   if(worker3position == "mountains"){
     document.getElementById("worker3moveX").setAttribute("from", 100)
     document.getElementById("worker3moveX").setAttribute("to", 470)
-    document.getElementById("worker3moveX").setAttribute("dur", 10)
+    document.getElementById("worker3moveX").setAttribute("dur", 23)
 
     document.getElementById("worker3moveY").setAttribute("from", 450)
     document.getElementById("worker3moveY").setAttribute("to", 320)
-    document.getElementById("worker3moveY").setAttribute("dur", 10)
+    document.getElementById("worker3moveY").setAttribute("dur", 23)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
     document.getElementById("worker3").setAttribute("cx", 470)
     document.getElementById("worker3").setAttribute("cy", 320)
     castleWorker3 = 0
     worker3position = "moving"
-    setTimeout(worker3castle, 10000)
+    setTimeout(worker3castle, 23000)
     clearTimeout(startMine1);
   }
 
 
-  if(castleWorker4 == 1 && worker4position == "mountains"){
+  if(worker4position == "mountains"){
     document.getElementById("worker4moveX").setAttribute("from", 130)
     document.getElementById("worker4moveX").setAttribute("to", 500)
-    document.getElementById("worker4moveX").setAttribute("dur", 10)
+    document.getElementById("worker4moveX").setAttribute("dur", 23)
 
     document.getElementById("worker4moveY").setAttribute("from", 450)
     document.getElementById("worker4moveY").setAttribute("to", 320)
-    document.getElementById("worker4moveY").setAttribute("dur", 10)
+    document.getElementById("worker4moveY").setAttribute("dur", 23)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
     document.getElementById("worker4").setAttribute("cx", 500)
     document.getElementById("worker4").setAttribute("cy", 320)
     castleWorker4 = 0
     worker4position = "moving"
-    setTimeout(worker4castle, 10000)
+    setTimeout(worker4castle, 23000)
     clearTimeout(startMine1);
   }
 
