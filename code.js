@@ -80,6 +80,7 @@ alert("Steward: One of the main threats of this kingdom is a mighty dragon that 
 alert("Steward: Your kingdom is a large one, so you will be required to make certain descisions that will affect certain aspects of your kingdom. When such a descision comes up, select whatever choice seems the best to you. Be wary, when interacting with certain figures, simple choices could have massive consequences. You may recieve a report saying that scouts have sighted a Night Beast in close proximity to some of your workers. You will be forced to decide to send reinforcements to the camp, send the workers home, or just do nothing. This descision will decide the fate of your subjects. But know this, you can't save everyone, accidents happen, things can be unpredictable. You can just hope that you made the right descision, and if you didn't, all you can do is shrug it off, and do better next time.")
 }
 timec()
+ // killWorker1()
 updateText()
 var rEvent = setInterval(randomChoice, 135000)
 function updateText(){
@@ -201,6 +202,19 @@ function mountainClick(){
 function menuLaunch(){
   if(wagonCheck1 == 1){
 // alert("menu up")
+document.getElementById("worker1X1").style.display = "block";
+document.getElementById("worker1X2").style.display = "block";
+
+document.getElementById("worker2X1").style.display = "block";
+document.getElementById("worker2X2").style.display = "block";
+
+document.getElementById("worker3X1").style.display = "block";
+document.getElementById("worker3X2").style.display = "block";
+
+document.getElementById("worker4X1").style.display = "block";
+document.getElementById("worker4X2").style.display = "block";
+
+
  document.getElementById("wagonMenu").style.display = "block";
  document.getElementById("mI").style.display = "block"
  document.getElementById("fI").style.display = "block"
@@ -231,6 +245,20 @@ function menuLaunch(){
   }
 
   else if(wagonCheck1 == 0){
+
+    document.getElementById("worker1X1").style.display = "none";
+    document.getElementById("worker1X2").style.display = "none";
+
+    document.getElementById("worker2X1").style.display = "none";
+    document.getElementById("worker2X2").style.display = "none";
+
+    document.getElementById("worker3X1").style.display = "none";
+    document.getElementById("worker3X2").style.display = "none";
+
+    document.getElementById("worker4X1").style.display = "none";
+    document.getElementById("worker4X2").style.display = "none";
+
+
 document.getElementById("wagonMenu").style.display = "none";
 document.getElementById("mI").style.display = "none"
 document.getElementById("fI").style.display = "none"
@@ -1872,6 +1900,85 @@ function setBandits5(){
     banditT5 = 5
   }
 }
+function reviveWorker1(){
+  document.getElementById("worker1X1").setAttribute("opacity", 0)
+  document.getElementById("worker1X2").setAttribute("opacity", 0)
+  worker1position = "castle"
+  document.getElementById("worker1").setAttribute("cx", 410)
+  document.getElementById("worker1").setAttribute("cy", 320)
+  alert("worker 1 was revived from the dead")
+}
+function reviveWorker2(){
+  document.getElementById("worker2X1").setAttribute("opacity", 0)
+  document.getElementById("worker2X2").setAttribute("opacity", 0)
+  worker2position = "castle"
+  document.getElementById("worker2").setAttribute("cx", 440)
+  document.getElementById("worker2").setAttribute("cy", 320)
+  alert("worker 2 was revived from the dead")
+}
+
+function reviveWorker3(){
+  document.getElementById("worker3X1").setAttribute("opacity", 0)
+  document.getElementById("worker3X2").setAttribute("opacity", 0)
+  worker3position = "castle"
+  document.getElementById("worker3").setAttribute("cx", 470)
+  document.getElementById("worker3").setAttribute("cy", 320)
+  alert("worker 3 was revived from the dead")
+}
+
+function reviveWorker4(){
+  document.getElementById("worker4X1").setAttribute("opacity", 0)
+  document.getElementById("worker4X2").setAttribute("opacity", 0)
+  worker4position = "castle"
+  document.getElementById("worker4").setAttribute("cx", 500)
+  document.getElementById("worker4").setAttribute("cy", 320)
+  alert("worker 4 was revived from the dead")
+}
+
+function killWorker1(){
+  document.getElementById("worker1X1").setAttribute("opacity", 1)
+  document.getElementById("worker1X2").setAttribute("opacity", 1)
+
+worker1position = "dead"
+document.getElementById("worker1").setAttribute("cx", 1500)
+document.getElementById("worker1").setAttribute("cy", 1500)
+alert("worker 1 died")
+setTimeout(reviveWorker1, 10000)
+}
+function killWorker2(){
+  document.getElementById("worker2X1").setAttribute("opacity", 1)
+  document.getElementById("worker2X2").setAttribute("opacity", 1)
+
+worker2position = "dead"
+document.getElementById("worker2").setAttribute("cx", 1500)
+document.getElementById("worker2").setAttribute("cy", 1500)
+alert("worker 2 died")
+setTimeout(reviveWorker2, 10000)
+}
+
+function killWorker3(){
+  document.getElementById("worker3X1").setAttribute("opacity", 1)
+  document.getElementById("worker3X2").setAttribute("opacity", 1)
+
+worker3position = "dead"
+document.getElementById("worker3").setAttribute("cx", 1500)
+document.getElementById("worker3").setAttribute("cy", 1500)
+alert("worker 3 died")
+setTimeout(reviveWorker3, 10000)
+}
+
+function killWorker4(){
+  document.getElementById("worker4X1").setAttribute("opacity", 1)
+  document.getElementById("worker4X2").setAttribute("opacity", 1)
+
+worker4position = "dead"
+document.getElementById("worker4").setAttribute("cx", 1500)
+document.getElementById("worker4").setAttribute("cy", 1500)
+alert("worker 4 died")
+setTimeout(reviveWorker4, 10000)
+}
+
+
 function randomChoice(){
   if(worker1position == "mountains" || worker2position == "mountains" || worker3position == "mountains" || worker4position == "mountains"){
     choice = "nbMount"
