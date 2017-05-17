@@ -81,7 +81,7 @@ alert("Steward: Your kingdom is a large one, so you will be required to make cer
 }
 timec()
 updateText()
-var rEvent = setInterval(randomChoice, 40000)
+var rEvent = setInterval(randomChoice, 135000)
 function updateText(){
   document.getElementById("displayWagonOre").textContent = wagonOre;
   document.getElementById("displayWagonWood").textContent = wagonWood;
@@ -1289,6 +1289,77 @@ takeWoodCastle()
 
 
 }
+function evacForest(){
+  if(worker1position == "forest"){
+
+      document.getElementById("worker1moveX").setAttribute("from", 800)
+    document.getElementById("worker1moveX").setAttribute("to", 410)
+    document.getElementById("worker1moveX").setAttribute("dur", 23)
+
+    document.getElementById("worker1moveY").setAttribute("from", 250)
+    document.getElementById("worker1moveY").setAttribute("to", 320)
+    document.getElementById("worker1moveY").setAttribute("dur", 23)
+    document.getElementById("worker1moveX").beginElement()
+    document.getElementById("worker1moveY").beginElement()
+    document.getElementById("worker1").setAttribute("cx", 410)
+    document.getElementById("worker1").setAttribute("cy", 320)
+    castleWorker1 = 0
+    worker1position = "moving"
+    var startMine1 = setTimeout(worker1castle, 23000)
+    }
+    if(worker2position == "forest"){
+      document.getElementById("worker2moveX").setAttribute("from", 800)
+    document.getElementById("worker2moveX").setAttribute("to", 440)
+    document.getElementById("worker2moveX").setAttribute("dur", 23)
+
+    document.getElementById("worker2moveY").setAttribute("from", 280)
+    document.getElementById("worker2moveY").setAttribute("to", 320)
+    document.getElementById("worker2moveY").setAttribute("dur", 23)
+    document.getElementById("worker2moveX").beginElement()
+    document.getElementById("worker2moveY").beginElement()
+    document.getElementById("worker2").setAttribute("cx", 440)
+    document.getElementById("worker2").setAttribute("cy", 320)
+    castleWorker2 = 0
+    worker2position = "moving"
+    setTimeout(worker2castle, 23000)
+
+    }
+    if(worker3position == "forest"){
+       document.getElementById("worker3moveX").setAttribute("from", 800)
+    document.getElementById("worker3moveX").setAttribute("to", 470)
+    document.getElementById("worker3moveX").setAttribute("dur", 23)
+
+    document.getElementById("worker3moveY").setAttribute("from", 310)
+    document.getElementById("worker3moveY").setAttribute("to", 320)
+    document.getElementById("worker3moveY").setAttribute("dur", 23)
+    document.getElementById("worker3moveX").beginElement()
+    document.getElementById("worker3moveY").beginElement()
+    document.getElementById("worker3").setAttribute("cx", 470)
+    document.getElementById("worker3").setAttribute("cy", 320)
+    castleWorker3 = 0
+    worker3position = "moving"
+    setTimeout(worker3castle, 23000)
+    }
+    //down
+    if(worker4position == "forest"){
+      document.getElementById("worker4moveX").setAttribute("from", 800)
+    document.getElementById("worker4moveX").setAttribute("to", 500)
+    document.getElementById("worker4moveX").setAttribute("dur", 23)
+
+    document.getElementById("worker4moveY").setAttribute("from", 340)
+    document.getElementById("worker4moveY").setAttribute("to", 320)
+    document.getElementById("worker4moveY").setAttribute("dur", 23)
+    document.getElementById("worker4moveX").beginElement()
+    document.getElementById("worker4moveY").beginElement()
+    document.getElementById("worker4").setAttribute("cx", 500)
+    document.getElementById("worker4").setAttribute("cy", 320)
+    castleWorker4 = 0
+    worker4position = "moving"
+    setTimeout(worker4castle, 23000)
+
+    }
+}
+
 function evacMount(){
 
   if(worker1position == "mountains"){
@@ -1804,7 +1875,12 @@ function setBandits5(){
 function randomChoice(){
   if(worker1position == "mountains" || worker2position == "mountains" || worker3position == "mountains" || worker4position == "mountains"){
     choice = "nbMount"
-    alert("ye")
+
+    choiceMake()
+  }
+  if(worker1position == "forest" || worker2position == "forest" || worker3position == "forest" || worker4position == "forest"){
+    choice = "nbForest"
+
     choiceMake()
   }
 }
@@ -1812,6 +1888,10 @@ function choiceMake(){
   document.getElementById("choiceOne").style.display = "block";
   document.getElementById("choiceTwo").style.display = "block";
   document.getElementById("choiceThree").style.display = "block";
+  if(choice == "nbForest"){
+    alert("Steward: Sir! Scouts around the forest camp have reported sightings of a Night Beast roaming the area! If it finds your workers, they will be in grave peril. What shall we do?")
+    alert("Choice: Select the RED choice to send your garrison to the camp to protect it from the Night Beast(-50 gold). Select the GRAY choice leave your camp how it is(chance). Select the BLUE choice to send your workers back to your castle(forfeit all resources at the camp)")
+  }
   if(choice == "nbMount"){
     alert("Steward: Sir! Scouts around the mountain camp have reported sightings of a Night Beast roaming the area! If it finds your workers, they will be in grave peril. What shall we do?")
     alert("Choice: Select the RED choice to send your garrison to the camp to protect it from the Night Beast(-50 gold). Select the GRAY choice leave your camp how it is(chance). Select the BLUE choice to send your workers back to your castle(forfeit all resources at the camp)")
@@ -1858,6 +1938,24 @@ if(choice == "nbMount"){
   castleGold -= 50
   choice = "blank"
 }
+if(choice == "nbForest"){
+  var chance = Math.random()
+  if(chance < .45){
+    alert("Steward: We have recieved reports that the Night Beast has moved on, and the garrison did not encounter it.")
+  }
+  else if(chance < .9){
+    alert("Steward: We have recieved reports that the garrison encountered the Night Beast, but they were able to fight it off.")
+  }
+  else{
+    alert("Steward: We have recieved reports that the garrison encountered the Night Beast, but sadly, they were unable to fight it off. ")
+    castleGold -= 100
+    forestWood = 0
+  }
+  castleGold -= 50
+  choice = "blank"
+}
+
+
 }
 function choice2select(){
   document.getElementById("choiceOne").style.display = "none";
@@ -1875,13 +1973,26 @@ choice = "blank"
   }
   if(choice == "nbMount"){
     var chance = Math.random()
-    if(chance < .7){
+    if(chance < .6){
       alert("Steward: We have recieved reports that the workers didn't encounter the Night Beast, and have continued working as planned")
     }
 else{
   alert("Steward: We have recieved reports that the Night Beast found your workers and they didn't survive the encounter.")
   castleGold -= 100
   mountainOre = 0
+}
+    choice = "blank"
+  }
+
+  if(choice == "nbForest"){
+    var chance = Math.random()
+    if(chance < .6){
+      alert("Steward: We have recieved reports that the workers didn't encounter the Night Beast, and have continued working as planned")
+    }
+else{
+  alert("Steward: We have recieved reports that the Night Beast found your workers and they didn't survive the encounter.")
+  castleGold -= 100
+  forestWood = 0
 }
     choice = "blank"
   }
@@ -1905,6 +2016,12 @@ alert("Dragon: Your manners and diplomacy are admirable my young king. I enjoyed
 alert("Steward: We have recieved reports that your workers are on their way back to the castle.")
 choice = "blank"
 evacMount()
+  }
+
+  if(choice == "nbForest"){
+alert("Steward: We have recieved reports that your workers are on their way back to the castle.")
+choice = "blank"
+evacForest()
   }
 }
 function launchGameO(){
