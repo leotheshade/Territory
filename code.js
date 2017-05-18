@@ -604,65 +604,7 @@ takeWoodCastle()
  var wagonTakeW = setTimeout(tradeWoodS, 10000)
 }
 
-// if(wagonBuyW == 1 && wagonPosition1 == "castle"){
-//   document.getElementById("wagon1MoveX").setAttribute("from", 450)
-//  document.getElementById("wagon1MoveX").setAttribute("to", 435)
-//   document.getElementById("wagon1MoveX").setAttribute("dur", 20)
-//
-//  document.getElementById("wagon1MoveY").setAttribute("from", 350)
-//  document.getElementById("wagon1MoveY").setAttribute("to", 110)
-//  document.getElementById("wagon1MoveY").setAttribute("dur", 20)
-//
-//   document.getElementById("wagon1MoveX").beginElement()
-//  document.getElementById("wagon1MoveY").beginElement()
-//
-//  document.getElementById("supplyWagon1").setAttribute("x", 435)
-//  document.getElementById("supplyWagon1").setAttribute("y", 111)
-//
-//  wagonPosition1 = "moving"
-//
-//  var wagonTakeW = setTimeout(takeWoodForest, 20000)
-// }
 
-// if(wagonSellO == 1 && wagonPosition1 == "castle"){
-//   document.getElementById("wagon1MoveX").setAttribute("from", 450)
-//  document.getElementById("wagon1MoveX").setAttribute("to", 435)
-//   document.getElementById("wagon1MoveX").setAttribute("dur", 20)
-//
-//  document.getElementById("wagon1MoveY").setAttribute("from", 350)
-//  document.getElementById("wagon1MoveY").setAttribute("to", 110)
-//  document.getElementById("wagon1MoveY").setAttribute("dur", 20)
-//
-//   document.getElementById("wagon1MoveX").beginElement()
-//  document.getElementById("wagon1MoveY").beginElement()
-//
-//  document.getElementById("supplyWagon1").setAttribute("x", 435)
-//  document.getElementById("supplyWagon1").setAttribute("y", 111)
-//
-//  wagonPosition1 = "moving"
-//
-//  var wagonTakeW = setTimeout(takeWoodForest, 20000)
-// }
-//
-// if(wagonBuyO == 1 && wagonPosition1 == "castle"){
-//   document.getElementById("wagon1MoveX").setAttribute("from", 450)
-//  document.getElementById("wagon1MoveX").setAttribute("to", 435)
-//   document.getElementById("wagon1MoveX").setAttribute("dur", 20)
-//
-//  document.getElementById("wagon1MoveY").setAttribute("from", 350)
-//  document.getElementById("wagon1MoveY").setAttribute("to", 110)
-//  document.getElementById("wagon1MoveY").setAttribute("dur", 20)
-//
-//   document.getElementById("wagon1MoveX").beginElement()
-//  document.getElementById("wagon1MoveY").beginElement()
-//
-//  document.getElementById("supplyWagon1").setAttribute("x", 435)
-//  document.getElementById("supplyWagon1").setAttribute("y", 111)
-//
-//  wagonPosition1 = "moving"
-//
-//  var wagonTakeW = setTimeout(takeWoodForest, 20000)
-// }
 
   // if(castleWorker1 == 1 && worker1position == "forest"){
   //
@@ -2116,7 +2058,7 @@ choice = "blank"
       alert("Steward: We have recieved reports that the workers didn't encounter the Night Beast, and have continued working as planned")
     }
 else{
-  alert("Steward: We have recieved reports that the Night Beast found your workers and they didn't survive the encounter.")
+  alert("Steward: We have recieved reports that the Night Beast found your workers and they did not survive the encounter.")
   castleGold -= 100
   mountainOre = 0
   nbHitMount()
