@@ -82,7 +82,7 @@ alert("Steward: Your kingdom is a large one, so you will be required to make cer
 timec()
  // killWorker1()
 updateText()
-var rEvent = setInterval(randomChoice, 135000)
+var rEvent = setInterval(randomChoice, 40000)
 function updateText(){
   document.getElementById("displayWagonOre").textContent = wagonOre;
   document.getElementById("displayWagonWood").textContent = wagonWood;
@@ -1468,6 +1468,36 @@ function evacMount(){
   }
 
 }
+function nbHitMount(){
+if(worker1position == "mountains"){
+  killWorker1()
+}
+if(worker2position == "mountains"){
+  killWorker2()
+
+}
+if(worker3position == "mountains"){
+  killWorker3()
+}
+if(worker4position == "mountains"){
+  killWorker4()
+}
+
+}
+function nbHitForest(){
+  if(worker1position == "forest"){
+killWorker1()
+  }
+  if(worker2position == "forest"){
+    killWorker2()
+  }
+  if(worker3position == "forest"){
+    killWorker3()
+  }
+  if(worker4position == "forest"){
+    killWorker4()
+  }
+}
 function worker1castle(){
   worker1position = "castle"
 
@@ -1943,7 +1973,7 @@ worker1position = "dead"
 document.getElementById("worker1").setAttribute("cx", 1500)
 document.getElementById("worker1").setAttribute("cy", 1500)
 alert("worker 1 died")
-setTimeout(reviveWorker1, 10000)
+setTimeout(reviveWorker1, 180000)
 }
 function killWorker2(){
   document.getElementById("worker2X1").setAttribute("opacity", 1)
@@ -1953,7 +1983,7 @@ worker2position = "dead"
 document.getElementById("worker2").setAttribute("cx", 1500)
 document.getElementById("worker2").setAttribute("cy", 1500)
 alert("worker 2 died")
-setTimeout(reviveWorker2, 10000)
+setTimeout(reviveWorker2, 180000)
 }
 
 function killWorker3(){
@@ -1964,7 +1994,7 @@ worker3position = "dead"
 document.getElementById("worker3").setAttribute("cx", 1500)
 document.getElementById("worker3").setAttribute("cy", 1500)
 alert("worker 3 died")
-setTimeout(reviveWorker3, 10000)
+setTimeout(reviveWorker3, 180000)
 }
 
 function killWorker4(){
@@ -1975,7 +2005,7 @@ worker4position = "dead"
 document.getElementById("worker4").setAttribute("cx", 1500)
 document.getElementById("worker4").setAttribute("cy", 1500)
 alert("worker 4 died")
-setTimeout(reviveWorker4, 10000)
+setTimeout(reviveWorker4, 180000)
 }
 
 
@@ -2041,6 +2071,7 @@ if(choice == "nbMount"){
     alert("Steward: We have recieved reports that the garrison encountered the Night Beast, but sadly, they were unable to fight it off ")
     castleGold -= 100
     mountainOre = 0
+    nbHitMount()
   }
   castleGold -= 50
   choice = "blank"
@@ -2057,6 +2088,7 @@ if(choice == "nbForest"){
     alert("Steward: We have recieved reports that the garrison encountered the Night Beast, but sadly, they were unable to fight it off. ")
     castleGold -= 100
     forestWood = 0
+    nbHitForest()
   }
   castleGold -= 50
   choice = "blank"
@@ -2087,6 +2119,7 @@ else{
   alert("Steward: We have recieved reports that the Night Beast found your workers and they didn't survive the encounter.")
   castleGold -= 100
   mountainOre = 0
+  nbHitMount()
 }
     choice = "blank"
   }
@@ -2100,6 +2133,7 @@ else{
   alert("Steward: We have recieved reports that the Night Beast found your workers and they didn't survive the encounter.")
   castleGold -= 100
   forestWood = 0
+  nbHitForest()
 }
     choice = "blank"
   }
