@@ -1962,11 +1962,21 @@ function randomChoice(){
 
     choiceMake()
   }
+  if(castleGold >= 500){
+    choice = "citRobbed"
+    choiceMake()
+  }
 }
 function choiceMake(){
   document.getElementById("choiceOne").style.display = "block";
   document.getElementById("choiceTwo").style.display = "block";
   document.getElementById("choiceThree").style.display = "block";
+
+if(choice == "citRobbed"){
+  alert("Steward: Sir! Citizens from a local village have come to us saying that they were robbed by a group of Acursed! As their ruler, I think they want you to help them by recovering what they've lost.")
+  alert("Choice: Select the RED to do nothing. Select GRAY to pay them in equal value to what they've lost(-100 gold). Select BLUE to send the garrison to find and recover the stolen possesions from the Acursed(-50 gold + chance)")
+}
+
   if(choice == "nbForest"){
     alert("Steward: Sir! Scouts around the forest camp have reported sightings of a Night Beast roaming the area! If it finds your workers, they will be in grave peril. What shall we do?")
     alert("Choice: Select the RED choice to send your garrison to the camp to protect it from the Night Beast(-50 gold). Select the GRAY choice leave your camp how it is(chance). Select the BLUE choice to send your workers back to your castle(forfeit all resources at the camp)")
