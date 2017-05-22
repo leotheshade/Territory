@@ -64,6 +64,7 @@ var castleGold = 0
 var wagonGold = 0
 var ransomGold = 300
 var dragonRep = 0
+var citRep = 10
 var firstDragVisit = 0
 var keyChoice = "blank"
 var choice = "blank"
@@ -82,7 +83,7 @@ alert("Steward: Your kingdom is a large one, so you will be required to make cer
 timec()
  // killWorker1()
 updateText()
-var rEvent = setInterval(randomChoice, 40000)
+var rEvent = setInterval(randomChoice, 135000)
 function updateText(){
   document.getElementById("displayWagonOre").textContent = wagonOre;
   document.getElementById("displayWagonWood").textContent = wagonWood;
