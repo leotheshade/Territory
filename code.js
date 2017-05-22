@@ -1999,6 +1999,11 @@ function choice1select(){
 document.getElementById("choiceOne").style.display = "none";
 document.getElementById("choiceTwo").style.display = "none";
 document.getElementById("choiceThree").style.display = "none";
+if(choice == "citRobbed"){
+  alert("Steward: The citizens that were robbed don't seem to find your descision popular. I do agree that it is your responsibility to help your people in any way you can.")
+  choice = "blank"
+  citRep -= 2
+}
 if(keyChoice == "dragonIntro"){
 alert("Dragon: You walk a dangerous line my young king. Some might take a tone like that badly. But you are Old King Genus's nephew, and you are new, but know this, if you continue how you are going, you await a dangerous fate. I will return tomorrow and for you and your kingdom's sake, I hope you will have my payment then.")
 dragonRep -= 5
@@ -2053,6 +2058,12 @@ function choice2select(){
   document.getElementById("choiceOne").style.display = "none";
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
+  if(choice == "citRobbed"){
+    alert("Steward: The citizens are grateful that you would pay for their lost possesions, but I think that you should actually deal with the acursed instead of giving them more to pillage.")
+    castleGold -= 100
+    citRep += 1
+    choice = "blank"
+  }
   if(keyChoice == "dragonIntro"){
 alert("Dragon: Of course. I wouldn't want to force someone to have a conversation they wouldn't want to have. Although I hope that you will speak with me next time. I do miss the talks I had with Old King Genus. I will be back tomorrow for my fee. You have my farewell until the next time we speak.")
 keyChoice = "blank"
@@ -2095,6 +2106,9 @@ function choice3select(){
   document.getElementById("choiceOne").style.display = "none";
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
+  if(choice == "citRobbed"){
+    var choice = Math.random()
+  }
   if(keyChoice == "dragonIntro"){
 alert("Dragon: Your manners and diplomacy are admirable my young king. I enjoyed talking with you this time. You will make a great ruler, and a worthy successor to your uncle. I look forward to our next meeting, but unfortunately, I will need my payment then. Farewell for now my young king.")
     dragonRep += 5
