@@ -1963,8 +1963,12 @@ function randomChoice(){
 
     choiceMake()
   }
-  if(castleGold >= 500){
+  if(castleGold >= 300){
     choice = "citRobbed"
+    choiceMake()
+  }
+  else if(castleGold >= 200){
+    choice = "citKidN"
     choiceMake()
   }
 }
@@ -1972,7 +1976,10 @@ function choiceMake(){
   document.getElementById("choiceOne").style.display = "block";
   document.getElementById("choiceTwo").style.display = "block";
   document.getElementById("choiceThree").style.display = "block";
-
+if(choice == citKidN){
+  alert("Steward: Sir! Citizens from a local village have come to us saying that a group of Acursed kidnapped their child, and are demanding a ransom fee! This is truly dire news, what shall we do?")
+  alert("Choice: Select the RED choice to do nothing. Select the GRAY choice to pay off the ransom fee(-100 gold). Select the BLUE choice to send the garrison to go save the child themselves.(-50 gold + chance)")
+}
 if(choice == "citRobbed"){
   alert("Steward: Sir! Citizens from a local village have come to us saying that they were robbed by a group of Acursed! As their ruler, I think they want you to help them by recovering what they've lost.")
   alert("Choice: Select the RED to do nothing. Select GRAY to pay them in equal value to what they've lost(-100 gold). Select BLUE to send the garrison to find and recover the stolen possesions from the Acursed(-50 gold + chance)")
@@ -1987,7 +1994,7 @@ if(choice == "citRobbed"){
     alert("Choice: Select the RED choice to send your garrison to the camp to protect it from the Night Beast(-50 gold). Select the GRAY choice leave your camp how it is(chance). Select the BLUE choice to send your workers back to your castle(forfeit all resources at the camp)")
   }
 if(keyChoice == "dragonIntro"){
-  alert("As you stand where the dragon will meet you on, you feel the ground shake and hear loud thuds at regular intervals. Steward: He approaches/. The thuds grow louder until a massive shape swoops down from the clouds and lands before you. It is a dragon. You cannot help but gape in awe at the sight before you. The dragon lowers it's head and speaks. Dragon: Who is this who stands before me? Where is Old King Genus? Speak human, or I shall slay you where you stand!/. You manage to explain that Old King Genus is dead, and that you are his nephew and heir. The dragon relaxes and droops slightly. Dragon: So that is why. You have my condolences and my grief. He was a good king and we had such pleasent talks. I assume that I will be meeting you from now on, and that your steward has already explained how these meetings will work? But, in Old King Genus's memory, I will not ask for my pay this time. Now that thats out out of the way, I would like to speak with you.")
+  alert("As you stand where the dragon will meet you, you feel the ground shake and hear loud thuds at regular intervals. Steward: He approaches/. The thuds grow louder until a massive shape swoops down from the clouds and lands before you. It is a dragon. You cannot help but gape in awe at the sight before you. The dragon lowers it's head and speaks. Dragon: Who is this who stands before me? Where is Old King Genus? Speak human, or I shall slay you where you stand!/. You manage to explain that Old King Genus is dead, and that you are his nephew and heir. The dragon relaxes and droops slightly. Dragon: So that is why. You have my condolences and my grief. He was a good king and we had such pleasent talks. I assume that I will be meeting you from now on, and that your steward has already explained how these meetings will work? But, in Old King Genus's memory, I will not ask for my pay this time. Now that thats out out of the way, I would like to speak with you.")
 alert("Choice: Select the RED choice to speak with him in a hostile tone. Select the GRAY choice to tell him that you don't feel like talking at that moment. Select the BLUE choice to oblige him in a friendly conversation. ")
 }
 if(choice == "dragonT"){
@@ -1999,6 +2006,11 @@ function choice1select(){
 document.getElementById("choiceOne").style.display = "none";
 document.getElementById("choiceTwo").style.display = "none";
 document.getElementById("choiceThree").style.display = "none";
+if(choice == "citKidN"){
+  alert("Steward: So you would leave your people to pay off the ransom themselves? Very well, if it is your descision, even if i don't agree with it. ")
+  choice = "blank"
+  citRep -= 3
+}
 if(choice == "citRobbed"){
   alert("Steward: The citizens that were robbed don't seem to find your descision popular. I do agree that it is your responsibility to help your people in any way you can.")
   choice = "blank"
@@ -2058,6 +2070,12 @@ function choice2select(){
   document.getElementById("choiceOne").style.display = "none";
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
+  if(choice == "citKidN"){
+    alert("Steward: The citizens have told us that the Acursed turned over the child without any issues once they got their pay. The citizens are very grateful towards your help in the matter. This truly was the best choice you could make, I do not think they could have affored the ransom by themselves.")
+castleGold -= 100
+citRep += 3
+choice = "blank"
+  }
   if(choice == "citRobbed"){
     alert("Steward: The citizens are grateful that you would pay for their lost possesions, but I think that you should actually deal with the acursed instead of giving them more to pillage.")
     castleGold -= 100
@@ -2106,6 +2124,9 @@ function choice3select(){
   document.getElementById("choiceOne").style.display = "none";
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
+  if(choice == "citKidN"){
+    
+  }
   if(choice == "citRobbed"){
     var chance = Math.random()
     castleGold -= 50
