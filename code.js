@@ -68,7 +68,7 @@ var citRep = 10
 var firstDragVisit = 0
 var keyChoice = "blank"
 var choice = "blank"
-var textTest = 0
+var textTest = 1
 var dragonIntroR = "blank"
 
 if(textTest == 1){
