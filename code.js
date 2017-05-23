@@ -60,7 +60,7 @@ var wagonSellW = 0
 var wagonBuyW = 0
 var wagonBuyO = 0
 var wagonSellO = 0
-var castleGold = 0
+var castleGold = 510
 var wagonGold = 0
 var ransomGold = 300
 var dragonRep = 0
@@ -68,7 +68,7 @@ var citRep = 10
 var firstDragVisit = 0
 var keyChoice = "blank"
 var choice = "blank"
-var textTest = 1
+var textTest = 0
 var dragonIntroR = "blank"
 
 if(textTest == 1){
@@ -2107,7 +2107,18 @@ function choice3select(){
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
   if(choice == "citRobbed"){
-    var choice = Math.random()
+    var chance = Math.random()
+    castleGold -= 50
+    if(chance < .7){
+      alert("Steward: The Garrison found the Acursed camp and managed to recover the stolen possesions, while taking care of quite a few of the Acursed occupying it. The citizens are very grateful toward you as well. This will make them more loyal to you, good work.")
+      citRep += 3
+    }
+    else{
+      alert("Steward: We have recieved reports that the Garrison found the Acursed camp, but they were overpowered by them and were forced to retreat. The citizens are grateful for your effort, but I think that they worry that you are not strong enouugh to protect them.")
+castleGold -= 100
+citRep += 1
+    }
+    choice = "blank"
   }
   if(keyChoice == "dragonIntro"){
 alert("Dragon: Your manners and diplomacy are admirable my young king. I enjoyed talking with you this time. You will make a great ruler, and a worthy successor to your uncle. I look forward to our next meeting, but unfortunately, I will need my payment then. Farewell for now my young king.")
