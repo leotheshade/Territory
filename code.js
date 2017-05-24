@@ -60,7 +60,7 @@ var wagonSellW = 0
 var wagonBuyW = 0
 var wagonBuyO = 0
 var wagonSellO = 0
-var castleGold = 510
+var castleGold = 210
 var wagonGold = 0
 var ransomGold = 300
 var dragonRep = 0
@@ -83,7 +83,7 @@ alert("Steward: Your kingdom is a large one, so you will be required to make cer
 timec()
  // killWorker1()
 updateText()
-var rEvent = setInterval(randomChoice, 135000)
+var rEvent = setInterval(randomChoice, 10000)
 function updateText(){
   document.getElementById("displayWagonOre").textContent = wagonOre;
   document.getElementById("displayWagonWood").textContent = wagonWood;
@@ -1976,7 +1976,7 @@ function choiceMake(){
   document.getElementById("choiceOne").style.display = "block";
   document.getElementById("choiceTwo").style.display = "block";
   document.getElementById("choiceThree").style.display = "block";
-if(choice == citKidN){
+if(choice == "citKidN"){
   alert("Steward: Sir! Citizens from a local village have come to us saying that a group of Acursed kidnapped their child, and are demanding a ransom fee! This is truly dire news, what shall we do?")
   alert("Choice: Select the RED choice to do nothing. Select the GRAY choice to pay off the ransom fee(-100 gold). Select the BLUE choice to send the garrison to go save the child themselves.(-50 gold + chance)")
 }
@@ -2071,9 +2071,9 @@ function choice2select(){
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
   if(choice == "citKidN"){
-    alert("Steward: The citizens have told us that the Acursed turned over the child without any issues once they got their pay. The citizens are very grateful towards your help in the matter. This truly was the best choice you could make, I do not think they could have affored the ransom by themselves.")
+    alert("Steward: The citizens have told us that the Acursed turned over the child without any issues once they got their gold. The citizens are very grateful towards your help in the matter. This truly was the best choice you could make, I do not think they could have affored the ransom by themselves.")
 castleGold -= 100
-citRep += 3
+citRep += 4
 choice = "blank"
   }
   if(choice == "citRobbed"){
@@ -2125,7 +2125,18 @@ function choice3select(){
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
   if(choice == "citKidN"){
-    
+    var chance = Math.random()
+    castleGold -= 50
+    if(chance < .7){
+alert("Steward: The Garrison found the Acursed camp holding the captive child, and were able to bring him to safety. The citizens responsible for the child are very grateful for your help as well.")
+      citRep += 4
+    }
+    else{
+alert("Steward: The Garrison found the Acursed camp holding the captive child, but were unable to save him and were forced to retreat. The citizens are furious and grief stricken for their child. We do not know what fate he awaits, but the Acursed will not take kindly towards your transgression.")
+      citRep -= 5
+      castleGold -= 100
+    }
+    choice = "blank"
   }
   if(choice == "citRobbed"){
     var chance = Math.random()
