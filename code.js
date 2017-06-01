@@ -60,7 +60,7 @@ var wagonSellW = 0
 var wagonBuyW = 0
 var wagonBuyO = 0
 var wagonSellO = 0
-var castleGold = 210
+var castleGold = 310
 var wagonGold = 0
 var ransomGold = 300
 var dragonRep = 0
@@ -70,6 +70,28 @@ var keyChoice = "blank"
 var choice = "blank"
 var textTest = 0
 var dragonIntroR = "blank"
+//choice var code down
+var choiceNo1 = 0
+var choiceNo2 = 0
+var choiceNo3 = 0
+var choiceNo4 = 0
+var choiceNo5 = 0
+var choiceNo6 = 0
+
+var choiceNo1A = 0
+var choiceNo2A = 0
+var choiceNo3A = 0
+var choiceNo4A = 0
+var choiceNo5A = 0
+var choiceNo6A = 0
+
+var choiceCount = 0
+
+var choicePerc1 = 0
+var choicePerc2 = 0
+
+// choice var code up
+
 
 if(textTest == 1){
 alert("Dear nephew, If you are reading this, I have passed from this world. As you are my only heir, my kingdom and everything it encompasses is now yours. Although do not belive this to be a blessing. As of this letter being written, my kingdom is in a state of great disparage. The vile Acursed haunt my roads, my coffers grow empty, the Night Beasts terrorize my settlements, and a dragon threatens everything if he does not recieve payment frequently. Given all this, I emplore you to take my mantle and rule my kingless nation. I care about my people greatly, and without a leader to guide and rule them, they would wither and die swiftly. Things may be looking grim, but I belive that if you take my throne, and lead my people, you will be able to make my crumbling nation into a mightly empire! If you do decide to take all the risks, and rule my kingdom, take this letter to my steward and he will help you with everything you need to know. Signed, Old King Genus")
@@ -83,7 +105,7 @@ alert("Steward: Your kingdom is a large one, so you will be required to make cer
 timec()
  // killWorker1()
 updateText()
-var rEvent = setInterval(randomChoice, 10000)
+var rEvent = setInterval(randomChoice, 135000)
 function updateText(){
   document.getElementById("displayWagonOre").textContent = wagonOre;
   document.getElementById("displayWagonWood").textContent = wagonWood;
@@ -1952,22 +1974,77 @@ setTimeout(reviveWorker4, 180000)
 }
 
 
-function randomChoice(){
-  if(worker1position == "mountains" || worker2position == "mountains" || worker3position == "mountains" || worker4position == "mountains"){
-    choice = "nbMount"
 
-    choiceMake()
+
+
+
+
+
+function randomChoice(){
+
+   choiceNo1 = 0
+   choiceNo2 = 0
+  choiceNo3 = 0
+   choiceNo4 = 0
+  choiceNo5 = 0
+   choiceNo6 = 0
+
+   choiceNo1A = 0
+   choiceNo2A = 0
+   choiceNo3A = 0
+   choiceNo4A = 0
+   choiceNo5A = 0
+   choiceNo6A = 0
+
+   choiceCount = 0
+
+   choicePerc1 = 0
+   choicePerc2 = 0
+
+  if(worker1position == "mountains" || worker2position == "mountains" || worker3position == "mountains" || worker4position == "mountains"){
+    // choice = "nbMount"
+choiceNo1A = 1
+choiceCount += 1
+choiceNo1 = choiceCount
+    // choiceMake()
   }
   if(worker1position == "forest" || worker2position == "forest" || worker3position == "forest" || worker4position == "forest"){
-    choice = "nbForest"
-
-    choiceMake()
+    // choice = "nbForest"
+    choiceNo2A = 1
+    choiceCount += 1
+    choiceNo2 = choiceCount
+    // choiceMake()
   }
   if(castleGold >= 300){
+    // choice = "citRobbed"
+    choiceNo3A = 1
+    choiceCount += 1
+    choiceNo3 = choiceCount
+    // choiceMake()
+  }
+  if(castleGold >= 200){
+    // choice = "citKidN"
+    choiceNo4A = 1
+    choiceCount += 1
+    choiceNo4 = choiceCount
+    // choiceMake()
+  }
+  choicePerc1 = 100/choiceCount
+  choicePerc2 = choicePerc1 * .01
+  var chance = Math.random()
+  if(choiceNo1A && chance < choicePerc2 * choiceNo1){
+    choice = "nbMount"
+    choiceMake()
+  }
+  else if(choiceNo2A && chance < choicePerc2 * choiceNo2){
+    choice = "nbForest"
+    choiceMake()
+  }
+  else if(choiceNo3A && chance < choicePerc2 * choiceNo3){
     choice = "citRobbed"
     choiceMake()
   }
-  else if(castleGold >= 200){
+  else if(choiceNo4A && chance < choicePerc2 * choiceNo4){
     choice = "citKidN"
     choiceMake()
   }
