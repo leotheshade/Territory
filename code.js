@@ -60,7 +60,7 @@ var wagonSellW = 0
 var wagonBuyW = 0
 var wagonBuyO = 0
 var wagonSellO = 0
-var castleGold = 310
+var castleGold = 0
 var wagonGold = 0
 var ransomGold = 300
 var dragonRep = 0
@@ -68,7 +68,7 @@ var citRep = 10
 var firstDragVisit = 0
 var keyChoice = "blank"
 var choice = "blank"
-var textTest = 0
+var textTest = 1
 var dragonIntroR = "blank"
 //choice var code down
 var choiceNo1 = 0
