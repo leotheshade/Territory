@@ -117,7 +117,7 @@ function updateText(){
   document.getElementById("displayForestWood").textContent = forestWood;
 requestAnimationFrame(updateText)
 }
- var cycle = setInterval(timec, 360000)
+ var cycle = setInterval(timec, 270000)
 function forestClick(){
   if(wagonCheck1 == 1){
     wagonMountains1 =0
@@ -1938,7 +1938,7 @@ worker1position = "dead"
 document.getElementById("worker1").setAttribute("cx", 1500)
 document.getElementById("worker1").setAttribute("cy", 1500)
 alert("worker 1 died")
-setTimeout(reviveWorker1, 180000)
+setTimeout(reviveWorker1, 150000)
 }
 function killWorker2(){
   document.getElementById("worker2X1").setAttribute("opacity", 1)
@@ -1948,7 +1948,7 @@ worker2position = "dead"
 document.getElementById("worker2").setAttribute("cx", 1500)
 document.getElementById("worker2").setAttribute("cy", 1500)
 alert("worker 2 died")
-setTimeout(reviveWorker2, 180000)
+setTimeout(reviveWorker2, 150000)
 }
 
 function killWorker3(){
@@ -1959,7 +1959,7 @@ worker3position = "dead"
 document.getElementById("worker3").setAttribute("cx", 1500)
 document.getElementById("worker3").setAttribute("cy", 1500)
 alert("worker 3 died")
-setTimeout(reviveWorker3, 180000)
+setTimeout(reviveWorker3, 150000)
 }
 
 function killWorker4(){
@@ -1970,7 +1970,7 @@ worker4position = "dead"
 document.getElementById("worker4").setAttribute("cx", 1500)
 document.getElementById("worker4").setAttribute("cy", 1500)
 alert("worker 4 died")
-setTimeout(reviveWorker4, 180000)
+setTimeout(reviveWorker4, 150000)
 }
 
 
@@ -2029,6 +2029,11 @@ choiceNo1 = choiceCount
     choiceNo4 = choiceCount
     // choiceMake()
   }
+  if(castleGold >= 1300){
+    choiceNo5A = 1
+    choiceCount += 1
+    choiceNo5 = choiceCount
+  }
   choicePerc1 = 100/choiceCount
   choicePerc2 = choicePerc1 * .01
   var chance = Math.random()
@@ -2048,11 +2053,19 @@ choiceNo1 = choiceCount
     choice = "citKidN"
     choiceMake()
   }
+  else if(choiceNo5A && chance < choicePerc2 * choiceNo5){
+    choice = "castleAttack"
+    choiceMake()
+  }
 }
 function choiceMake(){
   document.getElementById("choiceOne").style.display = "block";
   document.getElementById("choiceTwo").style.display = "block";
   document.getElementById("choiceThree").style.display = "block";
+  if(choice == "castleAttack"){
+    alert("Steward: Sir! The castle is currently under siege by a massive group of Acursed. An attack of this size has never happened before. The Garrison is fighting them off to the best of their abitlities, what shall we do?")
+    alert("Choice: select the RED choice to flee the castle in the chaos and try to come back to power once the fighting has ended. Select the GRAY choice to continue holding them off, and send for help from one of your allies(The dragon or any of your other allies). Select the BLUE choice to go out onto the battlements with your troops and fight alongside them to give them a morale boost.")
+  }
 if(choice == "citKidN"){
   alert("Steward: Sir! Citizens from a local village have come to us saying that a group of Acursed kidnapped their child, and are demanding a ransom fee! This is truly dire news, what shall we do?")
   alert("Choice: Select the RED choice to do nothing. Select the GRAY choice to pay off the ransom fee(-100 gold). Select the BLUE choice to send the garrison to go save the child themselves.(-50 gold + chance)")
@@ -2083,6 +2096,23 @@ function choice1select(){
 document.getElementById("choiceOne").style.display = "none";
 document.getElementById("choiceTwo").style.display = "none";
 document.getElementById("choiceThree").style.display = "none";
+if(choice == "castleAttack"){
+  var chance Math.random()
+  if(chance < .325){
+    launchGameO()
+    alert("While escaping the castle, you were seen by some of the Acursed attackers and were swiftly killed. The sight of their king's demise greatly impacted your soldiers, and they were defeated and killed. The Acursed take over your castle and rule as tyrants.")
+  }
+  else if(chance < .65){
+    launchGameO()
+    alert("After escaping you return to the castle after the sounds of fighting die out only to discover that the Acursed won the battle and are occupying your castle. You are quickly spotted by guards and are swiftly killed.")
+  }
+  else{
+    alert("After escaping you return to the castle after the sounds of fighting die out, and find that The Garrison managed to win the battle, but not before your castle was robbed of a large portion of it's gold. You quickly regain control, but have lost the respect of many of your subjects.")
+    castleGold -= 600
+    citRep -= 10
+  }
+  choice = "blank"
+}
 if(choice == "citKidN"){
   alert("Steward: So you would leave your people to pay off the ransom themselves? Very well, if it is your descision, even if i don't agree with it. ")
   choice = "blank"
@@ -2147,6 +2177,23 @@ function choice2select(){
   document.getElementById("choiceOne").style.display = "none";
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
+  if(choice == "castleAttack"){
+    var chance = Math.random()
+    if(chance < .3){
+      launchGameO()
+      alert("Once you send your messanger there is no time to keep track of him or see what became of him. You fight for a long time but hear no word from your allies. The fight drags on until The Acursed forces break through your defences, slaughter everyone, and take over your castle.")
+
+    }
+    else if(chance < .6){
+alert("As you send your messanger there is no time to keep track of him or see what became of him. As the fight drags on you begin to lose hope that your allies will come. Then you hear the familiar thumping sound. You smile as you see the large shape coming from the sky at a very fast rate. Then The Dragon lands in the middle of The Acursed forces with his sweeping claws and mighty tail. The battle did not last long after that with the dragon by your side. You thank him immensly for his help in the battle.")
+
+      dragonRep += 3
+    }
+    else{
+      alert("As you send your messanger there is no time to keep track of him or see what became of him. You fight for a long time but hear no word from your allies. Even with all the odds against you, you still manage to hold off The Acursed until they are finally forced to retreat.")
+    }
+    choice = "blank"
+  }
   if(choice == "citKidN"){
     alert("Steward: The citizens have told us that the Acursed turned over the child without any issues once they got their gold. The citizens are very grateful towards your help in the matter. This truly was the best choice you could make, I do not think they could have affored the ransom by themselves.")
 castleGold -= 100
@@ -2201,6 +2248,20 @@ function choice3select(){
   document.getElementById("choiceOne").style.display = "none";
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
+  if(choice == "castleAttack"){
+var chance = Math.random()
+    if(chance < .4){
+      launchGameO()
+      alert("As you stand on the battlements, you watch to your dismay as The Acursed break through your defences. Even with this, your soldiers rally with you. Even with everything going wrong, your soldiers still don't give up. Even with everyone dead, you die with your sword in your hand, and with a pile of dead enemies at your feet.")
+
+    }
+    else{
+alert("As you stand on the battlements, your soldiers are rallied by your presence. With you by your force's side, The Acursed never get an oppritunity to break through, and they all are forced to retreat.")
+citRep += 10
+
+    }
+    choice = "blank"
+  }
   if(choice == "citKidN"){
     var chance = Math.random()
     castleGold -= 50
