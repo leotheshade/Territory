@@ -68,7 +68,7 @@ var citRep = 10
 var firstDragVisit = 0
 var keyChoice = "blank"
 var choice = "blank"
-var textTest = 1
+var textTest = 0
 var dragonIntroR = "blank"
 //choice var code down
 var choiceNo1 = 0
@@ -2097,7 +2097,7 @@ document.getElementById("choiceOne").style.display = "none";
 document.getElementById("choiceTwo").style.display = "none";
 document.getElementById("choiceThree").style.display = "none";
 if(choice == "castleAttack"){
-  var chance Math.random()
+  var chance = Math.random()
   if(chance < .325){
     launchGameO()
     alert("While escaping the castle, you were seen by some of the Acursed attackers and were swiftly killed. The sight of their king's demise greatly impacted your soldiers, and they were defeated and killed. The Acursed take over your castle and rule as tyrants.")
