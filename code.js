@@ -99,6 +99,13 @@ var musicLock = 0
 
 // choice var code up
 
+var wagonOcean = 0
+var oceanWorker1 = 0
+var oceanWorker2 = 0
+var oceanWorker3 = 0
+var oceanWorker4 = 0
+
+
 function musicLoop(){
 Omusic.play()
   setTimeout(musicLoop, 12000)
@@ -433,6 +440,65 @@ function castleClick(){
     mountainWorker4 = 0
     castleWorker4 = 1
     forestWorker4 = 0
+    worker4check = 0
+    wagonWorker4 = 0
+    document.getElementById("worker4").setAttribute("fill", "blue")
+    document.getElementById("w4Label").setAttribute("fill","blue")
+  }
+}
+
+
+
+
+function oceanClick(){
+   if(wagonCheck1 == 1){
+    wagonMountains1 = 0
+    wagonForest = 0
+    wagonCastle = 0
+    wagonOcean = 1
+    wagonCheck1 = 0
+    wagonSellW = 0
+    wagonBuyW = 0
+    wagonSellO = 0
+    wagonBuyO = 0
+    document.getElementById("supplyWagon1").setAttribute("fill", "brown")
+  }
+  if(worker1check == 1){
+    mountainWorker1 = 0
+    castleWorker1 = 0
+    oceanWorker1 = 1
+    forestWorker1 = 0
+    worker1check = 0
+    wagonWorker1 = 0
+    document.getElementById("worker1").setAttribute("fill", "blue")
+    document.getElementById("w1Label").setAttribute("fill","blue")
+
+  }
+  if(worker2check == 1){
+    mountainWorker2 = 0
+    castleWorker2 = 0
+      oceanWorker2 = 1
+    forestWorker2 = 0
+    worker2check = 0
+    wagonWorker2 = 0
+    document.getElementById("worker2").setAttribute("fill", "blue")
+    document.getElementById("w2Label").setAttribute("fill","blue")
+  }
+  if(worker3check == 1){
+    mountainWorker3 = 0
+    castleWorker3 = 0
+      oceanWorker3 = 1
+    forestWorker3 = 0
+    worker3check = 0
+    wagonWorker3 = 0
+    document.getElementById("worker3").setAttribute("fill", "blue")
+    document.getElementById("w3Label").setAttribute("fill","blue")
+  }
+  if(worker4check == 1){
+    mountainWorker4 = 0
+    castleWorker4 = 0
+    forestWorker4 = 0
+      oceanWorker4 = 1
     worker4check = 0
     wagonWorker4 = 0
     document.getElementById("worker4").setAttribute("fill", "blue")
@@ -1157,9 +1223,91 @@ takeWoodCastle()
   }
   //up
 
+//down fishing camp
 
+  if(wagonWorker1 == 1 && worker1position == "castle" && wagonOcean == 1 && wagonPosition1 == "mountains"){
+      document.getElementById("worker1moveX").setAttribute("from", 40)
+    document.getElementById("worker1moveX").setAttribute("to", 410)
+    document.getElementById("worker1moveX").setAttribute("dur", 15)
 
+    document.getElementById("worker1moveY").setAttribute("from", 450)
+    document.getElementById("worker1moveY").setAttribute("to", 320)
+    document.getElementById("worker1moveY").setAttribute("dur", 15)
+    document.getElementById("worker1moveX").beginElement()
+    document.getElementById("worker1moveY").beginElement()
+    document.getElementById("worker1").setAttribute("cx", 410)
+    document.getElementById("worker1").setAttribute("cy", 320)
+    worker1position = "moving"
+    var startMine1 = setTimeout(worker1castle, 15000)
+    }
+    if(wagonWorker2 == 1 && worker2position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
+      document.getElementById("worker2moveX").setAttribute("from", 70)
+    document.getElementById("worker2moveX").setAttribute("to", 440)
+    document.getElementById("worker2moveX").setAttribute("dur", 15)
 
+    document.getElementById("worker2moveY").setAttribute("from", 450)
+    document.getElementById("worker2moveY").setAttribute("to", 320)
+    document.getElementById("worker2moveY").setAttribute("dur", 15)
+    document.getElementById("worker2moveX").beginElement()
+    document.getElementById("worker2moveY").beginElement()
+    document.getElementById("worker2").setAttribute("cx", 440)
+    document.getElementById("worker2").setAttribute("cy", 320)
+    worker2position = "moving"
+    setTimeout(worker2castle, 15000)
+
+    }
+    if(wagonWorker3 == 1 && worker3position == "mountains" && wagonCastle == 1 && wagonPosition1=="mountains"){
+       document.getElementById("worker3moveX").setAttribute("from", 100)
+    document.getElementById("worker3moveX").setAttribute("to", 470)
+    document.getElementById("worker3moveX").setAttribute("dur", 15)
+
+    document.getElementById("worker3moveY").setAttribute("from", 450)
+    document.getElementById("worker3moveY").setAttribute("to", 320)
+    document.getElementById("worker3moveY").setAttribute("dur", 15)
+    document.getElementById("worker3moveX").beginElement()
+    document.getElementById("worker3moveY").beginElement()
+    document.getElementById("worker3").setAttribute("cx", 470)
+    document.getElementById("worker3").setAttribute("cy", 320)
+    worker3position = "moving"
+    setTimeout(worker3castle, 15000)
+    }
+    //down
+    if(wagonWorker4 == 1 && worker4position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
+      document.getElementById("worker4moveX").setAttribute("from", 130)
+    document.getElementById("worker4moveX").setAttribute("to", 500)
+    document.getElementById("worker4moveX").setAttribute("dur", 15)
+
+    document.getElementById("worker4moveY").setAttribute("from", 450)
+    document.getElementById("worker4moveY").setAttribute("to", 320)
+    document.getElementById("worker4moveY").setAttribute("dur", 15)
+    document.getElementById("worker4moveX").beginElement()
+    document.getElementById("worker4moveY").beginElement()
+    document.getElementById("worker4").setAttribute("cx", 500)
+    document.getElementById("worker4").setAttribute("cy", 320)
+    worker4position = "moving"
+    setTimeout(worker4castle, 15000)
+
+    }
+  if(wagonCastle == 1 && wagonPosition1 == "mountains"){
+    document.getElementById("wagon1MoveX").setAttribute("from", 70)
+    document.getElementById("wagon1MoveX").setAttribute("to", 450)
+    document.getElementById("wagon1MoveX").setAttribute("dur", 15)
+
+    document.getElementById("wagon1MoveY").setAttribute("from", 480)
+    document.getElementById("wagon1MoveY").setAttribute("to", 350)
+    document.getElementById("wagon1MoveY").setAttribute("dur", 15)
+
+    document.getElementById("wagon1MoveX").beginElement()
+    document.getElementById("wagon1MoveY").beginElement()
+
+    document.getElementById("supplyWagon1").setAttribute("x", 450)
+    document.getElementById("supplyWagon1").setAttribute("y", 350)
+
+    wagonCastle = 0
+    wagonPosition1 = "moving"
+    var depoOre = setTimeout(depositOre, 15000)
+
+  }
 
 
 //   if(mountainWorker1 == 1 && worker1position == "castle" ){
