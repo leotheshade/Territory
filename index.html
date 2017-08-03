@@ -144,12 +144,15 @@
 
 
   <!-- // time of day -->
-   <rect id="dayNight", x="0" y="0" width="1000" height="1000" fill="black" opacity="0">
-     <animate id="dayToNight" attributeName="opacity" from="0" to="0.6" begin="indefinite" dur="5"/>
-     <animate id="nightToDay" attributeName="opacity" from="0.6" to="0" begin="indefinite" dur="5"/>
+   <rect id="dayNight" x="0" y="0" width="1000" height="1000" fill="black" opacity="0">
+     <animate id="dayToNight" attributeName="opacity" from="0" to="0.6" begin="indefinite" dur="10"/>
+     <animate id="nightToDay" attributeName="opacity" from="0.6" to="0" begin="indefinite" dur="10"/>
   </rect>
   <!-- //confirm button -->
+
   <rect x="440" y="405" width="50" height="30" fill="red" onclick="send()"/>
+  <text x="445" y="430" font-family="sans-serif" font-size="25">GO</text>
+  <rect x="440" y="405" width="50" height="30" fill="red" opacity="0" onclick="send()"/>
   <!-- //text -->
   <text id="displayForestWood" x="760" y ="200" font-family="sans-serif" font-size="25" fill="brown">0</text>
   <text id="displayCastleOre" x="400" y="230" font-family="sans-serif" font-size="25" fill="gray">0</text>
@@ -163,9 +166,11 @@
   <!-- menu -->
 
   <rect x="540" y="50" width="260" height="400" fill="slategrey" opacity="1" id="wagonMenu" style="display:none;"/>
-  <image id="mI" onclick="mountainClick()" width="100" height="100" x="540" y="60" xlink:href="file:///C:/Users/Liam Dimas/Desktop/TerritoryImages/Mountain.PNG" style="display:none;"/>
-  <image id="fI" onclick="forestClick()" width="100" height="100" x="720" y="60" xlink:href="file:///C:/Users/Liam Dimas/Desktop/TerritoryImages/tree.png" style="display:none;"/>
-    <image id="cI" onclick="castleClick()" width="100" height="100" x="640" y="60" xlink:href="file:///C:/Users/Liam Dimas/Desktop/TerritoryImages/Castle.PNG" style="display:none;"/>
+  <image id="mI" onclick="mountainClick()" width="100" height="100" x="540" y="30" xlink:href="file:///C:/Users/Liam Dimas/Desktop/TerritoryImages/Mountain.PNG" style="display:none;"/>
+  <image id="fI" onclick="forestClick()" width="100" height="100" x="720" y="50" xlink:href="file:///C:/Users/Liam Dimas/Desktop/TerritoryImages/tree.png" style="display:none;"/>
+    <image id="cI" onclick="castleClick()" width="100" height="100" x="640" y="30" xlink:href="file:///C:/Users/Liam Dimas/Desktop/TerritoryImages/Castle.PNG" style="display:none;"/>
+    <!-- am going to replace the following rect with the proper image once i ask katherine to draw out the ocean thumbnail -->
+    <rect id="oI" onclick="oceanClick()" width="100" height="60" x="640" y="110" fill="yellow" style="display:none;"/>
     <image id="w1I" onclick="worker1Click()" width="100" height="100" x="523" y="350" xlink:href="file:///C:/Users/Liam Dimas/Desktop/TerritoryImages/Fwoodcutter.png" style="display:none;"/>
         <image id="w2I" onclick="worker2Click()" width="100" height="100" x="588" y="350" xlink:href="file:///C:/Users/Liam Dimas/Desktop/TerritoryImages/lumberjack concept art.png" style="display:none;"/>
         <image id="w3I" onclick="worker3Click()" width="100" height="100" x="656" y="350" xlink:href="file:///C:/Users/Liam Dimas/Desktop/TerritoryImages/Wood Pick F.PNG" style="display:none;"/>
@@ -175,17 +180,17 @@
     <text id="w3Label" x="694" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">3</text>
       <text id="w4Label" x="755" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">4</text>
 
-      <text id="woodTrade" x="550" y="220" font-family="sans-serif" font-size="20" fill="brown" style="display:none;">Wood</text>
-      <rect id="sellWood" onclick="sellWoodS()" x="615" y="204" width="40" height="20" fill="gold" style="display:none;"/>
-      <rect id="buyWood" onclick="buyWoodS()" x="655" y="204" width="40" height="20" fill="silver" style="display:none;"/>
+      <text id="woodTrade" x="550" y="240" font-family="sans-serif" font-size="20" fill="brown" style="display:none;">Wood</text>
+      <rect id="sellWood" onclick="sellWoodS()" x="615" y="224" width="40" height="20" fill="gold" style="display:none;"/>
+      <rect id="buyWood" onclick="buyWoodS()" x="655" y="224" width="40" height="20" fill="silver" style="display:none;"/>
 
-      <text id="oreTrade"  x="550" y="270" font-family="sans-serif" font-size="20" fill="brown" style="display:none;">Ore</text>
-      <rect id="sellOre" onclick="sellOreS()" x="615" y="254" width="40" height="20" fill="gold" style="display:none;"/>
-      <rect id="buyOre" onclick="buyOreS()" x="655" y="254" width="40" height="20" fill="silver" style="display:none;"/>
-      <text id="buyLabel" x="615" y="245" font-family="sans-serif" font-size="18" fill="gold" style="display:none;">Sell</text>
-      <text id="sellLabel" x="655" y="245" font-family="sans-serif" font-size="18" fill="silver" style="display:none;">Buy</text>
+      <text id="oreTrade"  x="550" y="290" font-family="sans-serif" font-size="20" fill="brown" style="display:none;">Ore</text>
+      <rect id="sellOre" onclick="sellOreS()" x="615" y="274" width="40" height="20" fill="gold" style="display:none;"/>
+      <rect id="buyOre" onclick="buyOreS()" x="655" y="274" width="40" height="20" fill="silver" style="display:none;"/>
+      <text id="buyLabel" x="615" y="265" font-family="sans-serif" font-size="18" fill="gold" style="display:none;">Sell</text>
+      <text id="sellLabel" x="655" y="265" font-family="sans-serif" font-size="18" fill="silver" style="display:none;">Buy</text>
 
-      <rect id="closeButton" x="730" y="215" width="40" height="40" fill="red" style="display:none" onclick="menuLaunch()"/>
+      <rect id="closeButton" x="730" y="235" width="40" height="40" fill="red" style="display:none" onclick="menuLaunch()"/>
 
 <line id="worker1X1" x1="540" y1="350" x2="610" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
 <line id="worker1X2" x1="540" y1="450" x2="610" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
@@ -203,7 +208,9 @@
 <rect id="choiceTwo" x="300" y="200" width="60" height="40" fill="dimgrey" onclick="choice2select()" style="display: none"/>
 <rect id="choiceThree" x="300" y="250" width="60" height="40" fill="blue" onclick="choice3select()" style="display: none;"/>
 
-
+<!-- <rect id="choiceOne" x="540" y="50" width="260" height="133.33" fill="red" onclick="choice1select()" style="display: none"/>
+<rect id="choiceTwo" x="540" y="183.33" width="260" height="133.33" fill="dimgrey" onclick="choice2select()" style="display: none"/>
+<rect id="choiceThree" x="540" y="316.66" width="260" height="133.33" fill="blue" onclick="choice3select()" style="display: none;"/> -->
    <!-- // icon of raid -->
    <!-- // icon of raid -->
   <text id="raidAlert" x="330" y="150" font-family="sans-serif" font-size="25" fill="red" opacity="1" style="display: none;"></text>

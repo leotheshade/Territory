@@ -104,7 +104,7 @@ var oceanWorker1 = 0
 var oceanWorker2 = 0
 var oceanWorker3 = 0
 var oceanWorker4 = 0
-
+var choiceLock = 0
 
 function musicLoop(){
 Omusic.play()
@@ -127,7 +127,7 @@ alert("Steward: Ah, so you have come. Your uncle was right about you, he never o
 alert("Steward: Beware, when moving your units or resources, the vile Acursed are sure to be attracted. What are the Acursed you ask? Well they are vile creatures, once men, they are now ruthless theives who partol your roads and rob your people. Somehow they react to the Shadow Veil and gain immense power while its darkness envelops our land and become much more aggressive than normal. They can be easily identified by the glowing rune that is branded on their backs. They will attack your supply wagons if they spot them.(currently the combat features are not in place so when you are attacked, all that will happen is tell you what bandit team attacked and make a red label appear letting you know that you have been attacked)")
 alert("Steward: One facillity you might want to make use of is The Market located north of your castle. You can use it to buy or sell extra resources you might need. The people that run it are not part of any kingdom, do business indiscriminately, and have allies with any major power in this world. They deal in bundles of 100s, so if you give them 100 ore, they will trade you 100 gold in return and vice versa. You can access it by selecting either Buy or Sell from your wagon next to what resource you want to trade in. Be aware that the route to The Market is shorter then other routes so it will take less time for your wagon to arrive there. ")
 alert("Steward: One of the main threats of this kingdom is a mighty dragon that insists that he requires a protection fee to keep us safe, but has hinted that if we don't pay, he will destroy this kingdom and everyone in it. I do not belive that he is aware that your uncle is dead, so he will not expect you to be in your uncle's place when he comes. He always talked with Old King Genus when he came so he may want to speak with you. This will be your chance to make an impression on him, so make it a good one. When he first comes, he will demand 300 gold, so make sure you have earned that much by tomorrow. Every time he comes he will demand 50 more gold the next day.")
-alert("Steward: Your kingdom is a large one, so you will be required to make certain descisions that will affect certain aspects of your kingdom. When such a descision comes up, select whatever choice seems the best to you. Be wary, when interacting with certain figures, simple choices could have massive consequences. You may recieve a report saying that scouts have sighted a Night Beast in close proximity to some of your workers. You will be forced to decide to send reinforcements to the camp, send the workers home, or just do nothing. This descision will decide the fate of your subjects. But know this, you can't save everyone, accidents happen, things can be unpredictable. You can just hope that you made the right descision, and if you didn't, all you can do is shrug it off, and do better next time.")
+alert("Steward: Your kingdom is a large one, so you will be required to make certain descisions that will affect certain aspects of your kingdom. When such a descision comes up, select whatever choice seems the best to you. Be wary, when interacting with certain figures, simple choices could have massive consequences. You may recieve a report saying that scouts have sighted a Night Beast in close proximity to some of your workers. You will be forced to decide to send reinforcements to the camp, send the workers home, or just do nothing. This descision will decide the fate of your subjects. But know this, you can't save everyone, accidents happen, things can be unpredictable. You can just hope that you made the right descision, and if you didn't, all you can do is accept the consequences of your actions, and do better next time. Know that when the time comes for you to make a descision, you will be unable to send orders to your wagon until the issue is resolved. ")
 textTest = 0
 
 
@@ -273,6 +273,7 @@ document.getElementById("worker4X2").style.display = "block";
  document.getElementById("mI").style.display = "block"
  document.getElementById("fI").style.display = "block"
  document.getElementById("cI").style.display = "block"
+ document.getElementById("oI").style.display = "block"
 
  document.getElementById("woodTrade").style.display = "block"
  document.getElementById("sellWood").style.display = "block"
@@ -317,6 +318,7 @@ document.getElementById("wagonMenu").style.display = "none";
 document.getElementById("mI").style.display = "none"
 document.getElementById("fI").style.display = "none"
 document.getElementById("cI").style.display = "none"
+document.getElementById("oI").style.display = "none"
 
 document.getElementById("woodTrade").style.display = "none"
 document.getElementById("sellWood").style.display = "none"
@@ -451,6 +453,7 @@ function castleClick(){
 
 
 function oceanClick(){
+  alert("working")
    if(wagonCheck1 == 1){
     wagonMountains1 = 0
     wagonForest = 0
@@ -615,6 +618,7 @@ function buyOreS(){
 }
 function send(){
   //down
+  if(choiceLock == 0){
  raid()
  if(wagonCastle == 1 && wagonPosition1 == "market"){
    document.getElementById("wagon1MoveX").setAttribute("from", 435)
@@ -1608,7 +1612,7 @@ function evacMount(){
     setTimeout(worker4castle, 23000)
 
   }
-
+}
 }
 function nbHitMount(){
 if(worker1position == "mountains"){
@@ -2236,6 +2240,7 @@ choiceNo1 = choiceCount
   }
 }
 function choiceMake(){
+  choiceLock = 1
   document.getElementById("choiceOne").style.display = "block";
   document.getElementById("choiceTwo").style.display = "block";
   document.getElementById("choiceThree").style.display = "block";
@@ -2270,6 +2275,7 @@ if(choice == "dragonT"){
 }
 }
 function choice1select(){
+  choiceLock = 0
 document.getElementById("choiceOne").style.display = "none";
 document.getElementById("choiceTwo").style.display = "none";
 document.getElementById("choiceThree").style.display = "none";
@@ -2351,6 +2357,7 @@ if(choice == "nbForest"){
 
 }
 function choice2select(){
+  choiceLock = 0
   document.getElementById("choiceOne").style.display = "none";
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
@@ -2422,6 +2429,7 @@ else{
   }
 }
 function choice3select(){
+  choiceLock = 0
   document.getElementById("choiceOne").style.display = "none";
   document.getElementById("choiceTwo").style.display = "none";
   document.getElementById("choiceThree").style.display = "none";
@@ -2537,7 +2545,7 @@ function timec(){
      document.getElementById("notifications").style.display = "block";
       document.getElementById("notifications").textContent = "As the shadow vale rises, the acursed grow stronger...";
     if(Ncheck == 0){
-     setTimeout(notificationOP, 7000)
+     setTimeout(notificationOP, 13000)
        Ncheck = 1
      }
     time = "night"
