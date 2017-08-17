@@ -75,6 +75,8 @@ var keyChoice = "blank"
 var choice = "blank"
 var textTest = 0
 var dragonIntroR = "blank"
+var AcursedRep = 0
+var garrisonCooldown = 0
 //choice var code down
 var choiceNo1 = 0
 var choiceNo2 = 0
@@ -618,6 +620,9 @@ function buyOreS(){
 }
 function send(){
   //down
+  if(choiceLock == 1){
+    alert("You must deal with the business at hand before continuing on with other things..")
+  }
   if(choiceLock == 0){
  raid()
  if(wagonCastle == 1 && wagonPosition1 == "market"){
@@ -2287,7 +2292,7 @@ if(choice == "castleAttack"){
   }
   else if(chance < .65){
     launchGameO()
-    alert("After escaping you return to the castle after the sounds of fighting die out only to discover that the Acursed won the battle and are occupying your castle. You are quickly spotted by guards and are swiftly killed.")
+    alert("After escaping you return to the castle after the sounds of fighting die out only to discover that the Acursed won the battle and are occupying your castle. You are quickly spotted by the Acursed watchmen and are swiftly killed.")
   }
   else{
     alert("After escaping you return to the castle after the sounds of fighting die out, and find that The Garrison managed to win the battle, but not before your castle was robbed of a large portion of it's gold. You quickly regain control, but have lost the respect of many of your subjects.")
@@ -2396,7 +2401,7 @@ keyChoice = "blank"
 dragonIntroR = 2
   }
   if(choice == "dragonT"){
-    alert("Dragon: I see. Well, I am not one to force another to talk for my pleasure, but i do enjoy talking with someone, and Old King Genus was the only one that realy obliged my desire. I do hope you will talk to me tomorrow. Farewell until next time my young king.")
+    alert("Dragon: I see. Well, I am not one to force another to talk for my own pleasure, but i do enjoy talking with someone, and Old King Genus was the only one that realy obliged my desire. I do hope you will talk to me tomorrow. Farewell until next time my young king.")
 choice = "blank"
 
   }
@@ -2437,11 +2442,11 @@ function choice3select(){
 var chance = Math.random()
     if(chance < .4){
       launchGameO()
-      alert("As you stand on the battlements, you watch to your dismay as The Acursed break through your defences. Even with this, your soldiers rally with you. Even with everything going wrong, your soldiers still don't give up. Even with everyone dead, you die with your sword in your hand, and with a pile of dead enemies at your feet.")
+      alert("As you stand on the battlements, you watch to your dismay as The Acursed break through your defences. Even with this, your soldiers rally with you. Even with everything going wrong, your soldiers still don't give up. As the last of your men fall by your side, you hold on until you are struck down, although, you die with your sword in hand, and with a pile of Acursed at your feet.")
 
     }
     else{
-alert("As you stand on the battlements, your soldiers are rallied by your presence. With you by your force's side, The Acursed never get an oppritunity to break through, and they all are forced to retreat.")
+alert("As you stand on the battlements, your soldiers are rallied by your presence. With you by your force's side, The Acursed never get an oppritunity to break through, and they are forced to retreat.")
 citRep += 10
 
     }
@@ -2451,7 +2456,7 @@ citRep += 10
     var chance = Math.random()
     castleGold -= 50
     if(chance < .7){
-alert("Steward: The Garrison found the Acursed camp holding the captive child, and were able to bring him to safety. The citizens responsible for the child are very grateful for your help as well.")
+alert("Steward: The Garrison found the Acursed camp holding the captive child, and were able to bring them to safety. The citizens responsible for the child are very grateful for your help as well.")
       citRep += 4
     }
     else{
@@ -2465,7 +2470,7 @@ alert("Steward: The Garrison found the Acursed camp holding the captive child, b
     var chance = Math.random()
     castleGold -= 50
     if(chance < .7){
-      alert("Steward: The Garrison found the Acursed camp and managed to recover the stolen possesions, while taking care of quite a few of the Acursed occupying it. The citizens are very grateful toward you as well. This will make them more loyal to you, good work.")
+      alert("Steward: The Garrison found the Acursed camp and managed to recover the stolen possesions, while taking care of quite a few of Acursed occupying it. The citizens are very grateful toward you as well. This will make them more loyal to you, good work.")
       citRep += 3
     }
     else{
