@@ -1,7 +1,7 @@
 var Omusic = new Audio('C:/Users/Liam Dimas/Desktop/Skeleton of a Town - Icewind Dale 2 soundtrack.mp3');
 
 
-
+//known bug: Something is causing the "send workers home" function for the night beast choice event to fail. It may have something to do with the new code that stops you from ignoing the event, or unselected workers
 
 var worker1check = 0
 var worker2check = 0
