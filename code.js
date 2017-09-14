@@ -1062,7 +1062,7 @@ takeWoodCastle()
     takeWoodForest()
 
   }
-    if(wagonWorker1 == 1 && worker1position == "castle" && wagonMountains1 == 1){
+    if(wagonWorker1 == 1 && worker1position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
 
       document.getElementById("worker1moveX").setAttribute("from", 410)
     document.getElementById("worker1moveX").setAttribute("to", 40)
@@ -1078,7 +1078,7 @@ takeWoodCastle()
     worker1position = "moving"
     var startMine1 = setTimeout(worker1mining, 15000)
     }
-    if(wagonWorker2 == 1 && worker2position == "castle" && wagonMountains1 == 1){
+    if(wagonWorker2 == 1 && worker2position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
       document.getElementById("worker2moveX").setAttribute("from", 440)
     document.getElementById("worker2moveX").setAttribute("to", 70)
     document.getElementById("worker2moveX").setAttribute("dur", 15)
@@ -1094,7 +1094,7 @@ takeWoodCastle()
     setTimeout(worker2mining, 15000)
 
     }
-    if(wagonWorker3 == 1 && worker3position == "castle" && wagonMountains1 == 1){
+    if(wagonWorker3 == 1 && worker3position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
        document.getElementById("worker3moveX").setAttribute("from", 470)
     document.getElementById("worker3moveX").setAttribute("to", 100)
     document.getElementById("worker3moveX").setAttribute("dur", 15)
@@ -1110,7 +1110,7 @@ takeWoodCastle()
     setTimeout(worker3mining, 15000)
     }
     //down
-    if(wagonWorker4 == 1 && worker4position == "castle" && wagonMountains1 == 1){
+    if(wagonWorker4 == 1 && worker4position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
       document.getElementById("worker4moveX").setAttribute("from", 500)
     document.getElementById("worker4moveX").setAttribute("to", 130)
     document.getElementById("worker4moveX").setAttribute("dur", 15)
@@ -1538,7 +1538,7 @@ function evacForest(){
 
     }
 }
-
+}
 function evacMount(){
 
   if(worker1position == "mountains"){
@@ -1618,7 +1618,7 @@ function evacMount(){
 
   }
 }
-}
+
 function nbHitMount(){
 if(worker1position == "mountains"){
   killWorker1()
