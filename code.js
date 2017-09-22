@@ -254,6 +254,52 @@ function mountainClick(){
     document.getElementById("w4Label").setAttribute("fill","blue")
   }
 }
+function closeMenu(){
+     document.getElementById("worker1X1").style.display = "none";
+    document.getElementById("worker1X2").style.display = "none";
+
+    document.getElementById("worker2X1").style.display = "none";
+    document.getElementById("worker2X2").style.display = "none";
+
+    document.getElementById("worker3X1").style.display = "none";
+    document.getElementById("worker3X2").style.display = "none";
+
+    document.getElementById("worker4X1").style.display = "none";
+    document.getElementById("worker4X2").style.display = "none";
+
+
+document.getElementById("wagonMenu").style.display = "none";
+document.getElementById("mI").style.display = "none"
+document.getElementById("fI").style.display = "none"
+document.getElementById("cI").style.display = "none"
+document.getElementById("oI").style.display = "none"
+
+document.getElementById("woodTrade").style.display = "none"
+document.getElementById("sellWood").style.display = "none"
+document.getElementById("buyWood").style.display = "none"
+
+document.getElementById("buyLabel").style.display = "none"
+document.getElementById("sellLabel").style.display = "none"
+
+document.getElementById("oreTrade").style.display = "none"
+document.getElementById("sellOre").style.display = "none"
+document.getElementById("buyOre").style.display = "none"
+
+document.getElementById("w1I").style.display = "none"
+document.getElementById("w2I").style.display = "none"
+document.getElementById("w3I").style.display = "none"
+document.getElementById("w4I").style.display = "none"
+
+document.getElementById("w1Label").style.display = "none"
+document.getElementById("w2Label").style.display = "none"
+document.getElementById("w3Label").style.display = "none"
+document.getElementById("w4Label").style.display = "none"
+
+document.getElementById("closeButton").style.display = "none"
+
+
+    
+}
 //working on 12/12/16
 function menuLaunch(){
   if(wagonCheck1 == 1){
@@ -1468,6 +1514,7 @@ takeWoodCastle()
 
 
 }
+}
 function evacForest(){
   if(worker1position == "forest"){
 
@@ -1538,7 +1585,7 @@ function evacForest(){
 
     }
 }
-}
+
 function evacMount(){
 
   if(worker1position == "mountains"){
