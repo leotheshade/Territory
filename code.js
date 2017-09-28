@@ -682,25 +682,26 @@ function buyOreS(){
    document.getElementById("supplyWagon1").setAttribute("fill", "brown")
  }
 }
+
 function worker1Walk(){
 
-if(worker1position == "moving"){
+// if(worker1position == "moving"){
 
 if(worker1S1 == 1){
 
-document.getElementById("worker21").setAttribute("xlink:href", "Images/female wood 2 step 1.png")
+document.getElementById("worker1").setAttribute("xlink:href", "Images/female wood 2 step l.png")
   worker1S1 = 0
   worker1S2 = 1
-  setTimeout(worker1Walk, 500)
+  setTimeout(worker1Walk, 1000)
 }
 if(worker1S2 == 1){
 document.getElementById("worker1").setAttribute("xlink:href", "Images/female wood 2.png")
   worker1S1 = 1
   worker1S2 = 0
-  setTimeout(worker1Walk, 500)
+  setTimeout(worker1Walk, 1000)
 }
 
-}
+// }
 
 
 }
