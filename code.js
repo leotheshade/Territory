@@ -108,6 +108,24 @@ var oceanWorker3 = 0
 var oceanWorker4 = 0
 var choiceLock = 0
 
+var worker1CW = 0
+var worker1S1 = 1
+var worker1S2 = 0
+
+var worker2CW = 0
+var worker2S1 = 1
+var worker2S2 = 0
+
+var worker3CW = 0
+var worker3S1 = 1
+var worker3S2 = 0
+
+var worker4CW = 0
+var worker4S1 = 1
+var worker4S2 = 0
+
+
+
 function musicLoop(){
 Omusic.play()
   setTimeout(musicLoop, 12000)
@@ -298,7 +316,7 @@ document.getElementById("w4Label").style.display = "none"
 document.getElementById("closeButton").style.display = "none"
 
 
-    
+
 }
 //working on 12/12/16
 function menuLaunch(){
@@ -664,6 +682,32 @@ function buyOreS(){
    document.getElementById("supplyWagon1").setAttribute("fill", "brown")
  }
 }
+function worker1Walk(){
+
+if(worker1position == "moving"){
+
+if(worker1S1 == 1){
+
+document.getElementById("worker21").setAttribute("xlink:href", "Images/female wood 2 step 1.png")
+  worker1S1 = 0
+  worker1S2 = 1
+  setTimeout(worker1Walk, 500)
+}
+if(worker1S2 == 1){
+document.getElementById("worker1").setAttribute("xlink:href", "Images/female wood 2.png")
+  worker1S1 = 1
+  worker1S2 = 0
+  setTimeout(worker1Walk, 500)
+}
+
+}
+
+
+}
+
+
+
+
 function send(){
   //down
   if(choiceLock == 1){
@@ -865,6 +909,7 @@ takeWoodCastle()
     document.getElementById("worker1").setAttribute("cy", 320)
     // wagonWorker1 = 0
     worker1position = "moving"
+    worker1Walk()
     var startMine1 = setTimeout(worker1castle, 15000)
     }
     if(wagonWorker2 == 1 && worker2position == "forest" && wagonCastle == 1 && wagonPosition1 == "forest"){
@@ -964,6 +1009,7 @@ takeWoodCastle()
     document.getElementById("worker1").setAttribute("cy", 250)
     // wagonWorker1 = 0
     worker1position = "moving"
+    worker1Walk()
     var startMine1 = setTimeout(worker1cutting, 15000)
     }
   if(wagonWorker2 == 1 && worker2position == "castle" && wagonForest == 1 && wagonPosition1 == "castle"){
@@ -1122,6 +1168,7 @@ takeWoodCastle()
     document.getElementById("worker1").setAttribute("cx", 40)
     document.getElementById("worker1").setAttribute("cy", 450)
     worker1position = "moving"
+    worker1Walk()
     var startMine1 = setTimeout(worker1mining, 15000)
     }
     if(wagonWorker2 == 1 && worker2position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
