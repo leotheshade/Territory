@@ -685,7 +685,7 @@ function buyOreS(){
 
 function worker1Walk(){
 
-// if(worker1position == "moving"){
+ if(worker1position == "moving"){
 
 if(worker1S1 == 1){
 
@@ -701,7 +701,7 @@ document.getElementById("worker1").setAttribute("xlink:href", "Images/female woo
   setTimeout(worker1Walk, 1000)
 }
 
-// }
+ }
 
 
 }
