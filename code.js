@@ -2,7 +2,7 @@ var Omusic = new Audio('C:/Users/Liam Dimas/Desktop/Skeleton of a Town - Icewind
 
 
 //known bug: Something is causing the "send workers home" function for the night beast choice event to fail. It may have something to do with the new code that stops you from ignoing the event, or unselected workers
-
+var namespace = "http://www.w3.org/2000/svg"
 var worker1check = 0
 var worker2check = 0
 var worker3check = 0
@@ -688,21 +688,29 @@ function worker1Walk(){
  if(worker1position == "moving"){
 
 if(worker1S1 == 1){
-
-document.getElementById("worker1").setAttribute("xlink:href", "Images/female wood 2 step l.png")
+ document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Images/female wood 2 step l.png")
+// document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
   worker1S1 = 0
   worker1S2 = 1
-  setTimeout(worker1Walk, 1000)
+  setTimeout(worker1Walk, 900)
 }
-if(worker1S2 == 1){
-document.getElementById("worker1").setAttribute("xlink:href", "Images/female wood 2.png")
+else if(worker1S2 == 1){
+  document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Images/female wood 2.png")
+
+// document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   worker1S1 = 1
   worker1S2 = 0
-  setTimeout(worker1Walk, 1000)
+  setTimeout(worker1Walk, 900)
 }
 
  }
+else{
+  document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Images/female wood 2.png")
 
+// document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+  worker1S1 = 1
+  worker1S2 = 0
+}
 
 }
 
