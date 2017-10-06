@@ -683,7 +683,7 @@ function buyOreS(){
  }
 }
 
-function worker1Walk(){
+function worker1WalkW(){
 
  if(worker1position == "moving"){
 
@@ -918,7 +918,7 @@ takeWoodCastle()
     document.getElementById("worker1").setAttribute("cy", 320)
     // wagonWorker1 = 0
     worker1position = "moving"
-    worker1Walk()
+    worker1WalkW()
     var startMine1 = setTimeout(worker1castle, 15000)
     }
     if(wagonWorker2 == 1 && worker2position == "forest" && wagonCastle == 1 && wagonPosition1 == "forest"){
