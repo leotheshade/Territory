@@ -692,7 +692,7 @@ if(worker1S1 == 1){
 // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
   worker1S1 = 0
   worker1S2 = 1
-  setTimeout(worker1Walk, 900)
+  setTimeout(worker1WalkW, 500)
 }
 else if(worker1S2 == 1){
   document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Images/female wood 2.png")
@@ -700,7 +700,7 @@ else if(worker1S2 == 1){
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   worker1S1 = 1
   worker1S2 = 0
-  setTimeout(worker1Walk, 900)
+  setTimeout(worker1WalkW, 500)
 }
 
  }
@@ -1177,7 +1177,7 @@ takeWoodCastle()
     document.getElementById("worker1").setAttribute("cx", 40)
     document.getElementById("worker1").setAttribute("cy", 450)
     worker1position = "moving"
-    worker1Walk()
+    worker1WalkW()
     var startMine1 = setTimeout(worker1mining, 15000)
     }
     if(wagonWorker2 == 1 && worker2position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
