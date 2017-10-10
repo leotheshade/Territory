@@ -1,4 +1,4 @@
-var Omusic = new Audio('C:/Users/Liam Dimas/Desktop/Skeleton of a Town - Icewind Dale 2 soundtrack.mp3');
+var Omusic = new Audio('Sounds/Skeleton of a Town - Icewind Dale 2 soundtrack.mp3');
 
 
 //known bug: Something is causing the "send workers home" function for the night beast choice event to fail. It may have something to do with the new code that stops you from ignoing the event, or unselected workers
@@ -914,8 +914,8 @@ takeWoodCastle()
     document.getElementById("worker1moveY").setAttribute("dur", 15)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("cx", 410)
-    document.getElementById("worker1").setAttribute("cy", 320)
+    document.getElementById("worker1").setAttribute("x", 410)
+    document.getElementById("worker1").setAttribute("y", 320)
     // wagonWorker1 = 0
     worker1position = "moving"
     worker1WalkW()
@@ -932,8 +932,8 @@ takeWoodCastle()
     document.getElementById("worker2moveY").setAttribute("dur", 15)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
-    document.getElementById("worker2").setAttribute("cx", 440)
-    document.getElementById("worker2").setAttribute("cy", 320)
+    document.getElementById("worker2").setAttribute("x", 440)
+    document.getElementById("worker2").setAttribute("y", 320)
     // wagonWorker2 = 0
     worker2position = "moving"
     setTimeout(worker2castle, 15000)
@@ -950,8 +950,8 @@ takeWoodCastle()
     document.getElementById("worker3moveY").setAttribute("dur", 15)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
-    document.getElementById("worker3").setAttribute("cx", 470)
-    document.getElementById("worker3").setAttribute("cy", 320)
+    document.getElementById("worker3").setAttribute("x", 470)
+    document.getElementById("worker3").setAttribute("y", 320)
     // wagonWorker3 = 0
     worker3position = "moving"
     setTimeout(worker3castle, 15000)
@@ -968,8 +968,8 @@ takeWoodCastle()
     document.getElementById("worker4moveY").setAttribute("dur", 15)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
-    document.getElementById("worker4").setAttribute("cx", 500)
-    document.getElementById("worker4").setAttribute("cy", 320)
+    document.getElementById("worker4").setAttribute("x", 500)
+    document.getElementById("worker4").setAttribute("y", 320)
     // wagonWorker4 = 0
     worker4position = "moving"
     setTimeout(worker4castle, 15000)
@@ -1014,8 +1014,8 @@ takeWoodCastle()
     document.getElementById("worker1moveY").setAttribute("dur", 15)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("cx", 800)
-    document.getElementById("worker1").setAttribute("cy", 250)
+    document.getElementById("worker1").setAttribute("x", 800)
+    document.getElementById("worker1").setAttribute("y", 250)
     // wagonWorker1 = 0
     worker1position = "moving"
     worker1Walk()
@@ -1031,8 +1031,8 @@ takeWoodCastle()
     document.getElementById("worker2moveY").setAttribute("dur", 15)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
-    document.getElementById("worker2").setAttribute("cx", 800)
-    document.getElementById("worker2").setAttribute("cy", 280)
+    document.getElementById("worker2").setAttribute("x", 800)
+    document.getElementById("worker2").setAttribute("y", 280)
     // wagonWorker2 = 0
     worker2position = "moving"
     var startMine1 = setTimeout(worker2cutting, 15000)
@@ -1047,8 +1047,8 @@ takeWoodCastle()
     document.getElementById("worker3moveY").setAttribute("dur", 15)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
-    document.getElementById("worker3").setAttribute("cx", 800)
-    document.getElementById("worker3").setAttribute("cy", 310)
+    document.getElementById("worker3").setAttribute("x", 800)
+    document.getElementById("worker3").setAttribute("y", 310)
     // wagonWorker3 = 0
     worker3position = "moving"
      var startMine1 = setTimeout(worker3cutting, 15000)
@@ -1063,8 +1063,8 @@ takeWoodCastle()
     document.getElementById("worker4moveY").setAttribute("dur", 15)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
-    document.getElementById("worker4").setAttribute("cx", 800)
-    document.getElementById("worker4").setAttribute("cy", 340)
+    document.getElementById("worker4").setAttribute("x", 800)
+    document.getElementById("worker4").setAttribute("y", 340)
     // wagonWorker4 = 0
     worker4position = "moving"
      var startMine1 = setTimeout(worker4cutting, 15000)
@@ -1174,8 +1174,8 @@ takeWoodCastle()
     document.getElementById("worker1moveY").setAttribute("dur", 15)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("cx", 40)
-    document.getElementById("worker1").setAttribute("cy", 450)
+    document.getElementById("worker1").setAttribute("x", 20)
+    document.getElementById("worker1").setAttribute("y", 440)
     worker1position = "moving"
     worker1WalkW()
     var startMine1 = setTimeout(worker1mining, 15000)
@@ -1190,8 +1190,8 @@ takeWoodCastle()
     document.getElementById("worker2moveY").setAttribute("dur", 15)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
-    document.getElementById("worker2").setAttribute("cx", 70)
-    document.getElementById("worker2").setAttribute("cy", 450)
+    document.getElementById("worker2").setAttribute("x", 70)
+    document.getElementById("worker2").setAttribute("y", 450)
     worker2position = "moving"
     setTimeout(worker2mining, 15000)
 
@@ -1206,8 +1206,8 @@ takeWoodCastle()
     document.getElementById("worker3moveY").setAttribute("dur", 15)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
-    document.getElementById("worker3").setAttribute("cx", 100)
-    document.getElementById("worker3").setAttribute("cy", 450)
+    document.getElementById("worker3").setAttribute("x", 100)
+    document.getElementById("worker3").setAttribute("y", 450)
     worker3position = "moving"
     setTimeout(worker3mining, 15000)
     }
@@ -1222,8 +1222,8 @@ takeWoodCastle()
     document.getElementById("worker4moveY").setAttribute("dur", 15)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
-    document.getElementById("worker4").setAttribute("cx", 130)
-    document.getElementById("worker4").setAttribute("cy", 450)
+    document.getElementById("worker4").setAttribute("x", 130)
+    document.getElementById("worker4").setAttribute("y", 450)
     worker4position = "moving"
     setTimeout(worker4mining, 15000)
 
@@ -1259,8 +1259,8 @@ takeWoodCastle()
     document.getElementById("worker1moveY").setAttribute("dur", 15)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("cx", 410)
-    document.getElementById("worker1").setAttribute("cy", 320)
+    document.getElementById("worker1").setAttribute("x", 410)
+    document.getElementById("worker1").setAttribute("y", 320)
     worker1position = "moving"
     var startMine1 = setTimeout(worker1castle, 15000)
     }
@@ -1274,8 +1274,8 @@ takeWoodCastle()
     document.getElementById("worker2moveY").setAttribute("dur", 15)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
-    document.getElementById("worker2").setAttribute("cx", 440)
-    document.getElementById("worker2").setAttribute("cy", 320)
+    document.getElementById("worker2").setAttribute("x", 440)
+    document.getElementById("worker2").setAttribute("y", 320)
     worker2position = "moving"
     setTimeout(worker2castle, 15000)
 
@@ -1290,8 +1290,8 @@ takeWoodCastle()
     document.getElementById("worker3moveY").setAttribute("dur", 15)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
-    document.getElementById("worker3").setAttribute("cx", 470)
-    document.getElementById("worker3").setAttribute("cy", 320)
+    document.getElementById("worker3").setAttribute("x", 470)
+    document.getElementById("worker3").setAttribute("y", 320)
     worker3position = "moving"
     setTimeout(worker3castle, 15000)
     }
@@ -1306,8 +1306,8 @@ takeWoodCastle()
     document.getElementById("worker4moveY").setAttribute("dur", 15)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
-    document.getElementById("worker4").setAttribute("cx", 500)
-    document.getElementById("worker4").setAttribute("cy", 320)
+    document.getElementById("worker4").setAttribute("x", 500)
+    document.getElementById("worker4").setAttribute("y", 320)
     worker4position = "moving"
     setTimeout(worker4castle, 15000)
 
@@ -1346,8 +1346,8 @@ takeWoodCastle()
     document.getElementById("worker1moveY").setAttribute("dur", 15)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("cx", 410)
-    document.getElementById("worker1").setAttribute("cy", 320)
+    document.getElementById("worker1").setAttribute("x", 410)
+    document.getElementById("worker1").setAttribute("y", 320)
     worker1position = "moving"
     var startMine1 = setTimeout(worker1castle, 15000)
     }
@@ -1361,8 +1361,8 @@ takeWoodCastle()
     document.getElementById("worker2moveY").setAttribute("dur", 15)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
-    document.getElementById("worker2").setAttribute("cx", 440)
-    document.getElementById("worker2").setAttribute("cy", 320)
+    document.getElementById("worker2").setAttribute("x", 440)
+    document.getElementById("worker2").setAttribute("y", 320)
     worker2position = "moving"
     setTimeout(worker2castle, 15000)
 
@@ -1377,8 +1377,8 @@ takeWoodCastle()
     document.getElementById("worker3moveY").setAttribute("dur", 15)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
-    document.getElementById("worker3").setAttribute("cx", 470)
-    document.getElementById("worker3").setAttribute("cy", 320)
+    document.getElementById("worker3").setAttribute("x", 470)
+    document.getElementById("worker3").setAttribute("y", 320)
     worker3position = "moving"
     setTimeout(worker3castle, 15000)
     }
@@ -1393,8 +1393,8 @@ takeWoodCastle()
     document.getElementById("worker4moveY").setAttribute("dur", 15)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
-    document.getElementById("worker4").setAttribute("cx", 500)
-    document.getElementById("worker4").setAttribute("cy", 320)
+    document.getElementById("worker4").setAttribute("x", 500)
+    document.getElementById("worker4").setAttribute("y", 320)
     worker4position = "moving"
     setTimeout(worker4castle, 15000)
 
@@ -1583,8 +1583,8 @@ function evacForest(){
     document.getElementById("worker1moveY").setAttribute("dur", 23)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("cx", 410)
-    document.getElementById("worker1").setAttribute("cy", 320)
+    document.getElementById("worker1").setAttribute("x", 410)
+    document.getElementById("worker1").setAttribute("y", 320)
     castleWorker1 = 0
     worker1position = "moving"
     var startMine1 = setTimeout(worker1castle, 23000)
@@ -1599,8 +1599,8 @@ function evacForest(){
     document.getElementById("worker2moveY").setAttribute("dur", 23)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
-    document.getElementById("worker2").setAttribute("cx", 440)
-    document.getElementById("worker2").setAttribute("cy", 320)
+    document.getElementById("worker2").setAttribute("x", 440)
+    document.getElementById("worker2").setAttribute("y", 320)
     castleWorker2 = 0
     worker2position = "moving"
     setTimeout(worker2castle, 23000)
@@ -1616,8 +1616,8 @@ function evacForest(){
     document.getElementById("worker3moveY").setAttribute("dur", 23)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
-    document.getElementById("worker3").setAttribute("cx", 470)
-    document.getElementById("worker3").setAttribute("cy", 320)
+    document.getElementById("worker3").setAttribute("x", 470)
+    document.getElementById("worker3").setAttribute("y", 320)
     castleWorker3 = 0
     worker3position = "moving"
     setTimeout(worker3castle, 23000)
@@ -1633,8 +1633,8 @@ function evacForest(){
     document.getElementById("worker4moveY").setAttribute("dur", 23)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
-    document.getElementById("worker4").setAttribute("cx", 500)
-    document.getElementById("worker4").setAttribute("cy", 320)
+    document.getElementById("worker4").setAttribute("x", 500)
+    document.getElementById("worker4").setAttribute("y", 320)
     castleWorker4 = 0
     worker4position = "moving"
     setTimeout(worker4castle, 23000)
@@ -1655,8 +1655,8 @@ function evacMount(){
     document.getElementById("worker1moveY").setAttribute("dur", 23)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("cx", 410)
-    document.getElementById("worker1").setAttribute("cy", 320)
+    document.getElementById("worker1").setAttribute("x", 410)
+    document.getElementById("worker1").setAttribute("y", 320)
     castleWorker1 = 0
     worker1position = "moving"
     setTimeout(worker1castle, 23000)
@@ -1674,8 +1674,8 @@ function evacMount(){
     document.getElementById("worker2moveY").setAttribute("dur", 23)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
-    document.getElementById("worker2").setAttribute("cx", 440)
-    document.getElementById("worker2").setAttribute("cy", 320)
+    document.getElementById("worker2").setAttribute("x", 440)
+    document.getElementById("worker2").setAttribute("y", 320)
     castleWorker2 = 0
     worker2position = "moving"
     setTimeout(worker2castle, 23000)
@@ -1694,8 +1694,8 @@ function evacMount(){
     document.getElementById("worker3moveY").setAttribute("dur", 23)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
-    document.getElementById("worker3").setAttribute("cx", 470)
-    document.getElementById("worker3").setAttribute("cy", 320)
+    document.getElementById("worker3").setAttribute("x", 470)
+    document.getElementById("worker3").setAttribute("y", 320)
     castleWorker3 = 0
     worker3position = "moving"
     setTimeout(worker3castle, 23000)
@@ -1713,8 +1713,8 @@ function evacMount(){
     document.getElementById("worker4moveY").setAttribute("dur", 23)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
-    document.getElementById("worker4").setAttribute("cx", 500)
-    document.getElementById("worker4").setAttribute("cy", 320)
+    document.getElementById("worker4").setAttribute("x", 500)
+    document.getElementById("worker4").setAttribute("y", 320)
     castleWorker4 = 0
     worker4position = "moving"
     setTimeout(worker4castle, 23000)
