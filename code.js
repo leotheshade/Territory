@@ -73,7 +73,7 @@ var citRep = 10
 var firstDragVisit = 0
 var keyChoice = "blank"
 var choice = "blank"
-var textTest = 0
+var textTest = 1
 var dragonIntroR = "blank"
 var AcursedRep = 0
 var garrisonCooldown = 0
@@ -156,7 +156,7 @@ textTest = 0
 timec()
  // killWorker1()
 updateText()
-var rEvent = setInterval(randomChoice, 135000)
+var rEvent = setTimeout(randomChoice, 135000)
 function updateText(){
   document.getElementById("displayWagonOre").textContent = wagonOre;
   document.getElementById("displayWagonWood").textContent = wagonWood;
@@ -1771,7 +1771,7 @@ function worker4cutting(){
 
   worker4position = "forest"
   if(worker4position == "forest" && cutCheck4 == 0){
-  var cut = setInterval(cutting4, 1300)
+  var cut = setInterval(cutting4, 1700)
   cutCheck4 = 1
   }
 }
@@ -1780,7 +1780,7 @@ function worker3cutting(){
   worker3position = "forest"
   if(worker3position == "forest" && cutCheck3 == 0){
 
-  var mine = setInterval(cutting3, 1300)
+  var mine = setInterval(cutting3, 1700)
   cutCheck3 = 1
   }
 }
@@ -1791,7 +1791,7 @@ function worker2cutting(){
   worker2position = "forest"
   if(worker2position == "forest" && cutCheck2 == 0){
 
-  var mine = setInterval(cutting2, 1300)
+  var mine = setInterval(cutting2, 1700)
   cutCheck2 = 1
   }
 }
@@ -1799,7 +1799,7 @@ function worker1cutting(){
 
   worker1position = "forest"
   if(worker1position == "forest" && cutCheck1 == 0){
-  var cut = setInterval(cutting1, 1300)
+  var cut = setInterval(cutting1, 1700)
   cutCheck1 = 1
   }
 }
@@ -1837,7 +1837,7 @@ function worker4mining(){
 
   worker4position = "mountains"
   if(worker4position == "mountains" && mineCheck4 == 0){
-  var mine = setInterval(mining4, 1300)
+  var mine = setInterval(mining4, 1700)
   mineCheck4 = 1
   }
 }
@@ -1846,7 +1846,7 @@ function worker3mining(){
   worker3position = "mountains"
   if(worker3position == "mountains" && mineCheck3 == 0){
 
-  var mine = setInterval(mining3, 1300)
+  var mine = setInterval(mining3, 1700)
   mineCheck3 = 1
   }
 }
@@ -1857,7 +1857,7 @@ function worker2mining(){
   worker2position = "mountains"
   if(worker2position == "mountains" && mineCheck2 == 0){
 
-  var mine = setInterval(mining2, 1300)
+  var mine = setInterval(mining2, 1700)
   mineCheck2 = 1
   }
 }
@@ -1865,7 +1865,7 @@ function worker1mining(){
   clearInterval(mine)
   worker1position = "mountains"
   if(worker1position == "mountains" && mineCheck1 == 0){
-  var mine = setInterval(mining1, 1300)
+  var mine = setInterval(mining1, 1700)
   mineCheck1 = 1
   }
 }
@@ -2188,8 +2188,8 @@ function reviveWorker1(){
   document.getElementById("worker1X1").setAttribute("opacity", 0)
   document.getElementById("worker1X2").setAttribute("opacity", 0)
   worker1position = "castle"
-  document.getElementById("worker1").setAttribute("cx", 410)
-  document.getElementById("worker1").setAttribute("cy", 320)
+  document.getElementById("worker1").setAttribute("x", 410)
+  document.getElementById("worker1").setAttribute("y", 320)
   alert("worker 1 was revived from the dead")
 }
 function reviveWorker2(){
@@ -2270,6 +2270,7 @@ setTimeout(reviveWorker4, 150000)
 
 
 function randomChoice(){
+  if(choice == "blank" && keyChoice == "blank"){
 
    choiceNo1 = 0
    choiceNo2 = 0
@@ -2346,6 +2347,13 @@ choiceNo1 = choiceCount
     choice = "castleAttack"
     choiceMake()
   }
+}
+else{
+  setTimeout(RandomChoice, 10000)
+  alert("problem")
+}
+
+
 }
 function choiceMake(){
   choiceLock = 1
@@ -2461,7 +2469,7 @@ if(choice == "nbForest"){
   castleGold -= 50
   choice = "blank"
 }
-
+setTimeout(randomChoice, 135000)
 
 }
 function choice2select(){
@@ -2535,6 +2543,7 @@ else{
 }
     choice = "blank"
   }
+  setTimeout(randomChoice, 135000)
 }
 function choice3select(){
   choiceLock = 0
@@ -2605,6 +2614,7 @@ alert("Steward: We have recieved reports that your workers are on their way back
 choice = "blank"
 evacForest()
   }
+  setTimeout(randomChoice, 135000)
 }
 function launchGameO(){
   document.getElementById("deathScreen").style.display = "block";
