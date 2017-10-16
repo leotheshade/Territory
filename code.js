@@ -1181,17 +1181,17 @@ takeWoodCastle()
     var startMine1 = setTimeout(worker1mining, 15000)
     }
     if(wagonWorker2 == 1 && worker2position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
-      document.getElementById("worker2moveX").setAttribute("from", 440)
-    document.getElementById("worker2moveX").setAttribute("to", 70)
+      document.getElementById("worker2moveX").setAttribute("from", 420)
+    document.getElementById("worker2moveX").setAttribute("to", 50)
     document.getElementById("worker2moveX").setAttribute("dur", 15)
 
-    document.getElementById("worker2moveY").setAttribute("from", 320)
-    document.getElementById("worker2moveY").setAttribute("to", 450)
+    document.getElementById("worker2moveY").setAttribute("from", 310)
+    document.getElementById("worker2moveY").setAttribute("to", 440)
     document.getElementById("worker2moveY").setAttribute("dur", 15)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
-    document.getElementById("worker2").setAttribute("x", 70)
-    document.getElementById("worker2").setAttribute("y", 450)
+    document.getElementById("worker2").setAttribute("x", 50)
+    document.getElementById("worker2").setAttribute("y", 440)
     worker2position = "moving"
     setTimeout(worker2mining, 15000)
 
@@ -1250,32 +1250,32 @@ takeWoodCastle()
     }
   //down send back to castle
   if(wagonWorker1 == 1 && worker1position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
-      document.getElementById("worker1moveX").setAttribute("from", 40)
-    document.getElementById("worker1moveX").setAttribute("to", 410)
+      document.getElementById("worker1moveX").setAttribute("from", 20)
+    document.getElementById("worker1moveX").setAttribute("to", 390)
     document.getElementById("worker1moveX").setAttribute("dur", 15)
 
-    document.getElementById("worker1moveY").setAttribute("from", 450)
-    document.getElementById("worker1moveY").setAttribute("to", 320)
+    document.getElementById("worker1moveY").setAttribute("from", 440)
+    document.getElementById("worker1moveY").setAttribute("to", 310)
     document.getElementById("worker1moveY").setAttribute("dur", 15)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("x", 410)
-    document.getElementById("worker1").setAttribute("y", 320)
+    document.getElementById("worker1").setAttribute("x", 390)
+    document.getElementById("worker1").setAttribute("y", 310)
     worker1position = "moving"
     var startMine1 = setTimeout(worker1castle, 15000)
     }
     if(wagonWorker2 == 1 && worker2position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
-      document.getElementById("worker2moveX").setAttribute("from", 70)
-    document.getElementById("worker2moveX").setAttribute("to", 440)
+      document.getElementById("worker2moveX").setAttribute("from", 50)
+    document.getElementById("worker2moveX").setAttribute("to", 420)
     document.getElementById("worker2moveX").setAttribute("dur", 15)
 
     document.getElementById("worker2moveY").setAttribute("from", 450)
-    document.getElementById("worker2moveY").setAttribute("to", 320)
+    document.getElementById("worker2moveY").setAttribute("to", 310)
     document.getElementById("worker2moveY").setAttribute("dur", 15)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
-    document.getElementById("worker2").setAttribute("x", 440)
-    document.getElementById("worker2").setAttribute("y", 320)
+    document.getElementById("worker2").setAttribute("x", 420)
+    document.getElementById("worker2").setAttribute("y", 310)
     worker2position = "moving"
     setTimeout(worker2castle, 15000)
 
@@ -2188,16 +2188,16 @@ function reviveWorker1(){
   document.getElementById("worker1X1").setAttribute("opacity", 0)
   document.getElementById("worker1X2").setAttribute("opacity", 0)
   worker1position = "castle"
-  document.getElementById("worker1").setAttribute("x", 410)
-  document.getElementById("worker1").setAttribute("y", 320)
+  document.getElementById("worker1").setAttribute("x", 390)
+  document.getElementById("worker1").setAttribute("y", 310)
   alert("worker 1 was revived from the dead")
 }
 function reviveWorker2(){
   document.getElementById("worker2X1").setAttribute("opacity", 0)
   document.getElementById("worker2X2").setAttribute("opacity", 0)
   worker2position = "castle"
-  document.getElementById("worker2").setAttribute("cx", 440)
-  document.getElementById("worker2").setAttribute("cy", 320)
+  document.getElementById("worker2").setAttribute("x", 420)
+  document.getElementById("worker2").setAttribute("y", 310)
   alert("worker 2 was revived from the dead")
 }
 
@@ -2205,8 +2205,8 @@ function reviveWorker3(){
   document.getElementById("worker3X1").setAttribute("opacity", 0)
   document.getElementById("worker3X2").setAttribute("opacity", 0)
   worker3position = "castle"
-  document.getElementById("worker3").setAttribute("cx", 470)
-  document.getElementById("worker3").setAttribute("cy", 320)
+  document.getElementById("worker3").setAttribute("cx", 450)
+  document.getElementById("worker3").setAttribute("cy", 310)
   alert("worker 3 was revived from the dead")
 }
 
@@ -2214,8 +2214,8 @@ function reviveWorker4(){
   document.getElementById("worker4X1").setAttribute("opacity", 0)
   document.getElementById("worker4X2").setAttribute("opacity", 0)
   worker4position = "castle"
-  document.getElementById("worker4").setAttribute("cx", 500)
-  document.getElementById("worker4").setAttribute("cy", 320)
+  document.getElementById("worker4").setAttribute("cx", 480)
+  document.getElementById("worker4").setAttribute("cy", 310)
   alert("worker 4 was revived from the dead")
 }
 
@@ -2224,8 +2224,8 @@ function killWorker1(){
   document.getElementById("worker1X2").setAttribute("opacity", 1)
 
 worker1position = "dead"
-document.getElementById("worker1").setAttribute("cx", 1500)
-document.getElementById("worker1").setAttribute("cy", 1500)
+document.getElementById("worker1").setAttribute("x", 1500)
+document.getElementById("worker1").setAttribute("y", 1500)
 alert("worker 1 died")
 setTimeout(reviveWorker1, 150000)
 }
@@ -2234,8 +2234,8 @@ function killWorker2(){
   document.getElementById("worker2X2").setAttribute("opacity", 1)
 
 worker2position = "dead"
-document.getElementById("worker2").setAttribute("cx", 1500)
-document.getElementById("worker2").setAttribute("cy", 1500)
+document.getElementById("worker2").setAttribute("x", 1500)
+document.getElementById("worker2").setAttribute("y", 1500)
 alert("worker 2 died")
 setTimeout(reviveWorker2, 150000)
 }
@@ -2245,8 +2245,8 @@ function killWorker3(){
   document.getElementById("worker3X2").setAttribute("opacity", 1)
 
 worker3position = "dead"
-document.getElementById("worker3").setAttribute("cx", 1500)
-document.getElementById("worker3").setAttribute("cy", 1500)
+document.getElementById("worker3").setAttribute("x", 1500)
+document.getElementById("worker3").setAttribute("y", 1500)
 alert("worker 3 died")
 setTimeout(reviveWorker3, 150000)
 }
@@ -2256,8 +2256,8 @@ function killWorker4(){
   document.getElementById("worker4X2").setAttribute("opacity", 1)
 
 worker4position = "dead"
-document.getElementById("worker4").setAttribute("cx", 1500)
-document.getElementById("worker4").setAttribute("cy", 1500)
+document.getElementById("worker4").setAttribute("x", 1500)
+document.getElementById("worker4").setAttribute("y", 1500)
 alert("worker 4 died")
 setTimeout(reviveWorker4, 150000)
 }
