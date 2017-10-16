@@ -1165,12 +1165,12 @@ takeWoodCastle()
   }
     if(wagonWorker1 == 1 && worker1position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
 
-      document.getElementById("worker1moveX").setAttribute("from", 410)
-    document.getElementById("worker1moveX").setAttribute("to", 40)
+      document.getElementById("worker1moveX").setAttribute("from", 390)
+    document.getElementById("worker1moveX").setAttribute("to", 20)
     document.getElementById("worker1moveX").setAttribute("dur", 15)
 
-    document.getElementById("worker1moveY").setAttribute("from", 320)
-    document.getElementById("worker1moveY").setAttribute("to", 450)
+    document.getElementById("worker1moveY").setAttribute("from", 310)
+    document.getElementById("worker1moveY").setAttribute("to", 440)
     document.getElementById("worker1moveY").setAttribute("dur", 15)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
@@ -1647,16 +1647,16 @@ function evacMount(){
   if(worker1position == "mountains"){
 
     document.getElementById("worker1moveX").setAttribute("from", 40)
-    document.getElementById("worker1moveX").setAttribute("to", 410)
+    document.getElementById("worker1moveX").setAttribute("to", 390)
     document.getElementById("worker1moveX").setAttribute("dur", 23)
 
     document.getElementById("worker1moveY").setAttribute("from", 450)
-    document.getElementById("worker1moveY").setAttribute("to", 320)
+    document.getElementById("worker1moveY").setAttribute("to", 310)
     document.getElementById("worker1moveY").setAttribute("dur", 23)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("x", 410)
-    document.getElementById("worker1").setAttribute("y", 320)
+    document.getElementById("worker1").setAttribute("x", 390)
+    document.getElementById("worker1").setAttribute("y", 310)
     castleWorker1 = 0
     worker1position = "moving"
     setTimeout(worker1castle, 23000)
