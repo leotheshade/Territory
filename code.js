@@ -73,7 +73,7 @@ var citRep = 10
 var firstDragVisit = 0
 var keyChoice = "blank"
 var choice = "blank"
-var textTest = 1
+var textTest = 0
 var dragonIntroR = "blank"
 var AcursedRep = 0
 var garrisonCooldown = 0
@@ -136,7 +136,7 @@ Omusic.play()
 }
 
 
-musicLoop()
+// musicLoop()
 function startText(){
 
 
@@ -688,14 +688,14 @@ function worker1WalkW(){
  if(worker1position == "moving"){
 
 if(worker1S1 == 1){
- document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Images/female wood 2 step l.png")
+ document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B8.png")
 // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
   worker1S1 = 0
   worker1S2 = 1
   setTimeout(worker1WalkW, 500)
 }
 else if(worker1S2 == 1){
-  document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Images/female wood 2.png")
+  document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B7.png")
 
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   worker1S1 = 1
@@ -705,7 +705,7 @@ else if(worker1S2 == 1){
 
  }
 else{
-  document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Images/female wood 2.png")
+  document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B7.png")
 
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   worker1S1 = 1
