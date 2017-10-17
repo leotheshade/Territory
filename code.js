@@ -724,7 +724,7 @@ if(worker2S1 == 1){
   worker2S2 = 1
   setTimeout(worker2WalkWP, 500)
 }
-else if(worker1S2 == 1){
+else if(worker2S2 == 1){
   document.getElementById("worker2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A4.png")
 
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
@@ -735,15 +735,45 @@ else if(worker1S2 == 1){
 
  }
 else{
-  document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B7.png")
+  document.getElementById("worker2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A4.png")
 
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
-  worker1S1 = 1
-  worker1S2 = 0
+  worker2S1 = 1
+  worker2S2 = 0
 }
 
 }
 
+function worker3WalkWP(){
+
+ if(worker3position == "moving"){
+
+if(worker3S1 == 1){
+ document.getElementById("worker3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A7.png")
+// document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
+  worker3S1 = 0
+  worker3S2 = 1
+  setTimeout(worker3WalkWP, 500)
+}
+else if(worker3S2 == 1){
+  document.getElementById("worker3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A3.png")
+
+// document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+  worker3S1 = 1
+  worker3S2 = 0
+  setTimeout(worker3WalkWP, 500)
+}
+
+ }
+else{
+  document.getElementById("worker3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A3.png")
+
+// document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+  worker3S1 = 1
+  worker3S2 = 0
+}
+
+}
 
 
 
@@ -1223,6 +1253,7 @@ takeWoodCastle()
     document.getElementById("worker2").setAttribute("x", 50)
     document.getElementById("worker2").setAttribute("y", 440)
     worker2position = "moving"
+    worker2WalkWP()
     setTimeout(worker2mining, 15000)
 
     }
@@ -1239,6 +1270,7 @@ takeWoodCastle()
     document.getElementById("worker3").setAttribute("x", 100)
     document.getElementById("worker3").setAttribute("y", 450)
     worker3position = "moving"
+    worker3WalkWP()
     setTimeout(worker3mining, 15000)
     }
     //down
@@ -2693,7 +2725,7 @@ function timec(){
      document.getElementById("notifications").style.display = "block";
       document.getElementById("notifications").textContent = "As the shadow vale rises, the acursed grow stronger...";
     if(Ncheck == 0){
-     setTimeout(notificationOP, 13000)
+     setTimeout(notificationOP, 15000)
        Ncheck = 1
      }
     time = "night"
