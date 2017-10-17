@@ -683,7 +683,7 @@ function buyOreS(){
  }
 }
 
-function worker1WalkW(){
+function worker1WalkWP(){
 
  if(worker1position == "moving"){
 
@@ -692,7 +692,7 @@ if(worker1S1 == 1){
 // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
   worker1S1 = 0
   worker1S2 = 1
-  setTimeout(worker1WalkW, 500)
+  setTimeout(worker1WalkWP, 500)
 }
 else if(worker1S2 == 1){
   document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B7.png")
@@ -700,7 +700,37 @@ else if(worker1S2 == 1){
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   worker1S1 = 1
   worker1S2 = 0
-  setTimeout(worker1WalkW, 500)
+  setTimeout(worker1WalkWP, 500)
+}
+
+ }
+else{
+  document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B7.png")
+
+// document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+  worker1S1 = 1
+  worker1S2 = 0
+}
+
+}
+function worker2WalkWP(){
+
+ if(worker2position == "moving"){
+
+if(worker2S1 == 1){
+ document.getElementById("worker2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A5.png")
+// document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
+  worker2S1 = 0
+  worker2S2 = 1
+  setTimeout(worker2WalkWP, 500)
+}
+else if(worker1S2 == 1){
+  document.getElementById("worker2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A4.png")
+
+// document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+  worker2S1 = 1
+  worker2S2 = 0
+  setTimeout(worker2WalkWP, 500)
 }
 
  }
@@ -918,7 +948,7 @@ takeWoodCastle()
     document.getElementById("worker1").setAttribute("y", 320)
     // wagonWorker1 = 0
     worker1position = "moving"
-    worker1WalkW()
+    // worker1WalkWA()
     var startMine1 = setTimeout(worker1castle, 15000)
     }
     if(wagonWorker2 == 1 && worker2position == "forest" && wagonCastle == 1 && wagonPosition1 == "forest"){
@@ -1018,7 +1048,7 @@ takeWoodCastle()
     document.getElementById("worker1").setAttribute("y", 250)
     // wagonWorker1 = 0
     worker1position = "moving"
-    worker1Walk()
+    // worker1Walk()
     var startMine1 = setTimeout(worker1cutting, 15000)
     }
   if(wagonWorker2 == 1 && worker2position == "castle" && wagonForest == 1 && wagonPosition1 == "castle"){
@@ -1177,7 +1207,7 @@ takeWoodCastle()
     document.getElementById("worker1").setAttribute("x", 20)
     document.getElementById("worker1").setAttribute("y", 440)
     worker1position = "moving"
-    worker1WalkW()
+    worker1WalkWP()
     var startMine1 = setTimeout(worker1mining, 15000)
     }
     if(wagonWorker2 == 1 && worker2position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
