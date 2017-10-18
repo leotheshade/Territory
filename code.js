@@ -775,6 +775,108 @@ else{
 
 }
 
+function worker4WalkWP(){
+
+ if(worker4position == "moving"){
+
+if(worker4S1 == 1){
+ document.getElementById("worker4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/C1.png")
+// document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
+  worker4S1 = 0
+  worker4S2 = 1
+  setTimeout(worker4WalkWP, 500)
+}
+else if(worker4S2 == 1){
+  document.getElementById("worker4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B5.png")
+
+// document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+  worker4S1 = 1
+  worker4S2 = 0
+  setTimeout(worker4WalkWP, 500)
+}
+
+ }
+else{
+  document.getElementById("worker4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B5.png")
+
+// document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+  worker4S1 = 1
+  worker4S2 = 0
+}
+
+}
+
+function worker1WalkEP(){
+  if(worker1position == "moving"){
+
+  if(worker1S1 == 1){
+  document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B9.png")
+  // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
+   worker1S1 = 0
+   worker1S2 = 1
+   setTimeout(worker1WalkEP, 500)
+  }
+  else if(worker1S2 == 1){
+   document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/D9.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker1S1 = 1
+   worker1S2 = 0
+   setTimeout(worker1WalkEP, 500)
+  }
+
+  }
+  else{
+   document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/D9.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker1S1 = 1
+   worker1S2 = 0
+  }
+
+
+}
+
+function worker2WalkEP(){
+  if(worker2position == "moving"){
+
+  if(worker2S1 == 1){
+  document.getElementById("worker2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A6.png")
+  // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
+   worker2S1 = 0
+   worker2S2 = 1
+   setTimeout(worker2WalkEP, 500)
+  }
+  else if(worker2S2 == 1){
+   document.getElementById("worker2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/D7.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker2S1 = 1
+   worker2S2 = 0
+   setTimeout(worker2WalkEP, 500)
+  }
+
+  }
+  else{
+   document.getElementById("worker2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/D7.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker2S1 = 1
+   worker2S2 = 0
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 function send(){
@@ -1258,35 +1360,37 @@ takeWoodCastle()
 
     }
     if(wagonWorker3 == 1 && worker3position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
-       document.getElementById("worker3moveX").setAttribute("from", 470)
-    document.getElementById("worker3moveX").setAttribute("to", 100)
+       document.getElementById("worker3moveX").setAttribute("from", 450)
+    document.getElementById("worker3moveX").setAttribute("to", 80)
     document.getElementById("worker3moveX").setAttribute("dur", 15)
 
-    document.getElementById("worker3moveY").setAttribute("from", 320)
-    document.getElementById("worker3moveY").setAttribute("to", 450)
+    document.getElementById("worker3moveY").setAttribute("from", 310)
+    document.getElementById("worker3moveY").setAttribute("to", 440)
     document.getElementById("worker3moveY").setAttribute("dur", 15)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
-    document.getElementById("worker3").setAttribute("x", 100)
-    document.getElementById("worker3").setAttribute("y", 450)
+    document.getElementById("worker3").setAttribute("x", 80)
+    document.getElementById("worker3").setAttribute("y", 440)
     worker3position = "moving"
     worker3WalkWP()
     setTimeout(worker3mining, 15000)
     }
     //down
     if(wagonWorker4 == 1 && worker4position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
-      document.getElementById("worker4moveX").setAttribute("from", 500)
-    document.getElementById("worker4moveX").setAttribute("to", 130)
+      document.getElementById("worker4moveX").setAttribute("from", 480)
+    document.getElementById("worker4moveX").setAttribute("to", 110)
     document.getElementById("worker4moveX").setAttribute("dur", 15)
 
-    document.getElementById("worker4moveY").setAttribute("from", 320)
-    document.getElementById("worker4moveY").setAttribute("to", 450)
+    document.getElementById("worker4moveY").setAttribute("from", 310)
+    document.getElementById("worker4moveY").setAttribute("to", 440)
     document.getElementById("worker4moveY").setAttribute("dur", 15)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
-    document.getElementById("worker4").setAttribute("x", 130)
-    document.getElementById("worker4").setAttribute("y", 450)
+    document.getElementById("worker4").setAttribute("x", 110)
+    document.getElementById("worker4").setAttribute("y", 440)
+
     worker4position = "moving"
+    worker4WalkWP()
     setTimeout(worker4mining, 15000)
 
     }
@@ -1324,6 +1428,7 @@ takeWoodCastle()
     document.getElementById("worker1").setAttribute("x", 390)
     document.getElementById("worker1").setAttribute("y", 310)
     worker1position = "moving"
+    worker1WalkEP()
     var startMine1 = setTimeout(worker1castle, 15000)
     }
     if(wagonWorker2 == 1 && worker2position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
@@ -1331,7 +1436,7 @@ takeWoodCastle()
     document.getElementById("worker2moveX").setAttribute("to", 420)
     document.getElementById("worker2moveX").setAttribute("dur", 15)
 
-    document.getElementById("worker2moveY").setAttribute("from", 450)
+    document.getElementById("worker2moveY").setAttribute("from", 440)
     document.getElementById("worker2moveY").setAttribute("to", 310)
     document.getElementById("worker2moveY").setAttribute("dur", 15)
     document.getElementById("worker2moveX").beginElement()
@@ -1339,6 +1444,7 @@ takeWoodCastle()
     document.getElementById("worker2").setAttribute("x", 420)
     document.getElementById("worker2").setAttribute("y", 310)
     worker2position = "moving"
+    worker2WalkEP()
     setTimeout(worker2castle, 15000)
 
     }
@@ -2267,8 +2373,8 @@ function reviveWorker3(){
   document.getElementById("worker3X1").setAttribute("opacity", 0)
   document.getElementById("worker3X2").setAttribute("opacity", 0)
   worker3position = "castle"
-  document.getElementById("worker3").setAttribute("cx", 450)
-  document.getElementById("worker3").setAttribute("cy", 310)
+  document.getElementById("worker3").setAttribute("x", 450)
+  document.getElementById("worker3").setAttribute("y", 310)
   alert("worker 3 was revived from the dead")
 }
 
@@ -2276,8 +2382,8 @@ function reviveWorker4(){
   document.getElementById("worker4X1").setAttribute("opacity", 0)
   document.getElementById("worker4X2").setAttribute("opacity", 0)
   worker4position = "castle"
-  document.getElementById("worker4").setAttribute("cx", 480)
-  document.getElementById("worker4").setAttribute("cy", 310)
+  document.getElementById("worker4").setAttribute("x", 480)
+  document.getElementById("worker4").setAttribute("y", 310)
   alert("worker 4 was revived from the dead")
 }
 
