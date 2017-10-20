@@ -869,6 +869,67 @@ function worker2WalkEP(){
 }
 
 
+function worker3WalkEP(){
+  if(worker3position == "moving"){
+
+  if(worker3S1 == 1){
+  document.getElementById("worker3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A8.png")
+  // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
+   worker3S1 = 0
+   worker3S2 = 1
+   setTimeout(worker3WalkEP, 500)
+  }
+  else if(worker3S2 == 1){
+   document.getElementById("worker3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/D6.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker3S1 = 1
+   worker3S2 = 0
+   setTimeout(worker3WalkEP, 500)
+  }
+
+  }
+  else{
+   document.getElementById("worker3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/D6.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker3S1 = 1
+   worker3S2 = 0
+  }
+
+
+}
+
+function worker4WalkEP(){
+  if(worker4position == "moving"){
+
+  if(worker4S1 == 1){
+  document.getElementById("worker4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/C2.png")
+  // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
+   worker4S1 = 0
+   worker4S2 = 1
+   setTimeout(worker4WalkEP, 500)
+  }
+  else if(worker4S2 == 1){
+   document.getElementById("worker4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/D6.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker4S1 = 1
+   worker4S2 = 0
+   setTimeout(worker4WalkEP, 500)
+  }
+
+  }
+  else{
+   document.getElementById("worker4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/D6.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker4S1 = 1
+   worker4S2 = 0
+  }
+
+
+}
 
 
 
@@ -1449,33 +1510,34 @@ takeWoodCastle()
 
     }
     if(wagonWorker3 == 1 && worker3position == "mountains" && wagonCastle == 1 && wagonPosition1=="mountains"){
-       document.getElementById("worker3moveX").setAttribute("from", 100)
-    document.getElementById("worker3moveX").setAttribute("to", 470)
+       document.getElementById("worker3moveX").setAttribute("from", 80)
+    document.getElementById("worker3moveX").setAttribute("to", 450)
     document.getElementById("worker3moveX").setAttribute("dur", 15)
 
-    document.getElementById("worker3moveY").setAttribute("from", 450)
-    document.getElementById("worker3moveY").setAttribute("to", 320)
+    document.getElementById("worker3moveY").setAttribute("from", 440)
+    document.getElementById("worker3moveY").setAttribute("to", 310)
     document.getElementById("worker3moveY").setAttribute("dur", 15)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
-    document.getElementById("worker3").setAttribute("x", 470)
-    document.getElementById("worker3").setAttribute("y", 320)
+    document.getElementById("worker3").setAttribute("x", 450)
+    document.getElementById("worker3").setAttribute("y", 310)
     worker3position = "moving"
+    worker3WalkEP()
     setTimeout(worker3castle, 15000)
     }
     //down
     if(wagonWorker4 == 1 && worker4position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
-      document.getElementById("worker4moveX").setAttribute("from", 130)
-    document.getElementById("worker4moveX").setAttribute("to", 500)
+      document.getElementById("worker4moveX").setAttribute("from", 110)
+    document.getElementById("worker4moveX").setAttribute("to", 480)
     document.getElementById("worker4moveX").setAttribute("dur", 15)
 
-    document.getElementById("worker4moveY").setAttribute("from", 450)
-    document.getElementById("worker4moveY").setAttribute("to", 320)
+    document.getElementById("worker4moveY").setAttribute("from", 440)
+    document.getElementById("worker4moveY").setAttribute("to", 310)
     document.getElementById("worker4moveY").setAttribute("dur", 15)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
-    document.getElementById("worker4").setAttribute("x", 500)
-    document.getElementById("worker4").setAttribute("y", 320)
+    document.getElementById("worker4").setAttribute("x", 480)
+    document.getElementById("worker4").setAttribute("y", 310)
     worker4position = "moving"
     setTimeout(worker4castle, 15000)
 
