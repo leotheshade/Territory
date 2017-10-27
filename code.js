@@ -136,7 +136,7 @@ Omusic.play()
 }
 
 
-// musicLoop()
+musicLoop()
 function startText(){
 
 
