@@ -1229,7 +1229,7 @@ takeWoodCastle()
    if(wagonWorker1 == 1 && worker1position == "castle" && wagonForest == 1 && wagonPosition1 == "castle" ){
 
       document.getElementById("worker1moveX").setAttribute("from", 390)
-    document.getElementById("worker1moveX").setAttribute("to", 800)
+    document.getElementById("worker1moveX").setAttribute("to", 780)
     document.getElementById("worker1moveX").setAttribute("dur", 15)
 
     document.getElementById("worker1moveY").setAttribute("from", 310)
@@ -1237,7 +1237,7 @@ takeWoodCastle()
     document.getElementById("worker1moveY").setAttribute("dur", 15)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("x", 800)
+    document.getElementById("worker1").setAttribute("x", 780)
     document.getElementById("worker1").setAttribute("y", 250)
     // wagonWorker1 = 0
     worker1position = "moving"
