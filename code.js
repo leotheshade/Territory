@@ -1228,11 +1228,11 @@ takeWoodCastle()
 
    if(wagonWorker1 == 1 && worker1position == "castle" && wagonForest == 1 && wagonPosition1 == "castle" ){
 
-      document.getElementById("worker1moveX").setAttribute("from", 410)
+      document.getElementById("worker1moveX").setAttribute("from", 390)
     document.getElementById("worker1moveX").setAttribute("to", 800)
     document.getElementById("worker1moveX").setAttribute("dur", 15)
 
-    document.getElementById("worker1moveY").setAttribute("from", 320)
+    document.getElementById("worker1moveY").setAttribute("from", 310)
     document.getElementById("worker1moveY").setAttribute("to", 250)
     document.getElementById("worker1moveY").setAttribute("dur", 15)
     document.getElementById("worker1moveX").beginElement()
@@ -1245,11 +1245,11 @@ takeWoodCastle()
     var startMine1 = setTimeout(worker1cutting, 15000)
     }
   if(wagonWorker2 == 1 && worker2position == "castle" && wagonForest == 1 && wagonPosition1 == "castle"){
-     document.getElementById("worker2moveX").setAttribute("from", 440)
+     document.getElementById("worker2moveX").setAttribute("from", 420)
     document.getElementById("worker2moveX").setAttribute("to", 800)
     document.getElementById("worker2moveX").setAttribute("dur", 15)
 
-    document.getElementById("worker2moveY").setAttribute("from", 320)
+    document.getElementById("worker2moveY").setAttribute("from", 310)
     document.getElementById("worker2moveY").setAttribute("to", 280)
     document.getElementById("worker2moveY").setAttribute("dur", 15)
     document.getElementById("worker2moveX").beginElement()
@@ -1261,11 +1261,11 @@ takeWoodCastle()
     var startMine1 = setTimeout(worker2cutting, 15000)
   }
    if(wagonWorker3 == 1 && worker3position == "castle" && wagonForest == 1 && wagonPosition1 == "castle"){
-     document.getElementById("worker3moveX").setAttribute("from", 470)
+     document.getElementById("worker3moveX").setAttribute("from", 450)
     document.getElementById("worker3moveX").setAttribute("to", 800)
     document.getElementById("worker3moveX").setAttribute("dur", 15)
 
-    document.getElementById("worker3moveY").setAttribute("from", 320)
+    document.getElementById("worker3moveY").setAttribute("from", 310)
     document.getElementById("worker3moveY").setAttribute("to", 310)
     document.getElementById("worker3moveY").setAttribute("dur", 15)
     document.getElementById("worker3moveX").beginElement()
@@ -1277,11 +1277,11 @@ takeWoodCastle()
      var startMine1 = setTimeout(worker3cutting, 15000)
   }
    if(wagonWorker4 == 1 && worker4position == "castle" && wagonForest == 1 && wagonPosition1 == "castle"){
-     document.getElementById("worker4moveX").setAttribute("from", 500)
+     document.getElementById("worker4moveX").setAttribute("from", 480)
     document.getElementById("worker4moveX").setAttribute("to", 800)
     document.getElementById("worker4moveX").setAttribute("dur", 15)
 
-    document.getElementById("worker4moveY").setAttribute("from", 320)
+    document.getElementById("worker4moveY").setAttribute("from", 310)
     document.getElementById("worker4moveY").setAttribute("to", 340)
     document.getElementById("worker4moveY").setAttribute("dur", 15)
     document.getElementById("worker4moveX").beginElement()
