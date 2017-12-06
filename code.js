@@ -936,7 +936,7 @@ function worker1WalkEA(){
   if(worker1position == "moving"){
 
   if(worker1S1 == 1){
-  document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/C8.png")
+  document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/C9.png")
   // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
    worker1S1 = 0
    worker1S2 = 1
@@ -1056,9 +1056,135 @@ function worker4WalkEA(){
 
 
 }
+function worker1WalkWA(){
+  if(worker1position == "moving"){
+
+  if(worker1S1 == 1){
+  document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/C7.png")
+  // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
+   worker1S1 = 0
+   worker1S2 = 1
+   setTimeout(worker1WalkWA, 500)
+  }
+  else if(worker1S2 == 1){
+   document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B6.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker1S1 = 1
+   worker1S2 = 0
+   setTimeout(worker1WalkWA, 500)
+  }
+
+  }
+  else{
+   document.getElementById("worker1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B6.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker1S1 = 1
+   worker1S2 = 0
+  }
 
 
 
+
+}
+
+function worker2WalkWA(){
+  if(worker2position == "moving"){
+
+  if(worker2S1 == 1){
+  document.getElementById("worker2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B2.png")
+  // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
+   worker2S1 = 0
+   worker2S2 = 1
+   setTimeout(worker2WalkWA, 500)
+  }
+  else if(worker2S2 == 1){
+   document.getElementById("worker2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A1.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker2S1 = 1
+   worker2S2 = 0
+   setTimeout(worker2WalkWA, 500)
+  }
+
+  }
+  else{
+   document.getElementById("worker2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A1.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker2S1 = 1
+   worker2S2 = 0
+  }
+
+
+}
+
+function worker3WalkWA(){
+  if(worker3position == "moving"){
+
+  if(worker3S1 == 1){
+  document.getElementById("worker3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A9.png")
+  // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
+   worker3S1 = 0
+   worker3S2 = 1
+   setTimeout(worker3WalkWA, 500)
+  }
+  else if(worker3S2 == 1){
+   document.getElementById("worker3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A2.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker3S1 = 1
+   worker3S2 = 0
+   setTimeout(worker3WalkWA, 500)
+  }
+
+  }
+  else{
+   document.getElementById("worker3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/A2.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker3S1 = 1
+   worker3S2 = 0
+  }
+
+
+
+
+}
+
+function worker4WalkWA(){
+  if(worker4position == "moving"){
+
+  if(worker4S1 == 1){
+  document.getElementById("worker4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/C3.png")
+  // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
+   worker4S1 = 0
+   worker4S2 = 1
+   setTimeout(worker4WalkWA, 500)
+  }
+  else if(worker4S2 == 1){
+   document.getElementById("worker4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B4.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker4S1 = 1
+   worker4S2 = 0
+   setTimeout(worker4WalkWA, 500)
+  }
+
+  }
+  else{
+   document.getElementById("worker4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/B4.png")
+
+  // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
+   worker4S1 = 1
+   worker4S2 = 0
+  }
+
+
+
+
+}
 
 
 
@@ -1266,7 +1392,7 @@ takeWoodCastle()
     document.getElementById("worker1").setAttribute("y", 310)
     // wagonWorker1 = 0
     worker1position = "moving"
-    // worker1WalkWA()
+    worker1WalkWA()
     var startMine1 = setTimeout(worker1castle, 15000)
     }
     if(wagonWorker2 == 1 && worker2position == "forest" && wagonCastle == 1 && wagonPosition1 == "forest"){
@@ -1284,6 +1410,7 @@ takeWoodCastle()
     document.getElementById("worker2").setAttribute("y", 310)
     // wagonWorker2 = 0
     worker2position = "moving"
+    worker2WalkWA()
     setTimeout(worker2castle, 15000)
 
     }
@@ -1302,6 +1429,7 @@ takeWoodCastle()
     document.getElementById("worker3").setAttribute("y", 310)
     // wagonWorker3 = 0
     worker3position = "moving"
+    worker3WalkWA()
     setTimeout(worker3castle, 15000)
     }
     //down
@@ -1320,6 +1448,7 @@ takeWoodCastle()
     document.getElementById("worker4").setAttribute("y", 310)
     // wagonWorker4 = 0
     worker4position = "moving"
+    worker4WalkWA()
     setTimeout(worker4castle, 15000)
 
     }
