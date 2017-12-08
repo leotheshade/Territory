@@ -3162,8 +3162,9 @@ function timec(){
   }
   else if(time == "night"){
     time = "day"
+    dragon()
     document.getElementById("dayNight").setAttribute("opacity", 0)
-dragon()
+
       document.getElementById("nightToDay").beginElement()
     setBandits1()
      setBandits2()
