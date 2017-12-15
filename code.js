@@ -2840,6 +2840,7 @@ choiceNo1 = choiceCount
 else{
   setTimeout(RandomChoice, 10000)
   alert("problem")
+  console.log("Problem")
 }
 
 
@@ -2900,16 +2901,19 @@ if(choice == "castleAttack"){
     citRep -= 10
   }
   choice = "blank"
+  setTimeout(randomChoice, 135000)
 }
 if(choice == "citKidN"){
   alert("Steward: So you would leave your people to pay off the ransom themselves? Very well, if it is your descision, even if i don't agree with it. ")
   choice = "blank"
   citRep -= 3
+  setTimeout(randomChoice, 135000)
 }
 if(choice == "citRobbed"){
   alert("Steward: The citizens that were robbed don't seem to find your descision popular. I do agree that it is your responsibility to help your people in any way you can.")
   choice = "blank"
   citRep -= 2
+  setTimeout(randomChoice, 135000)
 }
 if(keyChoice == "dragonIntro"){
 alert("Dragon: You walk a dangerous line my young king. Some might take a tone like that badly. But you are Old King Genus's nephew, and you are new, but know this, if you continue how you are going, you await a dangerous fate. I will return tomorrow and for you and your kingdom's sake, I hope you will have my payment then.")
@@ -2940,6 +2944,7 @@ if(choice == "nbMount"){
   }
   castleGold -= 50
   choice = "blank"
+  setTimeout(randomChoice, 135000)
 }
 if(choice == "nbForest"){
   var chance = Math.random()
@@ -2957,8 +2962,9 @@ if(choice == "nbForest"){
   }
   castleGold -= 50
   choice = "blank"
+  setTimeout(randomChoice, 135000)
 }
-setTimeout(randomChoice, 135000)
+
 
 }
 function choice2select(){
@@ -2982,18 +2988,21 @@ alert("As you send your messanger there is no time to keep track of him or see w
       alert("As you send your messanger there is no time to keep track of him or see what became of him. You fight for a long time but hear no word from your allies. Even with all the odds against you, you still manage to hold off The Acursed until they are finally forced to retreat.")
     }
     choice = "blank"
+    setTimeout(randomChoice, 135000)
   }
   if(choice == "citKidN"){
     alert("Steward: The citizens have told us that the Acursed turned over the child without any issues once they got their gold. The citizens are very grateful towards your help in the matter. This truly was the best choice you could make, I do not think they could have affored the ransom by themselves.")
 castleGold -= 100
 citRep += 4
 choice = "blank"
+setTimeout(randomChoice, 135000)
   }
   if(choice == "citRobbed"){
     alert("Steward: The citizens are grateful that you would pay for their lost possesions, but I think that you should actually deal with the acursed instead of giving them more to pillage.")
     castleGold -= 100
     citRep += 1
     choice = "blank"
+    setTimeout(randomChoice, 135000)
   }
   if(keyChoice == "dragonIntro"){
 alert("Dragon: Of course. I wouldn't want to force someone to have a conversation they wouldn't want to have. Although I hope that you will speak with me next time. I do miss the talks I had with Old King Genus. I will be back tomorrow for my fee. You have my farewell until the next time we speak.")
@@ -3017,6 +3026,7 @@ else{
   nbHitMount()
 }
     choice = "blank"
+    setTimeout(randomChoice, 135000)
   }
 
   if(choice == "nbForest"){
@@ -3031,8 +3041,9 @@ else{
   nbHitForest()
 }
     choice = "blank"
+    setTimeout(randomChoice, 135000)
   }
-  setTimeout(randomChoice, 135000)
+
 }
 function choice3select(){
   choiceLock = 0
@@ -3052,6 +3063,7 @@ citRep += 10
 
     }
     choice = "blank"
+    setTimeout(randomChoice, 135000)
   }
   if(choice == "citKidN"){
     var chance = Math.random()
@@ -3066,6 +3078,7 @@ alert("Steward: The Garrison found the Acursed camp holding the captive child, b
       castleGold -= 100
     }
     choice = "blank"
+    setTimeout(randomChoice, 135000)
   }
   if(choice == "citRobbed"){
     var chance = Math.random()
@@ -3080,6 +3093,7 @@ castleGold -= 100
 citRep += 1
     }
     choice = "blank"
+    setTimeout(randomChoice, 135000)
   }
   if(keyChoice == "dragonIntro"){
 alert("Dragon: Your manners and diplomacy are admirable my young king. I enjoyed talking with you this time. You will make a great ruler, and a worthy successor to your uncle. I look forward to our next meeting, but unfortunately, I will need my payment then. Farewell for now my young king.")
@@ -3102,8 +3116,9 @@ evacMount()
 alert("Steward: We have recieved reports that your workers are on their way back to the castle.")
 choice = "blank"
 evacForest()
+setTimeout(randomChoice, 135000)
   }
-  setTimeout(randomChoice, 135000)
+
 }
 function launchGameO(){
   document.getElementById("deathScreen").style.display = "block";
