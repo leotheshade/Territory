@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <!-- <button onclick="REZT()">eh</button> -->
     <svg vewBox="0 0 1000 1000" width="920" height="520" id="board" style="display:block; margin: auto;">
 
     <!-- <image width="20" height="30" x="100" y="100" xlink:href="file:///C:/Users/Student/Desktop/miner%20concept%20art%20no%201.png" /> -->
@@ -123,12 +124,30 @@
   <!-- /forest cover -->
 <!-- <circle cx="350" cy="200" r="600" fill="black" opacity=".6"/>
 <circle cx="350" cy="200" r="400" fill="white" opacity=".1"/> -->
-<circle cx="435" cy="310" r="600" fill="black" opacity=".9"/>
-<circle cx="435" cy="310" r="300" fill="white" opacity=".2"/>
-<circle cx="435" cy="310" r="400" fill="white" opacity=".2"/>
-<circle cx="435" cy="310" r="500" fill="white" opacity=".2"/>
-<circle cx="435" cy="310" r="600" fill="white" opacity=".2"/>
-<circle cx="435" cy="310" r="200" fill="white" opacity=".2"/>
+<circle cx="435" cy="310" r="600" fill="black" opacity="0">
+  <animate id="RezPT1G" attributeName="opacity" from="0" to=".9" begin="RezPt1A.begin" dur=".3"/>
+  <animate id="RezPT2G" attributeName="opacity" from=".9" to="0" begin="RezPT1A.end" dur=".3"/>
+</circle>
+<circle cx="435" cy="310" r="300" fill="gold" opacity="0">
+  <animate id="RezPT1A" attributeName="opacity" from="0" to=".2" begin="indefinite" dur=".3"/>
+  <animate id="RezPT2A" attributeName="opacity" from=".2" to="0" begin="RezPT1A.end" dur=".3"/>
+</circle>
+<circle cx="435" cy="310" r="400" fill="gold" opacity="0">
+  <animate id="RezPT1B" attributeName="opacity" from="0" to=".2" begin="RezPt1A.begin" dur=".3"/>
+  <animate id="RezPT2B" attributeName="opacity" from=".2" to="0" begin="RezPT1A.end" dur=".3"/>
+</circle>
+<circle cx="435" cy="310" r="500" fill="gold" opacity="0">
+  <animate id="RezPT1C" attributeName="opacity" from="0" to=".2" begin="RezPt1A.begin" dur=".3"/>
+  <animate id="RezPT2C" attributeName="opacity" from=".2" to="0" begin="RezPT1A.end" dur=".3"/>
+</circle>
+<circle cx="435" cy="310" r="600" fill="white" opacity="0">
+  <animate id="RezPT1D" attributeName="opacity" from="0" to=".2" begin="RezPt1A.begin" dur=".3"/>
+  <animate id="RezPT2D" attributeName="opacity" from=".2" to="0" begin="RezPT1A.end" dur=".3"/>
+</circle>
+<circle cx="435" cy="310" r="200" fill="gold" opacity="0">
+  <animate id="RezPT1E" attributeName="opacity" from="0" to=".2" begin="RezPt1A.begin" dur=".3"/>
+  <animate id="RezPT2E" attributeName="opacity" from=".2" to="0" begin="RezPT1A.end" dur=".3"/>
+</circle>
  <!-- <line x1="270" y1="270" x2="270" y2="265" stroke="gray" stroke-width="30" stroke-linecap="round"/> -->
 <!-- <line x1="425" y1="375" x2="100" y2="480" stroke="white" stroke-width="45" opacity="1" />
 <line x1="425" y1="375" x2="100" y2="480" stroke="peru" stroke-width="45" opacity="0.95" />

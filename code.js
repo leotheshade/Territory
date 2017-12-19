@@ -124,6 +124,12 @@ var worker4CW = 0
 var worker4S1 = 1
 var worker4S2 = 0
 
+var RezA = document.getElementById("RezPT1A")
+// function REZT(){
+// // REZPT1A.beginElement
+// document.getElementById("RezPT1A").beginElement()
+//
+// }
 
 
 function musicLoop(){
@@ -2680,6 +2686,7 @@ function reviveWorker1(){
   document.getElementById("worker1").setAttribute("x", 390)
   document.getElementById("worker1").setAttribute("y", 310)
   alert("worker 1 was revived from the dead")
+  RezA.beginElement()
 }
 function reviveWorker2(){
   document.getElementById("worker2X1").setAttribute("opacity", 0)
@@ -2688,6 +2695,7 @@ function reviveWorker2(){
   document.getElementById("worker2").setAttribute("x", 420)
   document.getElementById("worker2").setAttribute("y", 310)
   alert("worker 2 was revived from the dead")
+  RezA.beginElement()
 }
 
 function reviveWorker3(){
@@ -2697,6 +2705,7 @@ function reviveWorker3(){
   document.getElementById("worker3").setAttribute("x", 450)
   document.getElementById("worker3").setAttribute("y", 310)
   alert("worker 3 was revived from the dead")
+  RezA.beginElement()
 }
 
 function reviveWorker4(){
@@ -2706,6 +2715,7 @@ function reviveWorker4(){
   document.getElementById("worker4").setAttribute("x", 480)
   document.getElementById("worker4").setAttribute("y", 310)
   alert("worker 4 was revived from the dead")
+  RezA.beginElement()
 }
 
 function killWorker1(){
