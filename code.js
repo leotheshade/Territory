@@ -2685,7 +2685,7 @@ function reviveWorker1(){
   worker1position = "castle"
   document.getElementById("worker1").setAttribute("x", 390)
   document.getElementById("worker1").setAttribute("y", 310)
-  alert("worker 1 was revived from the dead")
+  // alert("worker 1 was revived from the dead")
   RezA.beginElement()
 }
 function reviveWorker2(){
@@ -2694,7 +2694,7 @@ function reviveWorker2(){
   worker2position = "castle"
   document.getElementById("worker2").setAttribute("x", 420)
   document.getElementById("worker2").setAttribute("y", 310)
-  alert("worker 2 was revived from the dead")
+  // alert("worker 2 was revived from the dead")
   RezA.beginElement()
 }
 
@@ -2704,7 +2704,7 @@ function reviveWorker3(){
   worker3position = "castle"
   document.getElementById("worker3").setAttribute("x", 450)
   document.getElementById("worker3").setAttribute("y", 310)
-  alert("worker 3 was revived from the dead")
+  // alert("worker 3 was revived from the dead")
   RezA.beginElement()
 }
 
@@ -2714,7 +2714,7 @@ function reviveWorker4(){
   worker4position = "castle"
   document.getElementById("worker4").setAttribute("x", 480)
   document.getElementById("worker4").setAttribute("y", 310)
-  alert("worker 4 was revived from the dead")
+  // alert("worker 4 was revived from the dead")
   RezA.beginElement()
 }
 
@@ -2861,6 +2861,7 @@ function choiceMake(){
   document.getElementById("choiceTwo").style.display = "block";
   document.getElementById("choiceThree").style.display = "block";
   if(choice == "castleAttack"){
+    //scrapped
     alert("Steward: Sir! The castle is currently under siege by a massive group of Acursed. An attack of this size has never happened before. The Garrison is fighting them off to the best of their abitlities, what shall we do?")
     alert("Choice: select the RED choice to flee the castle in the chaos and try to come back to power once the fighting has ended. Select the GRAY choice to continue holding them off, and send for help from one of your allies(The dragon or any of your other allies). Select the BLUE choice to go out onto the battlements with your troops and fight alongside them to give them a morale boost.")
   }
@@ -2882,10 +2883,12 @@ if(choice == "citRobbed"){
     alert("Choice: Select the RED choice to send your garrison to the camp to protect it from the Night Beast(-50 gold). Select the GRAY choice leave your camp how it is(chance). Select the BLUE choice to send your workers back to your castle(forfeit all resources at the camp)")
   }
 if(keyChoice == "dragonIntro"){
+  //will be changed
   alert("As you stand where the dragon will meet you, you feel the ground shake and hear loud thuds at regular intervals. Steward: He approaches/. The thuds grow louder until a massive shape swoops down from the clouds and lands before you. It is a dragon. You cannot help but gape in awe at the sight before you. The dragon lowers it's head and speaks. Dragon: Who is this who stands before me? Where is Old King Genus? Speak human, or I shall slay you where you stand!/. You manage to explain that Old King Genus is dead, and that you are his nephew and heir. The dragon relaxes and droops slightly. Dragon: So that is why. You have my condolences and my grief. He was a good king and we had such pleasent talks. I assume that I will be meeting you from now on, and that your steward has already explained how these meetings will work? But, in Old King Genus's memory, I will not ask for my pay this time. Now that thats out out of the way, I would like to speak with you.")
 alert("Choice: Select the RED choice to speak with him in a hostile tone. Select the GRAY choice to tell him that you don't feel like talking at that moment. Select the BLUE choice to oblige him in a friendly conversation. ")
 }
 if(choice == "dragonT"){
+  //will be changed
   alert("As you stand where you will meet the dragon, you hear the familiar thuds as you feel the dragon aproaching. The dragon lands before you and looks down. Dragon: Greetings my young king. I have come to collect my payment. But why just do business? let us talk, about anything that might be happening with you and your kingdom.")
   alert("Choice: Select the RED choice to speak hostily. Select the GRAY choice to tell him that you don't feel like talking. Select the BLUE choice to speak to him in a friendly tone.")
 }
@@ -3026,7 +3029,7 @@ choice = "blank"
   }
   if(choice == "nbMount"){
     var chance = Math.random()
-    if(chance < .6){
+    if(chance < .65){
       alert("Steward: We have recieved reports that the workers didn't encounter the Night Beast, and have continued working as planned")
     }
 else{
