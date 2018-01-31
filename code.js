@@ -125,11 +125,13 @@ var worker4S1 = 1
 var worker4S2 = 0
 
 var RezA = document.getElementById("RezPT1A")
-// function REZT(){
-// // REZPT1A.beginElement
-// document.getElementById("RezPT1A").beginElement()
-//
-// }
+REZT()
+function REZT(){
+// REZPT1A.beginElement
+console.log("hells")
+document.getElementById("RezPT1A").beginElement()
+
+}
 
 
 function musicLoop(){
