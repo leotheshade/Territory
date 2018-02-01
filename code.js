@@ -125,7 +125,7 @@ var worker4S1 = 1
 var worker4S2 = 0
 
 var RezA = document.getElementById("RezPT1A")
-REZT()
+// REZT()
 function REZT(){
 // REZPT1A.beginElement
 console.log("hells")
@@ -2945,10 +2945,10 @@ choice = "blank"
 }
 if(choice == "nbMount"){
   var chance = Math.random()
-  if(chance < .45){
+  if(chance < .35){
     alert("Steward: We have recieved reports that the Night Beast has moved on, and the garrison did not encounter it.")
   }
-  else if(chance < .9){
+  else if(chance < .80){
     alert("Steward: We have recieved reports that the garrison encountered the Night Beast, but they were able to fight it off.")
   }
   else{
@@ -2963,10 +2963,10 @@ if(choice == "nbMount"){
 }
 if(choice == "nbForest"){
   var chance = Math.random()
-  if(chance < .45){
+  if(chance < .35){
     alert("Steward: We have recieved reports that the Night Beast has moved on, and the garrison did not encounter it.")
   }
-  else if(chance < .9){
+  else if(chance < .80){
     alert("Steward: We have recieved reports that the garrison encountered the Night Beast, but they were able to fight it off.")
   }
   else{
@@ -3031,7 +3031,7 @@ choice = "blank"
   }
   if(choice == "nbMount"){
     var chance = Math.random()
-    if(chance < .65){
+    if(chance < .45){
       alert("Steward: We have recieved reports that the workers didn't encounter the Night Beast, and have continued working as planned")
     }
 else{
@@ -3046,7 +3046,7 @@ else{
 
   if(choice == "nbForest"){
     var chance = Math.random()
-    if(chance < .6){
+    if(chance < .45){
       alert("Steward: We have recieved reports that the workers didn't encounter the Night Beast, and have continued working as planned")
     }
 else{
