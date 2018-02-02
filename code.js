@@ -125,6 +125,8 @@ var worker4S1 = 1
 var worker4S2 = 0
 
 var RezA = document.getElementById("RezPT1A")
+
+var raidHit = 0
 // REZT()
 function REZT(){
 // REZPT1A.beginElement
@@ -1478,7 +1480,7 @@ takeWoodCastle()
 
     wagonCastle = 0
     wagonPosition1 = "moving"
-    var depoOre = setTimeout(depositWood, 15000)
+    var depoOre = setTimeout(depositResources, 15000)
 
   }
 
@@ -1826,7 +1828,7 @@ takeWoodCastle()
 
     wagonCastle = 0
     wagonPosition1 = "moving"
-    var depoOre = setTimeout(depositOre, 15000)
+    var depoOre = setTimeout(depositResources, 15000)
 
   }
   //up
@@ -1848,7 +1850,7 @@ takeWoodCastle()
     worker1position = "moving"
     var startMine1 = setTimeout(worker1castle, 15000)
     }
-    if(wagonWorker2 == 1 && worker2position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
+    if(wagonWorker2 == 1 && worker2position == "mountains" && wagonOcean == 1 && wagonPosition1 == "mountains"){
       document.getElementById("worker2moveX").setAttribute("from", 70)
     document.getElementById("worker2moveX").setAttribute("to", 440)
     document.getElementById("worker2moveX").setAttribute("dur", 15)
@@ -1864,7 +1866,7 @@ takeWoodCastle()
     setTimeout(worker2castle, 15000)
 
     }
-    if(wagonWorker3 == 1 && worker3position == "mountains" && wagonCastle == 1 && wagonPosition1=="mountains"){
+    if(wagonWorker3 == 1 && worker3position == "mountains" && wagonOcean == 1 && wagonPosition1=="mountains"){
        document.getElementById("worker3moveX").setAttribute("from", 100)
     document.getElementById("worker3moveX").setAttribute("to", 470)
     document.getElementById("worker3moveX").setAttribute("dur", 15)
@@ -1880,7 +1882,7 @@ takeWoodCastle()
     setTimeout(worker3castle, 15000)
     }
     //down
-    if(wagonWorker4 == 1 && worker4position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
+    if(wagonWorker4 == 1 && worker4position == "mountains" && wagonOcean == 1 && wagonPosition1 == "mountains"){
       document.getElementById("worker4moveX").setAttribute("from", 130)
     document.getElementById("worker4moveX").setAttribute("to", 500)
     document.getElementById("worker4moveX").setAttribute("dur", 15)
@@ -1896,7 +1898,7 @@ takeWoodCastle()
     setTimeout(worker4castle, 15000)
 
     }
-  if(wagonCastle == 1 && wagonPosition1 == "mountains"){
+  if(wagonOcean == 1 && wagonPosition1 == "mountains"){
     document.getElementById("wagon1MoveX").setAttribute("from", 70)
     document.getElementById("wagon1MoveX").setAttribute("to", 450)
     document.getElementById("wagon1MoveX").setAttribute("dur", 15)
@@ -1913,7 +1915,7 @@ takeWoodCastle()
 
     wagonCastle = 0
     wagonPosition1 = "moving"
-    var depoOre = setTimeout(depositOre, 15000)
+    // var depoOre = setTimeout(depositOre, 15000)
 
   }
 
@@ -2450,17 +2452,17 @@ wagonPosition1 = "market"
 }
 function depositResources(){
   wagonPosition1 = "castle"
-  if(wagonGold >= 100){
-    wagonGold -= 100
-    castleGold += 100
+  if(wagonGold > 0){
+    castleGold += wagonGold
+      wagonGold -= wagonGold
   }
-  if(wagonOre >= 100){
-    wagonOre -= 100
-    castleOre += 100
+  if(wagonOre > 0){
+    castleOre += wagonOre
+    wagonOre -= wagonOre
   }
-  if(wagonWood >= 100){
-    wagonWood -= 100
-    castleWood += 100
+  if(wagonWood > 0){
+    castleWood += wagonWood
+      wagonWood -= wagonWood
   }
 }
 function takeOreMountains(){
@@ -2510,50 +2512,98 @@ function raid(){
   if(chance < 0.80 && time == "night"){
      var chance = Math.random()
     document.getElementById("raidAlert").style.display = "block";
-  document.getElementById("raidAlert").textContent = "You Have Been Raided";
+  document.getElementById("raidAlert").textContent = "Your Supply Wagon Has Been Attacked!";
   if(Ocheck == 0){
   setTimeout(setOpacityR, 5000)
     Ocheck = 1
   }
- if(banditT1 > 0 && chance < .20){
-    // alert("T1")
- }
- else if(banditT2 > 0 && chance < .40){
-    // alert("T2")
- }
- else if(banditT3 > 0 && chance < .60){
-    // alert("T3")
- }
- else if(banditT4 > 0 && chance < .80){
-    // alert("T4")
- }
- else if(banditT5 > 0 && chance < 1){
-  //  alert("T5")
- }
+ // if(banditT1 > 0 && chance < .20){
+ //    // alert("T1")
+ // }
+ // else if(banditT2 > 0 && chance < .40){
+ //    // alert("T2")
+ // }
+ // else if(banditT3 > 0 && chance < .60){
+ //    // alert("T3")
+ // }
+ // else if(banditT4 > 0 && chance < .80){
+ //    // alert("T4")
+ // }
+ // else if(banditT5 > 0 && chance < 1){
+ //  //  alert("T5")
+ // }
  }
    if(chance < 0.33 && time == "day"){
      var chance = Math.random()
     document.getElementById("raidAlert").style.display = "block";
-      document.getElementById("raidAlert").textContent = "You Have Been Raided";
+      document.getElementById("raidAlert").textContent = "Your Supply Wagon Has Been Attacked!";
+      raidHit = 1
      if(Ocheck == 0){
      setTimeout(setOpacityR, 5000)
        Ocheck = 1
      }
-    if(banditT1 > 0 && chance < .20){
-      //  alert("T1")
-    }
-    else if(banditT2 > 0 && chance < .40){
-      //  alert("T2")
-    }
-    else if(banditT3 > 0 && chance < .60){
-      //  alert("T3")
-    }
-    else if(banditT4 > 0 && chance < .80){
-      //  alert("T4")
-    }
-    else if(banditT5 > 0 && chance < 1){
-      // alert("T5")
-    }
+     if(wagonGold > 0){
+       wagonGold -= wagonGold/2
+
+     }
+     if(wagonOre > 0){
+       wagonOre -= wagonOre/2
+
+     }
+     if(wagonWood > 0){
+       wagonWood -= wagonWood/2
+
+     }
+     chance = Math.random()
+     if(worker1position == "moving" && chance < .30){
+       killWorker1()
+     }
+      chance = Math.random()
+     if(worker2position == "moving" && chance < .30){
+       killWorker2()
+
+     }
+      chance = Math.random()
+     if(worker3position == "moving" && chance < .30){
+       killWorker3()
+     }
+      chance = Math.random()
+     if(worker4position == "moving" && chance < .30){
+       killWorker4()
+     }
+
+
+     if(worker1position == "moving"){
+
+     }
+     if(worker2position == "moving"){
+
+
+     }
+
+     if(worker3position == "moving"){
+
+     }
+
+     if(worker4position == "moving"){
+
+     }
+
+    // if(banditT1 > 0 && chance < .20){
+    //   //  alert("T1")
+    // }
+    // else if(banditT2 > 0 && chance < .40){
+    //   //  alert("T2")
+    // }
+    // else if(banditT3 > 0 && chance < .60){
+    //   //  alert("T3")
+    // }
+    // else if(banditT4 > 0 && chance < .80){
+    //   //  alert("T4")
+    // }
+    // else if(banditT5 > 0 && chance < 1){
+    //   // alert("T5")
+    // }
   }
   else{
     // alert("no raid")
