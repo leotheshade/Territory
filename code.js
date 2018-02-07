@@ -1233,7 +1233,10 @@ function send(){
 
 
 
-
+ if(wagonPosition1 == "castle" && wagonBuyO == 1 || wagonBuyW == 1 || wagonSellW == 1 || wagonSellO == 1  ){
+ travelDur = 10
+ raid()
+ }
  if(wagonBuyO == 1 && wagonPosition1 == "castle" && castleGold >= 100){
    document.getElementById("wagon1MoveX").setAttribute("from", 450)
   document.getElementById("wagon1MoveX").setAttribute("to", 435)
@@ -2563,24 +2566,25 @@ travelDur * 1.5
        wagonWood -= wagonWood/2
 
      }
+     if(wagonBuyO != 1 && wagonBuyw != 1 && wagonSellO != 1 && wagonSellW != 1){
      chance = Math.random()
-     if(worker1position == "moving" && chance < .30){
+     if(worker1position == wagonPosition1 && wagonWorker1 == 1 && chance < .30){
        killWorker1()
      }
       chance = Math.random()
-     if(worker2position == "moving" && chance < .30){
+     if(worker2position == wagonPosition1 && wagonWorker2 == 1 && chance < .30){
        killWorker2()
 
      }
       chance = Math.random()
-     if(worker3position == "moving" && chance < .30){
+     if(worker3position == wagonPosition1 && wagonWorker3 == 1 && chance < .30){
        killWorker3()
      }
       chance = Math.random()
-     if(worker4position == "moving" && chance < .30){
+     if(worker4position == wagonPosition1 && wagonWorker4 == 1 && chance < .30){
        killWorker4()
      }
-
+}
 
      if(worker1position == "moving"){
 
