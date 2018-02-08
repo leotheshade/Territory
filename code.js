@@ -1693,6 +1693,7 @@ raid()
   if(wagonMountains1 == 1 && wagonPosition1 == "castle"){
   travelDur = 15
   raid()
+  console.log(travelDur)
   }
     if(wagonWorker1 == 1 && worker1position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
 
@@ -2822,7 +2823,7 @@ function killWorker1(){
 worker1position = "dead"
 document.getElementById("worker1").setAttribute("x", 1500)
 document.getElementById("worker1").setAttribute("y", 1500)
-alert("worker 1 died")
+// alert("worker 1 died")
 setTimeout(reviveWorker1, 150000)
 }
 function killWorker2(){
@@ -2832,7 +2833,7 @@ function killWorker2(){
 worker2position = "dead"
 document.getElementById("worker2").setAttribute("x", 1500)
 document.getElementById("worker2").setAttribute("y", 1500)
-alert("worker 2 died")
+// alert("worker 2 died")
 setTimeout(reviveWorker2, 150000)
 }
 
@@ -2843,7 +2844,7 @@ function killWorker3(){
 worker3position = "dead"
 document.getElementById("worker3").setAttribute("x", 1500)
 document.getElementById("worker3").setAttribute("y", 1500)
-alert("worker 3 died")
+// alert("worker 3 died")
 setTimeout(reviveWorker3, 150000)
 }
 
@@ -2854,7 +2855,7 @@ function killWorker4(){
 worker4position = "dead"
 document.getElementById("worker4").setAttribute("x", 1500)
 document.getElementById("worker4").setAttribute("y", 1500)
-alert("worker 4 died")
+// alert("worker 4 died")
 setTimeout(reviveWorker4, 150000)
 }
 
