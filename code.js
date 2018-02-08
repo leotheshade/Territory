@@ -1521,16 +1521,19 @@ raid()
 
 
 
-
+  if(wagonForest == 1 && wagonPosition1 == "castle"){
+  travelDur = 15
+  raid()
+  }
    if(wagonWorker1 == 1 && worker1position == "castle" && wagonForest == 1 && wagonPosition1 == "castle" ){
 
       document.getElementById("worker1moveX").setAttribute("from", 390)
     document.getElementById("worker1moveX").setAttribute("to", 780)
-    document.getElementById("worker1moveX").setAttribute("dur", 15)
+    document.getElementById("worker1moveX").setAttribute("dur", travelDur)
 
     document.getElementById("worker1moveY").setAttribute("from", 310)
     document.getElementById("worker1moveY").setAttribute("to", 250)
-    document.getElementById("worker1moveY").setAttribute("dur", 15)
+    document.getElementById("worker1moveY").setAttribute("dur", travelDur)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
     document.getElementById("worker1").setAttribute("x", 780)
@@ -1539,16 +1542,16 @@ raid()
     worker1position = "moving"
     // worker1Walk()
     worker1WalkEA()
-    var startMine1 = setTimeout(worker1cutting, 15000)
+    var startMine1 = setTimeout(worker1cutting, travelDur * 1000)
     }
   if(wagonWorker2 == 1 && worker2position == "castle" && wagonForest == 1 && wagonPosition1 == "castle"){
      document.getElementById("worker2moveX").setAttribute("from", 420)
     document.getElementById("worker2moveX").setAttribute("to", 780)
-    document.getElementById("worker2moveX").setAttribute("dur", 15)
+    document.getElementById("worker2moveX").setAttribute("dur", travelDur)
 
     document.getElementById("worker2moveY").setAttribute("from", 310)
     document.getElementById("worker2moveY").setAttribute("to", 285)
-    document.getElementById("worker2moveY").setAttribute("dur", 15)
+    document.getElementById("worker2moveY").setAttribute("dur", travelDur)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
     document.getElementById("worker2").setAttribute("x", 780)
@@ -1557,16 +1560,16 @@ raid()
 
     worker2position = "moving"
     worker2WalkEA()
-    var startMine1 = setTimeout(worker2cutting, 15000)
+    var startMine1 = setTimeout(worker2cutting, travelDur * 1000)
   }
    if(wagonWorker3 == 1 && worker3position == "castle" && wagonForest == 1 && wagonPosition1 == "castle"){
      document.getElementById("worker3moveX").setAttribute("from", 450)
     document.getElementById("worker3moveX").setAttribute("to", 780)
-    document.getElementById("worker3moveX").setAttribute("dur", 15)
+    document.getElementById("worker3moveX").setAttribute("dur", travelDur)
 
     document.getElementById("worker3moveY").setAttribute("from", 310)
     document.getElementById("worker3moveY").setAttribute("to", 320)
-    document.getElementById("worker3moveY").setAttribute("dur", 15)
+    document.getElementById("worker3moveY").setAttribute("dur", travelDur)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
     document.getElementById("worker3").setAttribute("x", 780)
@@ -1574,16 +1577,16 @@ raid()
     // wagonWorker3 = 0
     worker3position = "moving"
     worker3WalkEA()
-     var startMine1 = setTimeout(worker3cutting, 15000)
+     var startMine1 = setTimeout(worker3cutting, travelDur * 1000)
   }
    if(wagonWorker4 == 1 && worker4position == "castle" && wagonForest == 1 && wagonPosition1 == "castle"){
      document.getElementById("worker4moveX").setAttribute("from", 480)
     document.getElementById("worker4moveX").setAttribute("to", 780)
-    document.getElementById("worker4moveX").setAttribute("dur", 15)
+    document.getElementById("worker4moveX").setAttribute("dur", travelDur)
 
     document.getElementById("worker4moveY").setAttribute("from", 310)
     document.getElementById("worker4moveY").setAttribute("to", 355)
-    document.getElementById("worker4moveY").setAttribute("dur", 15)
+    document.getElementById("worker4moveY").setAttribute("dur", travelDur)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
     document.getElementById("worker4").setAttribute("x", 780)
@@ -1591,16 +1594,16 @@ raid()
     // wagonWorker4 = 0
     worker4position = "moving"
     worker4WalkEA()
-     var startMine1 = setTimeout(worker4cutting, 15000)
+     var startMine1 = setTimeout(worker4cutting, travelDur)
   }
   if(wagonForest == 1 && wagonPosition1 == "castle"){
      document.getElementById("wagon1MoveX").setAttribute("from", 450)
     document.getElementById("wagon1MoveX").setAttribute("to", 760)
-     document.getElementById("wagon1MoveX").setAttribute("dur", 15)
+     document.getElementById("wagon1MoveX").setAttribute("dur", travelDur)
 
     document.getElementById("wagon1MoveY").setAttribute("from", 350)
     document.getElementById("wagon1MoveY").setAttribute("to", 280)
-    document.getElementById("wagon1MoveY").setAttribute("dur", 15)
+    document.getElementById("wagon1MoveY").setAttribute("dur", travelDur)
 
      document.getElementById("wagon1MoveX").beginElement()
     document.getElementById("wagon1MoveY").beginElement()
@@ -1610,7 +1613,7 @@ raid()
 
     wagonPosition1 = "moving"
 
-    var wagonTakeW = setTimeout(takeWoodForest, 15000)
+    var wagonTakeW = setTimeout(takeWoodForest, travelDur * 1000)
   }
   //normal
   //  if(forestWorker1 == 1 && worker1position == "castle"){
@@ -1687,65 +1690,69 @@ raid()
     takeWoodForest()
 
   }
+  if(wagonMountains1 == 1 && wagonPosition1 == "castle"){
+  travelDur = 15
+  raid()
+  }
     if(wagonWorker1 == 1 && worker1position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
 
       document.getElementById("worker1moveX").setAttribute("from", 390)
     document.getElementById("worker1moveX").setAttribute("to", 20)
-    document.getElementById("worker1moveX").setAttribute("dur", 15)
+    document.getElementById("worker1moveX").setAttribute("dur", travelDur)
 
     document.getElementById("worker1moveY").setAttribute("from", 310)
     document.getElementById("worker1moveY").setAttribute("to", 440)
-    document.getElementById("worker1moveY").setAttribute("dur", 15)
+    document.getElementById("worker1moveY").setAttribute("dur", travelDur)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
     document.getElementById("worker1").setAttribute("x", 20)
     document.getElementById("worker1").setAttribute("y", 440)
     worker1position = "moving"
     worker1WalkWP()
-    var startMine1 = setTimeout(worker1mining, 15000)
+    var startMine1 = setTimeout(worker1mining, travelDur * 1000)
     }
     if(wagonWorker2 == 1 && worker2position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
       document.getElementById("worker2moveX").setAttribute("from", 420)
     document.getElementById("worker2moveX").setAttribute("to", 50)
-    document.getElementById("worker2moveX").setAttribute("dur", 15)
+    document.getElementById("worker2moveX").setAttribute("dur", travelDur)
 
     document.getElementById("worker2moveY").setAttribute("from", 310)
     document.getElementById("worker2moveY").setAttribute("to", 440)
-    document.getElementById("worker2moveY").setAttribute("dur", 15)
+    document.getElementById("worker2moveY").setAttribute("dur", travelDur)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
     document.getElementById("worker2").setAttribute("x", 50)
     document.getElementById("worker2").setAttribute("y", 440)
     worker2position = "moving"
     worker2WalkWP()
-    setTimeout(worker2mining, 15000)
+    setTimeout(worker2mining, travelDur * 1000)
 
     }
     if(wagonWorker3 == 1 && worker3position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
        document.getElementById("worker3moveX").setAttribute("from", 450)
     document.getElementById("worker3moveX").setAttribute("to", 80)
-    document.getElementById("worker3moveX").setAttribute("dur", 15)
+    document.getElementById("worker3moveX").setAttribute("dur", travelDur)
 
     document.getElementById("worker3moveY").setAttribute("from", 310)
     document.getElementById("worker3moveY").setAttribute("to", 440)
-    document.getElementById("worker3moveY").setAttribute("dur", 15)
+    document.getElementById("worker3moveY").setAttribute("dur", travelDur)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
     document.getElementById("worker3").setAttribute("x", 80)
     document.getElementById("worker3").setAttribute("y", 440)
     worker3position = "moving"
     worker3WalkWP()
-    setTimeout(worker3mining, 15000)
+    setTimeout(worker3mining, travelDur * 1000)
     }
     //down
     if(wagonWorker4 == 1 && worker4position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
       document.getElementById("worker4moveX").setAttribute("from", 480)
     document.getElementById("worker4moveX").setAttribute("to", 110)
-    document.getElementById("worker4moveX").setAttribute("dur", 15)
+    document.getElementById("worker4moveX").setAttribute("dur", travelDur)
 
     document.getElementById("worker4moveY").setAttribute("from", 310)
     document.getElementById("worker4moveY").setAttribute("to", 440)
-    document.getElementById("worker4moveY").setAttribute("dur", 15)
+    document.getElementById("worker4moveY").setAttribute("dur", travelDur)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
     document.getElementById("worker4").setAttribute("x", 110)
@@ -1753,17 +1760,17 @@ raid()
 
     worker4position = "moving"
     worker4WalkWP()
-    setTimeout(worker4mining, 15000)
+    setTimeout(worker4mining, travelDur * 1000)
 
     }
     if(wagonMountains1 == 1 && wagonPosition1 == "castle"){
       document.getElementById("wagon1MoveX").setAttribute("from", 450)
       document.getElementById("wagon1MoveX").setAttribute("to", 70)
-      document.getElementById("wagon1MoveX").setAttribute("dur", 15)
+      document.getElementById("wagon1MoveX").setAttribute("dur", travelDur)
 
       document.getElementById("wagon1MoveY").setAttribute("from", 350)
       document.getElementById("wagon1MoveY").setAttribute("to", 480)
-      document.getElementById("wagon1MoveY").setAttribute("dur", 15)
+      document.getElementById("wagon1MoveY").setAttribute("dur", travelDur)
 
       document.getElementById("wagon1MoveX").beginElement()
       document.getElementById("wagon1MoveY").beginElement()
@@ -1773,84 +1780,88 @@ raid()
 
 
       wagonPosition1 = "moving"
-      var startTakeOreM = setTimeout(takeOreMountains, 15000)
+      var startTakeOreM = setTimeout(takeOreMountains, travelDur * 1000)
 
     }
   //down send back to castle
+  if(wagonCastle == 1 && wagonPosition1 == "mountains"){
+  travelDur = 15
+  raid()
+  }
   if(wagonWorker1 == 1 && worker1position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
       document.getElementById("worker1moveX").setAttribute("from", 20)
     document.getElementById("worker1moveX").setAttribute("to", 390)
-    document.getElementById("worker1moveX").setAttribute("dur", 15)
+    document.getElementById("worker1moveX").setAttribute("dur", travelDur)
 
     document.getElementById("worker1moveY").setAttribute("from", 440)
     document.getElementById("worker1moveY").setAttribute("to", 310)
-    document.getElementById("worker1moveY").setAttribute("dur", 15)
+    document.getElementById("worker1moveY").setAttribute("dur", travelDur)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
     document.getElementById("worker1").setAttribute("x", 390)
     document.getElementById("worker1").setAttribute("y", 310)
     worker1position = "moving"
     worker1WalkEP()
-    var startMine1 = setTimeout(worker1castle, 15000)
+    var startMine1 = setTimeout(worker1castle, travelDur * 1000)
     }
     if(wagonWorker2 == 1 && worker2position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
       document.getElementById("worker2moveX").setAttribute("from", 50)
     document.getElementById("worker2moveX").setAttribute("to", 420)
-    document.getElementById("worker2moveX").setAttribute("dur", 15)
+    document.getElementById("worker2moveX").setAttribute("dur", travelDur)
 
     document.getElementById("worker2moveY").setAttribute("from", 440)
     document.getElementById("worker2moveY").setAttribute("to", 310)
-    document.getElementById("worker2moveY").setAttribute("dur", 15)
+    document.getElementById("worker2moveY").setAttribute("dur", travelDur)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
     document.getElementById("worker2").setAttribute("x", 420)
     document.getElementById("worker2").setAttribute("y", 310)
     worker2position = "moving"
     worker2WalkEP()
-    setTimeout(worker2castle, 15000)
+    setTimeout(worker2castle, travelDur * 1000)
 
     }
     if(wagonWorker3 == 1 && worker3position == "mountains" && wagonCastle == 1 && wagonPosition1=="mountains"){
        document.getElementById("worker3moveX").setAttribute("from", 80)
     document.getElementById("worker3moveX").setAttribute("to", 450)
-    document.getElementById("worker3moveX").setAttribute("dur", 15)
+    document.getElementById("worker3moveX").setAttribute("dur", travelDur)
 
     document.getElementById("worker3moveY").setAttribute("from", 440)
     document.getElementById("worker3moveY").setAttribute("to", 310)
-    document.getElementById("worker3moveY").setAttribute("dur", 15)
+    document.getElementById("worker3moveY").setAttribute("dur", travelDur)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
     document.getElementById("worker3").setAttribute("x", 450)
     document.getElementById("worker3").setAttribute("y", 310)
     worker3position = "moving"
     worker3WalkEP()
-    setTimeout(worker3castle, 15000)
+    setTimeout(worker3castle, travelDur * 1000)
     }
     //down
     if(wagonWorker4 == 1 && worker4position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
       document.getElementById("worker4moveX").setAttribute("from", 110)
     document.getElementById("worker4moveX").setAttribute("to", 480)
-    document.getElementById("worker4moveX").setAttribute("dur", 15)
+    document.getElementById("worker4moveX").setAttribute("dur", travelDur)
 
     document.getElementById("worker4moveY").setAttribute("from", 440)
     document.getElementById("worker4moveY").setAttribute("to", 310)
-    document.getElementById("worker4moveY").setAttribute("dur", 15)
+    document.getElementById("worker4moveY").setAttribute("dur", travelDur)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
     document.getElementById("worker4").setAttribute("x", 480)
     document.getElementById("worker4").setAttribute("y", 310)
     worker4position = "moving"
-    setTimeout(worker4castle, 15000)
+    setTimeout(worker4castle, travelDur * 1000)
 
     }
   if(wagonCastle == 1 && wagonPosition1 == "mountains"){
     document.getElementById("wagon1MoveX").setAttribute("from", 70)
     document.getElementById("wagon1MoveX").setAttribute("to", 450)
-    document.getElementById("wagon1MoveX").setAttribute("dur", 15)
+    document.getElementById("wagon1MoveX").setAttribute("dur", travelDur)
 
     document.getElementById("wagon1MoveY").setAttribute("from", 480)
     document.getElementById("wagon1MoveY").setAttribute("to", 350)
-    document.getElementById("wagon1MoveY").setAttribute("dur", 15)
+    document.getElementById("wagon1MoveY").setAttribute("dur", travelDur)
 
     document.getElementById("wagon1MoveX").beginElement()
     document.getElementById("wagon1MoveY").beginElement()
@@ -1860,7 +1871,7 @@ raid()
 
     wagonCastle = 0
     wagonPosition1 = "moving"
-    var depoOre = setTimeout(depositResources, 15000)
+    var depoOre = setTimeout(depositResources, travelDur * 1000)
 
   }
   //up
@@ -2587,7 +2598,7 @@ travelDur * 1.5
        wagonWood -= wagonWood/2
 
      }
-     if(wagonBuyO != 1 && wagonBuyw != 1 && wagonSellO != 1 && wagonSellW != 1){
+     if(wagonBuyO != 1 && wagonBuyW != 1 && wagonSellO != 1 && wagonSellW != 1){
      chance = Math.random()
      if(worker1position == wagonPosition1 && wagonWorker1 == 1 && chance < .30){
        killWorker1()
