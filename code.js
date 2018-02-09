@@ -2552,13 +2552,13 @@ function depositWood(){
 function raid(){
   var chance = Math.random()
   var timeTillRaid = chance * 20
-
+  console.log(chance + " generalRaid Night ")
   if(chance < 0.80 && time == "night"){
      var chance = Math.random()
     document.getElementById("raidAlert").style.display = "block";
   document.getElementById("raidAlert").textContent = "Your Supply Wagon Has Been Attacked!";
   raidHit = 1
-travelDur *= 1.5
+travelDur *= 1.7
   if(Ocheck == 0){
   setTimeout(setOpacityR, 5000)
     Ocheck = 1
@@ -2577,30 +2577,30 @@ travelDur *= 1.5
   }
   if(wagonBuyO != 1 && wagonBuyW != 1 && wagonSellO != 1 && wagonSellW != 1){
   chance = Math.random()
-     console.log(chance + " W1")
-  if(worker1position == wagonPosition1 && wagonWorker1 == 1 && chance < .30){
+     console.log(chance + " W1 Night")
+  if(worker1position == wagonPosition1 && wagonWorker1 == 1 && chance < .60){
 
     killWorker1()
   }
    chance = Math.random()
-      console.log(chance + " W2")
-  if(worker2position == wagonPosition1 && wagonWorker2 == 1 && chance < .30){
+      console.log(chance + " W2 Night")
+  if(worker2position == wagonPosition1 && wagonWorker2 == 1 && chance < .60){
     killWorker2()
 
   }
    chance = Math.random()
-      console.log(chance + " W3")
-  if(worker3position == wagonPosition1 && wagonWorker3 == 1 && chance < .30){
+      console.log(chance + " W3 Night ")
+  if(worker3position == wagonPosition1 && wagonWorker3 == 1 && chance < .60){
     killWorker3()
   }
    chance = Math.random()
-      console.log(chance + " W4")
-  if(worker4position == wagonPosition1 && wagonWorker4 == 1 && chance < .30){
+      console.log(chance + " W4 Night")
+  if(worker4position == wagonPosition1 && wagonWorker4 == 1 && chance < .60){
     killWorker4()
   }
 }
  }
-    console.log(chance + " generalRaid")
+    console.log(chance + " generalRaid Day ")
    if(chance < 0.29 && time == "day"){
      var chance = Math.random()
     document.getElementById("raidAlert").style.display = "block";
