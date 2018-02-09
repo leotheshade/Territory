@@ -2557,32 +2557,56 @@ function raid(){
      var chance = Math.random()
     document.getElementById("raidAlert").style.display = "block";
   document.getElementById("raidAlert").textContent = "Your Supply Wagon Has Been Attacked!";
+  raidHit = 1
+travelDur *= 1.5
   if(Ocheck == 0){
   setTimeout(setOpacityR, 5000)
     Ocheck = 1
   }
- // if(banditT1 > 0 && chance < .20){
- //    // alert("T1")
- // }
- // else if(banditT2 > 0 && chance < .40){
- //    // alert("T2")
- // }
- // else if(banditT3 > 0 && chance < .60){
- //    // alert("T3")
- // }
- // else if(banditT4 > 0 && chance < .80){
- //    // alert("T4")
- // }
- // else if(banditT5 > 0 && chance < 1){
- //  //  alert("T5")
- // }
+  if(wagonGold > 0){
+    wagonGold -= wagonGold/2
+
+  }
+  if(wagonOre > 0){
+    wagonOre -= wagonOre/2
+
+  }
+  if(wagonWood > 0){
+    wagonWood -= wagonWood/2
+
+  }
+  if(wagonBuyO != 1 && wagonBuyW != 1 && wagonSellO != 1 && wagonSellW != 1){
+  chance = Math.random()
+     console.log(chance + " W1")
+  if(worker1position == wagonPosition1 && wagonWorker1 == 1 && chance < .30){
+
+    killWorker1()
+  }
+   chance = Math.random()
+      console.log(chance + " W2")
+  if(worker2position == wagonPosition1 && wagonWorker2 == 1 && chance < .30){
+    killWorker2()
+
+  }
+   chance = Math.random()
+      console.log(chance + " W3")
+  if(worker3position == wagonPosition1 && wagonWorker3 == 1 && chance < .30){
+    killWorker3()
+  }
+   chance = Math.random()
+      console.log(chance + " W4")
+  if(worker4position == wagonPosition1 && wagonWorker4 == 1 && chance < .30){
+    killWorker4()
+  }
+}
  }
-   if(chance < 0.33 && time == "day"){
+    console.log(chance + " generalRaid")
+   if(chance < 0.29 && time == "day"){
      var chance = Math.random()
     document.getElementById("raidAlert").style.display = "block";
       document.getElementById("raidAlert").textContent = "Your Supply Wagon Has Been Attacked!";
       raidHit = 1
-travelDur * 1.5
+travelDur *= 1.5
      if(Ocheck == 0){
      setTimeout(setOpacityR, 5000)
        Ocheck = 1
@@ -2601,55 +2625,32 @@ travelDur * 1.5
      }
      if(wagonBuyO != 1 && wagonBuyW != 1 && wagonSellO != 1 && wagonSellW != 1){
      chance = Math.random()
+        console.log(chance + " W1")
      if(worker1position == wagonPosition1 && wagonWorker1 == 1 && chance < .30){
+
        killWorker1()
      }
       chance = Math.random()
+         console.log(chance + " W2")
      if(worker2position == wagonPosition1 && wagonWorker2 == 1 && chance < .30){
        killWorker2()
 
      }
       chance = Math.random()
+         console.log(chance + " W3")
      if(worker3position == wagonPosition1 && wagonWorker3 == 1 && chance < .30){
        killWorker3()
      }
       chance = Math.random()
+         console.log(chance + " W4")
      if(worker4position == wagonPosition1 && wagonWorker4 == 1 && chance < .30){
        killWorker4()
      }
 }
 
-     if(worker1position == "moving"){
-
-     }
-     if(worker2position == "moving"){
 
 
-     }
 
-     if(worker3position == "moving"){
-
-     }
-
-     if(worker4position == "moving"){
-
-     }
-
-    // if(banditT1 > 0 && chance < .20){
-    //   //  alert("T1")
-    // }
-    // else if(banditT2 > 0 && chance < .40){
-    //   //  alert("T2")
-    // }
-    // else if(banditT3 > 0 && chance < .60){
-    //   //  alert("T3")
-    // }
-    // else if(banditT4 > 0 && chance < .80){
-    //   //  alert("T4")
-    // }
-    // else if(banditT5 > 0 && chance < 1){
-    //   // alert("T5")
-    // }
   }
   else{
     // alert("no raid")
