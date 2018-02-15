@@ -135,6 +135,7 @@ var buyLock = 0
 var sellOreLock = 0
 var sellWoodLock = 0
 // REZT()
+console.log(new Date() + " program Begins")
 function REZT(){
 // REZPT1A.beginElement
 console.log("hells")
@@ -2266,32 +2267,40 @@ function evacMount(){
 }
 
 function nbHitMount(){
-if(worker1position == "mountains"){
+  var chance = Math.random()
+if(worker1position == "mountains" && chance < .80){
   killWorker1()
 }
-if(worker2position == "mountains"){
+chance = Math.random()
+if(worker2position == "mountains" && chance < .80){
   killWorker2()
 
 }
-if(worker3position == "mountains"){
+chance = Math.random()
+if(worker3position == "mountains" && chance < .80){
   killWorker3()
 }
-if(worker4position == "mountains"){
+chance = Math.random()
+if(worker4position == "mountains" && chance < .80){
   killWorker4()
 }
 
 }
 function nbHitForest(){
-  if(worker1position == "forest"){
+  chance = Math.random()
+  if(worker1position == "forest" && chance < .80){
 killWorker1()
   }
-  if(worker2position == "forest"){
+  chance = Math.random()
+  if(worker2position == "forest" && chance < .80){
     killWorker2()
   }
-  if(worker3position == "forest"){
+  chance = Math.random()
+  if(worker3position == "forest" && chance < .80){
     killWorker3()
   }
-  if(worker4position == "forest"){
+  chance = Math.random()
+  if(worker4position == "forest" && chance < .80){
     killWorker4()
   }
 }
@@ -2868,6 +2877,7 @@ setTimeout(reviveWorker4, 150000)
 
 
 function randomChoice(){
+  console.log(new Date() + "choice Timer")
   if(choice == "blank" && keyChoice == "blank"){
 
    choiceNo1 = 0
@@ -2944,6 +2954,10 @@ choiceNo1 = choiceCount
   else if(choiceNo5A && chance < choicePerc2 * choiceNo5){
     choice = "castleAttack"
     choiceMake()
+  }
+  if(choice == "blank" && keyChoice == "blank"){
+    setTimeout(randomChoice, 135000)
+
   }
 }
 else{
