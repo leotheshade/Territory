@@ -163,9 +163,9 @@ alert("Dear nephew, If you are reading this, I have passed from this world. As y
 
 alert("Steward: Ah, so you have arrived. Your uncle was right about you, he never once lost faith that you would come. Well, onto business. The first thing you need to know is how to assign workers to tasks. First you must click on your supply wagon. It's the brown box under your castle(placeholder). Then you must click the icon of whoever you want to acompany the wagon. Then select the destination you want it to be sent to. The mountains hold incredible ammounts of ore, and the forest has plenty of excelent wood that we can harvest. Once you have chosen a destination, select the red box at the bottom of your screen to order your wagon to begin moving.")
 alert("Steward: Beware, when moving your units or resources, the vile Accursed are sure to be attracted.(going to change this) What are the Acursed you ask? Well they are vile creatures, once men, they are now ruthless theives who partol your roads and rob your people. Somehow they react to the Shadow Veil and gain immense power while its darkness envelops our land and become much more aggressive than normal. They can be easily identified by the glowing rune that is branded on their backs. They will attack your supply wagons if they spot them.")
-alert("Steward: One facillity you might want to make use of is The Guild Outpost located north of your castle. You can use it to buy or sell extra resources you might need. The Guild is a branch of The Empire solely devoted to commerce and maintaining the currency. They trade in almost everything, do business indiscriminately, and have the power of the whole Empire at their backs. You can sell resources to gain gold, or spend gold to purchase resources. You can access it by selecting either Buy or Sell from your wagon next to what resource you want to trade in. Be aware that the route to The Market is shorter then other routes so it will take less time for your wagon to arrive there. ")
-alert("Steward: One of the greatest threats of this kingdom is a mighty dragon that insists that he requires a protection fee to keep us safe, but has hinted that if we don't pay, he will destroy this kingdom and everyone in it. I do not belive that he is aware that your uncle is dead, so he will not expect you to be in your uncle's place when he comes. He always talked with Old King Genus when he came so he may want to speak with you. This will be your chance to make an impression on him, so make it a good one. When he first comes, he will demand 300 gold, so make sure you have earned that much by tomorrow. Every time he comes he will demand 50 more gold the next day.")
-alert("Steward: Your kingdom is a large one, so you will be required to make certain descisions that will affect certain aspects of your kingdom. When such a descision comes up, select whatever choice seems the best to you. Be wary, when interacting with certain figures, simple choices could have massive consequences. You may recieve a report saying that scouts have sighted a Night Beast in close proximity to some of your workers. You will be forced to decide to send reinforcements to the camp, send the workers home, or just do nothing. This descision will decide the fate of your subjects. But know this, you can't save everyone, accidents happen, things can be unpredictable. You can just hope that you made the right descision, and if you didn't, all you can do is accept the consequences of your actions, and do better next time. Know that when the time comes for you to make a descision, you will be unable to send orders to your wagon until the issue is resolved. ")
+alert("Steward: One facillity you might want to make use of is The Guild Outpost located north of Castle Murus. You can use it to buy or sell any extra resources you might need. The Guild is a branch of The Empire solely devoted to commerce and maintaining the standard of currency. They trade in almost everything, do business indiscriminately, and have the power of the whole Empire at their backs. You can sell resources to gain gold, or spend gold to purchase resources. You can access the outpost by selecting either Buy or Sell from your wagon menu next to what resource you want to trade in. Be aware that the route to The Market is shorter then other routes so it will take less time for your wagon to arrive there. ")
+alert("Steward: One of the greatest threats to this kingdom is a mighty dragon that insists that he requires a protection fee to keep us safe, but has hinted that if we don't pay, he will destroy this kingdom and everyone in it. I do not belive that he is aware that your uncle is dead, so he will not expect you to be in your uncle's place when he comes. He was always fond of talking with Old King Benignus whenever he came so he may want to speak with you as well. This will be your chance to make an impression on him, so make it a good one. When he arrives, he will demand 300 gold, so make sure you have earned that much by tomorrow. Every time he comes he will demand 50 more gold the next day.")
+alert("Steward: Your kingdom is a large one, so you will be required to make many descisions that will affect certain aspects of your kingdom. When such a descision comes up, select whatever choice seems the best to you. Be wary, when interacting with certain figures, simple choices could have massive consequences. Your choices may decide the fate of your subjects, but know this, you can't save everyone, accidents happen, things can be unpredictable. You can just hope that you made the right choice, and if you didn't, just accept the consequences of your actions, and do better next time. Be aware that when the time comes for you to make a descision, you will be unable to send orders to your wagon until the issue is resolved. ")
 textTest = 0
 
 
@@ -2898,22 +2898,24 @@ function randomChoice(){
 
    choicePerc1 = 0
    choicePerc2 = 0
-
-  if(worker1position == "mountains" || worker2position == "mountains" || worker3position == "mountains" || worker4position == "mountains"){
+var chanceC = Math.random()
+  if(chanceC < .7 && worker1position == "mountains" || worker2position == "mountains" || worker3position == "mountains" || worker4position == "mountains"){
     // choice = "nbMount"
 choiceNo1A = 1
 choiceCount += 1
 choiceNo1 = choiceCount
     // choiceMake()
   }
-  if(worker1position == "forest" || worker2position == "forest" || worker3position == "forest" || worker4position == "forest"){
+  chanceC = Math.random()
+  if(chanceC < .7 && worker1position == "forest" || worker2position == "forest" || worker3position == "forest" || worker4position == "forest"){
     // choice = "nbForest"
     choiceNo2A = 1
     choiceCount += 1
     choiceNo2 = choiceCount
     // choiceMake()
   }
-  if(castleGold >= 300){
+  chanceC = Math.random()
+  if(chanceC < .6 && castleGold >= 300){
     // choice = "citRobbed"
     choiceNo3A = 1
     choiceCount += 1
@@ -2975,16 +2977,16 @@ function choiceMake(){
   document.getElementById("choiceThree").style.display = "block";
   if(choice == "castleAttack"){
     //scrapped
-    alert("Steward: Sir! The castle is currently under siege by a massive group of Acursed. An attack of this size has never happened before. The Garrison is fighting them off to the best of their abitlities, what shall we do?")
-    alert("Choice: select the RED choice to flee the castle in the chaos and try to come back to power once the fighting has ended. Select the GRAY choice to continue holding them off, and send for help from one of your allies(The dragon or any of your other allies). Select the BLUE choice to go out onto the battlements with your troops and fight alongside them to give them a morale boost.")
+    alert("Steward: My lord! A massive army of Accursed aproaches Castle Murus! An attack of this scale hasn't happened since the releasing of The Curse! The Garrison and the Gudbrand Knights are preparing to fight off the Accursed Hoards, what shall we do?")
+    alert(" (going to change this)Choice: select the RED choice to flee the castle. Select the GRAY choice to continue holding them off, and send for help from one of your allies(The dragon or any of your other allies). Select the BLUE choice to go out onto the battlements with your troops and fight alongside them to give them a morale boost.")
   }
 if(choice == "citKidN"){
-  alert("Steward: Sir! Citizens from a local village have come to us saying that a group of Acursed kidnapped their child, and are demanding a ransom fee! This is truly dire news, what shall we do?")
+  alert("Steward: My lord! Citizens from a local village have come to us saying that a group of Accursed have kidnapped their child, and are demanding a ransom fee! This is truly dire news, what shall you do?")
   alert("Choice: Select the RED choice to do nothing. Select the GRAY choice to pay off the ransom fee(-100 gold). Select the BLUE choice to send the garrison to go save the child themselves.(-50 gold + chance)")
 }
 if(choice == "citRobbed"){
-  alert("Steward: Sir! Citizens from a local village have come to us saying that they were robbed by a group of Acursed! As their ruler, I think they want you to help them by recovering what they've lost.")
-  alert("Choice: Select the RED to do nothing. Select GRAY to pay them in equal value to what they've lost(-100 gold). Select BLUE to send the garrison to find and recover the stolen possesions from the Acursed(-50 gold + chance)")
+  alert("Steward: My lord! Citizens from a local village have come to us saying that they were robbed by a group of Accursed! They are requesting your assistance in this matter. What shall you do?")
+  alert("Choice: Select the RED to do nothing. Select GRAY to pay them for what they've lost(-100 gold). Select BLUE to send the garrison to find and recover the stolen possesions from the Accursed(-50 gold + chance)")
 }
 
   if(choice == "nbForest"){
