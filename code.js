@@ -2922,14 +2922,16 @@ choiceNo1 = choiceCount
     choiceNo3 = choiceCount
     // choiceMake()
   }
-  if(castleGold >= 200){
+    chanceC = Math.random()
+  if(chanceC < .85 && castleGold >= 200){
     // choice = "citKidN"
     choiceNo4A = 1
     choiceCount += 1
     choiceNo4 = choiceCount
     // choiceMake()
   }
-  if(castleGold >= 1300){
+  chanceC = Math.random()
+  if(chanceC < .4 && castleGold >= 1300){
     choiceNo5A = 1
     choiceCount += 1
     choiceNo5 = choiceCount
