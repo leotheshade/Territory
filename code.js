@@ -134,6 +134,8 @@ var travelDur = 15
 var buyLock = 0
 var sellOreLock = 0
 var sellWoodLock = 0
+
+var daysSurvived = 0
 // REZT()
 console.log(new Date() + " program Begins")
 function REZT(){
@@ -2956,6 +2958,7 @@ choiceNo1 = choiceCount
     choiceMake()
   }
   else if(choiceNo5A && chance < choicePerc2 * choiceNo5){
+    //this choice event will likely be removed or massively changed
     choice = "castleAttack"
     choiceMake()
   }
@@ -3199,11 +3202,11 @@ citRep += 10
     var chance = Math.random()
     castleGold -= 50
     if(chance < .7){
-alert("Steward: The Garrison found the Acursed camp holding the captive child, and were able to bring them to safety. The citizens responsible for the child are very grateful for your help as well.")
+alert("Steward: The Garrison found the Acursed camp holding the child, and were able to bring them to safety. The citizens are very grateful for your help as well.")
       citRep += 4
     }
     else{
-alert("Steward: The Garrison found the Acursed camp holding the captive child, but were unable to save him and were forced to retreat. The citizens are furious and grief stricken for their child. We do not know what fate he awaits, but the Acursed will not take kindly towards your transgression.")
+alert("Steward: The Garrison found the Accursed camp holding the child, but were unable to save the child and were forced to retreat. The citizens are furious and grief stricken. The Acursed will not take kindly towards your transgression.")
       citRep -= 5
       castleGold -= 100
     }
@@ -3214,7 +3217,7 @@ alert("Steward: The Garrison found the Acursed camp holding the captive child, b
     var chance = Math.random()
     castleGold -= 50
     if(chance < .7){
-      alert("Steward: The Garrison found the Acursed camp and managed to recover the stolen possesions, while taking care of quite a few of Acursed occupying it. The citizens are very grateful toward you as well. This will make them more loyal to you, good work.")
+      alert("Steward: The Garrison found the Acursed camp and managed to recover the stolen possesions while taking care of quite a few of Accursed occupying it. The citizens are very grateful toward you as well.")
       citRep += 3
     }
     else{
@@ -3271,10 +3274,12 @@ function dragon(){
     alert("The dragon came to collect his protection fee, the next time he will want 50 more")
     choice = "dragonT"
     choiceMake()
+    daysSurvived += 1
   }
   else{
     alert("The dragon came to collect his protection fee, but was enraged to find that you didn't offered him the demanded ammount. In his blind rage he razed your kingdom to the ground.")
 launchGameO()
+document.getElementById("gameOT3").textContent = "Your kingdom lasted " + daysSurvived + " days."
   }
 }
 
