@@ -137,6 +137,7 @@ var sellWoodLock = 0
 
 var daysSurvived = 0
 // REZT()
+//mint
 console.log(new Date() + " program Begins")
 function REZT(){
 // REZPT1A.beginElement
@@ -155,7 +156,7 @@ Omusic.play()
 
 }
 
-
+//mint
 musicLoop()
 function startText(){
 
@@ -172,10 +173,12 @@ textTest = 0
 
 
 }
-
+//mint
 timec()
  // killWorker1()
+ //mint
 updateText()
+//mint
 var rEvent = setTimeout(randomChoice, 135000)
 function updateText(){
   document.getElementById("displayWagonOre").textContent = wagonOre;
@@ -188,6 +191,14 @@ function updateText(){
   document.getElementById("displayForestWood").textContent = forestWood;
 requestAnimationFrame(updateText)
 }
+function startGame(){
+
+
+
+}
+
+
+//mint
  var cycle = setInterval(timec, 270000)
 function forestClick(){
   if(wagonCheck1 == 1){
