@@ -164,7 +164,7 @@ function startText(){
 
 
 
-alert("Dear nephew, If you are reading this, I have passed from this world. As you are my only heir, my kingdom and everything it encompasses is now yours. But be warned, do not belive this to be a blessing. As of this letter being written, my kingdom is on the verge of collapse. The vile Accursed haunt my roads, my coffers grow empty, the Night Beasts terrorize my settlements, and a great dragon threatens everything if he does not recieve payment frequently. Knowing this, I emplore you to take up my mantle and rule my kingless nation. I care greatly for my people, and without a leader to guide and protect them, they would wither and die swiftly. Things may be looking grim, but I belive that if you take my throne and lead my people, you will be able save my kingdom, and become a great king! If you do decide to take all the risks, and rule my kingdom, come to Castle Murus and my steward will teach you with everything you need to know. Signed, Old King Benignus")
+alert("Dear nephew, If you are reading this, I have passed from this world. As you are my only heir, my kingdom and everything it encompasses is now yours. But be warned, do not belive this to be a blessing. As of this letter being written, my kingdom is on the verge of collapse. The vile Accursed haunt my roads, my treasury grows empty, the Night Beasts terrorize my settlements, and a great dragon threatens everything. Knowing this, I emplore you to take up my mantle and rule my kingless nation. I care greatly for my people, and without a leader to guide and protect them, they would wither and die swiftly. Things may be looking grim, but I belive that if you take my throne and lead my people, you may be able save my kingdom. If you do decide to take all the risks, and take my crown, come to Castle Murus and my steward will teach you with everything you need to know. Signed, Old King Benignus")
 
 alert("Steward: Ah, so you have arrived. Your uncle was right about you, he never once lost faith that you would come. Well, onto business. The first thing you need to know is how to assign workers to tasks. First you must click on your supply wagon. It's the brown box under your castle(placeholder). Then you must click the icon of whoever you want to acompany the wagon. Then select the destination you want it to be sent to. The mountains hold incredible ammounts of ore, and the forest has plenty of excelent wood that we can harvest. Once you have chosen a destination, select the red box at the bottom of your screen to order your wagon to begin moving.")
 alert("Steward: Beware, when moving your units or resources, the vile Accursed are sure to be attracted.(going to change this) What are the Acursed you ask? Well they are vile creatures, once men, they are now ruthless theives who partol your roads and rob your people. Somehow they react to the Shadow Veil and gain immense power while its darkness envelops our land and become much more aggressive than normal. They can be easily identified by the glowing rune that is branded on their backs. They will attack your supply wagons if they spot them.")
@@ -208,6 +208,9 @@ function startGameP2(){
   document.getElementById("mainMen").style.display = "none"
   document.getElementById("logo").style.display = "none"
   document.getElementById("startB").style.display = "none"
+  document.getElementById("frame1").style.display = "none"
+  document.getElementById("frame2").style.display = "none"
+
   document.getElementById("CFout").beginElement()
   console.log(new Date() + " program Begins")
   musicLoop()
