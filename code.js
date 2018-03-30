@@ -1,5 +1,5 @@
 var Omusic = new Audio('Sounds/Skeleton of a Town - Icewind Dale 2 soundtrack.mp3');
-
+var Smusic = new Audio('Sounds/Fractal Dreamers - Kingdom of Silence (HD).mp3');
 
 //known bug: Something is causing the "send workers home" function for the night beast choice event to fail. It may have something to do with the new code that stops you from ignoing the event, or unselected workers
 var namespace = "http://www.w3.org/2000/svg"
@@ -136,9 +136,11 @@ var sellOreLock = 0
 var sellWoodLock = 0
 
 var daysSurvived = 0
+
+var IClickCheck = 0
 // REZT()
 //mint
-console.log(new Date() + " program Begins")
+// console.log(new Date() + " program Begins")
 function REZT(){
 // REZPT1A.beginElement
 console.log("hells")
@@ -157,7 +159,7 @@ Omusic.play()
 }
 
 //mint
-musicLoop()
+// musicLoop()
 function startText(){
 
 
@@ -174,12 +176,13 @@ textTest = 0
 
 }
 //mint
-timec()
+// timec()
  // killWorker1()
  //mint
-updateText()
+// updateText()
 //mint
-var rEvent = setTimeout(randomChoice, 135000)
+// var rEvent = setTimeout(randomChoice, 135000)
+Smusic.play()
 function updateText(){
   document.getElementById("displayWagonOre").textContent = wagonOre;
   document.getElementById("displayWagonWood").textContent = wagonWood;
@@ -192,6 +195,30 @@ function updateText(){
 requestAnimationFrame(updateText)
 }
 function startGame(){
+  if(IClickCheck == 0){
+    IClickCheck = 1
+  document.getElementById("startGB").beginElement()
+  document.getElementById("startGB1").beginElement()
+  document.getElementById("startGB2").beginElement()
+  setTimeout(startGameP2, 2500)
+}
+}
+function startGameP2(){
+  Smusic.pause()
+  document.getElementById("mainMen").style.display = "none"
+  document.getElementById("logo").style.display = "none"
+  document.getElementById("startB").style.display = "none"
+  document.getElementById("CFout").beginElement()
+  console.log(new Date() + " program Begins")
+  musicLoop()
+  timec()
+  updateText()
+  var rEvent = setTimeout(randomChoice, 135000)
+  var cycle = setInterval(timec, 270000)
+setTimeout(startGameP3, 2000)
+}
+function startGameP3(){
+  document.getElementById("primaryC").style.display = "none"
 
 
 
@@ -199,7 +226,7 @@ function startGame(){
 
 
 //mint
- var cycle = setInterval(timec, 270000)
+ // var cycle = setInterval(timec, 270000)
 function forestClick(){
   if(wagonCheck1 == 1){
     wagonMountains1 =0
