@@ -3148,6 +3148,7 @@ function choice2select(){
   document.getElementById("choiceThree").style.display = "none";
   if(choice == "castleAttack"){
     var chance = Math.random()
+    //will be changed
     if(chance < .3){
       launchGameO()
       alert("Once you send your messanger there is no time to keep track of him or see what became of him. You fight for a long time but hear no word from your allies. The fight drags on until The Acursed forces break through your defences, slaughter everyone, and take over your castle.")
@@ -3284,6 +3285,8 @@ alert("Dragon: Your manners and diplomacy are admirable my young king. I enjoyed
 alert("Steward: We have recieved reports that your workers are on their way back to the castle.")
 choice = "blank"
 evacMount()
+setTimeout(randomChoice, 135000)
+
   }
 
   if(choice == "nbForest"){
