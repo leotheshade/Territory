@@ -75,6 +75,7 @@ var firstDragVisit = 0
 var keyChoice = "blank"
 var choice = "blank"
 var textTest = 0
+var IntroTest = 0
 var dragonIntroR = "blank"
 var AcursedRep = 0
 var garrisonCooldown = 0
@@ -182,6 +183,11 @@ textTest = 0
 // updateText()
 //mint
 // var rEvent = setTimeout(randomChoice, 135000)
+if(IntroTest == 0){
+startGame()
+
+}
+
 Smusic.play()
 function updateText(){
   document.getElementById("displayWagonOre").textContent = wagonOre;
