@@ -382,7 +382,8 @@ document.getElementById("w4Label").style.display = "none"
 
 document.getElementById("closeButton").style.display = "none"
 
-
+document.getElementById("workerMenL").style.display="none"
+document.getElementById("soldierMenL").style.display = "none"
 
 }
 //working on 12/12/16
@@ -430,6 +431,9 @@ document.getElementById("worker4X2").style.display = "block";
  document.getElementById("w4Label").style.display = "block"
 
  document.getElementById("closeButton").style.display = "block"
+
+ document.getElementById("workerMenL").style.display="block"
+ document.getElementById("soldierMenL").style.display = "block"
   }
 
   else if(wagonCheck1 == 0){
@@ -476,13 +480,65 @@ document.getElementById("w4Label").style.display = "none"
 
 document.getElementById("closeButton").style.display = "none"
 
-
+document.getElementById("workerMenL").style.display="none"
+document.getElementById("soldierMenL").style.display = "none"
 
 
 
   // alert("menu down")
   }
 }
+
+function workerMen1(){
+  document.getElementById("w1I").style.display = "block"
+  document.getElementById("w2I").style.display = "block"
+  document.getElementById("w3I").style.display = "block"
+  document.getElementById("w4I").style.display = "block"
+
+  document.getElementById("w1Label").style.display = "block"
+  document.getElementById("w2Label").style.display = "block"
+  document.getElementById("w3Label").style.display = "block"
+  document.getElementById("w4Label").style.display = "block"
+
+  document.getElementById("worker1X1").style.display = "block";
+  document.getElementById("worker1X2").style.display = "block";
+
+  document.getElementById("worker2X1").style.display = "block";
+  document.getElementById("worker2X2").style.display = "block";
+
+  document.getElementById("worker3X1").style.display = "block";
+  document.getElementById("worker3X2").style.display = "block";
+
+  document.getElementById("worker4X1").style.display = "block";
+  document.getElementById("worker4X2").style.display = "block";
+
+//going to need to add code to prevent the display of un-hired soldiers
+  document.getElementById("s1I").style.display = "none"
+  document.getElementById("s2I").style.display = "none"
+  document.getElementById("s3I").style.display = "none"
+  document.getElementById("s4I").style.display = "none"
+
+  document.getElementById("s1Label").style.display = "none"
+  document.getElementById("s2Label").style.display = "none"
+  document.getElementById("s3Label").style.display = "none"
+  document.getElementById("s4Label").style.display = "none"
+
+  document.getElementById("soldier1X1").style.display = "none";
+  document.getElementById("soldier1X2").style.display = "none";
+
+  document.getElementById("soldier2X1").style.display = "none";
+  document.getElementById("soldier2X2").style.display = "none";
+
+  document.getElementById("soldier3X1").style.display = "none";
+  document.getElementById("soldier3X2").style.display = "none";
+
+  document.getElementById("soldier4X1").style.display = "none";
+  document.getElementById("soldier4X2").style.display = "none";
+
+
+}
+
+
 function wagonClick(){
    if(worker1check == 1){
     wagonWorker1 = 1
