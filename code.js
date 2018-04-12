@@ -537,6 +537,54 @@ function workerMen1(){
 
 
 }
+function soldierMen1(){
+  document.getElementById("w1I").style.display = "none"
+  document.getElementById("w2I").style.display = "none"
+  document.getElementById("w3I").style.display = "none"
+  document.getElementById("w4I").style.display = "none"
+
+  document.getElementById("w1Label").style.display = "none"
+  document.getElementById("w2Label").style.display = "none"
+  document.getElementById("w3Label").style.display = "none"
+  document.getElementById("w4Label").style.display = "none"
+
+  document.getElementById("worker1X1").style.display = "none";
+  document.getElementById("worker1X2").style.display = "none";
+
+  document.getElementById("worker2X1").style.display = "none";
+  document.getElementById("worker2X2").style.display = "none";
+
+  document.getElementById("worker3X1").style.display = "none";
+  document.getElementById("worker3X2").style.display = "none";
+
+  document.getElementById("worker4X1").style.display = "none";
+  document.getElementById("worker4X2").style.display = "none";
+
+//going to need to add code to prevent the display of un-hired soldiers
+  document.getElementById("s1I").style.display = "block"
+  document.getElementById("s2I").style.display = "block"
+  document.getElementById("s3I").style.display = "block"
+  document.getElementById("s4I").style.display = "block"
+
+  document.getElementById("s1Label").style.display = "block"
+  document.getElementById("s2Label").style.display = "block"
+  document.getElementById("s3Label").style.display = "block"
+  document.getElementById("s4Label").style.display = "block"
+
+  document.getElementById("soldier1X1").style.display = "block";
+  document.getElementById("soldier1X2").style.display = "block";
+
+  document.getElementById("soldier2X1").style.display = "block";
+  document.getElementById("soldier2X2").style.display = "block";
+
+  document.getElementById("soldier3X1").style.display = "block";
+  document.getElementById("soldier3X2").style.display = "block";
+
+  document.getElementById("soldier4X1").style.display = "block";
+  document.getElementById("soldier4X2").style.display = "block";
+
+
+}
 
 
 function wagonClick(){
