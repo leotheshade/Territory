@@ -7,6 +7,22 @@ var worker1check = 0
 var worker2check = 0
 var worker3check = 0
 var worker4check = 0
+
+var soldier1check = 0
+var soldier2check = 0
+var soldier3check = 0
+var soldier4check = 0
+
+var wagonSoldier1 = 0
+var wagonSoldier2 = 0
+var wagonSoldier3 = 0
+var wagonSoldier4 = 0
+
+var soldier1position = "castle"
+var soldier2position = "castle"
+var soldier3position = "castle"
+var soldier4position = "castle"
+
 var mountainWorker1 = 0
 var mountainWorker2 = 0
 var mountainWorker3 = 0
@@ -745,6 +761,54 @@ function oceanClick(){
     document.getElementById("w4Label").setAttribute("fill","blue")
   }
 }
+//soldier checks
+function soldier1Click(){
+    if(wagonSoldier1 == 0){
+      //  worker1check = 1
+      wagonSoldier1 = 1
+
+      document.getElementById("s1Label").setAttribute("fill","green")
+       }
+    else if(wagonSoldier1 == 1){
+      // worker1check = 0
+      wagonSoldier1 = 0
+
+        document.getElementById("s1Label").setAttribute("fill","blue")
+    }
+  }
+function soldier2Click(){
+    if( wagonSoldier2 == 0){
+       wagonSoldier2 = 1
+
+        document.getElementById("s2Label").setAttribute("fill","green")
+       }
+    else if(wagonSoldier2 == 1){
+      wagonSoldier2 = 0
+        document.getElementById("s2Label").setAttribute("fill","blue")
+    }
+  }
+function soldier3Click(){
+    if(wagonSoldier3 == 0){
+       wagonSoldier3 = 1
+        document.getElementById("s3Label").setAttribute("fill","green")
+       }
+    else if(wagonSoldier3 == 1){
+      wagonSoldier3 = 0
+        document.getElementById("s3Label").setAttribute("fill","blue")
+    }
+  }
+function soldier4Click(){
+    if(wagonSoldier4 == 0){
+       wagonSoldier4 = 1
+        document.getElementById("s4Label").setAttribute("fill","green")
+       }
+    else if(wagonSoldier4 == 1){
+      wagonSoldier4 = 0
+        document.getElementById("s4Label").setAttribute("fill","blue")
+    }
+  }
+
+
    //worker checks
 
 function worker1Click(){
