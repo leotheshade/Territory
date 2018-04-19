@@ -91,7 +91,7 @@ var firstDragVisit = 0
 var keyChoice = "blank"
 var choice = "blank"
 var textTest = 0
-var IntroTest = 0
+var IntroTest = 1
 var dragonIntroR = "blank"
 var AcursedRep = 0
 var garrisonCooldown = 0
@@ -222,6 +222,7 @@ function startGame(){
   document.getElementById("startGB").beginElement()
   document.getElementById("startGB1").beginElement()
   document.getElementById("startGB2").beginElement()
+  document.getElementById("startGBT").beginElement()
   setTimeout(startGameP2, 2500)
 }
 }
@@ -230,6 +231,7 @@ function startGameP2(){
   document.getElementById("mainMen").style.display = "none"
   document.getElementById("logo").style.display = "none"
   document.getElementById("startB").style.display = "none"
+  document.getElementById("startBT").style.display = "none"
   document.getElementById("frame1").style.display = "none"
   document.getElementById("frame2").style.display = "none"
 
