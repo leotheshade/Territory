@@ -91,7 +91,7 @@ var firstDragVisit = 0
 var keyChoice = "blank"
 var choice = "blank"
 var textTest = 0
-var IntroTest = 1
+var IntroTest = 0
 var dragonIntroR = "blank"
 var AcursedRep = 0
 var garrisonCooldown = 0
@@ -403,6 +403,29 @@ document.getElementById("closeButton").style.display = "none"
 document.getElementById("workerMenL").style.display="none"
 document.getElementById("soldierMenL").style.display = "none"
 
+
+document.getElementById("s1I").style.display = "none"
+document.getElementById("s2I").style.display = "none"
+document.getElementById("s3I").style.display = "none"
+document.getElementById("s4I").style.display = "none"
+
+document.getElementById("s1Label").style.display = "none"
+document.getElementById("s2Label").style.display = "none"
+document.getElementById("s3Label").style.display = "none"
+document.getElementById("s4Label").style.display = "none"
+
+document.getElementById("soldier1X1").style.display = "none";
+document.getElementById("soldier1X2").style.display = "none";
+
+document.getElementById("soldier2X1").style.display = "none";
+document.getElementById("soldier2X2").style.display = "none";
+
+document.getElementById("soldier3X1").style.display = "none";
+document.getElementById("soldier3X2").style.display = "none";
+
+document.getElementById("soldier4X1").style.display = "none";
+document.getElementById("soldier4X2").style.display = "none";
+
 }
 //working on 12/12/16
 function menuLaunch(){
@@ -501,6 +524,27 @@ document.getElementById("closeButton").style.display = "none"
 document.getElementById("workerMenL").style.display="none"
 document.getElementById("soldierMenL").style.display = "none"
 
+document.getElementById("s1I").style.display = "none"
+document.getElementById("s2I").style.display = "none"
+document.getElementById("s3I").style.display = "none"
+document.getElementById("s4I").style.display = "none"
+
+document.getElementById("s1Label").style.display = "none"
+document.getElementById("s2Label").style.display = "none"
+document.getElementById("s3Label").style.display = "none"
+document.getElementById("s4Label").style.display = "none"
+
+document.getElementById("soldier1X1").style.display = "none";
+document.getElementById("soldier1X2").style.display = "none";
+
+document.getElementById("soldier2X1").style.display = "none";
+document.getElementById("soldier2X2").style.display = "none";
+
+document.getElementById("soldier3X1").style.display = "none";
+document.getElementById("soldier3X2").style.display = "none";
+
+document.getElementById("soldier4X1").style.display = "none";
+document.getElementById("soldier4X2").style.display = "none";
 
 
   // alert("menu down")
@@ -2099,89 +2143,89 @@ raid()
 
 //down fishing camp
 
-  if(wagonWorker1 == 1 && worker1position == "castle" && wagonOcean == 1 && wagonPosition1 == "mountains"){
-      document.getElementById("worker1moveX").setAttribute("from", 40)
-    document.getElementById("worker1moveX").setAttribute("to", 410)
-    document.getElementById("worker1moveX").setAttribute("dur", 15)
-
-    document.getElementById("worker1moveY").setAttribute("from", 450)
-    document.getElementById("worker1moveY").setAttribute("to", 320)
-    document.getElementById("worker1moveY").setAttribute("dur", 15)
-    document.getElementById("worker1moveX").beginElement()
-    document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("x", 410)
-    document.getElementById("worker1").setAttribute("y", 320)
-    worker1position = "moving"
-    var startMine1 = setTimeout(worker1castle, 15000)
-    }
-    if(wagonWorker2 == 1 && worker2position == "mountains" && wagonOcean == 1 && wagonPosition1 == "mountains"){
-      document.getElementById("worker2moveX").setAttribute("from", 70)
-    document.getElementById("worker2moveX").setAttribute("to", 440)
-    document.getElementById("worker2moveX").setAttribute("dur", 15)
-
-    document.getElementById("worker2moveY").setAttribute("from", 450)
-    document.getElementById("worker2moveY").setAttribute("to", 320)
-    document.getElementById("worker2moveY").setAttribute("dur", 15)
-    document.getElementById("worker2moveX").beginElement()
-    document.getElementById("worker2moveY").beginElement()
-    document.getElementById("worker2").setAttribute("x", 440)
-    document.getElementById("worker2").setAttribute("y", 320)
-    worker2position = "moving"
-    setTimeout(worker2castle, 15000)
-
-    }
-    if(wagonWorker3 == 1 && worker3position == "mountains" && wagonOcean == 1 && wagonPosition1=="mountains"){
-       document.getElementById("worker3moveX").setAttribute("from", 100)
-    document.getElementById("worker3moveX").setAttribute("to", 470)
-    document.getElementById("worker3moveX").setAttribute("dur", 15)
-
-    document.getElementById("worker3moveY").setAttribute("from", 450)
-    document.getElementById("worker3moveY").setAttribute("to", 320)
-    document.getElementById("worker3moveY").setAttribute("dur", 15)
-    document.getElementById("worker3moveX").beginElement()
-    document.getElementById("worker3moveY").beginElement()
-    document.getElementById("worker3").setAttribute("x", 470)
-    document.getElementById("worker3").setAttribute("y", 320)
-    worker3position = "moving"
-    setTimeout(worker3castle, 15000)
-    }
-    //down
-    if(wagonWorker4 == 1 && worker4position == "mountains" && wagonOcean == 1 && wagonPosition1 == "mountains"){
-      document.getElementById("worker4moveX").setAttribute("from", 130)
-    document.getElementById("worker4moveX").setAttribute("to", 500)
-    document.getElementById("worker4moveX").setAttribute("dur", 15)
-
-    document.getElementById("worker4moveY").setAttribute("from", 450)
-    document.getElementById("worker4moveY").setAttribute("to", 320)
-    document.getElementById("worker4moveY").setAttribute("dur", 15)
-    document.getElementById("worker4moveX").beginElement()
-    document.getElementById("worker4moveY").beginElement()
-    document.getElementById("worker4").setAttribute("x", 500)
-    document.getElementById("worker4").setAttribute("y", 320)
-    worker4position = "moving"
-    setTimeout(worker4castle, 15000)
-
-    }
-  if(wagonOcean == 1 && wagonPosition1 == "mountains"){
-    document.getElementById("wagon1MoveX").setAttribute("from", 70)
-    document.getElementById("wagon1MoveX").setAttribute("to", 450)
-    document.getElementById("wagon1MoveX").setAttribute("dur", 15)
-
-    document.getElementById("wagon1MoveY").setAttribute("from", 480)
-    document.getElementById("wagon1MoveY").setAttribute("to", 350)
-    document.getElementById("wagon1MoveY").setAttribute("dur", 15)
-
-    document.getElementById("wagon1MoveX").beginElement()
-    document.getElementById("wagon1MoveY").beginElement()
-
-    document.getElementById("supplyWagon1").setAttribute("x", 450)
-    document.getElementById("supplyWagon1").setAttribute("y", 350)
-
-    wagonCastle = 0
-    wagonPosition1 = "moving"
-    // var depoOre = setTimeout(depositOre, 15000)
-
-  }
+  // if(wagonWorker1 == 1 && worker1position == "castle" && wagonOcean == 1 && wagonPosition1 == "mountains"){
+  //     document.getElementById("worker1moveX").setAttribute("from", 40)
+  //   document.getElementById("worker1moveX").setAttribute("to", 410)
+  //   document.getElementById("worker1moveX").setAttribute("dur", 15)
+  //
+  //   document.getElementById("worker1moveY").setAttribute("from", 450)
+  //   document.getElementById("worker1moveY").setAttribute("to", 320)
+  //   document.getElementById("worker1moveY").setAttribute("dur", 15)
+  //   document.getElementById("worker1moveX").beginElement()
+  //   document.getElementById("worker1moveY").beginElement()
+  //   document.getElementById("worker1").setAttribute("x", 410)
+  //   document.getElementById("worker1").setAttribute("y", 320)
+  //   worker1position = "moving"
+  //   var startMine1 = setTimeout(worker1castle, 15000)
+  //   }
+  //   if(wagonWorker2 == 1 && worker2position == "mountains" && wagonOcean == 1 && wagonPosition1 == "mountains"){
+  //     document.getElementById("worker2moveX").setAttribute("from", 70)
+  //   document.getElementById("worker2moveX").setAttribute("to", 440)
+  //   document.getElementById("worker2moveX").setAttribute("dur", 15)
+  //
+  //   document.getElementById("worker2moveY").setAttribute("from", 450)
+  //   document.getElementById("worker2moveY").setAttribute("to", 320)
+  //   document.getElementById("worker2moveY").setAttribute("dur", 15)
+  //   document.getElementById("worker2moveX").beginElement()
+  //   document.getElementById("worker2moveY").beginElement()
+  //   document.getElementById("worker2").setAttribute("x", 440)
+  //   document.getElementById("worker2").setAttribute("y", 320)
+  //   worker2position = "moving"
+  //   setTimeout(worker2castle, 15000)
+  //
+  //   }
+  //   if(wagonWorker3 == 1 && worker3position == "mountains" && wagonOcean == 1 && wagonPosition1=="mountains"){
+  //      document.getElementById("worker3moveX").setAttribute("from", 100)
+  //   document.getElementById("worker3moveX").setAttribute("to", 470)
+  //   document.getElementById("worker3moveX").setAttribute("dur", 15)
+  //
+  //   document.getElementById("worker3moveY").setAttribute("from", 450)
+  //   document.getElementById("worker3moveY").setAttribute("to", 320)
+  //   document.getElementById("worker3moveY").setAttribute("dur", 15)
+  //   document.getElementById("worker3moveX").beginElement()
+  //   document.getElementById("worker3moveY").beginElement()
+  //   document.getElementById("worker3").setAttribute("x", 470)
+  //   document.getElementById("worker3").setAttribute("y", 320)
+  //   worker3position = "moving"
+  //   setTimeout(worker3castle, 15000)
+  //   }
+  //   //down
+  //   if(wagonWorker4 == 1 && worker4position == "mountains" && wagonOcean == 1 && wagonPosition1 == "mountains"){
+  //     document.getElementById("worker4moveX").setAttribute("from", 130)
+  //   document.getElementById("worker4moveX").setAttribute("to", 500)
+  //   document.getElementById("worker4moveX").setAttribute("dur", 15)
+  //
+  //   document.getElementById("worker4moveY").setAttribute("from", 450)
+  //   document.getElementById("worker4moveY").setAttribute("to", 320)
+  //   document.getElementById("worker4moveY").setAttribute("dur", 15)
+  //   document.getElementById("worker4moveX").beginElement()
+  //   document.getElementById("worker4moveY").beginElement()
+  //   document.getElementById("worker4").setAttribute("x", 500)
+  //   document.getElementById("worker4").setAttribute("y", 320)
+  //   worker4position = "moving"
+  //   setTimeout(worker4castle, 15000)
+  //
+  //   }
+  // if(wagonOcean == 1 && wagonPosition1 == "mountains"){
+  //   document.getElementById("wagon1MoveX").setAttribute("from", 70)
+  //   document.getElementById("wagon1MoveX").setAttribute("to", 450)
+  //   document.getElementById("wagon1MoveX").setAttribute("dur", 15)
+  //
+  //   document.getElementById("wagon1MoveY").setAttribute("from", 480)
+  //   document.getElementById("wagon1MoveY").setAttribute("to", 350)
+  //   document.getElementById("wagon1MoveY").setAttribute("dur", 15)
+  //
+  //   document.getElementById("wagon1MoveX").beginElement()
+  //   document.getElementById("wagon1MoveY").beginElement()
+  //
+  //   document.getElementById("supplyWagon1").setAttribute("x", 450)
+  //   document.getElementById("supplyWagon1").setAttribute("y", 350)
+  //
+  //   wagonCastle = 0
+  //   wagonPosition1 = "moving"
+  //   // var depoOre = setTimeout(depositOre, 15000)
+  //
+  // }
 
 
 //   if(mountainWorker1 == 1 && worker1position == "castle" ){
