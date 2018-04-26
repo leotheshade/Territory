@@ -1862,7 +1862,7 @@ raid()
     // wagonWorker4 = 0
     worker4position = "moving"
     worker4WalkEA()
-     var startMine1 = setTimeout(worker4cutting, travelDur)
+     var startMine1 = setTimeout(worker4cutting, travelDur * 1000)
   }
   if(wagonForest == 1 && wagonPosition1 == "castle"){
      document.getElementById("wagon1MoveX").setAttribute("from", 450)
@@ -1966,11 +1966,11 @@ raid()
 
   //soldierStartHere
   if(wagonSoldier1 == 1 && soldier1position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
-    document.getElementById("soldier1moveX").setAttribute("from", 390)//
+    document.getElementById("soldier1moveX").setAttribute("from", 400)//
   document.getElementById("soldier1moveX").setAttribute("to", 20)
   document.getElementById("soldier1moveX").setAttribute("dur", travelDur)
 
-  document.getElementById("soldier1moveY").setAttribute("from", 360)
+  document.getElementById("soldier1moveY").setAttribute("from", 350)
   document.getElementById("soldier1moveY").setAttribute("to", 480)
   document.getElementById("soldier1moveY").setAttribute("dur", travelDur)
   document.getElementById("soldier1moveX").beginElement()
@@ -1982,11 +1982,11 @@ raid()
 
   }
   if(wagonSoldier2 == 1 && soldier2position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
-    document.getElementById("soldier2moveX").setAttribute("from", 415)
+    document.getElementById("soldier2moveX").setAttribute("from", 425)
   document.getElementById("soldier2moveX").setAttribute("to", 45)
   document.getElementById("soldier2moveX").setAttribute("dur", travelDur)
 
-  document.getElementById("soldier2moveY").setAttribute("from", 360)
+  document.getElementById("soldier2moveY").setAttribute("from", 350)
   document.getElementById("soldier2moveY").setAttribute("to", 480)
   document.getElementById("soldier2moveY").setAttribute("dur", travelDur)
   document.getElementById("soldier2moveX").beginElement()
@@ -1998,11 +1998,11 @@ raid()
 
   }
   if(wagonSoldier3 == 1 && soldier3position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
-     document.getElementById("soldier3moveX").setAttribute("from", 490)
+     document.getElementById("soldier3moveX").setAttribute("from", 485)
   document.getElementById("soldier3moveX").setAttribute("to", 105)
   document.getElementById("soldier3moveX").setAttribute("dur", travelDur)
 
-  document.getElementById("soldier3moveY").setAttribute("from", 360)
+  document.getElementById("soldier3moveY").setAttribute("from", 350)
   document.getElementById("soldier3moveY").setAttribute("to", 480)
   document.getElementById("soldier3moveY").setAttribute("dur", travelDur)
   document.getElementById("soldier3moveX").beginElement()
@@ -2013,20 +2013,20 @@ raid()
 
   }
 
-  if(wagonWorker4 == 1 && worker4position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
-    document.getElementById("worker4moveX").setAttribute("from", 480)
-  document.getElementById("worker4moveX").setAttribute("to", 110)
-  document.getElementById("worker4moveX").setAttribute("dur", travelDur)
+  if(wagonSoldier4 == 1 && soldier4position == "castle" && wagonMountains1 == 1 && wagonPosition1 == "castle"){
+    document.getElementById("soldier4moveX").setAttribute("from", 510)
+  document.getElementById("soldier4moveX").setAttribute("to", 130)
+  document.getElementById("soldier4moveX").setAttribute("dur", travelDur)
 
-  document.getElementById("worker4moveY").setAttribute("from", 310)
-  document.getElementById("worker4moveY").setAttribute("to", 440)
-  document.getElementById("worker4moveY").setAttribute("dur", travelDur)
-  document.getElementById("worker4moveX").beginElement()
-  document.getElementById("worker4moveY").beginElement()
-  document.getElementById("worker4").setAttribute("x", 110)
-  document.getElementById("worker4").setAttribute("y", 440)
+  document.getElementById("soldier4moveY").setAttribute("from", 350)
+  document.getElementById("soldier4moveY").setAttribute("to", 480)
+  document.getElementById("soldier4moveY").setAttribute("dur", travelDur)
+  document.getElementById("soldier4moveX").beginElement()
+  document.getElementById("soldier4moveY").beginElement()
+  document.getElementById("soldier4").setAttribute("x", 130)
+  document.getElementById("soldier4").setAttribute("y", 480)
 
-  worker4position = "moving"
+  soldier4position = "moving"
 
 
   }
@@ -2125,6 +2125,74 @@ raid()
   travelDur = 15
   raid()
   }
+
+  if(wagonSoldier1 == 1 && soldier1position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
+    document.getElementById("soldier1moveX").setAttribute("from", 20)//
+  document.getElementById("soldier1moveX").setAttribute("to", 400)
+  document.getElementById("soldier1moveX").setAttribute("dur", travelDur)
+
+  document.getElementById("soldier1moveY").setAttribute("from", 480)
+  document.getElementById("soldier1moveY").setAttribute("to", 350)
+  document.getElementById("soldier1moveY").setAttribute("dur", travelDur)
+  document.getElementById("soldier1moveX").beginElement()
+  document.getElementById("soldier1moveY").beginElement()
+  document.getElementById("soldier1").setAttribute("x", 400)
+  document.getElementById("soldier1").setAttribute("y", 350)
+  soldier1position = "moving"
+
+
+  }
+  if(wagonSoldier2 == 1 && soldier2position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
+    document.getElementById("soldier2moveX").setAttribute("from", 45)
+  document.getElementById("soldier2moveX").setAttribute("to", 425)
+  document.getElementById("soldier2moveX").setAttribute("dur", travelDur)
+
+  document.getElementById("soldier2moveY").setAttribute("from", 480)
+  document.getElementById("soldier2moveY").setAttribute("to", 350)
+  document.getElementById("soldier2moveY").setAttribute("dur", travelDur)
+  document.getElementById("soldier2moveX").beginElement()
+  document.getElementById("soldier2moveY").beginElement()
+  document.getElementById("soldier2").setAttribute("x", 425)
+  document.getElementById("soldier2").setAttribute("y", 350)
+  soldier2position = "moving"
+
+
+  }
+  if(wagonSoldier3 == 1 && soldier3position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
+     document.getElementById("soldier3moveX").setAttribute("from", 105)
+  document.getElementById("soldier3moveX").setAttribute("to", 485)
+  document.getElementById("soldier3moveX").setAttribute("dur", travelDur)
+
+  document.getElementById("soldier3moveY").setAttribute("from", 480)
+  document.getElementById("soldier3moveY").setAttribute("to", 350)
+  document.getElementById("soldier3moveY").setAttribute("dur", travelDur)
+  document.getElementById("soldier3moveX").beginElement()
+  document.getElementById("soldier3moveY").beginElement()
+  document.getElementById("soldier3").setAttribute("x", 485)
+  document.getElementById("soldier3").setAttribute("y", 350)
+  soldier3position = "moving"
+
+  }
+
+  if(wagonSoldier4 == 1 && soldier4position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
+    document.getElementById("soldier4moveX").setAttribute("from", 130)
+  document.getElementById("soldier4moveX").setAttribute("to", 510)
+  document.getElementById("soldier4moveX").setAttribute("dur", travelDur)
+
+  document.getElementById("soldier4moveY").setAttribute("from", 480)
+  document.getElementById("soldier4moveY").setAttribute("to", 350)
+  document.getElementById("soldier4moveY").setAttribute("dur", travelDur)
+  document.getElementById("soldier4moveX").beginElement()
+  document.getElementById("soldier4moveY").beginElement()
+  document.getElementById("soldier4").setAttribute("x", 510)
+  document.getElementById("soldier4").setAttribute("y", 350)
+
+  soldier4position = "moving"
+
+
+  }
+
+
   if(wagonWorker1 == 1 && worker1position == "mountains" && wagonCastle == 1 && wagonPosition1 == "mountains"){
       document.getElementById("worker1moveX").setAttribute("from", 20)
     document.getElementById("worker1moveX").setAttribute("to", 390)
