@@ -158,6 +158,8 @@ var IClickCheck = 0
 
 var raidChanceDay = .29
 var raidChanceNight = .80
+var soldierProtection = .02
+var activeSoldiers = 0
 // REZT()
 //mint
 // console.log(new Date() + " program Begins")
@@ -1569,33 +1571,33 @@ soldier2position = "moving"
 
 }
 if(soldier3position == "castle" && tradeReqs() && wagonPosition1 == "castle" && wagonSoldier3 == 1){
-   document.getElementById("soldier3moveX").setAttribute("from", 466)
-document.getElementById("soldier3moveX").setAttribute("to", 451)
+   document.getElementById("soldier3moveX").setAttribute("from", 451)
+document.getElementById("soldier3moveX").setAttribute("to", 466)
 document.getElementById("soldier3moveX").setAttribute("dur", travelDur)
 
-document.getElementById("soldier3moveY").setAttribute("from", 375)
-document.getElementById("soldier3moveY").setAttribute("to", 135)
+document.getElementById("soldier3moveY").setAttribute("from", 135)
+document.getElementById("soldier3moveY").setAttribute("to", 375)
 document.getElementById("soldier3moveY").setAttribute("dur", travelDur)
 document.getElementById("soldier3moveX").beginElement()
 document.getElementById("soldier3moveY").beginElement()
-document.getElementById("soldier3").setAttribute("x", 451)
-document.getElementById("soldier3").setAttribute("y", 135)
+document.getElementById("soldier3").setAttribute("x", 466)
+document.getElementById("soldier3").setAttribute("y", 375)
 soldier3position = "moving"
 
 }
 
 if(soldier4position == "castle" && tradeReqs() && wagonPosition1 == "castle" && wagonSoldier4 == 1){
-  document.getElementById("soldier4moveX").setAttribute("from", 489)
-document.getElementById("soldier4moveX").setAttribute("to", 474)
+  document.getElementById("soldier4moveX").setAttribute("from", 474)
+document.getElementById("soldier4moveX").setAttribute("to", 489)
 document.getElementById("soldier4moveX").setAttribute("dur", travelDur)
 
-document.getElementById("soldier4moveY").setAttribute("from", 350)
-document.getElementById("soldier4moveY").setAttribute("to", 110)
+document.getElementById("soldier4moveY").setAttribute("from", 110)
+document.getElementById("soldier4moveY").setAttribute("to", 350)
 document.getElementById("soldier4moveY").setAttribute("dur", travelDur)
 document.getElementById("soldier4moveX").beginElement()
 document.getElementById("soldier4moveY").beginElement()
-document.getElementById("soldier4").setAttribute("x", 474)
-document.getElementById("soldier4").setAttribute("y", 110)
+document.getElementById("soldier4").setAttribute("x", 489.)
+document.getElementById("soldier4").setAttribute("y", 350)
 
 soldier4position = "moving"
 
@@ -3041,6 +3043,55 @@ killWorker1()
     killWorker4()
   }
 }
+//soldier setLocations
+function soldier1Castle(){
+  soldier1position = "castle"
+}
+function soldier2Castle(){
+    soldier2position = "castle"
+}
+function soldier3Castle(){
+    soldier3position = "castle"
+}
+function soldier4Castle(){
+    soldier4position = "castle"
+}
+function soldier1Mountains(){
+    soldier1position = "mountains"
+}
+function soldier2Mountains(){
+    soldier2position = "mountains"
+}
+function soldier3mountains(){
+    soldier3position = "mountains"
+}
+function soldier4Mountains(){
+    soldier4position = "mountains"
+}
+function soldier1Forest(){
+    soldier1position = "forest"
+}
+function soldier2Forest(){
+    soldier2position = "forest"
+}
+function soldier3Forest(){
+    soldier3position = "forest"
+}
+function soldier4Forest(){
+    soldier4position = "forest"
+}
+function soldier1Market(){
+    soldier1position = "market"
+}
+function soldier2Market(){
+    soldier2position = "market"
+}
+function soldier3Market(){
+    soldier3position = "market"
+}
+function soldier4Market(){
+    soldier4position = "market"
+}
 function worker1castle(){
   worker1position = "castle"
 
@@ -3299,7 +3350,40 @@ function raid(){
   var chance = Math.random()
   var timeTillRaid = chance * 20
   console.log(chance + " generalRaid Night ")
-  if(chance < 0.80 && time == "night"){
+  if(soldier1position == wagonPosition1 && wagonSoldier1 == 1){
+    activeSoldiers += 1
+  }
+  if(soldier2position == wagonPosition1 && wagonSoldier2 == 1){
+    activeSoldiers += 1
+  }
+  if(soldier3position == wagonPosition1 && wagonSoldier3 == 1){
+    activeSoldiers += 1
+  }
+  if(soldier4position == wagonPosition1 && wagonSoldier4 == 1){
+    activeSoldiers += 1
+  }
+  if(chance < 0.80 - soldierProtection*activeSoldiers && time == "night"){
+    //call killSoldiers here + chance%
+    var chance=Math.random()
+    if(soldier1position == wagonPosition1 && wagonSoldier1 == 1 && chance <.7){
+      activeSoldiers -= 1
+      killSoldier1()
+    }
+    chance = Math.random()
+    if(soldier2position == wagonPosition1 && wagonSoldier2 == 1 && chance <.7){
+      activeSoldiers -= 1
+      killSoldier2()
+    }
+    chance=Math.random()
+    if(soldier3position == wagonPosition1 && wagonSoldier3 == 1 && chance <.7){
+      activeSoldiers -= 1
+      killSoldier3()
+    }
+    chance = Math.random()
+    if(soldier4position == wagonPosition1 && wagonSoldier4 == 1 && chance < .7){
+      activeSoldiers -= 1
+      killSoldier4()
+    }
      var chance = Math.random()
     document.getElementById("raidAlert").style.display = "block";
   document.getElementById("raidAlert").textContent = "Your Supply Wagon Has Been Attacked!";
@@ -3309,6 +3393,7 @@ travelDur *= 1.7
   setTimeout(setOpacityR, 5000)
     Ocheck = 1
   }
+  if(activeSoldiers == 0){
   if(wagonGold > 0){
     wagonGold -= wagonGold/2
 
@@ -3345,10 +3430,32 @@ travelDur *= 1.7
     killWorker4()
   }
 }
+}
  }
  chance= Math.random()
     console.log(chance + " generalRaid Day ")
-   if(chance < 0.29 && time == "day"){
+
+   if(chance < 0.29 - soldierProtection*activeSoldiers && time == "day"){
+     chance = Math.random()
+     if(soldier1position == wagonPosition1 && wagonSoldier1 == 1 && chance <.4){
+       activeSoldiers -= 1
+       killSoldier1()
+     }
+     chance = Math.random()
+     if(soldier2position == wagonPosition1 && wagonSoldier2 == 1 && chance <.4){
+       activeSoldiers -= 1
+       killSoldier2()
+     }
+     chance=Math.random()
+     if(soldier3position == wagonPosition1 && wagonSoldier3 == 1 && chance <.4){
+       activeSoldiers -= 1
+       killSoldier3()
+     }
+     chance = Math.random()
+     if(soldier4position == wagonPosition1 && wagonSoldier4 == 1 && chance < .4){
+       activeSoldiers -= 1
+       killSoldier4()
+     }
      var chance = Math.random()
     document.getElementById("raidAlert").style.display = "block";
       document.getElementById("raidAlert").textContent = "Your Supply Wagon Has Been Attacked!";
@@ -3358,6 +3465,7 @@ travelDur *= 1.5
      setTimeout(setOpacityR, 5000)
        Ocheck = 1
      }
+     if(activeSoldiers == 0){
      if(wagonGold > 0){
        wagonGold -= wagonGold/2
 
@@ -3394,7 +3502,7 @@ travelDur *= 1.5
        killWorker4()
      }
 }
-
+}
 
 
 
@@ -3564,6 +3672,46 @@ function reviveWorker4(){
   RezA.beginElement()
 }
 
+function reviveSoldier1(){
+  document.getElementById("soldier1X1").setAttribute("opacity", 0)
+  document.getElementById("soldier1X2").setAttribute("opacity", 0)
+  soldier1position = "castle"
+  document.getElementById("soldier1").setAttribute("x", 370)
+  document.getElementById("soldier1").setAttribute("y", 230)
+  // alert("worker 1 was revived from the dead")
+  RezA.beginElement()
+}
+function reviveSoldier2(){
+  document.getElementById("soldier2X1").setAttribute("opacity", 0)
+  document.getElementById("soldier2X2").setAttribute("opacity", 0)
+  soldier2position = "castle"
+  document.getElementById("soldier2").setAttribute("x", 370)
+  document.getElementById("soldier2").setAttribute("y", 280)
+  // alert("worker 2 was revived from the dead")
+  RezA.beginElement()
+}
+
+function reviveSoldier3(){
+  document.getElementById("soldier3X1").setAttribute("opacity", 0)
+  document.getElementById("soldier3X2").setAttribute("opacity", 0)
+  soldier3position = "castle"
+  document.getElementById("soldier3").setAttribute("x", 520)
+  document.getElementById("soldier3").setAttribute("y", 230)
+  // alert("worker 3 was revived from the dead")
+  RezA.beginElement()
+}
+
+function reviveSoldier4(){
+  document.getElementById("soldier4X1").setAttribute("opacity", 0)
+  document.getElementById("soldier4X2").setAttribute("opacity", 0)
+  soldier4position = "castle"
+  document.getElementById("soldier4").setAttribute("x", 520)
+  document.getElementById("soldier4").setAttribute("y", 280)
+  // alert("worker 4 was revived from the dead")
+  RezA.beginElement()
+}
+
+
 function killWorker1(){
   document.getElementById("worker1X1").setAttribute("opacity", 1)
   document.getElementById("worker1X2").setAttribute("opacity", 1)
@@ -3606,7 +3754,50 @@ document.getElementById("worker4").setAttribute("y", 1500)
 // alert("worker 4 died")
 setTimeout(reviveWorker4, 150000)
 }
+//killSoldiers
+function killSoldier1(){
+  document.getElementById("soldier1X1").setAttribute("opacity", 1)
+  document.getElementById("soldier1X2").setAttribute("opacity", 1)
 
+soldier1position = "dead"
+document.getElementById("soldier1").setAttribute("x", 1500)
+document.getElementById("soldier1").setAttribute("y", 1500)
+// alert("worker 1 died")
+//need to add reviveSoldiers
+setTimeout(reviveSoldier1, 110000)
+}
+function killSoldier2(){
+  document.getElementById("soldier2X1").setAttribute("opacity", 1)
+  document.getElementById("soldier2X2").setAttribute("opacity", 1)
+
+soldier2position = "dead"
+document.getElementById("soldier2").setAttribute("x", 1500)
+document.getElementById("soldier2").setAttribute("y", 1500)
+// alert("worker 2 died")
+setTimeout(reviveSoldier2, 110000)
+}
+
+function killSoldier3(){
+  document.getElementById("soldier3X1").setAttribute("opacity", 1)
+  document.getElementById("soldier3X2").setAttribute("opacity", 1)
+
+soldier3position = "dead"
+document.getElementById("soldier3").setAttribute("x", 1500)
+document.getElementById("soldier3").setAttribute("y", 1500)
+// alert("worker 3 died")
+setTimeout(reviveSoldier3, 110000)
+}
+
+function killSoldier4(){
+  document.getElementById("soldier4X1").setAttribute("opacity", 1)
+  document.getElementById("soldier4X2").setAttribute("opacity", 1)
+
+soldier4position = "dead"
+document.getElementById("soldier4").setAttribute("x", 1500)
+document.getElementById("soldier4").setAttribute("y", 1500)
+// alert("worker 4 died")
+setTimeout(reviveSoldier4, 110000)
+}
 
 
 

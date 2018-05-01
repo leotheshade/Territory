@@ -210,7 +210,7 @@
     <animate id="worker4moveY" attributeName="y" from="0" to="0" begin="indefinite" dur="indefinite"/>
   </circle> -->
 
-  <rect id="supplyWagon1" x="450" y="350" width="30" height="20" fill="brown" onclick="wagonClick();menuLaunch()">
+  <rect id="supplyWagon1" class="buttonP" x="450" y="350" width="30" height="20" fill="brown" onclick="wagonClick();menuLaunch()">
     <animate id="wagon1MoveX" attributeName="x" from="0" to="0" begin="indefinite" dur="indefinite"/>
 
     <animate id="wagon1MoveY" attributeName="y" from="0" to="0" begin="indefinite" dur="indefinite"/>
@@ -275,9 +275,9 @@
 
   <!-- //confirm button -->
 
-  <rect x="440" y="405" width="50" height="30" fill="red" onclick="send()"/>
+  <rect class="buttonP" x="440" y="405" width="50" height="30" fill="red" onclick="send()"/>
   <text x="445" y="430" font-family="sans-serif" font-size="25">GO</text>
-  <rect x="440" y="405" width="50" height="30" fill="red" opacity="0" onclick="send()"/>
+  <rect x="440" class="buttonP" y="405" width="50" height="30" fill="red" opacity="0" onclick="send()"/>
   <!-- //text -->
   <text id="displayForestWood" x="760" y ="200" font-family="sans-serif" font-size="25" fill="brown">0</text>
   <text id="displayCastleOre" x="400" y="230" font-family="sans-serif" font-size="25" fill="gray">0</text>
@@ -291,79 +291,76 @@
   <!-- menu -->
 
   <rect x="540" y="50" width="260" height="400" fill="slategrey" opacity="1" id="wagonMenu" style="display:none;"/>
-  <image id="mI" onclick="mountainClick()" width="100" height="100" x="540" y="31" xlink:href="Worker-models/E2.PNG" style="display:none;"/>
-  <image id="fI" onclick="forestClick()" width="100" height="75" x="720" y="44" xlink:href="Worker-models/E3.PNG" style="display:none;"/>
-    <image id="cI" onclick="castleClick()" width="100" height="100" x="640" y="30" xlink:href="Worker-models/F6.PNG" style="display:none;"/>
+  <image id="mI" class="buttonP" onclick="mountainClick()" width="100" height="100" x="540" y="31" xlink:href="Worker-models/E2.PNG" style="display:none;"/>
+  <image id="fI" class="buttonP" onclick="forestClick()" width="100" height="75" x="720" y="44" xlink:href="Worker-models/E3.PNG" style="display:none;"/>
+    <image id="cI" class="buttonP" onclick="castleClick()" width="100" height="100" x="640" y="30" xlink:href="Worker-models/F6.PNG" style="display:none;"/>
     <!-- am going to replace the following rect with the proper image once i ask katherine to draw out the ocean thumbnail -->
     <rect id="oI" onclick="oceanClick()" width="100" height="60" x="640" y="110" fill="yellow" style="display:none;"/>
-    <image id="w1I" onclick="worker1Click()" width="100" height="100" x="523" y="350" xlink:href="Worker-models/E8.PNG" style="display:none;"/>
-        <image id="w2I" onclick="worker2Click()" width="100" height="100" x="588" y="350" xlink:href="Worker-models/E9.PNG" style="display:none;"/>
-        <image id="w3I" onclick="worker3Click()" width="100" height="100" x="656" y="350" xlink:href="Worker-models/E6.PNG" style="display:none;"/>
-        <image id="w4I" onclick="worker4Click()" width="100" height="100" x="715" y="350" xlink:href="Worker-models/E7.PNG" style="display:none;"/>
+    <image id="w1I" class="buttonP" onclick="worker1Click()" width="100" height="100" x="523" y="350" xlink:href="Worker-models/E8.PNG" style="display:none;"/>
+        <image id="w2I" class="buttonP" onclick="worker2Click()" width="100" height="100" x="588" y="350" xlink:href="Worker-models/E9.PNG" style="display:none;"/>
+        <image id="w3I" class="buttonP" onclick="worker3Click()" width="100" height="100" x="656" y="350" xlink:href="Worker-models/E6.PNG" style="display:none;"/>
+        <image id="w4I" class="buttonP" onclick="worker4Click()" width="100" height="100" x="715" y="350" xlink:href="Worker-models/E7.PNG" style="display:none;"/>
         <text id="w1Label" x="566" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">1</text>
   <text id="w2Label" x="630" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">2</text>
     <text id="w3Label" x="694" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">3</text>
       <text id="w4Label" x="755" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">4</text>
 <!-- code below is soldier objects -->
-      <image id="s1I" onclick="soldier1Click()" width="100" height="100" x="523" y="350" xlink:href="Worker-models/E8.PNG" style="display:none;"/>
-          <image id="s2I" onclick="soldier2Click()" width="100" height="100" x="588" y="350" xlink:href="Worker-models/E9.PNG" style="display:none;"/>
-          <image id="s3I" onclick="soldier3Click()" width="100" height="100" x="656" y="350" xlink:href="Worker-models/E6.PNG" style="display:none;"/>
-          <image id="s4I" onclick="soldier4Click()" width="100" height="100" x="715" y="350" xlink:href="Worker-models/E7.PNG" style="display:none;"/>
+      <image id="s1I" class="buttonP" onclick="soldier1Click()" width="100" height="100" x="523" y="350" xlink:href="Worker-models/E8.PNG" style="display:none;"/>
+          <image id="s2I" class="buttonP" onclick="soldier2Click()" width="100" height="100" x="588" y="350" xlink:href="Worker-models/E9.PNG" style="display:none;"/>
+          <image id="s3I" class="buttonP" onclick="soldier3Click()" width="100" height="100" x="656" y="350" xlink:href="Worker-models/E6.PNG" style="display:none;"/>
+          <image id="s4I" class="buttonP" onclick="soldier4Click()" width="100" height="100" x="715" y="350" xlink:href="Worker-models/E7.PNG" style="display:none;"/>
           <text id="s1Label" x="566" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">1</text>
       <text id="s2Label" x="630" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">2</text>
       <text id="s3Label" x="694" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">3</text>
         <text id="s4Label" x="755" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">4</text>
 
       <text id="woodTrade" x="550" y="200" font-family="sans-serif" font-size="20" fill="brown" style="display:none;">Wood</text>
-      <rect id="sellWood" onclick="sellWoodS()" x="615" y="184" width="40" height="20" fill="gold" style="display:none;"/>
-      <rect id="buyWood" onclick="buyWoodS()" x="655" y="184" width="40" height="20" fill="silver" style="display:none;"/>
+      <rect id="sellWood" class="buttonP" onclick="sellWoodS()" x="615" y="184" width="40" height="20" fill="gold" style="display:none;"/>
+      <rect id="buyWood" class="buttonP" onclick="buyWoodS()" x="655" y="184" width="40" height="20" fill="silver" style="display:none;"/>
 
       <text id="oreTrade"  x="550" y="250" font-family="sans-serif" font-size="20" fill="brown" style="display:none;">Ore</text>
-      <rect id="sellOre" onclick="sellOreS()" x="615" y="234" width="40" height="20" fill="gold" style="display:none;"/>
-      <rect id="buyOre" onclick="buyOreS()" x="655" y="234" width="40" height="20" fill="silver" style="display:none;"/>
+      <rect id="sellOre" class="buttonP" onclick="sellOreS()" x="615" y="234" width="40" height="20" fill="gold" style="display:none;"/>
+      <rect id="buyOre" class="buttonP" onclick="buyOreS()" x="655" y="234" width="40" height="20" fill="silver" style="display:none;"/>
       <text id="buyLabel" x="615" y="225" font-family="sans-serif" font-size="18" fill="gold" style="display:none;">Sell</text>
       <text id="sellLabel" x="655" y="225" font-family="sans-serif" font-size="18" fill="silver" style="display:none;">Buy</text>
 
-      <rect id="closeButton" x="730" y="195" width="40" height="40" fill="red" style="display:none" onclick="closeMenu()"/>
+      <rect id="closeButton" class="buttonP" x="730" y="195" width="40" height="40" fill="red" style="display:none" onclick="closeMenu()"/>
 
-      <rect id="workerMenL" x="565" y="265" width="50" height="50" fill="brown" style="display:none;" onclick="workerMen1()"/>
+      <rect id="workerMenL" class="buttonP" x="565" y="265" width="50" height="50" fill="brown" style="display:none;" onclick="workerMen1()"/>
 
-      <rect id="soldierMenL" x="635" y="265" width="50" height="50" fill="silver" style="display:none;" onclick="soldierMen1()"/>
+      <rect id="soldierMenL" class="buttonP" x="635" y="265" width="50" height="50" fill="silver" style="display:none;" onclick="soldierMen1()"/>
 
-<line id="worker1X1" class="DeathX" x1="540" y1="350" x2="610" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
-<line id="worker1X2" class="DeathX" x1="540" y1="450" x2="610" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+<line id="worker1X1" class="DeathX" onclick="worker1Click()" x1="540" y1="350" x2="610" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+<line id="worker1X2" class="DeathX" onclick="worker1Click()" x1="540" y1="450" x2="610" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
 
-<line id="worker2X1" class="DeathX" x1="610" y1="350" x2="670" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
-<line id="worker2X2" class="DeathX" x1="610" y1="450" x2="670" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+<line id="worker2X1" class="DeathX" onclick="worker2Click()" x1="610" y1="350" x2="670" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+<line id="worker2X2" class="DeathX" onclick="worker2Click()" x1="610" y1="450" x2="670" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
 
-<line id="worker3X1" class="DeathX" x1="670" y1="350" x2="730" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
-<line id="worker3X2" class="DeathX" x1="670" y1="450" x2="730" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+<line id="worker3X1" class="DeathX" onclick="worker3Click()" x1="670" y1="350" x2="730" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+<line id="worker3X2" class="DeathX" onclick="worker3Click()" x1="670" y1="450" x2="730" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
 
-<line id="worker4X1" class="DeathX" x1="730" y1="350" x2="800" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
-<line id="worker4X2" class="DeathX" x1="730" y1="450" x2="800" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
-
-
-<line id="soldier1X1" class="DeathX" x1="540" y1="350" x2="610" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
-<line id="soldier1X2" class="DeathX" x1="540" y1="450" x2="610" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
-
-<line id="soldier2X1" class="DeathX" x1="610" y1="350" x2="670" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
-<line id="soldier2X2" class="DeathX" x1="610" y1="450" x2="670" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
-
-<line id="soldier3X1" class="DeathX" x1="670" y1="350" x2="730" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
-<line id="soldier3X2" class="DeathX" x1="670" y1="450" x2="730" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
-
-<line id="soldier4X1" class="DeathX" x1="730" y1="350" x2="800" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
-<line id="soldier4X2" class="DeathX" x1="730" y1="450" x2="800" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+<line id="worker4X1" class="DeathX" onclick="worker4Click()" x1="730" y1="350" x2="800" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+<line id="worker4X2" class="DeathX" onclick="worker4Click()" x1="730" y1="450" x2="800" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
 
 
-<rect id="choiceOne" x="300" y="150" width="60" height="40" fill="red" onclick="choice1select()" style="display: none"/>
-<rect id="choiceTwo" x="300" y="200" width="60" height="40" fill="dimgrey" onclick="choice2select()" style="display: none"/>
-<rect id="choiceThree" x="300" y="250" width="60" height="40" fill="blue" onclick="choice3select()" style="display: none"/>
+<line id="soldier1X1" class="DeathX" onclick="soldier1Click()" x1="540" y1="350" x2="610" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+<line id="soldier1X2" class="DeathX" onclick="soldier1Click()" x1="540" y1="450" x2="610" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
 
-<!-- <rect id="choiceOne" x="540" y="50" width="260" height="133.33" fill="red" onclick="choice1select()" style="display: none"/>
-<rect id="choiceTwo" x="540" y="183.33" width="260" height="133.33" fill="dimgrey" onclick="choice2select()" style="display: none"/>
-<rect id="choiceThree" x="540" y="316.66" width="260" height="133.33" fill="blue" onclick="choice3select()" style="display: none;"/> -->
-   <!-- // icon of raid -->
+<line id="soldier2X1" class="DeathX" onclick="soldier2Click()" x1="610" y1="350" x2="670" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+<line id="soldier2X2" class="DeathX" onclick="soldier2Click()" x1="610" y1="450" x2="670" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+
+<line id="soldier3X1" class="DeathX" onclick="soldier3Click()" x1="670" y1="350" x2="730" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+<line id="soldier3X2" class="DeathX" onclick="soldier3Click()" x1="670" y1="450" x2="730" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+
+<line id="soldier4X1" class="DeathX" onclick="soldier4Click()" x1="730" y1="350" x2="800" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+<line id="soldier4X2" class="DeathX" onclick="soldier4Click()" x1="730" y1="450" x2="800" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
+
+
+<rect id="choiceOne" class="buttonP" x="300" y="150" width="60" height="40" fill="red" onclick="choice1select()" style="display: none"/>
+<rect id="choiceTwo" class="buttonP" x="300" y="200" width="60" height="40" fill="dimgrey" onclick="choice2select()" style="display: none"/>
+<rect id="choiceThree" class="buttonP" x="300" y="250" width="60" height="40" fill="blue" onclick="choice3select()" style="display: none"/>
+
+
    <!-- // icon of raid -->
   <text id="raidAlert" x="240" y="140" font-family="sans-serif" font-size="25" fill="red" opacity="1" style="display: none;"></text>
  <text id="notifications" x="20" y="50" font-family="sans-serif" font-size="20" fill="red" opacity="1" style="display:none;"></text>
@@ -383,8 +380,8 @@
   <animate id="logoF" attributeName="opacity" fill="freeze" from="0" to="1" dur="1" begin="15" />
   <animate id="startGB1" attributeName="opacity" from="1" to="0" begin="indefinite" dur="2" fill="freeze"/>
 </image>
-<rect id="startB" x="395" y="400" width="130" height="65" fill="gray" opacity="0" onclick="startGame()"><animate id="startBA" attributeName="opacity" from="0" to="1" begin="15" dur="1" fill="freeze"/><animate id="startGB" attributeName="opacity" from="1" to="0" begin="indefinite" dur="2" fill="freeze"/></rect>
-<text id="startBT" x="410" y="440" font-family="sans-serif" font-size="35" fill="dark blue" opacity="0" onclick="startGame()"><animate id="startBAT" attributeName="opacity" from="0" to="1" begin="15" dur="1" fill="freeze"/><animate id="startGBT" attributeName="opacity" from="1" to="0" begin="indefinite" dur="2" fill="freeze"/>Begin</text>
+<rect id="startB" class="buttonP" x="395" y="400" width="130" height="65" fill="gray" opacity="0" onclick="startGame()"><animate id="startBA" attributeName="opacity" from="0" to="1" begin="15" dur="1" fill="freeze"/><animate id="startGB" attributeName="opacity" from="1" to="0" begin="indefinite" dur="2" fill="freeze"/></rect>
+<text id="startBT" class="buttonP" x="410" y="440" font-family="sans-serif" font-size="35" fill="dark blue" opacity="0" onclick="startGame()"><animate id="startBAT" attributeName="opacity" from="0" to="1" begin="15" dur="1" fill="freeze"/><animate id="startGBT" attributeName="opacity" from="1" to="0" begin="indefinite" dur="2" fill="freeze"/>Begin</text>
 
 
 

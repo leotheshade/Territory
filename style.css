@@ -14,3 +14,11 @@ cursor:default;
 cursor:default;
   pointer-events: none;
 }
+.buttonP:hover{
+   border: 1px solid black;
+   opacity: .5;
+}
+.buttonP:active:hover{
+   border: 1px solid black;
+   opacity: .7;
+}
