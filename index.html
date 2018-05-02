@@ -218,27 +218,27 @@
   </rect>
 
 
-  <rect id="soldier1" x="370" y="230" width="20" height="30">
+  <image xlink:href="Soldier-imgs/H9.png" id="soldier1" class="soldierSprite" x="360" y="230"  height="70" opacity=".7">
     <animate id="soldier1moveX" attributeName="x" from="0" to="0" begin="indefinite" dur="indefinite"/>
 
     <animate id="soldier1moveY" attributeName="y" from="0" to="0" begin="indefinite" dur="indefinite"/>
-  </rect>
-  <rect id="soldier2" x="370" y="280" width="20" height="30">
+  </image>
+  <image xlink:href="Soldier-imgs/H9.png" id="soldier2" class="soldierSprite" x="360" y="280" height="70" opacity=".7">
     <animate id="soldier2moveX" attributeName="x" from="0" to="0" begin="indefinite" dur="indefinite"/>
 
     <animate id="soldier2moveY" attributeName="y" from="0" to="0" begin="indefinite" dur="indefinite"/>
-  </rect>
+  </image>
 
-  <rect id="soldier3" x="520" y="230" width="20" height="30">
+  <image xlink:href="Soldier-imgs/H8.png" id="soldier3" class="soldierSprite" x="490" y="230" height="70" opacity=".7">
     <animate id="soldier3moveX" attributeName="x" from="0" to="0" begin="indefinite" dur="indefinite"/>
 
     <animate id="soldier3moveY" attributeName="y" from="0" to="0" begin="indefinite" dur="indefinite"/>
-  </rect>
-  <rect id="soldier4" x="520" y="280" width="20" height="30">
+  </image>
+  <image xlink:href="Soldier-imgs/H8.png" id="soldier4" class="soldierSprite" x="490" y="280" height="70" opacity=".7">
     <animate id="soldier4moveX" attributeName="x" from="0" to="0" begin="indefinite" dur="indefinite"/>
 
     <animate id="soldier4moveY" attributeName="y" from="0" to="0" begin="indefinite" dur="indefinite"/>
-  </rect>
+  </image>
 
 
 
@@ -305,10 +305,10 @@
     <text id="w3Label" x="694" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">3</text>
       <text id="w4Label" x="755" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">4</text>
 <!-- code below is soldier objects -->
-      <image id="s1I" class="buttonP" onclick="soldier1Click()" width="100" height="100" x="523" y="350" xlink:href="Worker-models/E8.PNG" style="display:none;"/>
-          <image id="s2I" class="buttonP" onclick="soldier2Click()" width="100" height="100" x="588" y="350" xlink:href="Worker-models/E9.PNG" style="display:none;"/>
-          <image id="s3I" class="buttonP" onclick="soldier3Click()" width="100" height="100" x="656" y="350" xlink:href="Worker-models/E6.PNG" style="display:none;"/>
-          <image id="s4I" class="buttonP" onclick="soldier4Click()" width="100" height="100" x="715" y="350" xlink:href="Worker-models/E7.PNG" style="display:none;"/>
+      <image id="s1I" class="buttonP" onclick="soldier1Click()" width="110" height="110" x="513" y="350" xlink:href="Soldier-imgs/H3.PNG" style="display:none;"/>
+          <image id="s2I" class="buttonP" onclick="soldier2Click()" width="110" height="110" x="578" y="350" xlink:href="Soldier-imgs/H3.PNG" style="display:none;"/>
+          <image id="s3I" class="buttonP" onclick="soldier3Click()" width="110" height="110" x="646" y="350" xlink:href="Soldier-imgs/H3.PNG" style="display:none;"/>
+          <image id="s4I" class="buttonP" onclick="soldier4Click()" width="110" height="110" x="705" y="350" xlink:href="Soldier-imgs/H3.PNG" style="display:none;"/>
           <text id="s1Label" x="566" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">1</text>
       <text id="s2Label" x="630" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">2</text>
       <text id="s3Label" x="694" y="340" font-family="sans-serif" font-size="20" fill="blue" style="display:none;">3</text>
@@ -326,9 +326,9 @@
 
       <rect id="closeButton" class="buttonP" x="730" y="195" width="40" height="40" fill="red" style="display:none" onclick="closeMenu()"/>
 
-      <rect id="workerMenL" class="buttonP" x="565" y="265" width="50" height="50" fill="brown" style="display:none;" onclick="workerMen1()"/>
+      <image xlink:href="Soldier-imgs/J1.png" id="workerMenL" class="buttonP" x="550" y="260" width="80" height="80" fill="brown" style="display:none;" onclick="workerMen1()"/>
 
-      <rect id="soldierMenL" class="buttonP" x="635" y="265" width="50" height="50" fill="silver" style="display:none;" onclick="soldierMen1()"/>
+      <image xlink:href="Soldier-imgs/I9.png" id="soldierMenL" class="buttonP" x="625" y="255" width="80" height="80" fill="silver" style="display:none;" onclick="soldierMen1()"/>
 
 <line id="worker1X1" class="DeathX" onclick="worker1Click()" x1="540" y1="350" x2="610" y2="450" stroke="red" stroke-width="4" opacity="0" style="display:none"/>
 <line id="worker1X2" class="DeathX" onclick="worker1Click()" x1="540" y1="450" x2="610" y2="350" stroke="red" stroke-width="4" opacity="0" style="display:none"/>

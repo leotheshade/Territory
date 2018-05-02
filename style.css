@@ -22,3 +22,6 @@ cursor:default;
    border: 1px solid black;
    opacity: .7;
 }
+.soldierSprite{
+    pointer-events: none;
+}
