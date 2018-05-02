@@ -1834,8 +1834,8 @@ function send(){
 }
 //return
 if(soldier1position == "market" && wagonPosition1 == "market" && wagonCastle == 1){
-  document.getElementById("soldier1moveX").setAttribute("from", 405)
-document.getElementById("soldier1moveX").setAttribute("to", 420)
+  document.getElementById("soldier1moveX").setAttribute("from", 375)
+document.getElementById("soldier1moveX").setAttribute("to", 390)
 document.getElementById("soldier1moveX").setAttribute("dur", travelDur)
 
 document.getElementById("soldier1moveY").setAttribute("from", 110)
@@ -1843,15 +1843,16 @@ document.getElementById("soldier1moveY").setAttribute("to", 350)
 document.getElementById("soldier1moveY").setAttribute("dur", travelDur)
 document.getElementById("soldier1moveX").beginElement()
 document.getElementById("soldier1moveY").beginElement()
-document.getElementById("soldier1").setAttribute("x", 370)
+document.getElementById("soldier1").setAttribute("x", 360)
 document.getElementById("soldier1").setAttribute("y", 230)
 soldier1position = "moving"
+soldier1WalkE()
 setTimeout(soldier1Castle, travelDur * 1000)
 }
 
 if(soldier2position == "market" && wagonPosition1 == "market" && wagonCastle == 1){
-  document.getElementById("soldier2moveX").setAttribute("from", 428)
-document.getElementById("soldier2moveX").setAttribute("to", 443)
+  document.getElementById("soldier2moveX").setAttribute("from", 398)
+document.getElementById("soldier2moveX").setAttribute("to", 413)
 document.getElementById("soldier2moveX").setAttribute("dur", travelDur)
 
 document.getElementById("soldier2moveY").setAttribute("from", 135)
@@ -1859,15 +1860,16 @@ document.getElementById("soldier2moveY").setAttribute("to", 375)
 document.getElementById("soldier2moveY").setAttribute("dur", travelDur)
 document.getElementById("soldier2moveX").beginElement()
 document.getElementById("soldier2moveY").beginElement()
-document.getElementById("soldier2").setAttribute("x", 370)
+document.getElementById("soldier2").setAttribute("x", 360)
 document.getElementById("soldier2").setAttribute("y", 280)
 soldier2position = "moving"
+soldier2WalkE()
 setTimeout(soldier2Castle, travelDur * 1000)
 
 }
 if(soldier3position == "market" && wagonPosition1 == "market" && wagonCastle == 1){
-   document.getElementById("soldier3moveX").setAttribute("from", 451)
-document.getElementById("soldier3moveX").setAttribute("to", 466)
+   document.getElementById("soldier3moveX").setAttribute("from", 421)
+document.getElementById("soldier3moveX").setAttribute("to", 436)
 document.getElementById("soldier3moveX").setAttribute("dur", travelDur)
 
 document.getElementById("soldier3moveY").setAttribute("from", 135)
@@ -1875,15 +1877,16 @@ document.getElementById("soldier3moveY").setAttribute("to", 375)
 document.getElementById("soldier3moveY").setAttribute("dur", travelDur)
 document.getElementById("soldier3moveX").beginElement()
 document.getElementById("soldier3moveY").beginElement()
-document.getElementById("soldier3").setAttribute("x", 520)
+document.getElementById("soldier3").setAttribute("x", 490)
 document.getElementById("soldier3").setAttribute("y", 230)
 soldier3position = "moving"
+soldier3WalkE()
 setTimeout(soldier3Castle, travelDur * 1000)
 }
 
 if(soldier4position == "market" && wagonPosition1 == "market" && wagonCastle == 1){
-  document.getElementById("soldier4moveX").setAttribute("from", 474)
-document.getElementById("soldier4moveX").setAttribute("to", 489)
+  document.getElementById("soldier4moveX").setAttribute("from", 444)
+document.getElementById("soldier4moveX").setAttribute("to", 459)
 document.getElementById("soldier4moveX").setAttribute("dur", travelDur)
 
 document.getElementById("soldier4moveY").setAttribute("from", 110)
@@ -1891,10 +1894,11 @@ document.getElementById("soldier4moveY").setAttribute("to", 350)
 document.getElementById("soldier4moveY").setAttribute("dur", travelDur)
 document.getElementById("soldier4moveX").beginElement()
 document.getElementById("soldier4moveY").beginElement()
-document.getElementById("soldier4").setAttribute("x", 520)
+document.getElementById("soldier4").setAttribute("x", 490)
 document.getElementById("soldier4").setAttribute("y", 280)
 
 soldier4position = "moving"
+soldier4WalkE()
 setTimeout(soldier4Castle, travelDur * 1000)
 
 }
@@ -4622,7 +4626,7 @@ function timec(){
   }
   else if(time == "day"){
      document.getElementById("notifications").style.display = "block";
-      document.getElementById("notifications").textContent = "As the shadow vale rises, the acursed grow stronger...";
+      document.getElementById("notifications").textContent = "As the shadow vale rises, The Accursed grow stronger...";
     if(Ncheck == 0){
      setTimeout(notificationOP, 15000)
        Ncheck = 1
