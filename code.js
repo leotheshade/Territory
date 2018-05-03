@@ -91,7 +91,7 @@ var firstDragVisit = 0
 var keyChoice = "blank"
 var choice = "blank"
 var textTest = 0
-var IntroTest = 0
+var IntroTest = 1
 var dragonIntroR = "blank"
 var AcursedRep = 0
 var garrisonCooldown = 0
@@ -239,6 +239,8 @@ function startGame(){
     IClickCheck = 1
   document.getElementById("startGB").beginElement()
   document.getElementById("startGB1").beginElement()
+  document.getElementById("startBGB1").beginElement()
+
   document.getElementById("startGB2").beginElement()
   document.getElementById("startGBT").beginElement()
   setTimeout(startGameP2, 2500)
@@ -248,6 +250,8 @@ function startGameP2(){
   Smusic.pause()
   document.getElementById("mainMen").style.display = "none"
   document.getElementById("logo").style.display = "none"
+  document.getElementById("logoBG").style.display = "none"
+
   document.getElementById("startB").style.display = "none"
   document.getElementById("startBT").style.display = "none"
   document.getElementById("frame1").style.display = "none"
@@ -493,6 +497,29 @@ document.getElementById("worker4X2").style.display = "block";
 
  document.getElementById("workerMenL").style.display="block"
  document.getElementById("soldierMenL").style.display = "block"
+
+
+ document.getElementById("s1I").style.display = "none"
+ document.getElementById("s2I").style.display = "none"
+ document.getElementById("s3I").style.display = "none"
+ document.getElementById("s4I").style.display = "none"
+
+ document.getElementById("s1Label").style.display = "none"
+ document.getElementById("s2Label").style.display = "none"
+ document.getElementById("s3Label").style.display = "none"
+ document.getElementById("s4Label").style.display = "none"
+
+ document.getElementById("soldier1X1").style.display = "none";
+ document.getElementById("soldier1X2").style.display = "none";
+
+ document.getElementById("soldier2X1").style.display = "none";
+ document.getElementById("soldier2X2").style.display = "none";
+
+ document.getElementById("soldier3X1").style.display = "none";
+ document.getElementById("soldier3X2").style.display = "none";
+
+ document.getElementById("soldier4X1").style.display = "none";
+ document.getElementById("soldier4X2").style.display = "none";
   }
 
   else if(wagonCheck1 == 0){
@@ -1491,19 +1518,28 @@ function worker4WalkWA(){
 //soldierWalk
 
 function soldier1WalkW(){
-if(time == "day"){
+
  if(soldier1position == "moving"){
 
 if(soldier1S1 == 1){
+  if(time == "day"){
  document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/I1.png")
+}
+else{
+  document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H7.png")
+}
 // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
   soldier1S1 = 0
   soldier1S2 = 1
   setTimeout(soldier1WalkW, 500)
 }
 else if(soldier1S2 == 1){
+  if(time == "day"){
   document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
-
+}
+else{
+  document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
+}
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier1S1 = 1
   soldier1S2 = 0
@@ -1512,8 +1548,12 @@ else if(soldier1S2 == 1){
 }
 
 else{
+  if(time == "day"){
   document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
-
+}
+else{
+  document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
+}
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier1S1 = 1
   soldier1S2 = 0
@@ -1522,19 +1562,30 @@ else{
 
 }
 function soldier2WalkW(){
-if(time == "day"){
+
  if(soldier2position == "moving"){
 
 if(soldier2S1 == 1){
+  if(time == "night"){
+    document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H7.png")
+
+  }
+  else{
  document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/I1.png")
+}
 // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
   soldier2S1 = 0
   soldier2S2 = 1
   setTimeout(soldier2WalkW, 500)
 }
 else if(soldier2S2 == 1){
-  document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
+  if(time == "night"){
+    document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
 
+  }
+  else{
+  document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
+}
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier2S1 = 1
   soldier2S2 = 0
@@ -1543,8 +1594,13 @@ else if(soldier2S2 == 1){
 }
 
 else{
-  document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
+  if(time == "night"){
+    document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
 
+  }
+  else{
+  document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
+}
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier2S1 = 1
   soldier2S2 = 0
@@ -1553,19 +1609,30 @@ else{
 
 }
 function soldier3WalkW(){
-if(time == "day"){
+
  if(soldier3position == "moving"){
 
 if(soldier3S1 == 1){
+  if(time == "night"){
+    document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H7.png")
+
+  }
+  else{
  document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/I1.png")
+}
 // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
   soldier3S1 = 0
   soldier3S2 = 1
   setTimeout(soldier3WalkW, 500)
 }
 else if(soldier3S2 == 1){
-  document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
+  if(time == "night"){
+    document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
 
+  }
+  else{
+  document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
+}
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier3S1 = 1
   soldier3S2 = 0
@@ -1575,11 +1642,22 @@ else if(soldier3S2 == 1){
 
 else{
   if(soldier3position == "castle"){
-document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+    if(time == "night"){
+      document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H4.png")
 
+    }
+    else{
+document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+}
   }
   else{
+    if(time == "night"){
+      document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
+
+    }
+    else{
   document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
+}
 }
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier3S1 = 1
@@ -1589,19 +1667,30 @@ document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink
 
 }
 function soldier4WalkW(){
-if(time == "day"){
+
  if(soldier4position == "moving"){
 
 if(soldier4S1 == 1){
+  if(time == "night"){
+    document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H7.png")
+
+  }
+  else{
  document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/I1.png")
+}
 // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
   soldier4S1 = 0
   soldier4S2 = 1
   setTimeout(soldier4WalkW, 500)
 }
 else if(soldier4S2 == 1){
-  document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
+  if(time == "night"){
+    document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
 
+  }
+  else{
+  document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
+}
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier4S1 = 1
   soldier4S2 = 0
@@ -1611,9 +1700,20 @@ else if(soldier4S2 == 1){
 
 else{
   if(soldier4position == "castle"){
+    if(time == "night"){
+      document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H4.png")
+
+    }
+    else{
     document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
   }
+  }
   else{
+    if(time == "night"){
+      document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
+
+    }
+    else{
   document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
 }
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
@@ -1626,19 +1726,30 @@ else{
 
 
 function soldier1WalkE(){
-if(time == "day"){
+
  if(soldier1position == "moving"){
 
 if(soldier1S1 == 1){
+  if(time == "night"){
+    document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H6.png")
+
+  }
+  else{
  document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/I2.png")
+}
 // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
   soldier1S1 = 0
   soldier1S2 = 1
   setTimeout(soldier1WalkE, 500)
 }
 else if(soldier1S2 == 1){
-  document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+  if(time == "night"){
+    document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H4.png")
 
+  }
+  else{
+  document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+}
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier1S1 = 1
   soldier1S2 = 0
@@ -1648,11 +1759,22 @@ else if(soldier1S2 == 1){
 
 else{
   if(soldier1position == "castle"){
-    document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
+    if(time == "night"){
+      document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
 
+    }
+    else{
+    document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
+}
   }
   else{
+    if(time == "night"){
+      document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H4.png")
+
+    }
+    else{
   document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+}
 }
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier1S1 = 1
@@ -1662,19 +1784,30 @@ else{
 
 }
 function soldier2WalkE(){
-if(time == "day"){
+
  if(soldier2position == "moving"){
 
 if(soldier2S1 == 1){
+  if(time == "night"){
+    document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H6.png")
+
+  }
+  else{
  document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/I2.png")
+}
 // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
   soldier2S1 = 0
   soldier2S2 = 1
   setTimeout(soldier2WalkE, 500)
 }
 else if(soldier2S2 == 1){
-  document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+  if(time == "night"){
+    document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H4.png")
 
+  }
+  else{
+  document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+}
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier2S1 = 1
   soldier2S2 = 0
@@ -1684,10 +1817,20 @@ else if(soldier2S2 == 1){
 
 else{
   if(soldier2position == "castle"){
+    if(time == "night"){
+      document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
+
+    }
+    else{
     document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
 
   }
   else{
+    if(time == "night"){
+      document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H4.png")
+
+    }
+    else{
   document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
 }
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
@@ -1698,19 +1841,30 @@ else{
 
 }
 function soldier3WalkE(){
-if(time == "day"){
+
  if(soldier3position == "moving"){
 
 if(soldier3S1 == 1){
+  if(time == "night"){
+    document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H6.png")
+
+  }
+  else{
  document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/I2.png")
+}
 // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
   soldier3S1 = 0
   soldier3S2 = 1
   setTimeout(soldier3WalkE, 500)
 }
 else if(soldier3S2 == 1){
-  document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+  if(time == "night"){
+    document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H4.png")
 
+  }
+  else{
+  document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+}
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier3S1 = 1
   soldier3S2 = 0
@@ -1719,8 +1873,13 @@ else if(soldier3S2 == 1){
 }
 
 else{
-  document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+  if(time == "night"){
+    document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
 
+  }
+  else{
+  document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+}
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier3S1 = 1
   soldier3S2 = 0
@@ -1729,19 +1888,30 @@ else{
 
 }
 function soldier4WalkE(){
-if(time == "day"){
+
  if(soldier3position == "moving"){
 
 if(soldier4S1 == 1){
+  if(time == "night"){
+    document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H6.png")
+
+  }
+  else{
  document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/I2.png")
+}
 // document.getElementById("worker1").setAttribute('href', 'Images/female wood 2 step l.png')
   soldier4S1 = 0
   soldier4S2 = 1
   setTimeout(soldier4WalkE, 500)
 }
 else if(soldier4S2 == 1){
-  document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+  if(time == "night"){
+    document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H4.png")
 
+  }
+  else{
+  document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+}
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier4S1 = 1
   soldier4S2 = 0
@@ -1750,8 +1920,13 @@ else if(soldier4S2 == 1){
 }
 
 else{
-  document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+  if(time == "night"){
+    document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
 
+  }
+  else{
+  document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+}
 // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
   soldier4S1 = 1
   soldier4S2 = 0
