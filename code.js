@@ -1560,7 +1560,7 @@ else{
 }
 }
 
-}
+
 function soldier2WalkW(){
 
  if(soldier2position == "moving"){
@@ -1607,7 +1607,7 @@ else{
 }
 }
 
-}
+
 function soldier3WalkW(){
 
  if(soldier3position == "moving"){
@@ -1665,7 +1665,7 @@ document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink
 }
 }
 
-}
+
 function soldier4WalkW(){
 
  if(soldier4position == "moving"){
@@ -1782,7 +1782,7 @@ else{
 }
 }
 
-}
+
 function soldier2WalkE(){
 
  if(soldier2position == "moving"){
@@ -1823,7 +1823,7 @@ else{
     }
     else{
     document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
-
+}
   }
   else{
     if(time == "night"){
@@ -1874,7 +1874,7 @@ else if(soldier3S2 == 1){
 
 else{
   if(time == "night"){
-    document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
+    document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H4.png")
 
   }
   else{
@@ -1886,7 +1886,7 @@ else{
 }
 }
 
-}
+
 function soldier4WalkE(){
 
  if(soldier3position == "moving"){
@@ -1921,7 +1921,7 @@ else if(soldier4S2 == 1){
 
 else{
   if(time == "night"){
-    document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
+    document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H4.png")
 
   }
   else{
@@ -1933,7 +1933,7 @@ else{
 }
 }
 
-}
+
 
 
 
