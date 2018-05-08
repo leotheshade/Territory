@@ -1237,7 +1237,7 @@ function worker4WalkEP(){
    setTimeout(worker4WalkEP, 500)
   }
   else if(worker4S2 == 1){
-   document.getElementById("worker4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/D6.png")
+   document.getElementById("worker4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/D5.png")
 
   // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
    worker4S1 = 1
@@ -1247,7 +1247,7 @@ function worker4WalkEP(){
 
   }
   else{
-   document.getElementById("worker4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/D6.png")
+   document.getElementById("worker4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Worker-models/D5.png")
 
   // document.getElementById("worker1").setAttribute("href", "Images/female wood 2.png")
    worker4S1 = 1
@@ -3081,6 +3081,7 @@ setTimeout(soldier4Castle, travelDur * 1000)
     document.getElementById("worker4").setAttribute("x", 480)
     document.getElementById("worker4").setAttribute("y", 310)
     worker4position = "moving"
+    worker4WalkEP()
     setTimeout(worker4castle, travelDur * 1000)
 
     }
@@ -3346,34 +3347,34 @@ setTimeout(soldier4Castle, travelDur * 1000)
 function evacForest(){
   if(worker1position == "forest"){
 
-      document.getElementById("worker1moveX").setAttribute("from", 800)
-    document.getElementById("worker1moveX").setAttribute("to", 410)
+      document.getElementById("worker1moveX").setAttribute("from", 780)
+    document.getElementById("worker1moveX").setAttribute("to", 390)
     document.getElementById("worker1moveX").setAttribute("dur", 23)
 
     document.getElementById("worker1moveY").setAttribute("from", 250)
-    document.getElementById("worker1moveY").setAttribute("to", 320)
+    document.getElementById("worker1moveY").setAttribute("to", 310)
     document.getElementById("worker1moveY").setAttribute("dur", 23)
     document.getElementById("worker1moveX").beginElement()
     document.getElementById("worker1moveY").beginElement()
-    document.getElementById("worker1").setAttribute("x", 410)
-    document.getElementById("worker1").setAttribute("y", 320)
+    document.getElementById("worker1").setAttribute("x", 390)
+    document.getElementById("worker1").setAttribute("y", 310)
 
     worker1position = "moving"
     worker1WalkWA()
     var startMine1 = setTimeout(worker1castle, 23000)
     }
     if(worker2position == "forest"){
-      document.getElementById("worker2moveX").setAttribute("from", 800)
-    document.getElementById("worker2moveX").setAttribute("to", 440)
+      document.getElementById("worker2moveX").setAttribute("from", 780)
+    document.getElementById("worker2moveX").setAttribute("to", 420)
     document.getElementById("worker2moveX").setAttribute("dur", 23)
 
-    document.getElementById("worker2moveY").setAttribute("from", 280)
-    document.getElementById("worker2moveY").setAttribute("to", 320)
+    document.getElementById("worker2moveY").setAttribute("from", 285)
+    document.getElementById("worker2moveY").setAttribute("to", 310)
     document.getElementById("worker2moveY").setAttribute("dur", 23)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
-    document.getElementById("worker2").setAttribute("x", 440)
-    document.getElementById("worker2").setAttribute("y", 320)
+    document.getElementById("worker2").setAttribute("x", 420)
+    document.getElementById("worker2").setAttribute("y", 310)
 
     worker2position = "moving"
     worker2WalkWA()
@@ -3381,17 +3382,17 @@ function evacForest(){
 
     }
     if(worker3position == "forest"){
-       document.getElementById("worker3moveX").setAttribute("from", 800)
-    document.getElementById("worker3moveX").setAttribute("to", 470)
+       document.getElementById("worker3moveX").setAttribute("from", 780)
+    document.getElementById("worker3moveX").setAttribute("to", 450)
     document.getElementById("worker3moveX").setAttribute("dur", 23)
 
-    document.getElementById("worker3moveY").setAttribute("from", 310)
-    document.getElementById("worker3moveY").setAttribute("to", 320)
+    document.getElementById("worker3moveY").setAttribute("from", 320)
+    document.getElementById("worker3moveY").setAttribute("to", 310)
     document.getElementById("worker3moveY").setAttribute("dur", 23)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
-    document.getElementById("worker3").setAttribute("x", 470)
-    document.getElementById("worker3").setAttribute("y", 320)
+    document.getElementById("worker3").setAttribute("x", 450)
+    document.getElementById("worker3").setAttribute("y", 310)
 
     worker3position = "moving"
     worker3WalkWA()
@@ -3399,17 +3400,17 @@ function evacForest(){
     }
     //down
     if(worker4position == "forest"){
-      document.getElementById("worker4moveX").setAttribute("from", 800)
-    document.getElementById("worker4moveX").setAttribute("to", 500)
+      document.getElementById("worker4moveX").setAttribute("from", 780)
+    document.getElementById("worker4moveX").setAttribute("to", 480)
     document.getElementById("worker4moveX").setAttribute("dur", 23)
 
-    document.getElementById("worker4moveY").setAttribute("from", 340)
-    document.getElementById("worker4moveY").setAttribute("to", 320)
+    document.getElementById("worker4moveY").setAttribute("from", 355)
+    document.getElementById("worker4moveY").setAttribute("to", 310)
     document.getElementById("worker4moveY").setAttribute("dur", 23)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
-    document.getElementById("worker4").setAttribute("x", 500)
-    document.getElementById("worker4").setAttribute("y", 320)
+    document.getElementById("worker4").setAttribute("x", 480)
+    document.getElementById("worker4").setAttribute("y", 310)
 
     worker4position = "moving"
     worker4WalkWA()
@@ -3422,11 +3423,11 @@ function evacMount(){
 
   if(worker1position == "mountains"){
 
-    document.getElementById("worker1moveX").setAttribute("from", 40)
+    document.getElementById("worker1moveX").setAttribute("from", 20)
     document.getElementById("worker1moveX").setAttribute("to", 390)
     document.getElementById("worker1moveX").setAttribute("dur", 23)
 
-    document.getElementById("worker1moveY").setAttribute("from", 450)
+    document.getElementById("worker1moveY").setAttribute("from", 440)
     document.getElementById("worker1moveY").setAttribute("to", 310)
     document.getElementById("worker1moveY").setAttribute("dur", 23)
     document.getElementById("worker1moveX").beginElement()
@@ -3442,17 +3443,17 @@ function evacMount(){
 
 
   if(worker2position == "mountains"){
-    document.getElementById("worker2moveX").setAttribute("from", 70)
-    document.getElementById("worker2moveX").setAttribute("to", 440)
+    document.getElementById("worker2moveX").setAttribute("from", 50)
+    document.getElementById("worker2moveX").setAttribute("to", 420)
     document.getElementById("worker2moveX").setAttribute("dur", 23)
 
-    document.getElementById("worker2moveY").setAttribute("from", 450)
-    document.getElementById("worker2moveY").setAttribute("to", 320)
+    document.getElementById("worker2moveY").setAttribute("from", 440)
+    document.getElementById("worker2moveY").setAttribute("to", 310)
     document.getElementById("worker2moveY").setAttribute("dur", 23)
     document.getElementById("worker2moveX").beginElement()
     document.getElementById("worker2moveY").beginElement()
-    document.getElementById("worker2").setAttribute("x", 440)
-    document.getElementById("worker2").setAttribute("y", 320)
+    document.getElementById("worker2").setAttribute("x", 420)
+    document.getElementById("worker2").setAttribute("y", 310)
 
     worker2position = "moving"
     worker2WalkEP()
@@ -3463,17 +3464,17 @@ function evacMount(){
 
 
    if(worker3position == "mountains"){
-    document.getElementById("worker3moveX").setAttribute("from", 100)
-    document.getElementById("worker3moveX").setAttribute("to", 470)
+    document.getElementById("worker3moveX").setAttribute("from", 80)
+    document.getElementById("worker3moveX").setAttribute("to", 450)
     document.getElementById("worker3moveX").setAttribute("dur", 23)
 
-    document.getElementById("worker3moveY").setAttribute("from", 450)
-    document.getElementById("worker3moveY").setAttribute("to", 320)
+    document.getElementById("worker3moveY").setAttribute("from", 440)
+    document.getElementById("worker3moveY").setAttribute("to", 310)
     document.getElementById("worker3moveY").setAttribute("dur", 23)
     document.getElementById("worker3moveX").beginElement()
     document.getElementById("worker3moveY").beginElement()
-    document.getElementById("worker3").setAttribute("x", 470)
-    document.getElementById("worker3").setAttribute("y", 320)
+    document.getElementById("worker3").setAttribute("x", 450)
+    document.getElementById("worker3").setAttribute("y", 310)
 
     worker3position = "moving"
     worker3WalkEP()
@@ -3483,18 +3484,18 @@ function evacMount(){
 
 
   if(worker4position == "mountains"){
-    document.getElementById("worker4moveX").setAttribute("from", 130)
-    document.getElementById("worker4moveX").setAttribute("to", 500)
+    document.getElementById("worker4moveX").setAttribute("from", 110)
+    document.getElementById("worker4moveX").setAttribute("to", 480)
     document.getElementById("worker4moveX").setAttribute("dur", 23)
 
-    document.getElementById("worker4moveY").setAttribute("from", 450)
-    document.getElementById("worker4moveY").setAttribute("to", 320)
+    document.getElementById("worker4moveY").setAttribute("from", 440)
+    document.getElementById("worker4moveY").setAttribute("to", 310)
     document.getElementById("worker4moveY").setAttribute("dur", 23)
     document.getElementById("worker4moveX").beginElement()
     document.getElementById("worker4moveY").beginElement()
-    document.getElementById("worker4").setAttribute("x", 500)
-    document.getElementById("worker4").setAttribute("y", 320)
-    castleWorker4 = 0
+    document.getElementById("worker4").setAttribute("x", 480)
+    document.getElementById("worker4").setAttribute("y", 310)
+
     worker4position = "moving"
     worker4WalkEP()
     setTimeout(worker4castle, 23000)
