@@ -210,12 +210,18 @@
     <animate id="worker4moveY" attributeName="y" from="0" to="0" begin="indefinite" dur="indefinite"/>
   </circle> -->
 
-  <rect id="supplyWagon1" class="buttonP" x="450" y="350" width="30" height="20" fill="brown" onclick="wagonClick();menuLaunch()">
+  <!-- <rect id="supplyWagon1" class="buttonP" x="450" y="350" width="30" height="20" fill="brown" onclick="wagonClick();menuLaunch()">
     <animate id="wagon1MoveX" attributeName="x" from="0" to="0" begin="indefinite" dur="indefinite"/>
 
     <animate id="wagon1MoveY" attributeName="y" from="0" to="0" begin="indefinite" dur="indefinite"/>
 
-  </rect>
+  </rect> -->
+  <image id="supplyWagon1" class="buttonP" x="450" y="350" width="70"  xlink:href="Soldier-imgs/I3.png" onclick="wagonClick();menuLaunch()">
+    <animate id="wagon1MoveX" attributeName="x" from="0" to="0" begin="indefinite" dur="indefinite"/>
+
+    <animate id="wagon1MoveY" attributeName="y" from="0" to="0" begin="indefinite" dur="indefinite"/>
+
+  </image>
 
 
   <image xlink:href="Soldier-imgs/H9.png" id="soldier1" class="soldierSprite" x="360" y="230"  height="70" opacity="1">

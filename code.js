@@ -91,7 +91,7 @@ var firstDragVisit = 0
 var keyChoice = "blank"
 var choice = "blank"
 var textTest = 0
-var IntroTest = 1
+var IntroTest = 0
 var dragonIntroR = "blank"
 var AcursedRep = 0
 var garrisonCooldown = 0
@@ -1889,7 +1889,7 @@ else{
 
 function soldier4WalkE(){
 
- if(soldier3position == "moving"){
+ if(soldier4position == "moving"){
 
 if(soldier4S1 == 1){
   if(time == "night"){
@@ -4159,6 +4159,8 @@ function reviveWorker1(){
   worker1position = "castle"
   document.getElementById("worker1").setAttribute("x", 390)
   document.getElementById("worker1").setAttribute("y", 310)
+
+
   // alert("worker 1 was revived from the dead")
   RezA.beginElement()
 }
@@ -4196,8 +4198,15 @@ function reviveSoldier1(){
   document.getElementById("soldier1X1").setAttribute("opacity", 0)
   document.getElementById("soldier1X2").setAttribute("opacity", 0)
   soldier1position = "castle"
-  document.getElementById("soldier1").setAttribute("x", 370)
+  document.getElementById("soldier1").setAttribute("x", 360)
   document.getElementById("soldier1").setAttribute("y", 230)
+  if(time == "day"){
+  document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
+}
+else{
+  document.getElementById("soldier1").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
+
+}
   // alert("worker 1 was revived from the dead")
   RezA.beginElement()
 }
@@ -4205,8 +4214,17 @@ function reviveSoldier2(){
   document.getElementById("soldier2X1").setAttribute("opacity", 0)
   document.getElementById("soldier2X2").setAttribute("opacity", 0)
   soldier2position = "castle"
-  document.getElementById("soldier2").setAttribute("x", 370)
+  document.getElementById("soldier2").setAttribute("x", 360)
   document.getElementById("soldier2").setAttribute("y", 280)
+  if(time == "day"){
+  document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H9.png")
+}
+else{
+  document.getElementById("soldier2").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H5.png")
+
+}
+
+
   // alert("worker 2 was revived from the dead")
   RezA.beginElement()
 }
@@ -4215,8 +4233,17 @@ function reviveSoldier3(){
   document.getElementById("soldier3X1").setAttribute("opacity", 0)
   document.getElementById("soldier3X2").setAttribute("opacity", 0)
   soldier3position = "castle"
-  document.getElementById("soldier3").setAttribute("x", 520)
+  document.getElementById("soldier3").setAttribute("x", 490)
   document.getElementById("soldier3").setAttribute("y", 230)
+  if(time == "day"){
+  document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+}
+else{
+  document.getElementById("soldier3").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H4.png")
+
+}
+
+
   // alert("worker 3 was revived from the dead")
   RezA.beginElement()
 }
@@ -4225,8 +4252,17 @@ function reviveSoldier4(){
   document.getElementById("soldier4X1").setAttribute("opacity", 0)
   document.getElementById("soldier4X2").setAttribute("opacity", 0)
   soldier4position = "castle"
-  document.getElementById("soldier4").setAttribute("x", 520)
+  document.getElementById("soldier4").setAttribute("x", 490)
   document.getElementById("soldier4").setAttribute("y", 280)
+  if(time == "day"){
+  document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H8.png")
+}
+else{
+  document.getElementById("soldier4").setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "Soldier-imgs/H4.png")
+
+}
+
+
   // alert("worker 4 was revived from the dead")
   RezA.beginElement()
 }
