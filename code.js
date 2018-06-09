@@ -2922,19 +2922,19 @@ setTimeout(soldier4Mountains, travelDur * 1000)
 
     }
     if(wagonMountains1 == 1 && wagonPosition1 == "castle"){
-      document.getElementById("wagon1MoveX").setAttribute("from", 450)
-      document.getElementById("wagon1MoveX").setAttribute("to", 70)
+      document.getElementById("wagon1MoveX").setAttribute("from", 420)
+      document.getElementById("wagon1MoveX").setAttribute("to", 40)
       document.getElementById("wagon1MoveX").setAttribute("dur", travelDur)
 
-      document.getElementById("wagon1MoveY").setAttribute("from", 350)
-      document.getElementById("wagon1MoveY").setAttribute("to", 480)
+      document.getElementById("wagon1MoveY").setAttribute("from", 335)
+      document.getElementById("wagon1MoveY").setAttribute("to", 473)
       document.getElementById("wagon1MoveY").setAttribute("dur", travelDur)
 
       document.getElementById("wagon1MoveX").beginElement()
       document.getElementById("wagon1MoveY").beginElement()
 
-      document.getElementById("supplyWagon1").setAttribute("x", 70)
-      document.getElementById("supplyWagon1").setAttribute("y", 480)
+      document.getElementById("supplyWagon1").setAttribute("x", 40)
+      document.getElementById("supplyWagon1").setAttribute("y", 473)
 
 
       wagonPosition1 = "moving"
